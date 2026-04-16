@@ -152,7 +152,7 @@ else:
 
     tsdae_model = SentenceTransformer(BASE_MODEL, trust_remote_code=True)
     tsdae_dataset = DenoisingAutoEncoderDataset(hplt_sentences)
-    tsdae_loss = st_losses.DenoaningAutoEncoderLoss(
+    tsdae_loss = st_losses.DenoisingAutoEncoderLoss(
         tsdae_model,
         decoder_name_or_path=BASE_MODEL,
         tie_encoder_decoder=True,
