@@ -87,7 +87,7 @@ vg_ds = load_dataset("zrmarine/vg-rag-benchmark", split="test")
 print(f"  {len(vg_ds):,} examples  |  columns: {vg_ds.column_names}")
 
 QUERY_COL   = "question"
-PASSAGE_COL = "context"
+PASSAGE_COL = "article"
 
 # Build IR evaluator — assumes query i maps to passage i (1-to-1 RAG structure)
 vg_queries       = {str(i): q for i, q in enumerate(vg_ds[QUERY_COL])}
