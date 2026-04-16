@@ -131,51 +131,60 @@ info("IR evaluator ready (ndcg@10 / mrr@10 / recall@1/5/10)")
 # ── 6. Load training data ────────────────────────────────────────────────────
 section("Training Data")
 
-# mMARCO-no
-info(f"Loading mMARCO-no (up to {MMARCO_MAX:,} pairs, streaming)...")
-mmarco_pairs = []
+# MIRACL Norwegian — retrieval-focused dataset with Wikipedia passages
+# Queries are paired with gold positive passages; ideal for MNRL.
+info("Loading MIRACL Norwegian...")
+miracl_pairs = []
 try:
-    mmarco_ds = load_dataset(
-        "unicamp-dl/mmarco", "norwegian", split="train",
-        streaming=True, trust_remote_code=True,
-    )
-    for row in mmarco_ds:
-        if len(mmarco_pairs) >= MMARCO_MAX:
-            break
+    miracl_ds = load_dataset("miracl/miracl", "no", split="train")
+    info(f"  Raw MIRACL-no rows: {len(miracl_ds):,}")
+    for row in miracl_ds:
         query = row["query"].strip()
-        positives = row.get("positive_passages", [])
-        if positives:
-            passage = positives[0]["text"].strip()
-            if query and passage:
-                mmarco_pairs.append(InputExample(texts=[query, passage]))
-        if len(mmarco_pairs) % 10_000 == 0 and len(mmarco_pairs) > 0:
-            info(f"  mMARCO-no: {len(mmarco_pairs):,} / {MMARCO_MAX:,}")
-    info(f"  mMARCO-no done: {len(mmarco_pairs):,} pairs")
+        for pos in row.get("positive_passages", []):
+            text = pos.get("text", "").strip()
+            if query and text:
+                miracl_pairs.append(InputExample(texts=[query, text]))
+    info(f"  MIRACL-no done: {len(miracl_pairs):,} pairs")
 except Exception as e:
-    info(f"  mMARCO-no not available ({e}) — skipping")
-    mmarco_pairs = []
+    info(f"  MIRACL-no not available ({e}) — skipping")
 
-# NorQuad — Norwegian Wikipedia QA (replaces ltg/nornli which was removed)
-# question + context paragraph = query/passage pair for retrieval
-info("Loading NorQuad (Norwegian Wikipedia QA)...")
+# NorQuad — Norwegian Wikipedia QA (question + context paragraph)
+info("Loading NorQuad...")
 norquad_pairs = []
-try:
-    norquad_ds = load_dataset("NbAiLab/norquad", split="train")
-    info(f"  Raw NorQuad rows: {len(norquad_ds):,}")
-    for row in norquad_ds:
-        context = row.get("context", "").strip()
-        for qa in row.get("qas", []):
-            question = qa.get("question", "").strip()
-            if question and context:
-                norquad_pairs.append(InputExample(texts=[question, context]))
-    info(f"  NorQuad done: {len(norquad_pairs):,} pairs")
-except Exception as e:
-    info(f"  NorQuad not available ({e}) — skipping")
+for repo in ["ltg/norquad", "NbAiLab/norquad"]:
+    try:
+        norquad_ds = load_dataset(repo, split="train")
+        info(f"  Loaded from {repo}: {len(norquad_ds):,} rows")
+        for row in norquad_ds:
+            context = row.get("context", "").strip()
+            for qa in row.get("qas", []):
+                question = qa.get("question", "").strip()
+                if question and context:
+                    norquad_pairs.append(InputExample(texts=[question, context]))
+        info(f"  NorQuad done: {len(norquad_pairs):,} pairs")
+        break
+    except Exception as e:
+        info(f"  {repo} not available ({e})")
 
-# NorSumm — dataset has only validation + test splits (no train)
+# ScandiQA Norwegian — Scandinavian open-domain QA with Norwegian subset
+info("Loading ScandiQA (Norwegian)...")
+scandiqa_pairs = []
+try:
+    scandiqa_ds = load_dataset("alexandrainst/scandiqa", "no", split="train")
+    info(f"  Raw ScandiQA-no rows: {len(scandiqa_ds):,}")
+    for row in scandiqa_ds:
+        question = row.get("question", "").strip()
+        context  = row.get("context",  "").strip()
+        if question and context:
+            scandiqa_pairs.append(InputExample(texts=[question, context]))
+    info(f"  ScandiQA-no done: {len(scandiqa_pairs):,} pairs")
+except Exception as e:
+    info(f"  ScandiQA-no not available ({e}) — skipping")
+
+# NorSumm — only validation + test splits exist (no train split)
 info("Loading NorSumm...")
 norsumm_pairs = []
-nornli_triplets = []  # no triplet source available; Stage 1 will use MNRL only
+nornli_triplets = []  # no triplet source; Stage 1 uses MNRL only
 try:
     norsumm_ds = load_dataset("SamiaT/NorSumm", "nb")
     for split in ["train", "validation", "test"]:
@@ -194,10 +203,11 @@ except Exception as e:
     info(f"  NorSumm not available ({e}) — skipping")
 
 # Combine
-all_mnrl_pairs = mmarco_pairs + norquad_pairs + norsumm_pairs
+all_mnrl_pairs = miracl_pairs + norquad_pairs + scandiqa_pairs + norsumm_pairs
 random.shuffle(all_mnrl_pairs)
 info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}  "
-     f"(mMARCO={len(mmarco_pairs):,}  NorQuad={len(norquad_pairs):,}  NorSumm={len(norsumm_pairs):,})")
+     f"(MIRACL={len(miracl_pairs):,}  NorQuad={len(norquad_pairs):,}  "
+     f"ScandiQA={len(scandiqa_pairs):,}  NorSumm={len(norsumm_pairs):,})")
 info(f"Total triplets   : {len(nornli_triplets):,}")
 
 # ── 7. (Optional) TSDAE warm-up ─────────────────────────────────────────────
