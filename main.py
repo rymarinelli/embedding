@@ -34,6 +34,9 @@ def info(msg):
     ts = time.strftime("%H:%M:%S")
     print(f"[{ts}] {msg}", flush=True)
 
+# Reduce GPU memory fragmentation (recommended by PyTorch for OOM cases)
+os.environ.setdefault("PYTORCH_ALLOC_CONF", "expandable_segments:True")
+
 # ── 2. Mount Google Drive (for saving checkpoints) ──────────────────────────
 section("Setup")
 
@@ -57,9 +60,9 @@ HF_USERNAME    = "zrmarine"
 HF_MODEL_NAME  = "nor-pplx-embed-v1"
 HF_REPO_ID     = f"{HF_USERNAME}/{HF_MODEL_NAME}"
 
-MMARCO_MAX     = 50_000   # increase to 200k on A100
-BATCH_SIZE_S1  = 8
-BATCH_SIZE_S2  = 4
+MMARCO_MAX     = 50_000
+BATCH_SIZE_S1  = 4        # reduced from 8 — OOM on A100 at 8
+BATCH_SIZE_S2  = 2        # reduced from 4
 EPOCHS_S1      = 1
 EPOCHS_S2      = 1
 SKIP_TSDAE     = True
@@ -272,7 +275,10 @@ def to_hf(examples, columns):
     )
 
 info(f"Loading model: {stage1_init}")
-model = SentenceTransformer(stage1_init, trust_remote_code=True)
+model = SentenceTransformer(
+    stage1_init, trust_remote_code=True,
+    model_kwargs={"torch_dtype": torch.bfloat16},
+)
 
 mnrl_dataset   = to_hf(all_mnrl_pairs, ["anchor", "positive"])
 train_datasets = {"mnrl": mnrl_dataset}
@@ -301,7 +307,8 @@ s1_args = SentenceTransformerTrainingArguments(
     warmup_ratio=0.05,
     learning_rate=2e-5,
     lr_scheduler_type="cosine",
-    fp16=True,
+    bf16=True,
+    gradient_checkpointing=True,
     eval_strategy="steps",
     eval_steps=EVAL_STEPS,
     save_strategy="steps",
@@ -397,7 +404,8 @@ s2_args = SentenceTransformerTrainingArguments(
     warmup_ratio=0.05,
     learning_rate=1e-5,
     lr_scheduler_type="cosine",
-    fp16=True,
+    bf16=True,
+    gradient_checkpointing=True,
     eval_strategy="steps",
     eval_steps=EVAL_STEPS,
     save_strategy="steps",
