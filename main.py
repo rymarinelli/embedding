@@ -134,24 +134,36 @@ info("IR evaluator ready (ndcg@10 / mrr@10 / recall@1/5/10)")
 # ── 6. Load training data ────────────────────────────────────────────────────
 section("Training Data")
 
-# MIRACL Norwegian — retrieval-focused dataset with Wikipedia passages
-# Queries are paired with gold positive passages; ideal for MNRL.
-info("Loading MIRACL Norwegian...")
-miracl_pairs = []
+# Norwegian Wikipedia — title as query, first substantive paragraph as passage
+# Gives ~50k+ pairs; streamed so no full download required.
+WIKI_MAX = 50_000
+info(f"Loading Norwegian Wikipedia (up to {WIKI_MAX:,} pairs, streaming)...")
+wiki_pairs = []
 try:
-    miracl_ds = load_dataset("miracl/miracl", "no", split="train")
-    info(f"  Raw MIRACL-no rows: {len(miracl_ds):,}")
-    for row in miracl_ds:
-        query = row["query"].strip()
-        for pos in row.get("positive_passages", []):
-            text = pos.get("text", "").strip()
-            if query and text:
-                miracl_pairs.append(InputExample(texts=[query, text]))
-    info(f"  MIRACL-no done: {len(miracl_pairs):,} pairs")
+    wiki_ds = load_dataset(
+        "wikimedia/wikipedia", "20231101.no", split="train", streaming=True
+    )
+    for row in wiki_ds:
+        if len(wiki_pairs) >= WIKI_MAX:
+            break
+        title = row.get("title", "").strip()
+        text  = row.get("text",  "").strip()
+        if not title or not text:
+            continue
+        # Take the first paragraph with at least 30 words
+        for para in text.split("\n"):
+            para = para.strip()
+            if len(para.split()) >= 30:
+                wiki_pairs.append(InputExample(texts=[title, para]))
+                break
+        if len(wiki_pairs) % 10_000 == 0 and len(wiki_pairs) > 0:
+            info(f"  Wikipedia: {len(wiki_pairs):,} / {WIKI_MAX:,}")
+    info(f"  Wikipedia done: {len(wiki_pairs):,} pairs")
 except Exception as e:
-    info(f"  MIRACL-no not available ({e}) — skipping")
+    info(f"  Wikipedia not available ({e}) — skipping")
+    wiki_pairs = []
 
-# NorQuad — Norwegian Wikipedia QA (question + context paragraph)
+# NorQuad — flat SQuAD format: row["question"] + row["context"]
 info("Loading NorQuad...")
 norquad_pairs = []
 for repo in ["ltg/norquad", "NbAiLab/norquad"]:
@@ -159,30 +171,33 @@ for repo in ["ltg/norquad", "NbAiLab/norquad"]:
         norquad_ds = load_dataset(repo, split="train")
         info(f"  Loaded from {repo}: {len(norquad_ds):,} rows")
         for row in norquad_ds:
-            context = row.get("context", "").strip()
-            for qa in row.get("qas", []):
-                question = qa.get("question", "").strip()
-                if question and context:
-                    norquad_pairs.append(InputExample(texts=[question, context]))
+            question = row.get("question", "").strip()
+            context  = row.get("context",  "").strip()
+            if question and context:
+                norquad_pairs.append(InputExample(texts=[question, context]))
         info(f"  NorQuad done: {len(norquad_pairs):,} pairs")
         break
     except Exception as e:
         info(f"  {repo} not available ({e})")
 
-# ScandiQA Norwegian — Scandinavian open-domain QA with Norwegian subset
-info("Loading ScandiQA (Norwegian)...")
+# ScandiQA — "default" is the only config; filter for Norwegian rows
+info("Loading ScandiQA (Norwegian rows)...")
 scandiqa_pairs = []
 try:
-    scandiqa_ds = load_dataset("alexandrainst/scandiqa", "no", split="train")
-    info(f"  Raw ScandiQA-no rows: {len(scandiqa_ds):,}")
+    scandiqa_ds = load_dataset("alexandrainst/scandiqa", split="train")
+    info(f"  Raw ScandiQA rows: {len(scandiqa_ds):,} | columns: {scandiqa_ds.column_names}")
+    no_langs = {"no", "nb", "nn"}
     for row in scandiqa_ds:
+        lang = row.get("language", row.get("lang", "")).lower()
+        if lang and lang not in no_langs:
+            continue  # skip non-Norwegian when a language field exists
         question = row.get("question", "").strip()
         context  = row.get("context",  "").strip()
         if question and context:
             scandiqa_pairs.append(InputExample(texts=[question, context]))
-    info(f"  ScandiQA-no done: {len(scandiqa_pairs):,} pairs")
+    info(f"  ScandiQA done: {len(scandiqa_pairs):,} pairs")
 except Exception as e:
-    info(f"  ScandiQA-no not available ({e}) — skipping")
+    info(f"  ScandiQA not available ({e}) — skipping")
 
 # NorSumm — only validation + test splits exist (no train split)
 info("Loading NorSumm...")
@@ -206,10 +221,10 @@ except Exception as e:
     info(f"  NorSumm not available ({e}) — skipping")
 
 # Combine
-all_mnrl_pairs = miracl_pairs + norquad_pairs + scandiqa_pairs + norsumm_pairs
+all_mnrl_pairs = wiki_pairs + norquad_pairs + scandiqa_pairs + norsumm_pairs
 random.shuffle(all_mnrl_pairs)
 info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}  "
-     f"(MIRACL={len(miracl_pairs):,}  NorQuad={len(norquad_pairs):,}  "
+     f"(Wikipedia={len(wiki_pairs):,}  NorQuad={len(norquad_pairs):,}  "
      f"ScandiQA={len(scandiqa_pairs):,}  NorSumm={len(norsumm_pairs):,})")
 info(f"Total triplets   : {len(nornli_triplets):,}")
 
