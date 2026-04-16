@@ -109,7 +109,7 @@ from sentence_transformers.evaluation import InformationRetrievalEvaluator
 random.seed(42)
 
 info("Downloading zrmarine/vg-rag-benchmark ...")
-vg_ds = load_dataset("zrmarine/vg-rag-benchmark", split="test")
+vg_ds = load_dataset("zrmarine/vg-rag-benchmark", split="train")
 info(f"Loaded {len(vg_ds):,} examples | columns: {vg_ds.column_names}")
 
 QUERY_COL   = "question"
