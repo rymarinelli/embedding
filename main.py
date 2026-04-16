@@ -58,14 +58,18 @@ if DEVICE == "cuda":
 
 from huggingface_hub import login
 
+HF_TOKEN = ""
 try:
     from google.colab import userdata
-    HF_TOKEN = userdata.get("HF_TOKEN")
+    HF_TOKEN = userdata.get("HF_TOKEN") or ""
 except Exception:
     HF_TOKEN = os.environ.get("HF_TOKEN", "")
 
-login(token=HF_TOKEN)
-print("Logged in to Hugging Face Hub")
+if HF_TOKEN:
+    login(token=HF_TOKEN)
+    print("Logged in to Hugging Face Hub")
+else:
+    print("No HF_TOKEN found — set HF_TOKEN env var or add it to Colab secrets")
 
 # ── 5. Load VG-RAG benchmark early — used as evaluator during training ───────
 
