@@ -135,7 +135,10 @@ section("Training Data")
 info(f"Loading mMARCO-no (up to {MMARCO_MAX:,} pairs, streaming)...")
 mmarco_pairs = []
 try:
-    mmarco_ds = load_dataset("unicamp-dl/mmarco", "norwegian", split="train", streaming=True)
+    mmarco_ds = load_dataset(
+        "unicamp-dl/mmarco", "norwegian", split="train",
+        streaming=True, trust_remote_code=True,
+    )
     for row in mmarco_ds:
         if len(mmarco_pairs) >= MMARCO_MAX:
             break
@@ -148,47 +151,34 @@ try:
         if len(mmarco_pairs) % 10_000 == 0 and len(mmarco_pairs) > 0:
             info(f"  mMARCO-no: {len(mmarco_pairs):,} / {MMARCO_MAX:,}")
     info(f"  mMARCO-no done: {len(mmarco_pairs):,} pairs")
-except RuntimeError as e:
+except Exception as e:
     info(f"  mMARCO-no not available ({e}) — skipping")
     mmarco_pairs = []
 
-# NorNLI
-info("Loading NorNLI...")
-nornli_mnrl, nornli_triplets = [], []
+# NorQuad — Norwegian Wikipedia QA (replaces ltg/nornli which was removed)
+# question + context paragraph = query/passage pair for retrieval
+info("Loading NorQuad (Norwegian Wikipedia QA)...")
+norquad_pairs = []
 try:
-    nornli_ds = load_dataset("ltg/nornli", split="train")
-    info(f"  Raw NorNLI rows: {len(nornli_ds):,}")
-
-    entailment, contradiction = {}, {}
-    for row in nornli_ds:
-        premise = row["premise"].strip()
-        hyp = row["hypothesis"].strip()
-        label = row["label"]  # 0=entailment, 1=neutral, 2=contradiction
-        if label == 0:
-            entailment.setdefault(premise, []).append(hyp)
-        elif label == 2:
-            contradiction.setdefault(premise, []).append(hyp)
-
-    premises_with_both = set(entailment) & set(contradiction)
-    info(f"  Premises with entailment+contradiction: {len(premises_with_both):,}")
-    for premise in premises_with_both:
-        pos = random.choice(entailment[premise])
-        neg = random.choice(contradiction[premise])
-        nornli_triplets.append(InputExample(texts=[premise, pos, neg]))
-        nornli_mnrl.append(InputExample(texts=[premise, pos]))
-    for premise in set(entailment) - premises_with_both:
-        for pos in entailment[premise]:
-            nornli_mnrl.append(InputExample(texts=[premise, pos]))
-    info(f"  NorNLI done: {len(nornli_mnrl):,} MNRL pairs, {len(nornli_triplets):,} triplets")
+    norquad_ds = load_dataset("NbAiLab/norquad", split="train")
+    info(f"  Raw NorQuad rows: {len(norquad_ds):,}")
+    for row in norquad_ds:
+        context = row.get("context", "").strip()
+        for qa in row.get("qas", []):
+            question = qa.get("question", "").strip()
+            if question and context:
+                norquad_pairs.append(InputExample(texts=[question, context]))
+    info(f"  NorQuad done: {len(norquad_pairs):,} pairs")
 except Exception as e:
-    info(f"  NorNLI not available ({e}) — skipping")
+    info(f"  NorQuad not available ({e}) — skipping")
 
-# NorSumm
+# NorSumm — dataset has only validation + test splits (no train)
 info("Loading NorSumm...")
 norsumm_pairs = []
+nornli_triplets = []  # no triplet source available; Stage 1 will use MNRL only
 try:
     norsumm_ds = load_dataset("SamiaT/NorSumm", "nb")
-    for split in ["train", "validation"]:
+    for split in ["train", "validation", "test"]:
         if split not in norsumm_ds:
             continue
         for row in norsumm_ds[split]:
@@ -204,9 +194,10 @@ except Exception as e:
     info(f"  NorSumm not available ({e}) — skipping")
 
 # Combine
-all_mnrl_pairs = mmarco_pairs + nornli_mnrl + norsumm_pairs
+all_mnrl_pairs = mmarco_pairs + norquad_pairs + norsumm_pairs
 random.shuffle(all_mnrl_pairs)
-info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}")
+info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}  "
+     f"(mMARCO={len(mmarco_pairs):,}  NorQuad={len(norquad_pairs):,}  NorSumm={len(norsumm_pairs):,})")
 info(f"Total triplets   : {len(nornli_triplets):,}")
 
 # ── 7. (Optional) TSDAE warm-up ─────────────────────────────────────────────
