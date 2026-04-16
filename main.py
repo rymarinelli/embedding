@@ -14,11 +14,18 @@
 # pip install sentence-transformers>=3.0.0 datasets transformers faiss-gpu mteb tqdm huggingface_hub
 
 # ── 2. Mount Google Drive (for saving checkpoints) ──────────────────────────
-from google.colab import drive
-drive.mount('/content/drive')
-
 import os
-SAVE_DIR = "/content/drive/MyDrive/nor-pplx-embed"
+
+try:
+    from google.colab import drive
+    drive.mount('/content/drive')
+    SAVE_DIR = "/content/drive/MyDrive/nor-pplx-embed"
+    print("Google Drive mounted")
+except Exception:
+    # Running as a script (python main.py) rather than in a notebook cell
+    SAVE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "checkpoints")
+    print("Drive mount skipped — saving locally")
+
 os.makedirs(SAVE_DIR, exist_ok=True)
 print(f"Checkpoints will be saved to: {SAVE_DIR}")
 
