@@ -194,6 +194,12 @@ info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}  "
      f"(NorSumm={len(norsumm_pairs):,}  NorSumm-instruct={len(norsum_instruct_pairs):,})")
 info(f"Total triplets   : {len(nornli_triplets):,}")
 
+if len(all_mnrl_pairs) == 0:
+    raise RuntimeError(
+        "No training data loaded — all dataset sources returned 0 pairs. "
+        "Check the loading errors above."
+    )
+
 # ── 7. (Optional) TSDAE warm-up ─────────────────────────────────────────────
 section("TSDAE Warm-up")
 
@@ -285,7 +291,7 @@ s1_args = SentenceTransformerTrainingArguments(
     num_train_epochs=EPOCHS_S1,
     per_device_train_batch_size=BATCH_SIZE_S1,
     gradient_accumulation_steps=2,
-    warmup_ratio=0.05,
+    warmup_steps=0.05,
     learning_rate=2e-5,
     lr_scheduler_type="cosine",
     bf16=True,
@@ -382,7 +388,7 @@ s2_args = SentenceTransformerTrainingArguments(
     num_train_epochs=EPOCHS_S2,
     per_device_train_batch_size=BATCH_SIZE_S2,
     gradient_accumulation_steps=4,
-    warmup_ratio=0.05,
+    warmup_steps=0.05,
     learning_rate=1e-5,
     lr_scheduler_type="cosine",
     bf16=True,
