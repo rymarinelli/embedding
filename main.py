@@ -90,9 +90,14 @@ except Exception:
 
 if HF_TOKEN:
     login(token=HF_TOKEN)
-    info("Logged in to Hugging Face Hub")
+    info("Logged in to Hugging Face Hub (token)")
 else:
-    info("WARNING: No HF_TOKEN found — Hub push will fail. Set HF_TOKEN env var.")
+    # Fall back to token cached by `huggingface-cli login` or a prior notebook cell
+    try:
+        login()
+        info("Logged in to Hugging Face Hub (cached credentials)")
+    except Exception as e:
+        info(f"WARNING: HF login failed ({e}) — Hub push will be skipped")
 
 # ── 5. Load VG-RAG benchmark — used as evaluator during training ─────────────
 section("VG-RAG Evaluator")
