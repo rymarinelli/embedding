@@ -26,7 +26,7 @@ print(f"Checkpoints will be saved to: {SAVE_DIR}")
 
 BASE_MODEL     = "perplexity-ai/pplx-embed-v1-0.6b"
 
-HF_USERNAME    = "YOUR_HF_USERNAME"    # ← set your Hugging Face username
+HF_USERNAME    = "zrmarine"
 HF_MODEL_NAME  = "nor-pplx-embed-v1"
 HF_REPO_ID     = f"{HF_USERNAME}/{HF_MODEL_NAME}"
 
@@ -50,14 +50,11 @@ if DEVICE == "cuda":
 # ── 4. Authenticate with Hugging Face Hub ───────────────────────────────────
 
 from huggingface_hub import login
+from google.colab import userdata
 
-HF_TOKEN = os.environ.get("HF_TOKEN", "")
-if HF_TOKEN:
-    login(token=HF_TOKEN)
-    print("Logged in to Hugging Face Hub")
-else:
-    # Falls back to interactive prompt / cached credentials
-    login()
+HF_TOKEN = userdata.get("HF_TOKEN")
+login(token=HF_TOKEN)
+print("Logged in to Hugging Face Hub")
 
 # ── 5. Load VG-RAG benchmark early — used as evaluator during training ───────
 
