@@ -136,7 +136,8 @@ section("Training Data")
 
 nornli_triplets = []  # no triplet source; Stage 1 uses MNRL only
 
-# ltg/norsumm-nob-nno-translation — NorSumm articles + summaries (Bokmål & Nynorsk)
+# ltg/norsumm-nob-nno-translation — same news article in Bokmål + Nynorsk
+# Columns: text_nob, text_nno  |  only a 'test' split exists
 info("Loading ltg/norsumm-nob-nno-translation...")
 norsumm_pairs = []
 try:
@@ -145,53 +146,57 @@ try:
     for split_name, split_ds in ltg_summ_ds.items():
         info(f"  {split_name}: {len(split_ds):,} rows | columns: {split_ds.column_names}")
         for row in split_ds:
-            for art_key, sum_key in [
-                ("article_nob", "summary_nob"), ("article_nno", "summary_nno"),
-                ("article", "summary"), ("text", "summary"),
-            ]:
-                article = row.get(art_key, "").strip()
-                summary = row.get(sum_key, "").strip()
-                if article and summary:
-                    norsumm_pairs.append(InputExample(texts=[summary, article]))
-                    break
+            nob = row.get("text_nob", "").strip()
+            nno = row.get("text_nno", "").strip()
+            if nob and nno:
+                norsumm_pairs.append(InputExample(texts=[nob, nno]))
     info(f"  done: {len(norsumm_pairs):,} pairs")
 except Exception as e:
-    info(f"  ltg/norsumm-nob-nno-translation not available ({e}) — falling back to SamiaT/NorSumm")
-    try:
-        norsumm_ds = load_dataset("SamiaT/NorSumm", "nb")
-        for split in ["train", "validation", "test"]:
-            if split not in norsumm_ds:
-                continue
-            for row in norsumm_ds[split]:
-                article = row.get("article", "").strip()
-                for summary_text in row.get("summaries", []):
-                    summary = summary_text.strip()
-                    if article and summary:
-                        norsumm_pairs.append(InputExample(texts=[summary, article]))
-        info(f"  SamiaT/NorSumm fallback: {len(norsumm_pairs):,} pairs")
-    except Exception as e2:
-        info(f"  NorSumm fallback also failed ({e2}) — skipping")
+    info(f"  ltg/norsumm-nob-nno-translation not available ({e}) — skipping")
+
+# SamiaT/NorSumm — Norwegian news article + human summaries
+info("Loading SamiaT/NorSumm...")
+samia_pairs = []
+try:
+    norsumm_ds = load_dataset("SamiaT/NorSumm", "nb")
+    info(f"  splits: {list(norsumm_ds.keys())}")
+    for split in ["train", "validation", "test"]:
+        if split not in norsumm_ds:
+            continue
+        for row in norsumm_ds[split]:
+            article = row.get("article", "").strip()
+            for summary_text in row.get("summaries", []):
+                summary = summary_text.strip()
+                if article and summary:
+                    samia_pairs.append(InputExample(texts=[summary, article]))
+    info(f"  done: {len(samia_pairs):,} pairs")
+except Exception as e:
+    info(f"  SamiaT/NorSumm not available ({e}) — skipping")
 
 # ltg/norsummarize-instruct — instruction-format Norwegian news summarization
+# Only a 'test' split exists — load all available splits
 info("Loading ltg/norsummarize-instruct...")
 norsum_instruct_pairs = []
 try:
-    norsum_ds = load_dataset("ltg/norsummarize-instruct", split="train")
-    info(f"  {len(norsum_ds):,} rows | columns: {norsum_ds.column_names}")
-    for row in norsum_ds:
-        doc     = (row.get("input") or row.get("document") or row.get("text") or "").strip()
-        summary = (row.get("output") or row.get("summary") or "").strip()
-        if doc and summary:
-            norsum_instruct_pairs.append(InputExample(texts=[summary, doc]))
+    norsum_ds = load_dataset("ltg/norsummarize-instruct")
+    info(f"  splits: {list(norsum_ds.keys())}")
+    for split_name, split_ds in norsum_ds.items():
+        info(f"  {split_name}: {len(split_ds):,} rows | columns: {split_ds.column_names}")
+        for row in split_ds:
+            doc     = (row.get("input") or row.get("document") or row.get("text") or "").strip()
+            summary = (row.get("output") or row.get("summary") or "").strip()
+            if doc and summary:
+                norsum_instruct_pairs.append(InputExample(texts=[summary, doc]))
     info(f"  done: {len(norsum_instruct_pairs):,} pairs")
 except Exception as e:
     info(f"  ltg/norsummarize-instruct not available ({e}) — skipping")
 
 # Combine
-all_mnrl_pairs = norsumm_pairs + norsum_instruct_pairs
+all_mnrl_pairs = norsumm_pairs + samia_pairs + norsum_instruct_pairs
 random.shuffle(all_mnrl_pairs)
 info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}  "
-     f"(NorSumm={len(norsumm_pairs):,}  NorSumm-instruct={len(norsum_instruct_pairs):,})")
+     f"(LTG-NorSumm={len(norsumm_pairs):,}  SamiaT-NorSumm={len(samia_pairs):,}  "
+     f"NorSumm-instruct={len(norsum_instruct_pairs):,})")
 info(f"Total triplets   : {len(nornli_triplets):,}")
 
 if len(all_mnrl_pairs) == 0:
