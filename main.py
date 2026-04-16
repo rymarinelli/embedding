@@ -131,84 +131,20 @@ ir_evaluator = InformationRetrievalEvaluator(
 )
 info("IR evaluator ready (ndcg@10 / mrr@10 / recall@1/5/10)")
 
-# ── 6. Load training data ────────────────────────────────────────────────────
+# ── 6. Load training data (Norwegian news only) ──────────────────────────────
 section("Training Data")
 
-# Norwegian Wikipedia — title as query, first substantive paragraph as passage
-# Gives ~50k+ pairs; streamed so no full download required.
-WIKI_MAX = 50_000
-info(f"Loading Norwegian Wikipedia (up to {WIKI_MAX:,} pairs, streaming)...")
-wiki_pairs = []
-try:
-    wiki_ds = load_dataset(
-        "wikimedia/wikipedia", "20231101.no", split="train", streaming=True
-    )
-    for row in wiki_ds:
-        if len(wiki_pairs) >= WIKI_MAX:
-            break
-        title = row.get("title", "").strip()
-        text  = row.get("text",  "").strip()
-        if not title or not text:
-            continue
-        # Take the first paragraph with at least 30 words
-        for para in text.split("\n"):
-            para = para.strip()
-            if len(para.split()) >= 30:
-                wiki_pairs.append(InputExample(texts=[title, para]))
-                break
-        if len(wiki_pairs) % 10_000 == 0 and len(wiki_pairs) > 0:
-            info(f"  Wikipedia: {len(wiki_pairs):,} / {WIKI_MAX:,}")
-    info(f"  Wikipedia done: {len(wiki_pairs):,} pairs")
-except Exception as e:
-    info(f"  Wikipedia not available ({e}) — skipping")
-    wiki_pairs = []
+nornli_triplets = []  # no triplet source; Stage 1 uses MNRL only
 
-# ── LTG datasets ─────────────────────────────────────────────────────────────
-
-# ltg/norquad — Norwegian Wikipedia QA, flat SQuAD format
-info("Loading ltg/norquad...")
-norquad_pairs = []
-try:
-    norquad_ds = load_dataset("ltg/norquad", split="train")
-    info(f"  {len(norquad_ds):,} rows | columns: {norquad_ds.column_names}")
-    for row in norquad_ds:
-        question = row.get("question", "").strip()
-        context  = row.get("context",  "").strip()
-        if question and context:
-            norquad_pairs.append(InputExample(texts=[question, context]))
-    info(f"  ltg/norquad done: {len(norquad_pairs):,} pairs")
-except Exception as e:
-    info(f"  ltg/norquad not available ({e}) — skipping")
-
-# ltg/nrk_quiz_qa — QA pairs from NRK quiz archive
-info("Loading ltg/nrk_quiz_qa...")
-nrk_pairs = []
-try:
-    nrk_ds = load_dataset("ltg/nrk_quiz_qa", split="train")
-    info(f"  {len(nrk_ds):,} rows | columns: {nrk_ds.column_names}")
-    for row in nrk_ds:
-        question = row.get("question", "").strip()
-        # try common field names for the answer/passage
-        passage = (row.get("context") or row.get("answer") or
-                   row.get("passage") or row.get("text") or "")
-        passage = passage.strip()
-        if question and passage:
-            nrk_pairs.append(InputExample(texts=[question, passage]))
-    info(f"  ltg/nrk_quiz_qa done: {len(nrk_pairs):,} pairs")
-except Exception as e:
-    info(f"  ltg/nrk_quiz_qa not available ({e}) — skipping")
-
-# ltg/norsumm-nob-nno-translation — NorSumm in Bokmål + Nynorsk
+# ltg/norsumm-nob-nno-translation — NorSumm articles + summaries (Bokmål & Nynorsk)
 info("Loading ltg/norsumm-nob-nno-translation...")
 norsumm_pairs = []
-nornli_triplets = []  # no triplet source; Stage 1 uses MNRL only
 try:
     ltg_summ_ds = load_dataset("ltg/norsumm-nob-nno-translation")
     info(f"  splits: {list(ltg_summ_ds.keys())}")
     for split_name, split_ds in ltg_summ_ds.items():
         info(f"  {split_name}: {len(split_ds):,} rows | columns: {split_ds.column_names}")
         for row in split_ds:
-            # Try both Bokmål and Nynorsk article/summary fields
             for art_key, sum_key in [
                 ("article_nob", "summary_nob"), ("article_nno", "summary_nno"),
                 ("article", "summary"), ("text", "summary"),
@@ -218,7 +154,7 @@ try:
                 if article and summary:
                     norsumm_pairs.append(InputExample(texts=[summary, article]))
                     break
-    info(f"  ltg/norsumm-nob-nno-translation done: {len(norsumm_pairs):,} pairs")
+    info(f"  done: {len(norsumm_pairs):,} pairs")
 except Exception as e:
     info(f"  ltg/norsumm-nob-nno-translation not available ({e}) — falling back to SamiaT/NorSumm")
     try:
@@ -236,65 +172,43 @@ except Exception as e:
     except Exception as e2:
         info(f"  NorSumm fallback also failed ({e2}) — skipping")
 
-# ltg/norsummarize-instruct — instruction-format summarization (document + summary)
+# ltg/norsummarize-instruct — instruction-format Norwegian news summarization
 info("Loading ltg/norsummarize-instruct...")
 norsum_instruct_pairs = []
 try:
     norsum_ds = load_dataset("ltg/norsummarize-instruct", split="train")
     info(f"  {len(norsum_ds):,} rows | columns: {norsum_ds.column_names}")
     for row in norsum_ds:
-        # Instruction-tuning format: input=document, output=summary
         doc     = (row.get("input") or row.get("document") or row.get("text") or "").strip()
         summary = (row.get("output") or row.get("summary") or "").strip()
         if doc and summary:
             norsum_instruct_pairs.append(InputExample(texts=[summary, doc]))
-    info(f"  ltg/norsummarize-instruct done: {len(norsum_instruct_pairs):,} pairs")
+    info(f"  done: {len(norsum_instruct_pairs):,} pairs")
 except Exception as e:
     info(f"  ltg/norsummarize-instruct not available ({e}) — skipping")
 
-# ltg/nob-nno-eng-translation-pairs — Bokmål/Nynorsk pairs as paraphrase signal
-info("Loading ltg/nob-nno-eng-translation-pairs...")
-nob_nno_pairs = []
+# ltg/nrk_quiz_qa — QA pairs from NRK (Norwegian public broadcaster)
+info("Loading ltg/nrk_quiz_qa...")
+nrk_pairs = []
 try:
-    trans_ds = load_dataset("ltg/nob-nno-eng-translation-pairs", split="train")
-    info(f"  {len(trans_ds):,} rows | columns: {trans_ds.column_names}")
-    for row in trans_ds:
-        nob = (row.get("nob") or row.get("bokmaal") or row.get("nb") or "").strip()
-        nno = (row.get("nno") or row.get("nynorsk") or row.get("nn") or "").strip()
-        if nob and nno:
-            nob_nno_pairs.append(InputExample(texts=[nob, nno]))
-    info(f"  ltg/nob-nno-eng-translation-pairs done: {len(nob_nno_pairs):,} pairs")
-except Exception as e:
-    info(f"  ltg/nob-nno-eng-translation-pairs not available ({e}) — skipping")
-
-# ScandiQA — "default" is the only config; filter for Norwegian rows
-info("Loading ScandiQA (Norwegian rows)...")
-scandiqa_pairs = []
-try:
-    scandiqa_ds = load_dataset("alexandrainst/scandiqa", split="train")
-    info(f"  {len(scandiqa_ds):,} rows | columns: {scandiqa_ds.column_names}")
-    no_langs = {"no", "nb", "nn"}
-    for row in scandiqa_ds:
-        lang = row.get("language", row.get("lang", "")).lower()
-        if lang and lang not in no_langs:
-            continue
+    nrk_ds = load_dataset("ltg/nrk_quiz_qa", split="train")
+    info(f"  {len(nrk_ds):,} rows | columns: {nrk_ds.column_names}")
+    for row in nrk_ds:
         question = row.get("question", "").strip()
-        context  = row.get("context",  "").strip()
-        if question and context:
-            scandiqa_pairs.append(InputExample(texts=[question, context]))
-    info(f"  ScandiQA done: {len(scandiqa_pairs):,} pairs")
+        passage  = (row.get("context") or row.get("answer") or
+                    row.get("passage") or row.get("text") or "").strip()
+        if question and passage:
+            nrk_pairs.append(InputExample(texts=[question, passage]))
+    info(f"  done: {len(nrk_pairs):,} pairs")
 except Exception as e:
-    info(f"  ScandiQA not available ({e}) — skipping")
+    info(f"  ltg/nrk_quiz_qa not available ({e}) — skipping")
 
 # Combine
-all_mnrl_pairs = (wiki_pairs + norquad_pairs + nrk_pairs + norsumm_pairs +
-                  norsum_instruct_pairs + nob_nno_pairs + scandiqa_pairs)
+all_mnrl_pairs = norsumm_pairs + norsum_instruct_pairs + nrk_pairs
 random.shuffle(all_mnrl_pairs)
-info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}")
-info(f"  Wikipedia={len(wiki_pairs):,}  NorQuad={len(norquad_pairs):,}  "
-     f"NRK={len(nrk_pairs):,}  NorSumm={len(norsumm_pairs):,}")
-info(f"  NorSumm-instruct={len(norsum_instruct_pairs):,}  "
-     f"Nob-Nno={len(nob_nno_pairs):,}  ScandiQA={len(scandiqa_pairs):,}")
+info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}  "
+     f"(NorSumm={len(norsumm_pairs):,}  NorSumm-instruct={len(norsum_instruct_pairs):,}  "
+     f"NRK={len(nrk_pairs):,})")
 info(f"Total triplets   : {len(nornli_triplets):,}")
 
 # ── 7. (Optional) TSDAE warm-up ─────────────────────────────────────────────
