@@ -57,9 +57,13 @@ if DEVICE == "cuda":
 # ── 4. Authenticate with Hugging Face Hub ───────────────────────────────────
 
 from huggingface_hub import login
-from google.colab import userdata
 
-HF_TOKEN = userdata.get("HF_TOKEN")
+try:
+    from google.colab import userdata
+    HF_TOKEN = userdata.get("HF_TOKEN")
+except Exception:
+    HF_TOKEN = os.environ.get("HF_TOKEN", "")
+
 login(token=HF_TOKEN)
 print("Logged in to Hugging Face Hub")
 
