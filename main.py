@@ -7,11 +7,11 @@
 #   - NorSumm — Norwegian news article/summary pairs (dev split only)
 #
 # Eval data (never used in training):
-#   - VG-RAG benchmark (held-out benchmark)
+#   - VG-RAG benchmark (held-out benchmark, evaluated at every checkpoint)
 #   - NorQuad, SNL, MIRACL-no via MTEB
 
 # ── 1. Install dependencies ─────────────────────────────────────────────────
-# pip install sentence-transformers>=3.0.0 datasets transformers faiss-gpu mteb tqdm
+# pip install sentence-transformers>=3.0.0 datasets transformers faiss-gpu mteb tqdm huggingface_hub
 
 # ── 2. Mount Google Drive (for saving checkpoints) ──────────────────────────
 from google.colab import drive
@@ -26,13 +26,19 @@ print(f"Checkpoints will be saved to: {SAVE_DIR}")
 
 BASE_MODEL     = "perplexity-ai/pplx-embed-v1-0.6b"
 
+HF_USERNAME    = "YOUR_HF_USERNAME"    # ← set your Hugging Face username
+HF_MODEL_NAME  = "nor-pplx-embed-v1"
+HF_REPO_ID     = f"{HF_USERNAME}/{HF_MODEL_NAME}"
+
 # Colab T4 has 16GB VRAM — these settings are safe
 MMARCO_MAX     = 50_000   # increase to 200k on A100
-BATCH_SIZE_S1  = 8       # Stage 1 — MNRL benefits from larger batches
-BATCH_SIZE_S2  = 4       # Stage 2 — hard negatives, explicit triples
+BATCH_SIZE_S1  = 8        # Stage 1 — MNRL benefits from larger batches
+BATCH_SIZE_S2  = 4        # Stage 2 — hard negatives, explicit triples
 EPOCHS_S1      = 1
 EPOCHS_S2      = 1
 SKIP_TSDAE     = True     # set False to run TSDAE warm-up first (slow)
+EVAL_STEPS     = 500      # evaluate on VG-RAG every N steps
+SAVE_STEPS     = 500      # save + push checkpoint every N steps
 
 import torch
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -41,15 +47,50 @@ if DEVICE == "cuda":
     print(f"GPU: {torch.cuda.get_device_name(0)}")
     print(f"VRAM: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
 
-# ── 4. Load training data ────────────────────────────────────────────────────
+# ── 4. Authenticate with Hugging Face Hub ───────────────────────────────────
+
+from huggingface_hub import login
+
+HF_TOKEN = os.environ.get("HF_TOKEN", "")
+if HF_TOKEN:
+    login(token=HF_TOKEN)
+    print("Logged in to Hugging Face Hub")
+else:
+    # Falls back to interactive prompt / cached credentials
+    login()
+
+# ── 5. Load VG-RAG benchmark early — used as evaluator during training ───────
 
 import random
 import logging
 from datasets import load_dataset
 from sentence_transformers import InputExample
+from sentence_transformers.evaluation import InformationRetrievalEvaluator
 
 logging.basicConfig(level=logging.INFO)
 random.seed(42)
+
+print("Loading VG-RAG benchmark...")
+vg_ds = load_dataset("zrmarine/vg-rag-benchmark", split="test")
+print(f"  {len(vg_ds):,} examples  |  columns: {vg_ds.column_names}")
+
+QUERY_COL   = "question"
+PASSAGE_COL = "context"
+
+# Build IR evaluator — assumes query i maps to passage i (1-to-1 RAG structure)
+vg_queries       = {str(i): q for i, q in enumerate(vg_ds[QUERY_COL])}
+vg_corpus        = {str(i): p for i, p in enumerate(vg_ds[PASSAGE_COL])}
+vg_relevant_docs = {str(i): {str(i)} for i in range(len(vg_ds))}
+
+ir_evaluator = InformationRetrievalEvaluator(
+    queries=vg_queries,
+    corpus=vg_corpus,
+    relevant_docs=vg_relevant_docs,
+    name="vg-rag",
+    show_progress_bar=False,
+)
+
+# ── 6. Load training data ────────────────────────────────────────────────────
 
 # mMARCO-no
 print("Loading mMARCO-no...")
@@ -68,7 +109,7 @@ try:
     print(f"  mMARCO-no: {len(mmarco_pairs):,} pairs")
 except RuntimeError as e:
     print(f"  mMARCO-no not available ({e}) — skipping")
-    mmarco_pairs = [] # Ensure it's empty if loading fails
+    mmarco_pairs = []
 
 # NorNLI
 print("Loading NorNLI...")
@@ -111,7 +152,6 @@ try:
             article = row.get("article", "").strip()
             if not article:
                 continue
-            # The row contains a 'summaries' key which is a list of summaries
             for summary_text in row.get("summaries", []):
                 summary = summary_text.strip()
                 if summary:
@@ -126,20 +166,19 @@ random.shuffle(all_mnrl_pairs)
 print(f"\nTotal MNRL pairs:  {len(all_mnrl_pairs):,}")
 print(f"Total triplets:    {len(nornli_triplets):,}")
 
-# ── 5. (Optional) TSDAE warm-up — skip if SKIP_TSDAE=True ──────────────────
+# ── 7. (Optional) TSDAE warm-up — skip if SKIP_TSDAE=True ──────────────────
 
 if SKIP_TSDAE:
     print("Skipping TSDAE — using base model directly for Stage 1")
     stage1_init = BASE_MODEL
 else:
-    from datasets import load_dataset as ld
     from sentence_transformers import SentenceTransformer, SentenceTransformerTrainer
     from sentence_transformers import losses as st_losses
     from sentence_transformers.datasets import DenoisingAutoEncoderDataset
     from sentence_transformers.training_args import SentenceTransformerTrainingArguments
 
     print("Loading HPLT Norwegian for TSDAE...")
-    hplt_ds = ld("HPLT/HPLT2.0_cleaned", "nob_Latn", split="train", streaming=True)
+    hplt_ds = load_dataset("HPLT/HPLT2.0_cleaned", "nob_Latn", split="train", streaming=True)
     hplt_sentences = []
     for row in hplt_ds:
         if len(hplt_sentences) >= 20_000:
@@ -174,7 +213,7 @@ else:
     tsdae_model.save(stage1_init)
     print(f"TSDAE saved to {stage1_init}")
 
-# ── 6. Stage 1 — MNRL + TripletLoss ─────────────────────────────────────────
+# ── 8. Stage 1 — MNRL + TripletLoss ─────────────────────────────────────────
 
 from datasets import Dataset as HFDataset
 from sentence_transformers import SentenceTransformer, SentenceTransformerTrainer, losses
@@ -188,20 +227,19 @@ def to_hf(examples, columns):
 print(f"Loading model from: {stage1_init}")
 model = SentenceTransformer(stage1_init, trust_remote_code=True)
 
-mnrl_dataset    = to_hf(all_mnrl_pairs, ["anchor", "positive"])
+mnrl_dataset = to_hf(all_mnrl_pairs, ["anchor", "positive"])
 
 train_datasets = {"mnrl": mnrl_dataset}
-train_losses = {"mnrl": losses.MultipleNegativesRankingLoss(model)}
+train_losses   = {"mnrl": losses.MultipleNegativesRankingLoss(model)}
 
 if len(nornli_triplets) > 0:
     triplet_dataset = to_hf(nornli_triplets, ["anchor", "positive", "negative"])
-    triplet_loss = losses.TripletLoss(
+    train_datasets["triplet"] = triplet_dataset
+    train_losses["triplet"]   = losses.TripletLoss(
         model,
         distance_metric=losses.TripletDistanceMetric.COSINE,
         triplet_margin=0.15,
     )
-    train_datasets["triplet"] = triplet_dataset
-    train_losses["triplet"] = triplet_loss
 
 s1_args = SentenceTransformerTrainingArguments(
     output_dir=f"{SAVE_DIR}/stage1",
@@ -212,7 +250,20 @@ s1_args = SentenceTransformerTrainingArguments(
     learning_rate=2e-5,
     lr_scheduler_type="cosine",
     fp16=True,
-    save_strategy="epoch",
+    # ── Eval & checkpointing ──────────────────────────────────────────────────
+    eval_strategy="steps",
+    eval_steps=EVAL_STEPS,
+    save_strategy="steps",
+    save_steps=SAVE_STEPS,
+    save_total_limit=3,
+    load_best_model_at_end=True,
+    metric_for_best_model="vg-rag_cosine_ndcg@10",
+    greater_is_better=True,
+    # ── Hub push ─────────────────────────────────────────────────────────────
+    push_to_hub=True,
+    hub_model_id=f"{HF_REPO_ID}-stage1",
+    hub_strategy="checkpoint",
+    # ─────────────────────────────────────────────────────────────────────────
     logging_steps=50,
     dataloader_num_workers=2,
 )
@@ -222,20 +273,21 @@ SentenceTransformerTrainer(
     args=s1_args,
     train_dataset=train_datasets,
     loss=train_losses,
+    evaluator=ir_evaluator,
 ).train()
 
 model.save(f"{SAVE_DIR}/stage1/final")
 print(f"Stage 1 saved to {SAVE_DIR}/stage1/final")
 
-# ── 7. Hard negative mining ──────────────────────────────────────────────────
+# ── 9. Hard negative mining ──────────────────────────────────────────────────
 
 import faiss
 import numpy as np
 from tqdm.auto import tqdm
 
-queries   = [p.texts[0] for p in all_mnrl_pairs]
-positives = [p.texts[1] for p in all_mnrl_pairs]
-corpus    = list(set(positives))
+queries_list  = [p.texts[0] for p in all_mnrl_pairs]
+positives_list = [p.texts[1] for p in all_mnrl_pairs]
+corpus    = list(set(positives_list))
 corpus_idx = {text: i for i, text in enumerate(corpus)}
 
 print(f"Encoding corpus ({len(corpus):,} passages)...")
@@ -244,9 +296,9 @@ corpus_emb = model.encode(
     show_progress_bar=True, convert_to_numpy=True,
 ).astype(np.float32)
 
-print(f"Encoding queries ({len(queries):,})...")
+print(f"Encoding queries ({len(queries_list):,})...")
 query_emb = model.encode(
-    queries, batch_size=256, normalize_embeddings=True,
+    queries_list, batch_size=256, normalize_embeddings=True,
     show_progress_bar=True, convert_to_numpy=True,
 ).astype(np.float32)
 
@@ -259,7 +311,7 @@ print(f"FAISS search (top_k={TOP_K})...")
 scores, indices = index.search(query_emb, TOP_K)
 
 hard_triplets = []
-for i, (query, positive) in enumerate(zip(queries, positives)):
+for i, (query, positive) in enumerate(zip(queries_list, positives_list)):
     hard_neg = None
     for score, idx in zip(scores[i], indices[i]):
         candidate = corpus[idx]
@@ -272,7 +324,7 @@ for i, (query, positive) in enumerate(zip(queries, positives)):
 
 print(f"Mined {len(hard_triplets):,} hard-negative triplets")
 
-# ── 8. Stage 2 — MNRL with hard negatives ───────────────────────────────────
+# ── 10. Stage 2 — MNRL with hard negatives ──────────────────────────────────
 
 hard_dataset = to_hf(hard_triplets, ["anchor", "positive", "negative"])
 mnrl_loss2   = losses.MultipleNegativesRankingLoss(model)
@@ -286,7 +338,20 @@ s2_args = SentenceTransformerTrainingArguments(
     learning_rate=1e-5,
     lr_scheduler_type="cosine",
     fp16=True,
-    save_strategy="epoch",
+    # ── Eval & checkpointing ──────────────────────────────────────────────────
+    eval_strategy="steps",
+    eval_steps=EVAL_STEPS,
+    save_strategy="steps",
+    save_steps=SAVE_STEPS,
+    save_total_limit=3,
+    load_best_model_at_end=True,
+    metric_for_best_model="vg-rag_cosine_ndcg@10",
+    greater_is_better=True,
+    # ── Hub push ─────────────────────────────────────────────────────────────
+    push_to_hub=True,
+    hub_model_id=HF_REPO_ID,
+    hub_strategy="checkpoint",
+    # ─────────────────────────────────────────────────────────────────────────
     logging_steps=50,
     dataloader_num_workers=2,
 )
@@ -296,55 +361,32 @@ SentenceTransformerTrainer(
     args=s2_args,
     train_dataset={"mnrl_hard": hard_dataset},
     loss={"mnrl_hard": mnrl_loss2},
+    evaluator=ir_evaluator,
 ).train()
 
 model.save(f"{SAVE_DIR}/stage2/final")
 print(f"Stage 2 saved to {SAVE_DIR}/stage2/final")
 
-# ── 9. Evaluate on VG-RAG benchmark ─────────────────────────────────────────
-# Adjust column names below to match your actual dataset schema
+# ── 11. Push final model to Hub ──────────────────────────────────────────────
 
-import numpy as np
+print(f"Pushing final model to {HF_REPO_ID}...")
+model.push_to_hub(HF_REPO_ID, exist_ok=True)
+print(f"Model live at: https://huggingface.co/{HF_REPO_ID}")
 
-print("Loading VG-RAG benchmark...")
-vg_ds = load_dataset("zrmarine/vg-rag-benchmark", split="test")
-print(f"  {len(vg_ds):,} examples")
-print(f"  Columns: {vg_ds.column_names}")
+# ── 12. VG-RAG final evaluation ──────────────────────────────────────────────
 
-# ← adjust these to match your dataset's actual column names
-QUERY_COL   = "question"
-PASSAGE_COL = "context"
+print("\nFinal VG-RAG evaluation...")
+results = ir_evaluator(model)
+for k, v in sorted(results.items()):
+    print(f"  {k}: {v:.4f}")
 
-queries  = vg_ds[QUERY_COL]
-passages = vg_ds[PASSAGE_COL]
-
-q_emb = model.encode(queries,  normalize_embeddings=True, show_progress_bar=True)
-p_emb = model.encode(passages, normalize_embeddings=True, show_progress_bar=True)
-
-sim = q_emb @ p_emb.T
-
-hits1 = hits5 = hits10 = mrr = 0
-n = len(queries)
-for i in range(n):
-    rank = int(np.where(np.argsort(-sim[i]) == i)[0][0]) + 1
-    mrr += 1.0 / rank
-    if rank == 1:  hits1  += 1
-    if rank <= 5:  hits5  += 1
-    if rank <= 10: hits10 += 1
-
-print(f"\nVG-RAG Results (n={n})")
-print(f"  Hits@1  : {hits1/n:.3f}")
-print(f"  Hits@5  : {hits5/n:.3f}")
-print(f"  Hits@10 : {hits10/n:.3f}")
-print(f"  MRR     : {mrr/n:.3f}")
-
-# ── 10. (Optional) MTEB Norwegian eval ──────────────────────────────────────
+# ── 13. (Optional) MTEB Norwegian eval ──────────────────────────────────────
 
 import mteb
 
 MTEB_TASKS = ["NorQuadRetrieval", "SNLRetrieval", "MIRACLRetrieval"]
 
-mteb_model = mteb.get_model(f"{SAVE_DIR}/stage2/final")
+mteb_model = mteb.get_model(HF_REPO_ID)
 tasks = mteb.get_tasks(tasks=MTEB_TASKS, languages=["nob", "nno"])
 results = mteb.evaluate(mteb_model, tasks)
 
