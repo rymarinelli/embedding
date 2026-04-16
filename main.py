@@ -187,28 +187,11 @@ try:
 except Exception as e:
     info(f"  ltg/norsummarize-instruct not available ({e}) — skipping")
 
-# ltg/nrk_quiz_qa — QA pairs from NRK (Norwegian public broadcaster)
-info("Loading ltg/nrk_quiz_qa...")
-nrk_pairs = []
-try:
-    nrk_ds = load_dataset("ltg/nrk_quiz_qa", split="train")
-    info(f"  {len(nrk_ds):,} rows | columns: {nrk_ds.column_names}")
-    for row in nrk_ds:
-        question = row.get("question", "").strip()
-        passage  = (row.get("context") or row.get("answer") or
-                    row.get("passage") or row.get("text") or "").strip()
-        if question and passage:
-            nrk_pairs.append(InputExample(texts=[question, passage]))
-    info(f"  done: {len(nrk_pairs):,} pairs")
-except Exception as e:
-    info(f"  ltg/nrk_quiz_qa not available ({e}) — skipping")
-
 # Combine
-all_mnrl_pairs = norsumm_pairs + norsum_instruct_pairs + nrk_pairs
+all_mnrl_pairs = norsumm_pairs + norsum_instruct_pairs
 random.shuffle(all_mnrl_pairs)
 info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}  "
-     f"(NorSumm={len(norsumm_pairs):,}  NorSumm-instruct={len(norsum_instruct_pairs):,}  "
-     f"NRK={len(nrk_pairs):,})")
+     f"(NorSumm={len(norsumm_pairs):,}  NorSumm-instruct={len(norsum_instruct_pairs):,})")
 info(f"Total triplets   : {len(nornli_triplets):,}")
 
 # ── 7. (Optional) TSDAE warm-up ─────────────────────────────────────────────
