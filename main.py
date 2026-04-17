@@ -209,8 +209,8 @@ try:
     for split_name, split_ds in norsum_ds.items():
         info(f"  {split_name}: {len(split_ds):,} rows | columns: {split_ds.column_names}")
         for row in split_ds:
-            doc     = (row.get("input") or row.get("document") or row.get("text") or "").strip()
-            summary = (row.get("output") or row.get("summary") or "").strip()
+            doc     = (row.get("context") or row.get("input") or row.get("document") or row.get("text") or "").strip()
+            summary = (row.get("response") or row.get("output") or row.get("summary") or "").strip()
             if doc and summary:
                 norsum_instruct_pairs.append(InputExample(texts=[summary, doc]))
     info(f"  done: {len(norsum_instruct_pairs):,} pairs")
