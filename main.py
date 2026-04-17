@@ -356,7 +356,12 @@ info(f"Stage 1 complete -> {SAVE_DIR}/stage1/final")
 # ── 9. Hard negative mining ──────────────────────────────────────────────────
 section("Hard Negative Mining")
 
-import faiss
+try:
+    import faiss
+except ModuleNotFoundError:
+    import subprocess, sys
+    subprocess.run([sys.executable, "-m", "pip", "install", "faiss-gpu"], check=True)
+    import faiss
 import numpy as np
 from tqdm.auto import tqdm
 
