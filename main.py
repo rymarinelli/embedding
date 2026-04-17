@@ -139,7 +139,13 @@ section("Training Data")
 info("Loading NbAiLab/mnli-norwegian...")
 nornli_mnrl, nornli_triplets = [], []
 try:
-    nornli_ds = load_dataset("NbAiLab/mnli-norwegian", split="train")
+    # Load only the train JSONL to avoid DatasetGenerationCastError caused by
+    # xnli_dev_no_mt.jsonl having an extra 'match' column not present in other files
+    nornli_ds = load_dataset(
+        "NbAiLab/mnli-norwegian",
+        data_files={"train": "multinli_1.0_train_no_mt.jsonl"},
+        split="train",
+    )
     entailment, contradiction = {}, {}
     for row in nornli_ds:
         premise = row["sentence1"].strip()
