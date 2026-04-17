@@ -217,12 +217,45 @@ try:
 except Exception as e:
     info(f"  ltg/norsummarize-instruct not available ({e}) — skipping")
 
+# NorQuad — Norwegian QA: (question, context) pairs
+# Only train split used; test split is reserved for MTEB NorQuadRetrieval eval
+info("Loading ltg/norquad...")
+norquad_pairs = []
+try:
+    norquad_ds = load_dataset("ltg/norquad", split="train")
+    for row in norquad_ds:
+        question = row["question"].strip()
+        context  = row["context"].strip()
+        if question and context:
+            norquad_pairs.append(InputExample(texts=[question, context]))
+    info(f"  done: {len(norquad_pairs):,} pairs")
+except Exception as e:
+    info(f"  ltg/norquad not available ({e}) — skipping")
+
+# NorEC — Norwegian review corpus (VG, Dagbladet, Aftenposten, …)
+# Pairs: (excerpt, full_text) where excerpt exists, else (title, full_text)
+info("Loading ltg/norec...")
+norec_pairs = []
+try:
+    norec_ds = load_dataset("ltg/norec", split="train")
+    for row in norec_ds:
+        text    = row.get("text", "").strip()
+        excerpt = row.get("excerpt", "").strip()
+        title   = row.get("title", "").strip()
+        query   = excerpt if excerpt else title
+        if query and text:
+            norec_pairs.append(InputExample(texts=[query, text]))
+    info(f"  done: {len(norec_pairs):,} pairs")
+except Exception as e:
+    info(f"  ltg/norec not available ({e}) — skipping")
+
 # Combine
-all_mnrl_pairs = nornli_mnrl + norsumm_pairs + samia_pairs + norsum_instruct_pairs
+all_mnrl_pairs = nornli_mnrl + norsumm_pairs + samia_pairs + norsum_instruct_pairs + norquad_pairs + norec_pairs
 random.shuffle(all_mnrl_pairs)
 info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}  "
      f"(NorNLI={len(nornli_mnrl):,}  LTG-NorSumm={len(norsumm_pairs):,}  "
-     f"SamiaT-NorSumm={len(samia_pairs):,}  NorSumm-instruct={len(norsum_instruct_pairs):,})")
+     f"SamiaT-NorSumm={len(samia_pairs):,}  NorSumm-instruct={len(norsum_instruct_pairs):,}  "
+     f"NorQuad={len(norquad_pairs):,}  NorEC={len(norec_pairs):,})")
 info(f"Total triplets   : {len(nornli_triplets):,}")
 
 if len(all_mnrl_pairs) == 0:
