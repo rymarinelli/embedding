@@ -134,19 +134,20 @@ info("IR evaluator ready (ndcg@10 / mrr@10 / recall@1/5/10)")
 # ── 6. Load training data (Norwegian news only) ──────────────────────────────
 section("Training Data")
 
-# NbAiLab/mnli-norwegian — machine-translated Norwegian MultiNLI (premise/hypothesis/label)
+# NbAiLab/mnli-norwegian — machine-translated Norwegian MultiNLI
+# Columns: sentence1, sentence2, gold_label ("entailment"/"neutral"/"contradiction")
 info("Loading NbAiLab/mnli-norwegian...")
 nornli_mnrl, nornli_triplets = [], []
 try:
     nornli_ds = load_dataset("NbAiLab/mnli-norwegian", split="train")
     entailment, contradiction = {}, {}
     for row in nornli_ds:
-        premise = row["premise"].strip()
-        hyp     = row["hypothesis"].strip()
-        label   = row["label"]  # 0=entailment, 1=neutral, 2=contradiction
-        if label == 0:
+        premise = row["sentence1"].strip()
+        hyp     = row["sentence2"].strip()
+        label   = row["gold_label"]
+        if label == "entailment":
             entailment.setdefault(premise, []).append(hyp)
-        elif label == 2:
+        elif label == "contradiction":
             contradiction.setdefault(premise, []).append(hyp)
     premises_with_both = set(entailment) & set(contradiction)
     for premise in premises_with_both:
