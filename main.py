@@ -134,7 +134,32 @@ info("IR evaluator ready (ndcg@10 / mrr@10 / recall@1/5/10)")
 # ── 6. Load training data (Norwegian news only) ──────────────────────────────
 section("Training Data")
 
-nornli_triplets = []  # no triplet source; Stage 1 uses MNRL only
+# NorNLI — Norwegian NLI: premise + entailment hypothesis + contradiction hypothesis
+info("Loading ltg/nornli...")
+nornli_mnrl, nornli_triplets = [], []
+try:
+    nornli_ds = load_dataset("ltg/nornli", split="train")
+    entailment, contradiction = {}, {}
+    for row in nornli_ds:
+        premise = row["premise"].strip()
+        hyp     = row["hypothesis"].strip()
+        label   = row["label"]  # 0=entailment, 1=neutral, 2=contradiction
+        if label == 0:
+            entailment.setdefault(premise, []).append(hyp)
+        elif label == 2:
+            contradiction.setdefault(premise, []).append(hyp)
+    premises_with_both = set(entailment) & set(contradiction)
+    for premise in premises_with_both:
+        pos = random.choice(entailment[premise])
+        neg = random.choice(contradiction[premise])
+        nornli_triplets.append(InputExample(texts=[premise, pos, neg]))
+        nornli_mnrl.append(InputExample(texts=[premise, pos]))
+    for premise in set(entailment) - premises_with_both:
+        for pos in entailment[premise]:
+            nornli_mnrl.append(InputExample(texts=[premise, pos]))
+    info(f"  done: {len(nornli_mnrl):,} MNRL pairs, {len(nornli_triplets):,} triplets")
+except Exception as e:
+    info(f"  ltg/nornli not available ({e}) — skipping")
 
 # ltg/norsumm-nob-nno-translation — same news article in Bokmål + Nynorsk
 # Columns: text_nob, text_nno  |  only a 'test' split exists
@@ -192,11 +217,11 @@ except Exception as e:
     info(f"  ltg/norsummarize-instruct not available ({e}) — skipping")
 
 # Combine
-all_mnrl_pairs = norsumm_pairs + samia_pairs + norsum_instruct_pairs
+all_mnrl_pairs = nornli_mnrl + norsumm_pairs + samia_pairs + norsum_instruct_pairs
 random.shuffle(all_mnrl_pairs)
 info(f"Total MNRL pairs : {len(all_mnrl_pairs):,}  "
-     f"(LTG-NorSumm={len(norsumm_pairs):,}  SamiaT-NorSumm={len(samia_pairs):,}  "
-     f"NorSumm-instruct={len(norsum_instruct_pairs):,})")
+     f"(NorNLI={len(nornli_mnrl):,}  LTG-NorSumm={len(norsumm_pairs):,}  "
+     f"SamiaT-NorSumm={len(samia_pairs):,}  NorSumm-instruct={len(norsum_instruct_pairs):,})")
 info(f"Total triplets   : {len(nornli_triplets):,}")
 
 if len(all_mnrl_pairs) == 0:
