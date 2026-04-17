@@ -134,11 +134,11 @@ info("IR evaluator ready (ndcg@10 / mrr@10 / recall@1/5/10)")
 # ── 6. Load training data (Norwegian news only) ──────────────────────────────
 section("Training Data")
 
-# NorNLI — Norwegian NLI: premise + entailment hypothesis + contradiction hypothesis
-info("Loading ltg/nornli...")
+# NbAiLab/mnli-norwegian — machine-translated Norwegian MultiNLI (premise/hypothesis/label)
+info("Loading NbAiLab/mnli-norwegian...")
 nornli_mnrl, nornli_triplets = [], []
 try:
-    nornli_ds = load_dataset("ltg/nornli", split="train")
+    nornli_ds = load_dataset("NbAiLab/mnli-norwegian", split="train")
     entailment, contradiction = {}, {}
     for row in nornli_ds:
         premise = row["premise"].strip()
@@ -159,7 +159,7 @@ try:
             nornli_mnrl.append(InputExample(texts=[premise, pos]))
     info(f"  done: {len(nornli_mnrl):,} MNRL pairs, {len(nornli_triplets):,} triplets")
 except Exception as e:
-    info(f"  ltg/nornli not available ({e}) — skipping")
+    info(f"  NbAiLab/mnli-norwegian not available ({e}) — skipping")
 
 # ltg/norsumm-nob-nno-translation — same news article in Bokmål + Nynorsk
 # Columns: text_nob, text_nno  |  only a 'test' split exists
