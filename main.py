@@ -361,7 +361,7 @@ try:
     import faiss
 except ModuleNotFoundError:
     import subprocess, sys
-    subprocess.run([sys.executable, "-m", "pip", "install", "faiss-gpu"], check=True)
+    subprocess.run([sys.executable, "-m", "pip", "install", "faiss-cpu"], check=True)
     import faiss
 import numpy as np
 from tqdm.auto import tqdm
