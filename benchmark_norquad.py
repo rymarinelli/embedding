@@ -17,6 +17,13 @@ Benchmark OpenRouter free-tier models on the news portion of NorQuAD
 - Scores each generated answer against all annotated reference answers with
   SQuAD-style Exact Match and token-overlap F1, taking the max over
   references per example.
+- As a secondary signal, an LLM judge (default: meta-llama/llama-3.3-70b-instruct,
+  the same judge NorEval itself uses) independently rates each answer as
+  correct/incorrect given the context, question, and gold answers. This runs
+  alongside EM/F1 rather than replacing them, so you can see where the judge
+  and the automatic metric agree or disagree (e.g. a verbose-but-correct
+  answer that EM/F1 penalizes for wording). Set use_judge=False to skip it
+  and halve the number of API calls.
 - Reports per-model averages.
 
 Usage (command line):
@@ -40,6 +47,7 @@ import time
 import requests
 
 from openrouter_client import get_api_key, call_model, build_headers
+from llm_judge import DEFAULT_JUDGE_MODEL, judge_norquad_answer
 
 NORQUAD_NEWS_TEST_URL = (
     "https://raw.githubusercontent.com/ltgoslo/NorQuAD/main/"
@@ -120,7 +128,14 @@ def metric_max_over_ground_truths(metric_fn, prediction, ground_truths):
     return max(metric_fn(gt, prediction) for gt in ground_truths)
 
 
-def run(models=None, n_examples=20, delay=2.0, api_key=None):
+def run(
+    models=None,
+    n_examples=20,
+    delay=2.0,
+    api_key=None,
+    use_judge=True,
+    judge_model=DEFAULT_JUDGE_MODEL,
+):
     """
     Run the NorQuAD (news) benchmark against a list of OpenRouter free models.
 
@@ -139,7 +154,11 @@ def run(models=None, n_examples=20, delay=2.0, api_key=None):
     models = models or DEFAULT_MODELS
     print(f"Loading {n_examples} NorQuAD news test examples...")
     dataset = load_norquad_news(n_examples)
-    print(f"Loaded {len(dataset)} examples. Testing {len(models)} model(s).\n")
+    print(f"Loaded {len(dataset)} examples. Testing {len(models)} model(s).")
+    if use_judge:
+        print(f"LLM judge enabled ({judge_model}) - doubles the API calls made.\n")
+    else:
+        print()
 
     rows = []
     for model_id in models:
@@ -155,27 +174,45 @@ def run(models=None, n_examples=20, delay=2.0, api_key=None):
                 print(f"  [{i+1}/{len(dataset)}] FAIL -> {error}")
                 rows.append({
                     "model": model_id, "example_id": example["id"],
-                    "exact_match": None, "f1": None, "error": error,
+                    "exact_match": None, "f1": None, "judge_correct": None, "error": error,
                 })
                 time.sleep(delay)
                 continue
 
             em = metric_max_over_ground_truths(compute_exact, answer, example["answers"])
             f1 = metric_max_over_ground_truths(compute_f1, answer, example["answers"])
-            print(f"  [{i+1}/{len(dataset)}] EM={em} f1={f1:.3f}")
+
+            judge_correct = None
+            if use_judge:
+                judge_correct = judge_norquad_answer(
+                    judge_model, headers, example["context"], example["question"],
+                    example["answers"], answer,
+                )
+                time.sleep(delay)
+
+            judge_str = "n/a" if judge_correct is None else str(judge_correct)
+            print(f"  [{i+1}/{len(dataset)}] EM={em} f1={f1:.3f} judge={judge_str}")
             rows.append({
                 "model": model_id, "example_id": example["id"],
-                "exact_match": em, "f1": f1, "error": None,
+                "exact_match": em, "f1": f1, "judge_correct": judge_correct, "error": None,
             })
             time.sleep(delay)
 
     df = pd.DataFrame(rows)
+    scored = df.dropna(subset=["f1"]).copy()
     summary_table = (
-        df.dropna(subset=["f1"])
-        .groupby("model")[["exact_match", "f1"]]
+        scored.groupby("model")[["exact_match", "f1"]]
         .mean()
         .sort_values("f1", ascending=False)
     )
+    if use_judge:
+        judge_scored = scored.dropna(subset=["judge_correct"])
+        summary_table["judge_accuracy"] = judge_scored.groupby("model")["judge_correct"].mean()
+        judge_scored = judge_scored.assign(
+            agrees_with_em=judge_scored["judge_correct"] == judge_scored["exact_match"].astype(bool)
+        )
+        summary_table["em_judge_agreement"] = judge_scored.groupby("model")["agrees_with_em"].mean()
+
     fail_counts = df[df["error"].notna()].groupby("model").size()
 
     print("\n" + "=" * 60)

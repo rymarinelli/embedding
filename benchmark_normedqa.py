@@ -13,7 +13,12 @@ question answering, Riegler 2025, SimulaMet/NorMedQA on Hugging Face).
   grounded in the fixed answer set given in the dataset rather than letting
   the model hallucinate an unconstrained medical answer.
 - Scores accuracy: does the model's chosen letter match the annotated
-  correct answer.
+  correct answer (parsed from the raw response with a regex/substring match).
+- As a secondary signal, an LLM judge (default: meta-llama/llama-3.3-70b-instruct,
+  the same judge NorEval itself uses) independently reads the model's raw
+  response and the options and decides which letter was chosen, giving a
+  second accuracy figure plus an agreement rate against the regex-based
+  parse. Set use_judge=False to skip it and halve the number of API calls.
 - Reports per-model averages.
 
 Usage (command line):
@@ -35,6 +40,7 @@ import sys
 import time
 
 from openrouter_client import get_api_key, call_model, build_headers
+from llm_judge import DEFAULT_JUDGE_MODEL, judge_normedqa_answer
 
 # Models that returned valid completions in the last free-tier connectivity test.
 DEFAULT_MODELS = [
@@ -110,7 +116,14 @@ def parse_prediction(response: str, example: dict):
     return None
 
 
-def run(models=None, n_examples=20, delay=2.0, api_key=None):
+def run(
+    models=None,
+    n_examples=20,
+    delay=2.0,
+    api_key=None,
+    use_judge=True,
+    judge_model=DEFAULT_JUDGE_MODEL,
+):
     """
     Run the NorMedQA benchmark against a list of OpenRouter free models.
 
@@ -129,7 +142,11 @@ def run(models=None, n_examples=20, delay=2.0, api_key=None):
     models = models or DEFAULT_MODELS
     print(f"Loading {n_examples} NorMedQA examples...")
     dataset = load_normedqa(n_examples)
-    print(f"Loaded {len(dataset)} examples. Testing {len(models)} model(s).\n")
+    print(f"Loaded {len(dataset)} examples. Testing {len(models)} model(s).")
+    if use_judge:
+        print(f"LLM judge enabled ({judge_model}) - doubles the API calls made.\n")
+    else:
+        print()
 
     rows = []
     for model_id in models:
@@ -143,31 +160,55 @@ def run(models=None, n_examples=20, delay=2.0, api_key=None):
                 print(f"  [{i+1}/{len(dataset)}] FAIL -> {error}")
                 rows.append({
                     "model": model_id, "example_idx": i,
-                    "correct": None, "parsed": None, "error": error,
+                    "correct": None, "parsed": None, "judge_correct": None, "error": error,
                 })
                 time.sleep(delay)
                 continue
 
             predicted_letter = parse_prediction(response, example)
             correct = (predicted_letter == example["correct_letter"])
+
+            judge_correct = None
+            if use_judge:
+                judge_letter = judge_normedqa_answer(
+                    judge_model, headers, example["question"], example["options"],
+                    example["letters"], response,
+                )
+                if judge_letter is not None:
+                    judge_correct = (judge_letter == example["correct_letter"])
+                time.sleep(delay)
+
+            judge_str = "n/a" if judge_correct is None else str(judge_correct)
             print(
                 f"  [{i+1}/{len(dataset)}] predicted={predicted_letter} "
-                f"correct={example['correct_letter']} -> {'OK' if correct else 'WRONG'}"
+                f"correct={example['correct_letter']} -> {'OK' if correct else 'WRONG'} "
+                f"judge={judge_str}"
             )
             rows.append({
                 "model": model_id, "example_idx": i,
-                "correct": correct, "parsed": predicted_letter is not None, "error": None,
+                "correct": correct, "parsed": predicted_letter is not None,
+                "judge_correct": judge_correct, "error": None,
             })
             time.sleep(delay)
 
     df = pd.DataFrame(rows)
+    scored = df.dropna(subset=["correct"]).copy()
     summary_table = (
-        df.dropna(subset=["correct"])
-        .groupby("model")[["correct", "parsed"]]
+        scored.groupby("model")[["correct", "parsed"]]
         .mean()
         .rename(columns={"correct": "accuracy", "parsed": "parse_rate"})
         .sort_values("accuracy", ascending=False)
     )
+    if use_judge:
+        judge_scored = scored.dropna(subset=["judge_correct"])
+        summary_table["judge_accuracy"] = judge_scored.groupby("model")["judge_correct"].mean()
+        judge_scored = judge_scored.assign(
+            agrees_with_regex=judge_scored["judge_correct"] == judge_scored["correct"]
+        )
+        summary_table["regex_judge_agreement"] = (
+            judge_scored.groupby("model")["agrees_with_regex"].mean()
+        )
+
     fail_counts = df[df["error"].notna()].groupby("model").size()
 
     print("\n" + "=" * 60)
