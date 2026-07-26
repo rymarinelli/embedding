@@ -1,0 +1,7 @@
+model,n_articles,n_empty_outputs,rouge1_f1,rouge2_f1,rougeL_f1
+claude-sonnet-5,33,0,0.4775,0.2103,0.3031
+mistral-small-3.2-24b,33,0,0.4644,0.2064,0.3005
+gemini-3.5-flash,33,0,0.4594,0.2016,0.2963
+gpt-5.6-sol,33,0,0.4517,0.1913,0.2904
+qwen3.6-27b,33,0,0.4475,0.1923,0.2844
+gemma-3-27b-it-base,33,0,0.4507,0.1744,0.2701
