@@ -6,7 +6,7 @@ template and article truncation as generate_summaries_openrouter.py so
 results are comparable.
 
 Usage:
-    python3 generate_summaries_local_gguf.py <gguf_path> <output_name> [n_ctx] [n_threads]
+    python3 generate_summaries_local_gguf.py <gguf_path> <output_name> [n_ctx] [n_threads] [max_tokens]
 """
 import json
 import sys
@@ -20,17 +20,19 @@ from prompts import build_messages
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 OUT_DIR = Path(__file__).resolve().parent.parent / "results" / "generated_summaries"
 
-MAX_TOKENS = 500
-
 
 def main():
     if len(sys.argv) < 3:
-        print("usage: generate_summaries_local_gguf.py <gguf_path> <output_name> [n_ctx] [n_threads]")
+        print("usage: generate_summaries_local_gguf.py <gguf_path> <output_name> [n_ctx] [n_threads] [max_tokens]")
         sys.exit(1)
     gguf_path = sys.argv[1]
     out_name = sys.argv[2]
     n_ctx = int(sys.argv[3]) if len(sys.argv) > 3 else 8192
     n_threads = int(sys.argv[4]) if len(sys.argv) > 4 else 4
+    # "Thinking"/reasoning GGUF models (e.g. normistral-11b-thinking) spend part
+    # of the completion budget on hidden chain-of-thought before the answer,
+    # same issue as the OpenRouter reasoning models — give them more room.
+    max_tokens = int(sys.argv[5]) if len(sys.argv) > 5 else 500
 
     articles = json.loads((DATA_DIR / "norsumm_test.json").read_text(encoding="utf-8"))
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -53,9 +55,12 @@ def main():
         messages = build_messages(art["article"])
         try:
             resp = llm.create_chat_completion(
-                messages=messages, max_tokens=MAX_TOKENS, temperature=0.2,
+                messages=messages, max_tokens=max_tokens, temperature=0.2,
             )
-            summary = resp["choices"][0]["message"]["content"].strip()
+            content = resp["choices"][0]["message"]["content"]
+            summary = (content or "").strip()
+            if not summary:
+                print(f"  [{i}] WARNING: empty content (finish_reason={resp['choices'][0].get('finish_reason')})")
         except Exception as e:
             print(f"  [{i}] ERROR: {e}")
             summary = ""
