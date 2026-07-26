@@ -1,0 +1,26 @@
+# NorQuAD / NorSumm benchmark results
+
+## NorQuAD news — retrieval benchmark
+
+403 passages, 2398 questions (combined news answers_1.json + answers_2.json).
+
+| model                                                       |   recall@1 |   recall@5 |   recall@10 |   mrr@10 |   ndcg@10 |   seconds |
+|:------------------------------------------------------------|-----------:|-----------:|------------:|---------:|----------:|----------:|
+| intfloat/multilingual-e5-large                              |   0.732277 |   0.879066 |    0.91618  | 0.797691 |  0.826575 |     638   |
+| intfloat/multilingual-e5-base                               |   0.707673 |   0.863219 |    0.913261 | 0.775967 |  0.809146 |     237.6 |
+| BAAI/bge-m3                                                 |   0.703086 |   0.857381 |    0.900751 | 0.77141  |  0.802838 |     691.1 |
+| intfloat/multilingual-e5-small                              |   0.692244 |   0.852794 |    0.89241  | 0.762227 |  0.793906 |      96.5 |
+| NbAiLab/nb-sbert-base                                       |   0.454128 |   0.673478 |    0.751043 | 0.548875 |  0.597378 |      68.2 |
+| sentence-transformers/paraphrase-multilingual-mpnet-base-v2 |   0.415346 |   0.619266 |    0.690158 | 0.50396  |  0.548704 |      80.3 |
+
+
+## NorSumm — lexical summarization metrics (OpenRouter models)
+
+| model                 |   n_articles |   n_empty_outputs |   rouge1_f1 |   rouge2_f1 |   rougeL_f1 |
+|:----------------------|-------------:|------------------:|------------:|------------:|------------:|
+| claude-sonnet-5       |           33 |                 0 |      0.4775 |      0.2103 |      0.3031 |
+| mistral-small-3.2-24b |           33 |                 0 |      0.4644 |      0.2064 |      0.3005 |
+| gemini-3.5-flash      |           33 |                 0 |      0.4594 |      0.2016 |      0.2963 |
+| gpt-5.6-sol           |           33 |                 0 |      0.4517 |      0.1913 |      0.2904 |
+| qwen3.6-27b           |           33 |                 0 |      0.4475 |      0.1923 |      0.2844 |
+| gemma-3-27b-it-base   |           33 |                 0 |      0.4507 |      0.1744 |      0.2701 |
