@@ -34,8 +34,13 @@ MODELS = {
     "mistral-small-3.2-24b": "mistralai/mistral-small-3.2-24b-instruct",
 }
 
-MAX_TOKENS = 400
-TIMEOUT = 60
+# Some OpenRouter models (Qwen3.6, Gemini 3.5, ...) spend completion tokens on
+# hidden chain-of-thought "reasoning" before writing the final answer. With a
+# tight max_tokens budget, that reasoning can eat the entire budget, leaving
+# content truncated or null. 1600 leaves comfortable room for reasoning +
+# the (short) summary for every model in MODELS.
+MAX_TOKENS = 1600
+TIMEOUT = 90
 RETRIES = 3
 
 
@@ -56,7 +61,13 @@ def call_openrouter(api_key, model_slug, messages):
             resp = requests.post(OPENROUTER_URL, headers=headers, json=payload, timeout=TIMEOUT)
             if resp.status_code == 200:
                 data = resp.json()
-                return data["choices"][0]["message"]["content"].strip()
+                content = data["choices"][0]["message"]["content"]
+                if content is None:
+                    finish_reason = data["choices"][0].get("finish_reason")
+                    last_err = f"null content (finish_reason={finish_reason}) — likely ran out of tokens on reasoning"
+                    time.sleep(2 ** attempt)
+                    continue
+                return content.strip()
             last_err = f"HTTP {resp.status_code}: {resp.text[:300]}"
         except requests.RequestException as e:
             last_err = str(e)
