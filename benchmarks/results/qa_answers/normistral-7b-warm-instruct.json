@@ -400,5 +400,35 @@
     "question": "Hva ønsker Ursula von der Leyen spesifikt å fremme?",
     "gold_answer": "tidenes første europeiske klimalov",
     "predicted_answer": "Ursula von der Leyen har lovet å fremme en «grønn avtale» for Europa i løpet av sine første 100 dager som president for EU-kommisjonen. Denne planen vil omfatte en klimalov som vil lovfeste EUs 2050-mål om klimanøytralitet. Dette målet innebærer å"
+  },
+  {
+    "qid": 1002,
+    "question": "Hvilken stilling innehar Elin Floberghagen i Norsk Presseforbund?",
+    "gold_answer": "generalsekretær",
+    "predicted_answer": "Elin Floberghagen er generalsekretær i Norsk Presseforbund. Denne stillingen innebærer å lede organisasjonen og dens ulike komiteer og utvalg, og å representere den i ulike sammenhenger. Floberghagen har tidligere vært leder for Norsk Journalistlag og Fagpressen. Hun har også bakgrunn som journalist og redaktør."
+  },
+  {
+    "qid": 669,
+    "question": "Når var den siktede eritreeren i psykiatrisk behandling?",
+    "gold_answer": "i 2019",
+    "predicted_answer": "Den siktede eritreeren var i psykiatrisk behandling i 2019."
+  },
+  {
+    "qid": 1893,
+    "question": "Hvor mange priser vant Jakob Ingebrigtsen på fjorårets Idrettsgalla?",
+    "gold_answer": "to",
+    "predicted_answer": "Jakob Ingebrigtsen vant to priser på fjorårets Idrettsgalla. Han ble kåret til årets gjennombrudd, en pris som stemmes fram av publikum. I tillegg ble han tildelt utøvernes pris, som deles ut av utøverne selv. Dette viser at han er en svært populær og dyktig utøver i det norske idrettsmiljøet."
+  },
+  {
+    "qid": 1554,
+    "question": "Hvilke to partier ligger under sperregrensen?",
+    "gold_answer": "Venstre og KrF",
+    "predicted_answer": "Basert på den gitte teksten, er de to partiene som ligger under sperregrensen på meningsmålingene Venstre og Kristelig Folkeparti. Disse partiene har slitt med å opprettholde en sterk tilstedeværelse på meningsmålingene, og har for tiden en samlet oppslutning på rundt 58-59 mandater, som er godt under det nødvendige antallet på"
+  },
+  {
+    "qid": 1105,
+    "question": "Hvor mange strafferunder fikk Erlend Bjøntegaard?",
+    "gold_answer": "to",
+    "predicted_answer": "Erlend Bjøntegaard pådro seg to bom på stående skyting, som oppgitt i den medfølgende teksten. Denne informasjonen kan finnes i setningen: «Erlend Bjøntegaard skjøt på seg to runder og endte på 32. plass.»"
   }
 ]
