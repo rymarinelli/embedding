@@ -48,17 +48,28 @@ def dcg_at_k(rank, k):
 
 
 def stage1_retrieve(bi_encoder_id, corpus, queries, pool_size):
-    print(f"Stage 1: encoding with {bi_encoder_id}...")
-    model = SentenceTransformer(bi_encoder_id, trust_remote_code=True)
     doc_ids = [c["doc_id"] for c in corpus]
-    passages = ["passage: " + c["text"] for c in corpus]
-    questions = ["query: " + q["question"] for q in queries]
 
-    passage_emb = model.encode(passages, batch_size=64, normalize_embeddings=True,
-                                show_progress_bar=True, convert_to_numpy=True).astype(np.float32)
-    query_emb = model.encode(questions, batch_size=64, normalize_embeddings=True,
-                              show_progress_bar=True, convert_to_numpy=True).astype(np.float32)
-    del model
+    # Cache embeddings per bi-encoder so re-running with a different reranker
+    # (e.g. base vs. NorSumm-fine-tuned) doesn't redo the expensive encode.
+    cache_path = DATA_DIR / f"_stage1_cache_{bi_encoder_id.replace('/', '_')}.npz"
+    if cache_path.exists():
+        print(f"Stage 1: loading cached embeddings from {cache_path}")
+        cached = np.load(cache_path)
+        passage_emb, query_emb = cached["passage_emb"], cached["query_emb"]
+    else:
+        print(f"Stage 1: encoding with {bi_encoder_id}...")
+        model = SentenceTransformer(bi_encoder_id, trust_remote_code=True)
+        passages = ["passage: " + c["text"] for c in corpus]
+        questions = ["query: " + q["question"] for q in queries]
+
+        passage_emb = model.encode(passages, batch_size=64, normalize_embeddings=True,
+                                    show_progress_bar=True, convert_to_numpy=True).astype(np.float32)
+        query_emb = model.encode(questions, batch_size=64, normalize_embeddings=True,
+                                  show_progress_bar=True, convert_to_numpy=True).astype(np.float32)
+        del model
+        np.savez(cache_path, passage_emb=passage_emb, query_emb=query_emb)
+        print(f"  cached to {cache_path}")
 
     sims = query_emb @ passage_emb.T
     top_idx = np.argsort(-sims, axis=1)[:, :pool_size]  # [n_queries, pool_size]
