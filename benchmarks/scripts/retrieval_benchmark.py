@@ -121,6 +121,7 @@ def main():
         for row in pd.read_csv(out_path).to_dict("records"):
             existing[row["model"]] = row
 
+    RESULTS_DIR.mkdir(exist_ok=True)
     for model_id, qp, pp, bs in models_to_run:
         try:
             row = evaluate(model_id, qp, pp, corpus, queries, batch_size=bs)
@@ -128,10 +129,11 @@ def main():
             print(f"  FAILED: {model_id}: {e}")
             row = {"model": model_id, "error": str(e)}
         existing[model_id] = row
+        # Save after every model — some of these take an hour+ on CPU, and an
+        # interrupted run shouldn't lose already-completed results.
+        pd.DataFrame(list(existing.values())).to_csv(out_path, index=False)
 
     df = pd.DataFrame(list(existing.values()))
-    RESULTS_DIR.mkdir(exist_ok=True)
-    df.to_csv(out_path, index=False)
     print(f"\nSaved: {out_path}")
     print(df.to_string(index=False))
 
