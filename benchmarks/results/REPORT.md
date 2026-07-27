@@ -16,6 +16,16 @@
 | sentence-transformers/paraphrase-multilingual-mpnet-base-v2 |   0.415346 |   0.619266 |    0.690158 | 0.50396  |  0.548704 |      80.3 |
 
 
+## NorQuAD news — QA benchmark (Anthropic native API, 300-question sample)
+
+Claude Opus 5 / Fable 5 can't take the embedding retrieval benchmark's role (Anthropic has no embeddings endpoint), so they're scored here as extractive QA models instead: context + question -> answer span, standard SQuAD-style Exact Match / F1 against the NorQuAD gold answers.
+
+| model          |   n_questions |   n_empty_predictions |   exact_match |     f1 |
+|:---------------|--------------:|----------------------:|--------------:|-------:|
+| claude-fable-5 |           300 |                     9 |        0.7233 | 0.8889 |
+| claude-opus-5  |           300 |                    11 |        0.6567 | 0.8538 |
+
+
 ## NorSumm — lexical summarization metrics (OpenRouter models)
 
 | model                       |   n_articles |   n_empty_outputs |   rouge1_f1 |   rouge2_f1 |   rougeL_f1 |

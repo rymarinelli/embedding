@@ -17,19 +17,7 @@ def load_jsonl(path):
 
 def main():
     corpus = {c["doc_id"]: c["text"] for c in load_jsonl(DATA_DIR / "corpus.jsonl")}
-    queries = load_jsonl(DATA_DIR / "queries.jsonl")
-
-    # queries.jsonl only has {qid, question, gold_doc_id}; re-read the raw
-    # NorQuAD files to attach the gold answer text for each question.
-    answers_by_qid = {}
-    for fname in ["norquad_news_answers_1.json", "norquad_news_answers_2.json"]:
-        data = json.loads((DATA_DIR / fname).read_text(encoding="utf-8"))["data"]
-        for article in data:
-            for paragraph in article["paragraphs"]:
-                for qa in paragraph["qas"]:
-                    if qa.get("is_impossible"):
-                        continue
-                    answers_by_qid[qa["id"]] = qa["answers"][0]["text"]
+    queries = load_jsonl(DATA_DIR / "queries.jsonl")  # each row already carries its own gold_answer
 
     random.seed(SEED)
     sample = random.sample(queries, SAMPLE_SIZE)
@@ -40,7 +28,7 @@ def main():
             "qid": q["qid"],
             "question": q["question"],
             "context": corpus[q["gold_doc_id"]],
-            "gold_answer": answers_by_qid[q["qid"]],
+            "gold_answer": q["gold_answer"],
         })
 
     out_path = DATA_DIR / "norquad_qa_sample.json"
