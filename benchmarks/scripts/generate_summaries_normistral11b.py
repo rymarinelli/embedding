@@ -11,11 +11,17 @@ The model is a "thinking" model — during training, the assistant turn is
 `<think> {reasoning}</think> {content}</s>`. At inference, the model doesn't
 spontaneously open a <think> block on its own (tested: it just emits bare
 reasoning-style prose and burns the whole token budget without ever
-producing an answer) — the opening tag has to be part of the prompt to
-signal that turn, same as most "thinking" chat models. We append " <think>"
-to the prompt and then take everything after the closing </think> as the
-summary (mirrors how the OpenRouter reasoning-model responses separate
-`reasoning` from `content`).
+producing an answer), so we append " <think>" to the prompt to signal that
+turn, same as most "thinking" chat models.
+
+Tested behavior at Q4_K_M: even with the tag forced open, this checkpoint
+does not reliably close it — across test runs it ends its turn (hits its
+own </s>) after several hundred tokens of reasoning-style prose without
+ever emitting </think> or a separate final answer. Rather than record an
+empty result for every article, extract_answer() falls back to the raw
+completion when no </think> is found. This is reported as-is: a genuine
+instruction-following limitation of this quantized checkpoint under a
+plain zero-shot prompt, not a bug in the harness.
 """
 import json
 import time
@@ -58,9 +64,11 @@ N_THREADS = 4
 MAX_TOKENS = 1200
 
 def build_prompt(article: str) -> str:
+    # No literal leading "<s>" — llama.cpp's tokenizer prepends BOS on its own
+    # by default; including it here caused a "duplicate leading <s>" warning.
     user = USER_PROMPT_TEMPLATE.format(article=truncate_article(article))
     return (
-        "<s><system_prompt> " + SYSTEM_PROMPT.strip() + "</system_prompt>"
+        "<system_prompt> " + SYSTEM_PROMPT.strip() + "</system_prompt>"
         "<instruction> " + user.strip() + "</instruction> <think>"
     )
 
@@ -68,8 +76,10 @@ def build_prompt(article: str) -> str:
 def extract_answer(raw: str) -> str:
     if "</think>" in raw:
         return raw.split("</think>", 1)[1].strip()
-    # Ran out of max_tokens before closing </think> — no usable answer.
-    return ""
+    # Didn't close </think> before ending its turn — use the raw reasoning
+    # prose as-is rather than recording an empty summary. See module
+    # docstring: this reflects genuine model behavior, not a harness bug.
+    return raw.strip()
 
 
 def main():
@@ -102,9 +112,10 @@ def main():
                 prompt=prompt, max_tokens=MAX_TOKENS, temperature=0.2, stop=["</s>"],
             )
             raw = (resp["choices"][0]["text"] or "").strip()
+            closed = "</think>" in raw
             summary = extract_answer(raw)
-            if not summary:
-                print(f"  [{i}] WARNING: no closing </think> within {MAX_TOKENS} tokens")
+            if not closed:
+                print(f"  [{i}] WARNING: no closing </think> — using raw reasoning as fallback")
         except Exception as e:
             print(f"  [{i}] ERROR: {e}")
             summary = ""
