@@ -25,10 +25,31 @@ every (question, passage) pair, and the passage of origin is scored as the singl
 `query:`/`passage:` prefixes; `perplexity-ai/pplx-embed-v1-0.6b` (this repo's own `main.py`
 fine-tuning base model) deliberately requires none.
 
-Models compared: `NbAiLab/nb-sbert-base`, `sentence-transformers/paraphrase-multilingual-mpnet-base-v2`,
+Models compared: `NbAiLab/nb-sbert-base`, `NbAiLab/nb-sentence-bert-base-mnli-test`,
+`sentence-transformers/paraphrase-multilingual-mpnet-base-v2`,
 `intfloat/multilingual-e5-{small,base,large}`, `BAAI/bge-m3`, `perplexity-ai/pplx-embed-v1-0.6b`,
-`Qwen/Qwen3-Embedding-0.6B`. The two Qwen3-based models need a much smaller `batch_size` (8, vs. 64
-for the rest) to run at reasonable speed on CPU — see the comment in `retrieval_benchmark.py`.
+`Qwen/Qwen3-Embedding-0.6B`, `ltg/norbert4-{base,large}`. The two Qwen3-based models need a much
+smaller `batch_size` (8, vs. 64 for the rest) to run at reasonable speed on CPU — see the comment in
+`retrieval_benchmark.py`.
+
+### Why norbert4 scores near-random
+
+`ltg/norbert4-base`/`-large` score at essentially random chance (recall@1 ≈ 1/403 passages) despite
+being LTG's newest and largest Norwegian encoders. This is **not a bug** — verified directly: mean-
+pooled embeddings from these models put "Oslo er hovedstaden i Norge" and "Jeg liker å spise pizza på
+fredager" (two unrelated sentences) at 0.97 cosine similarity, barely below an actual paraphrase pair
+(0.98). This is the well-documented anisotropy problem with raw MLM/causal-pretrained transformer
+encoders: without contrastive/sentence-similarity fine-tuning (which is exactly what turns BERT into
+SBERT), mean-pooled embeddings collapse into a narrow cone dominated by frequency/generic-content
+signal rather than semantic content, and are unusable for retrieval as-is. `NbAiLab/nb-sbert-base`
+and `NbAiLab/nb-sentence-bert-base-mnli-test` *are* fine-tuned this way and perform reasonably; the
+NorBERT4 family (as released) simply hasn't had that step applied. Included for completeness/
+documentation rather than as a fair capability comparison against purpose-built embedding models —
+fixing this would mean fine-tuning norbert4 for sentence similarity, out of scope here.
+
+`retrieval_benchmark.py`'s `MeanPoolingEncoder` class implements the standard approach (mean-pool
+`last_hidden_state` over non-padding tokens via `attention_mask`, then L2-normalize) for models not
+packaged as sentence-transformers.
 
 ### Data integrity note: NorQuAD `id` is not globally unique
 
