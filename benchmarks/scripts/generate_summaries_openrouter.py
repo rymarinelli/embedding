@@ -27,6 +27,8 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 # on OpenRouter.
 MODELS = {
     "claude-sonnet-5": "anthropic/claude-sonnet-5",
+    "claude-opus-5": "anthropic/claude-opus-5",
+    "claude-fable-5": "anthropic/claude-fable-5",
     "gpt-5.6-sol": "openai/gpt-5.6-sol",
     "gemini-3.5-flash": "google/gemini-3.5-flash",
     "gemma-3-27b-it-base": "google/gemma-3-27b-it",
