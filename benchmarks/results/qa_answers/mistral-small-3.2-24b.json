@@ -15,7 +15,7 @@
     "qid": 1126,
     "question": "Hvor er Kristian Røkke investeringsdirektør?",
     "gold_answer": "Aker",
-    "predicted_answer": "Aker"
+    "predicted_answer": "i pappas børsnoterte selskap Aker"
   },
   {
     "qid": 1003,
@@ -27,13 +27,13 @@
     "qid": 914,
     "question": "Hvem sørget for sikkerheten under valget i Spania?",
     "gold_answer": "Rundt 93.000 politifolk",
-    "predicted_answer": ""
+    "predicted_answer": "Rundt 93.000 politifolk"
   },
   {
     "qid": 571,
     "question": "Hvem var Ruuds motstander i åttendelsfinalen i Autralia?",
     "gold_answer": "Henri Laaksonen",
-    "predicted_answer": ""
+    "predicted_answer": "Arthur De Greef"
   },
   {
     "qid": 419,
@@ -63,13 +63,13 @@
     "qid": 130,
     "question": "Når gikk Zuccarello til Dallas?",
     "gold_answer": "i februar",
-    "predicted_answer": ""
+    "predicted_answer": "i februar"
   },
   {
     "qid": 122,
     "question": "Hvordan kommenterer Casey Stoney den forestående kampen mot Vålerenga på Intility arena?",
     "gold_answer": "Kampen blir en viktig del av vår sesongoppkjøring, og det blir en veldig fin test for oss mot en god motstander. I tillegg gleder vi oss veldig til å besøke Norge og Oslo som by og ser fram til en spennende kamp med fine rammer rundt, forteller Stoney i en pressemelding",
-    "predicted_answer": ""
+    "predicted_answer": "– Kampen blir en viktig del av vår sesongoppkjøring, og det blir en veldig fin test for oss mot en god motstander. I tillegg gleder vi oss veldig til å besøke Norge og Oslo som by og ser fram til en spennende kamp med fine rammer rundt"
   },
   {
     "qid": 383,
@@ -93,7 +93,7 @@
     "qid": 2069,
     "question": "Når vil en åpen høring finne sted i Stortinget?",
     "gold_answer": "Den 9. januar",
-    "predicted_answer": "9. januar"
+    "predicted_answer": "Den 9. januar"
   },
   {
     "qid": 108,
@@ -105,7 +105,7 @@
     "qid": 2298,
     "question": "Hva bør man gjøre i stedet for å chatte og surfe?",
     "gold_answer": "snakke med hverandre",
-    "predicted_answer": ""
+    "predicted_answer": "snakke med hverandre"
   },
   {
     "qid": 814,
@@ -117,13 +117,13 @@
     "qid": 2232,
     "question": "Hvor gammel ble Hvite hjelmer-grunnleggeren?",
     "gold_answer": "48 år gammel",
-    "predicted_answer": ""
+    "predicted_answer": "48 år gammel"
   },
   {
     "qid": 1718,
     "question": "Hvordan endte 2. sett mellom Ruud og Griekspoor?",
     "gold_answer": "1-6",
-    "predicted_answer": ""
+    "predicted_answer": "6-1"
   },
   {
     "qid": 902,
@@ -135,7 +135,7 @@
     "qid": 1839,
     "question": "Hvem har spesialenheten for politisaker avhørt i helga?",
     "gold_answer": "blant andre tjenestepersonene som var involvert i hendelsen",
-    "predicted_answer": ""
+    "predicted_answer": "tjenestepersonene som var involvert i hendelsen"
   },
   {
     "qid": 1139,
@@ -183,7 +183,7 @@
     "qid": 881,
     "question": "Hvorfor har ikke foreldrene fra Naustdal returnert til Norge?",
     "gold_answer": "På grunn av mistillit mot barnevernet og frykt for rettsforfølging",
-    "predicted_answer": "mistillit mot barnevernet og frykt for rettsforfølging"
+    "predicted_answer": "frykt for rettsforfølging"
   },
   {
     "qid": 1378,
@@ -195,7 +195,7 @@
     "qid": 418,
     "question": "Hvorfor snudde landslagstrener Alexander Stöckl og alle hans trenerkolleger seg bort på filmen av Stjernens fall?",
     "gold_answer": "for å slippe å se Stjernens brutale møte med unnarennet",
-    "predicted_answer": "for å slippe å se Stjernens brutale møte med unnarennet."
+    "predicted_answer": "for å slippe å se Stjernens brutale møte med unnarennet"
   },
   {
     "qid": 379,
@@ -219,7 +219,7 @@
     "qid": 1470,
     "question": "Hvordan skal VAR-prosessen formidles til publikum på stadion?",
     "gold_answer": "ved hjelp enten av storskjermer eller beskjeder over høyttaleranlegget",
-    "predicted_answer": ""
+    "predicted_answer": "ved hjelp enten av storskjermer eller beskjeder over høyttaleranlegget."
   },
   {
     "qid": 1408,
@@ -231,13 +231,13 @@
     "qid": 1083,
     "question": "Hva frykter foreldrene til de HIV-smittede barna?",
     "gold_answer": "at deres barns fremtid er påført ubotelig skade fordi de er smittet med hiv",
-    "predicted_answer": ""
+    "predicted_answer": "at deres barns fremtid er påført ubotelig skade fordi de er smittet med hiv"
   },
   {
     "qid": 177,
     "question": "Hvordan ble finalen i turneringen avgjort?",
     "gold_answer": "på straffekast",
-    "predicted_answer": ""
+    "predicted_answer": "på straffekast"
   },
   {
     "qid": 1881,
@@ -279,7 +279,7 @@
     "qid": 1200,
     "question": "Hvem er er det Warren ikke er så populær hos?",
     "gold_answer": "Mark Zuckerberg",
-    "predicted_answer": "alle"
+    "predicted_answer": "gigantselskaper som Facebook"
   },
   {
     "qid": 1481,
@@ -327,7 +327,7 @@
     "qid": 326,
     "question": "Hvem står bak Evil Corp?",
     "gold_answer": "Personer bosatt i Moskva",
-    "predicted_answer": "Maksim Jakubets og Igor Turasjev"
+    "predicted_answer": "Personer bosatt i Moskva"
   },
   {
     "qid": 953,
@@ -345,25 +345,25 @@
     "qid": 1857,
     "question": "Når tok Hammerson eierskap over Norwegian Outlet?",
     "gold_answer": "i 2017",
-    "predicted_answer": ""
+    "predicted_answer": "2017"
   },
   {
     "qid": 1494,
     "question": "Hva skrev Mjelva om i BT i mai?",
     "gold_answer": "om hvor godt det går i Norge, med synkende arbeidsløshet og økte lønninger på grunn av mangel på arbeidskraft",
-    "predicted_answer": ""
+    "predicted_answer": "hvor godt det går i Norge, med synkende arbeidsløshet og økte lønninger på grunn av mangel på arbeidskraft."
   },
   {
     "qid": 666,
     "question": "Hvordan vurderte sveitsiske myndighetere eritreeren frem til for et år siden?",
     "gold_answer": "som «godt integrert»",
-    "predicted_answer": "«godt integrert»"
+    "predicted_answer": "godt integrert"
   },
   {
     "qid": 1516,
     "question": "Hvor mange spanske journalister har kommet til Oslo før kampen mellom Spania og Norge?",
     "gold_answer": "et tredvetalls",
-    "predicted_answer": ""
+    "predicted_answer": "Over et tredvetalls"
   },
   {
     "qid": 1455,
@@ -381,7 +381,7 @@
     "qid": 1093,
     "question": "Hvordan kommenterte Ingvild Østberg løpet?",
     "gold_answer": "Jeg er så fornøyd og stolt. Det var virkelig en kamp i dag",
-    "predicted_answer": "Jeg er så fornøyd og stolt. Det"
+    "predicted_answer": "– Jeg er så fornøyd og stolt. Det var virkelig en kamp i dag"
   },
   {
     "qid": 292,
@@ -393,13 +393,13 @@
     "qid": 700,
     "question": "Hvor arrangeres kombinert neste helg?",
     "gold_answer": "Lahti",
-    "predicted_answer": "Lahti"
+    "predicted_answer": "finske Lahti"
   },
   {
     "qid": 2187,
     "question": "Hva ønsker Ursula von der Leyen spesifikt å fremme?",
     "gold_answer": "tidenes første europeiske klimalov",
-    "predicted_answer": ""
+    "predicted_answer": "en grønn avtale for Europa i løpet av mine første 100 dager som kommisjonspresident"
   },
   {
     "qid": 1002,
@@ -411,7 +411,7 @@
     "qid": 669,
     "question": "Når var den siktede eritreeren i psykiatrisk behandling?",
     "gold_answer": "i 2019",
-    "predicted_answer": "i 2019"
+    "predicted_answer": "2019"
   },
   {
     "qid": 1893,
@@ -429,13 +429,13 @@
     "qid": 1105,
     "question": "Hvor mange strafferunder fikk Erlend Bjøntegaard?",
     "gold_answer": "to",
-    "predicted_answer": "to"
+    "predicted_answer": "to runder"
   },
   {
     "qid": 2281,
     "question": "Hvorfor ble Wayne frikjent?",
     "gold_answer": "fordi han ikke visste hva nazihilsen var",
-    "predicted_answer": ""
+    "predicted_answer": "han ikke kunne straffes fordi det ikke kunne bevises at han gjorde gesten med viten og vilje."
   },
   {
     "qid": 899,
@@ -471,7 +471,7 @@
     "qid": 1292,
     "question": "Når i storslalåmrennet kjørte Aamodt Kilde ut?",
     "gold_answer": "allerede før TV-sendingen fikk fokusert på løpet hans",
-    "predicted_answer": ""
+    "predicted_answer": "allerede før TV-sendingen fikk fokusert på løpet hans"
   },
   {
     "qid": 1643,
@@ -501,7 +501,7 @@
     "qid": 2323,
     "question": "Hvem skal avhøres i dag?",
     "gold_answer": "Flere naboer",
-    "predicted_answer": ""
+    "predicted_answer": "Flere naboer"
   },
   {
     "qid": 1288,
@@ -549,7 +549,7 @@
     "qid": 1010,
     "question": "Hvor mye anslo Per Sandberg at totalkostnaden for Mulla Krekar var på i 2012?",
     "gold_answer": "minst 20 millioner kroner",
-    "predicted_answer": "minst 20 millioner kroner"
+    "predicted_answer": "20 millioner kroner"
   },
   {
     "qid": 2299,
@@ -561,7 +561,7 @@
     "qid": 2207,
     "question": "Hvordan mener May at det er best å forlate EU?",
     "gold_answer": "på en velordnet måte med en avtale",
-    "predicted_answer": ""
+    "predicted_answer": "å gå ut av på en velordnet måte med en avtale"
   },
   {
     "qid": 1076,
@@ -573,13 +573,13 @@
     "qid": 2394,
     "question": "Hvordan har Australia Institute markert seg?",
     "gold_answer": "som en uttalt kritiker av Equinors prosjekt i South Australia",
-    "predicted_answer": ""
+    "predicted_answer": "som en uttalt kritiker av Equinors prosjekt i South Australia."
   },
   {
     "qid": 1754,
     "question": "Hva foreslo MDG?",
     "gold_answer": "å styrke nattogtilbudet til Europa",
-    "predicted_answer": "styrke nattogtilbudet til Europa"
+    "predicted_answer": "å styrke nattogtilbudet til Europa"
   },
   {
     "qid": 2390,
@@ -597,7 +597,7 @@
     "qid": 1482,
     "question": "Hvilke nordmenn klarte ikke å kvalifisere seg til kvartfinalen i sprinten?",
     "gold_answer": "Sjur Røthe og Martin Johnsrud Sundby, Didrik Tønseth og Hans Christer Holund",
-    "predicted_answer": "Sjur Røthe og Martin Johnsrud Sundby, Didrik Tønseth og Hans Christer Holund"
+    "predicted_answer": "Sjur Røthe, Martin Johnsrud Sundby, Didrik Tønseth, Hans Christer Holund"
   },
   {
     "qid": 898,
@@ -645,13 +645,13 @@
     "qid": 626,
     "question": "Hva heter selvbiografien til Svindal?",
     "gold_answer": "«Større enn meg»",
-    "predicted_answer": "«Større enn meg»"
+    "predicted_answer": "Større enn meg"
   },
   {
     "qid": 655,
     "question": "Hvilken type serie er Homecoming?",
     "gold_answer": "en mørk psykologisk thriller",
-    "predicted_answer": "mørk psykologisk thriller"
+    "predicted_answer": "en mørk psykologisk thriller"
   },
   {
     "qid": 1729,
@@ -663,19 +663,19 @@
     "qid": 260,
     "question": "Hva heter målvakten til Storhamar?",
     "gold_answer": "Oskar Östlund",
-    "predicted_answer": ""
+    "predicted_answer": "Oskar Östlund"
   },
   {
     "qid": 1576,
     "question": "Hvor mange prosent støtte har Høyre i den nye målingen?",
     "gold_answer": "22,1",
-    "predicted_answer": "22,1 prosent"
+    "predicted_answer": "22,1"
   },
   {
     "qid": 1563,
     "question": "Hvem synes Thue at Lie lager stråmenn av?",
     "gold_answer": "av meningsmotstandere",
-    "predicted_answer": ""
+    "predicted_answer": "meningsmotstandere"
   },
   {
     "qid": 1917,
@@ -705,7 +705,7 @@
     "qid": 47,
     "question": "Hvem er leder i Kvinnegruppa Ottar?",
     "gold_answer": "Ane Stø",
-    "predicted_answer": "Ane Stø"
+    "predicted_answer": "Ottar Ane Stø"
   },
   {
     "qid": 469,
@@ -723,7 +723,7 @@
     "qid": 1092,
     "question": "Hva sa Therese Johaug etter skiathlon-rennet i Seefeld?",
     "gold_answer": "Dette betyr så utrolig mye",
-    "predicted_answer": "Dette betyr så utrolig mye"
+    "predicted_answer": "– Dette betyr så utrolig mye"
   },
   {
     "qid": 1202,
@@ -759,13 +759,13 @@
     "qid": 1078,
     "question": "Hvorfor mener digitaliseringsministeren at foreldre ikke bør gi mobiltelefon til barna før de er 13?",
     "gold_answer": "Han er bekymret for digital avhengighet og for potensielle digitale fallgruver på internett",
-    "predicted_answer": "digital avhengighet og potensielle digitale fallgruver på internett"
+    "predicted_answer": "Han er bekymret for digital avhengighet og for potensielle digitale fallgruver på internett."
   },
   {
     "qid": 2050,
     "question": "Hvorfor er turister på øya Boracay stranda?",
     "gold_answer": "siden ferjene til og fra øya er kansellert",
-    "predicted_answer": ""
+    "predicted_answer": "ferjene til og fra øya er kansellert"
   },
   {
     "qid": 731,
@@ -783,13 +783,13 @@
     "qid": 435,
     "question": "Når kom det ut i offentligheten at Leine skulle slutte å studere ved VID?",
     "gold_answer": "I november",
-    "predicted_answer": ""
+    "predicted_answer": "I august i fjor"
   },
   {
     "qid": 1222,
     "question": "Hvor mange drap var det i Oslo i 2018?",
     "gold_answer": "seks",
-    "predicted_answer": "seks"
+    "predicted_answer": "6"
   },
   {
     "qid": 1531,
@@ -801,7 +801,7 @@
     "qid": 661,
     "question": "Hvilken bok skal Ståle Solbakken lese ferdig før han leser boka til Bendtner?",
     "gold_answer": "boka om Reiulf Steen",
-    "predicted_answer": ""
+    "predicted_answer": "boka om Reiulf Steen"
   },
   {
     "qid": 2209,
@@ -843,7 +843,7 @@
     "qid": 458,
     "question": "Hvem ligger som nummer to i serien?",
     "gold_answer": "Liverpool",
-    "predicted_answer": ""
+    "predicted_answer": "Liverpool"
   },
   {
     "qid": 1486,
@@ -867,7 +867,7 @@
     "qid": 237,
     "question": "Hvor skal ny leder i Venstre velges?",
     "gold_answer": "på Venstres landsmøte",
-    "predicted_answer": "Venstres landsmøte"
+    "predicted_answer": "Venstres landsmøte 19. – 20. april neste år"
   },
   {
     "qid": 986,
@@ -879,7 +879,7 @@
     "qid": 350,
     "question": "Hvilke land kan legge ned veto mot å forlenge forhandlingsperioden for Brexit?",
     "gold_answer": "ethvert medlemsland",
-    "predicted_answer": ""
+    "predicted_answer": "EUs 27 øvrige medlemsland"
   },
   {
     "qid": 1990,
@@ -891,13 +891,13 @@
     "qid": 283,
     "question": "Når holdt May nyvalg i UK?",
     "gold_answer": "I 2017",
-    "predicted_answer": "I 2017"
+    "predicted_answer": "2017"
   },
   {
     "qid": 2181,
     "question": "Hvor høy er norsk oljeproduksjon til sammen?",
     "gold_answer": "1,3 millioner fat olje per dag",
-    "predicted_answer": ""
+    "predicted_answer": "1,3 millioner fat olje per dag"
   },
   {
     "qid": 515,
@@ -909,7 +909,7 @@
     "qid": 525,
     "question": "Hvorfor vil ikke innsatslederen klassifisere brannen som alvorlig?",
     "gold_answer": "ettersom det ikke stod om liv",
-    "predicted_answer": ""
+    "predicted_answer": "Det stod ikke om liv."
   },
   {
     "qid": 1946,
@@ -927,25 +927,25 @@
     "qid": 676,
     "question": "Når ringte offeret selv til politiet?",
     "gold_answer": "Mens politiet var på utrykning til åstedet",
-    "predicted_answer": ""
+    "predicted_answer": "klokken 10.37"
   },
   {
     "qid": 1085,
     "question": "Hvor mange nye hiv-smittede var det i Pakistan i 2017?",
     "gold_answer": "20.000",
-    "predicted_answer": ""
+    "predicted_answer": "20.000"
   },
   {
     "qid": 2161,
     "question": "Hva heter direktøren i selskapet som ble rammet av ulykken?",
     "gold_answer": "Shane Carmody",
-    "predicted_answer": ""
+    "predicted_answer": "Shane Carmody"
   },
   {
     "qid": 1733,
     "question": "Hvor mange studenthybler og leiligheter finnes i Nydalen?",
     "gold_answer": "3150",
-    "predicted_answer": "3150"
+    "predicted_answer": "3150 leiligheter og studenthybler"
   },
   {
     "qid": 867,
@@ -957,13 +957,13 @@
     "qid": 2208,
     "question": "Hva vil kreves for å godkjent en eventuell forespørsel om utsettelse av skilsmisse?",
     "gold_answer": "enstemmig tilslutning fra samtlige medlemsland, inkludert Storbritannia",
-    "predicted_answer": "enstemmig tilslutning fra samtlige medlemsland, inkludert Storbritannia"
+    "predicted_answer": "enstemmig tilslutning fra samtlige medlemsland, inkludert Storbritannia."
   },
   {
     "qid": 823,
     "question": "Når bestemte Thorsen seg for å anmelde hendelsen?",
     "gold_answer": "Etter å ha snakket med de involverte",
-    "predicted_answer": ""
+    "predicted_answer": "Etter å ha snakket med de involverte"
   },
   {
     "qid": 1276,
@@ -993,19 +993,19 @@
     "qid": 2119,
     "question": "Hvor mange mener at dagens bilavgifter bør byttes ut med veiprising?",
     "gold_answer": "53 prosent",
-    "predicted_answer": ""
+    "predicted_answer": "53 prosent"
   },
   {
     "qid": 1849,
     "question": "Når går Dan Coats av?",
     "gold_answer": "15. august",
-    "predicted_answer": ""
+    "predicted_answer": "15. august"
   },
   {
     "qid": 495,
     "question": "Hvem er regjerende mestre i EM?",
     "gold_answer": "Mol og Sørum",
-    "predicted_answer": ""
+    "predicted_answer": "Mol og Sørum"
   },
   {
     "qid": 1015,
@@ -1023,19 +1023,19 @@
     "qid": 262,
     "question": "Hvilken minister fikk innført kvotering av kvinner i styrene i store selskaper i Norge?",
     "gold_answer": "Ansgar Gabrielsen",
-    "predicted_answer": ""
+    "predicted_answer": "Ansgar Gabrielsen"
   },
   {
     "qid": 1384,
     "question": "Hvor jobber David Nyblom?",
     "gold_answer": "i Medicall",
-    "predicted_answer": "Med"
+    "predicted_answer": "administrerende direktør i Medicall"
   },
   {
     "qid": 86,
     "question": "Hva er to av de siktede i saken siktet for?",
     "gold_answer": "forsettlig drap eller medvirkning til dette",
-    "predicted_answer": ""
+    "predicted_answer": "forsettlig drap eller medvirkning til dette"
   },
   {
     "qid": 2268,
@@ -1059,7 +1059,7 @@
     "qid": 290,
     "question": "Hva kommer Trump til å gjøre hvis ikke en avtale kommer på bordet før 1. mars?",
     "gold_answer": "øke tollen på kinesiske importvarer",
-    "predicted_answer": ""
+    "predicted_answer": "øke tollen på kinesiske importvarer"
   },
   {
     "qid": 241,
@@ -1071,7 +1071,7 @@
     "qid": 937,
     "question": "Når spilte PSG mot Manchester United sist?",
     "gold_answer": "for halvannen uke siden",
-    "predicted_answer": ""
+    "predicted_answer": "for halvannen uke siden"
   },
   {
     "qid": 276,
@@ -1095,7 +1095,7 @@
     "qid": 2105,
     "question": "Når vil The Tall Ships Races foregå?",
     "gold_answer": "i midten av juli",
-    "predicted_answer": "i midten av juli"
+    "predicted_answer": "midten av juli"
   },
   {
     "qid": 974,
@@ -1107,7 +1107,7 @@
     "qid": 1140,
     "question": "Hvor ligger Washington?",
     "gold_answer": "I District of Columbia",
-    "predicted_answer": "District of Columbia"
+    "predicted_answer": "i District of Columbia"
   },
   {
     "qid": 1988,
@@ -1119,7 +1119,7 @@
     "qid": 877,
     "question": "Hvilken geriljagruppe samarbeider YPG med?",
     "gold_answer": "PKK-geriljaen",
-    "predicted_answer": ""
+    "predicted_answer": "PKK-geriljaen"
   },
   {
     "qid": 541,
@@ -1131,7 +1131,7 @@
     "qid": 2338,
     "question": "Hva har partene enda ikke kommet til enighet om?",
     "gold_answer": "retningslinjer for sosiale medier",
-    "predicted_answer": "klare retningslinjer for sosiale medier"
+    "predicted_answer": "grensesettingen på når man er skiløper og ikke, spesielt på sosiale medier."
   },
   {
     "qid": 2360,
@@ -1143,13 +1143,13 @@
     "qid": 1936,
     "question": "Hva jobber Hannah som?",
     "gold_answer": "forsker",
-    "predicted_answer": "forsker"
+    "predicted_answer": "forskers"
   },
   {
     "qid": 995,
     "question": "Hvor går siste etappe av Tour of Norway i år?",
     "gold_answer": "fra Gran til Hønefoss",
-    "predicted_answer": "fra Gran til Hønefoss"
+    "predicted_answer": "Gran til Hønefoss"
   },
   {
     "qid": 1937,
@@ -1167,7 +1167,7 @@
     "qid": 779,
     "question": "Hvilken rangering har Federico Delbonis i verdenssammenheng?",
     "gold_answer": "nummer 63",
-    "predicted_answer": ""
+    "predicted_answer": "nummer 63"
   },
   {
     "qid": 386,
@@ -1179,7 +1179,7 @@
     "qid": 397,
     "question": "Når vant Manchester United sist Premier League?",
     "gold_answer": "i 2012/13-sesongen",
-    "predicted_answer": ""
+    "predicted_answer": "2012/13-sesongen"
   },
   {
     "qid": 1765,
@@ -1203,7 +1203,7 @@
     "qid": 1683,
     "question": "Hvorfor ønsker mange filmprodusenter å lansere filmene sine om høsten?",
     "gold_answer": "for å maksimere sine sjanser i kinomarkedet",
-    "predicted_answer": ""
+    "predicted_answer": "for å maksimere sine sjanser i kinomarkedet"
   },
   {
     "qid": 1912,
@@ -1215,13 +1215,13 @@
     "qid": 221,
     "question": "Når fikk Viking Sky motortrøbbel?",
     "gold_answer": "ved 14-tiden lørdag",
-    "predicted_answer": ""
+    "predicted_answer": "lørdag ettermiddag"
   },
   {
     "qid": 403,
     "question": "Hvordan ble Norway cup åpnet i år?",
     "gold_answer": "med parade og åpningsshow på Ekebergsletta i Oslo",
-    "predicted_answer": ""
+    "predicted_answer": "med parade og åpningsshow på Ekebergsletta i Oslo."
   },
   {
     "qid": 248,
@@ -1257,13 +1257,13 @@
     "qid": 784,
     "question": "Hvor skal det norske landslaget trene den kommende uka?",
     "gold_answer": "i høyden i Anterselva",
-    "predicted_answer": ""
+    "predicted_answer": "i Anterselva"
   },
   {
     "qid": 1837,
     "question": "Hva stemte Ligaen mot?",
     "gold_answer": "å godkjenne tyske Ursula von der Leyen som EU-kommisjonens nye president",
-    "predicted_answer": ""
+    "predicted_answer": "Ursula von der Leyen som EU-kommisjonens nye president"
   },
   {
     "qid": 574,
@@ -1281,7 +1281,7 @@
     "qid": 1894,
     "question": "Hvordan endte kampen mellom Spania og Sverige?",
     "gold_answer": "3 – 0",
-    "predicted_answer": "3 – 0"
+    "predicted_answer": "3-0"
   },
   {
     "qid": 1023,
@@ -1317,13 +1317,13 @@
     "qid": 207,
     "question": "Hvorfor trakk Nishikori seg fra kvartfinalekampen mot Djokovic?",
     "gold_answer": "på grunn av skade",
-    "predicted_answer": "på grunn av skade"
+    "predicted_answer": "skade"
   },
   {
     "qid": 2214,
     "question": "Hvor mange demokratiske presidentkandidater stiller til valg i 2020?",
     "gold_answer": "et sted mellom 15 og 30",
-    "predicted_answer": ""
+    "predicted_answer": "mellom 15 og 30"
   },
   {
     "qid": 60,
@@ -1389,19 +1389,19 @@
     "qid": 674,
     "question": "Hvorfor er den angrepne 16-åringen sendt til legevakten?",
     "gold_answer": "for behandling av mulige bruddskader og flere kutt i hodet",
-    "predicted_answer": "for behandling av mulige bruddskader og flere kutt i hodet"
+    "predicted_answer": "for behandling av mulige bruddskader og flere kutt i hodet."
   },
   {
     "qid": 1552,
     "question": "Når kan det bli frisk bris på kysten?",
     "gold_answer": "På kvelden",
-    "predicted_answer": "På kvelden"
+    "predicted_answer": "på kvelden"
   },
   {
     "qid": 8,
     "question": "Hvor mye nedbør hadde Bergen i november 2005?",
     "gold_answer": "ti ganger så mye som i år",
-    "predicted_answer": ""
+    "predicted_answer": "ti ganger så mye som i år"
   },
   {
     "qid": 1599,
@@ -1437,7 +1437,7 @@
     "qid": 2276,
     "question": "Hvor mange forskningsartikler publiserte Lars?",
     "gold_answer": "mer enn 300",
-    "predicted_answer": ""
+    "predicted_answer": "mer enn 300"
   },
   {
     "qid": 1993,
@@ -1449,13 +1449,13 @@
     "qid": 634,
     "question": "Hvorfor ble 13 av migrantene ført til Lampedusa?",
     "gold_answer": "av humanitære eller medisinske grunner",
-    "predicted_answer": "av humanitære eller medisinske grunner"
+    "predicted_answer": "humanitære eller medisinske grunner"
   },
   {
     "qid": 777,
     "question": "Hvor mye kan Ruud tjene på ATP 1000-turneringen i Ohio?",
     "gold_answer": "seks millioner dollar",
-    "predicted_answer": ""
+    "predicted_answer": "seks millioner dollar"
   },
   {
     "qid": 1215,
@@ -1479,7 +1479,7 @@
     "qid": 2372,
     "question": "Hvorfor ble det et opphold under kampen til Anders og Christian?",
     "gold_answer": "på grunn av problemer med lyset i arenaen",
-    "predicted_answer": ""
+    "predicted_answer": "problemer med lyset i arenaen"
   },
   {
     "qid": 2220,
@@ -1497,13 +1497,13 @@
     "qid": 1284,
     "question": "Hvordan kan regjeringen bidra til at systemet blir bedre til å ta vare på de sårbare barna i barnevoldssaker?\n",
     "gold_answer": "Ved å innføre en saksbehandlingsfrist i barnevoldssaker",
-    "predicted_answer": "Ved å innføre en saksbehandlingsfrist i barnevoldssaker"
+    "predicted_answer": "Ved å innføre en saksbehandlingsfrist i barnevoldssaker."
   },
   {
     "qid": 234,
     "question": "Når meldte Abid Raja sitt kandidatur til ledervervet i Venstre?",
     "gold_answer": "etter at han deltok på et møte i jusstudentforeningen Mino. jur i Bergen",
-    "predicted_answer": ""
+    "predicted_answer": "etter at han deltok på et møte i jusstudentforeningen Mino. jur i Bergen"
   },
   {
     "qid": 205,
@@ -1515,7 +1515,7 @@
     "qid": 2392,
     "question": "Hvor ofte flyr kampfly over Vestlandet?",
     "gold_answer": "ikke så ofte",
-    "predicted_answer": "ikke så ofte"
+    "predicted_answer": "Det skjer ikke så ofte."
   },
   {
     "qid": 1952,
@@ -1527,7 +1527,7 @@
     "qid": 2059,
     "question": "Hvordan kjørte Nina ned henget ifølge henne selv?",
     "gold_answer": "litt pinglete",
-    "predicted_answer": "litt pinglete"
+    "predicted_answer": "pinglete"
   },
   {
     "qid": 2175,
@@ -1545,7 +1545,7 @@
     "qid": 232,
     "question": "Hvilke folk lever i ufrie regimer i dag?",
     "gold_answer": "kinesere og iranere, tyrkere og palestinere",
-    "predicted_answer": ""
+    "predicted_answer": "kinesere og iranere, tyrkere og palestinere"
   },
   {
     "qid": 2080,
@@ -1587,7 +1587,7 @@
     "qid": 1653,
     "question": "Hvem scoret det fjerde målet for LSK?",
     "gold_answer": "Guro Reiten",
-    "predicted_answer": ""
+    "predicted_answer": "Guro Reiten"
   },
   {
     "qid": 491,
@@ -1599,7 +1599,7 @@
     "qid": 2333,
     "question": "Når satte Rodrigo inn mål nummer to?",
     "gold_answer": "etter 33 minutters spill",
-    "predicted_answer": "etter 33 minutters spill"
+    "predicted_answer": "33 minutters spill"
   },
   {
     "qid": 1008,
@@ -1611,13 +1611,13 @@
     "qid": 2371,
     "question": "Hvem tok førsteplassen i volleyball-VM?",
     "gold_answer": "Oleg Stojanovskij og Vjatsjeslav Krasilnikov",
-    "predicted_answer": ""
+    "predicted_answer": "Russerne"
   },
   {
     "qid": 162,
     "question": "Når skjedde det en avsporing ved Helsfyr?",
     "gold_answer": "ved 21.30-tiden lørdag",
-    "predicted_answer": "21.30-tiden lørdag"
+    "predicted_answer": "ved 21.30-tiden lørdag"
   },
   {
     "qid": 335,
@@ -1629,7 +1629,7 @@
     "qid": 1717,
     "question": "Hvordan endte 3. sett mellom Ruud og Griekspoor?",
     "gold_answer": "2-6",
-    "predicted_answer": ""
+    "predicted_answer": "6-2"
   },
   {
     "qid": 2315,
@@ -1653,7 +1653,7 @@
     "qid": 1068,
     "question": "Hva var det politiet bekreftet på en pressekonferanse tirsdag?",
     "gold_answer": "Mann siktet for drap på sin 15 år gamle sønn på Toten",
-    "predicted_answer": ""
+    "predicted_answer": "Mann siktet for drap på sin 15 år gamle sønn på Toten"
   },
   {
     "qid": 836,
@@ -1665,13 +1665,13 @@
     "qid": 1286,
     "question": "Hvorfor mener en arbeidsgruppe som er oppnevnt av Justisdepartementet at det innføres tidsfrist for behandling av barnevoldssaker?",
     "gold_answer": "slik at barnevoldssaker havner lenger opp i saksbunken",
-    "predicted_answer": "for å bedre rettssikkerheten både for barna og de mistenkte"
+    "predicted_answer": "for å bedre rettssikkerheten både for barna og de mistenkte."
   },
   {
     "qid": 977,
     "question": "Hvem ble beste norske i normalbakkerennet på fredag?",
     "gold_answer": "Johansson",
-    "predicted_answer": ""
+    "predicted_answer": "Robert Johansson"
   },
   {
     "qid": 1087,
@@ -1695,7 +1695,7 @@
     "qid": 1228,
     "question": "Hvordan er glasset på brillene til Jeng?",
     "gold_answer": "mørkt",
-    "predicted_answer": "mørkt glass"
+    "predicted_answer": "et mørkt glass"
   },
   {
     "qid": 1872,
@@ -1713,7 +1713,7 @@
     "qid": 38,
     "question": "Når var skatt siste en hovedsak i norsk politikk?",
     "gold_answer": "stortingsvalget i 2001",
-    "predicted_answer": ""
+    "predicted_answer": "stortingsvalget i 2001"
   },
   {
     "qid": 1877,
@@ -1725,19 +1725,19 @@
     "qid": 2306,
     "question": "Hva ønsker USA at danske styrker skal gjøre i Syria?",
     "gold_answer": "bistå med å trene den kurdiske YPG-militsen",
-    "predicted_answer": ""
+    "predicted_answer": "trene den kurdiske YPG-militsen"
   },
   {
     "qid": 409,
     "question": "Når går temperaturene i Oslo ned igjen?",
     "gold_answer": "Fra tirsdag",
-    "predicted_answer": "Fra tir"
+    "predicted_answer": "fra tirsdag"
   },
   {
     "qid": 300,
     "question": "Hvem er sjef i senatet i USA?",
     "gold_answer": "Mitch McConnell",
-    "predicted_answer": "Mitch McConnell"
+    "predicted_answer": "Senatets leder Mitch McConnell"
   },
   {
     "qid": 2202,
@@ -1755,13 +1755,13 @@
     "qid": 2072,
     "question": "Hvorfor satt politiet inn helikopter?",
     "gold_answer": "for å observere fra lufta",
-    "predicted_answer": "for å observere fra lufta"
+    "predicted_answer": "for å observere fra lufta."
   },
   {
     "qid": 542,
     "question": "Hvem vant verdenscupen sammenlagt i fjor vinter?",
     "gold_answer": "Therese Johaug",
-    "predicted_answer": "Therese Joh"
+    "predicted_answer": "Therese Johaug"
   },
   {
     "qid": 1429,
@@ -1797,6 +1797,6 @@
     "qid": 646,
     "question": "Hvorfor ble Arild Bergs karriere noe kortere enn brødrenes?",
     "gold_answer": "Berg var plaget av sykdommen ME",
-    "predicted_answer": ""
+    "predicted_answer": "sykdommen ME"
   }
 ]

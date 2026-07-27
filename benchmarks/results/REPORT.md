@@ -23,14 +23,16 @@
 
 Claude Opus 5 / Fable 5 can't take the embedding retrieval benchmark's role (Anthropic has no embeddings endpoint), so they're scored here as extractive QA models instead: context + question -> answer span, standard SQuAD-style Exact Match / F1 against the NorQuAD gold answers.
 
-| model               |   n_questions |   n_empty_predictions |   exact_match |     f1 |
-|:--------------------|--------------:|----------------------:|--------------:|-------:|
-| gemini-3.5-flash    |           300 |                     0 |        0.7333 | 0.9068 |
-| claude-fable-5      |           300 |                     9 |        0.7233 | 0.8889 |
-| claude-sonnet-5     |           300 |                     0 |        0.6667 | 0.8832 |
-| gpt-5.6-sol         |           300 |                     0 |        0.6533 | 0.8779 |
-| gemma-3-27b-it-base |           300 |                     0 |        0.6233 | 0.8575 |
-| claude-opus-5       |           300 |                    11 |        0.6567 | 0.8538 |
+| model                 |   n_questions |   n_empty_predictions |   exact_match |     f1 |
+|:----------------------|--------------:|----------------------:|--------------:|-------:|
+| gemini-3.5-flash      |           300 |                     0 |        0.7333 | 0.9068 |
+| claude-fable-5        |           300 |                     9 |        0.7233 | 0.8889 |
+| claude-sonnet-5       |           300 |                     0 |        0.6667 | 0.8832 |
+| gpt-5.6-sol           |           300 |                     0 |        0.6533 | 0.8779 |
+| mistral-small-3.2-24b |           300 |                     0 |        0.6767 | 0.8656 |
+| gemma-3-27b-it-base   |           300 |                     0 |        0.6233 | 0.8575 |
+| claude-opus-5         |           300 |                    11 |        0.6567 | 0.8538 |
+| qwen3.6-27b           |           300 |                    63 |        0.5967 | 0.7201 |
 
 
 ## NorSumm — lexical summarization metrics (OpenRouter models)
