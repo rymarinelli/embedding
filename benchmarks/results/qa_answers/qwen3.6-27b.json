@@ -658,5 +658,437 @@
     "question": "Når lanserte Zara Larsson \"Uncover\"?",
     "gold_answer": "i 2013",
     "predicted_answer": "2013"
+  },
+  {
+    "qid": 260,
+    "question": "Hva heter målvakten til Storhamar?",
+    "gold_answer": "Oskar Östlund",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1576,
+    "question": "Hvor mange prosent støtte har Høyre i den nye målingen?",
+    "gold_answer": "22,1",
+    "predicted_answer": "22,1 prosent"
+  },
+  {
+    "qid": 1563,
+    "question": "Hvem synes Thue at Lie lager stråmenn av?",
+    "gold_answer": "av meningsmotstandere",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1917,
+    "question": "Hva slags storm er det meldt fredag morgen?",
+    "gold_answer": "full vestlig storm",
+    "predicted_answer": "full vestlig storm"
+  },
+  {
+    "qid": 2167,
+    "question": "Hva er Elyounoussis jobb som spiss?",
+    "gold_answer": "å score mål og skape sjanser for laget",
+    "predicted_answer": "å score mål og skape sjanser for laget"
+  },
+  {
+    "qid": 1029,
+    "question": "Hvem skal makten vinnes tilbake fra, ifølge Den nordiske motstandsbevegelsen?",
+    "gold_answer": "fra den globale sionistiske eliten, som økonomisk og rent militært har okkupert store deler av verden",
+    "predicted_answer": "den globale sionistiske eliten"
+  },
+  {
+    "qid": 2266,
+    "question": "Hvor har Ugland-rederiet sitt hovedkontor?",
+    "gold_answer": "i Grimstad",
+    "predicted_answer": "Grimstad"
+  },
+  {
+    "qid": 47,
+    "question": "Hvem er leder i Kvinnegruppa Ottar?",
+    "gold_answer": "Ane Stø",
+    "predicted_answer": "Ane Stø"
+  },
+  {
+    "qid": 469,
+    "question": "Når var Cenk Sahin i duell med Giannelli Imbula?",
+    "gold_answer": "i fjor sommer",
+    "predicted_answer": "i fjor sommer"
+  },
+  {
+    "qid": 2199,
+    "question": "Hvor mange personer døde natt til søndag?",
+    "gold_answer": "syv",
+    "predicted_answer": "syv"
+  },
+  {
+    "qid": 1092,
+    "question": "Hva sa Therese Johaug etter skiathlon-rennet i Seefeld?",
+    "gold_answer": "Dette betyr så utrolig mye",
+    "predicted_answer": "Dette betyr så utrolig mye"
+  },
+  {
+    "qid": 1202,
+    "question": "Når angrep Warren Zuckerberg på Twitter?",
+    "gold_answer": "Tirsdag morgen",
+    "predicted_answer": "Tirsdag morgen"
+  },
+  {
+    "qid": 1780,
+    "question": "Hvilken by vokste Myra McKee opp i?",
+    "gold_answer": "Belfast",
+    "predicted_answer": "Belfast"
+  },
+  {
+    "qid": 647,
+    "question": "Hva gjorde Arild Berg da han var 26 år?",
+    "gold_answer": "Han ga seg som toppspiller",
+    "predicted_answer": "ga seg som toppspiller"
+  },
+  {
+    "qid": 1858,
+    "question": "Hvor mye tjente Ådne Søndrål i 2017?",
+    "gold_answer": "18,8 millioner kroner",
+    "predicted_answer": "18,8 millioner kroner"
+  },
+  {
+    "qid": 13,
+    "question": "Hvem er det som melder at Krekar er dømt til 12 års fengsel?",
+    "gold_answer": "Italienske medier",
+    "predicted_answer": "Italienske medier"
+  },
+  {
+    "qid": 1078,
+    "question": "Hvorfor mener digitaliseringsministeren at foreldre ikke bør gi mobiltelefon til barna før de er 13?",
+    "gold_answer": "Han er bekymret for digital avhengighet og for potensielle digitale fallgruver på internett",
+    "predicted_answer": "digital avhengighet og potensielle digitale fallgruver på internett"
+  },
+  {
+    "qid": 2050,
+    "question": "Hvorfor er turister på øya Boracay stranda?",
+    "gold_answer": "siden ferjene til og fra øya er kansellert",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 731,
+    "question": "Hva mener Borchsenius vi bør spise mer av?",
+    "gold_answer": "grønnsaker",
+    "predicted_answer": "grønnsaker"
+  },
+  {
+    "qid": 2079,
+    "question": "Hvor tidlig vil en ev. utvidelse av streiken varsles?",
+    "gold_answer": "fire dager før den kan iverksettes",
+    "predicted_answer": "fire dager før den kan iverksettes"
+  },
+  {
+    "qid": 435,
+    "question": "Når kom det ut i offentligheten at Leine skulle slutte å studere ved VID?",
+    "gold_answer": "I november",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1222,
+    "question": "Hvor mange drap var det i Oslo i 2018?",
+    "gold_answer": "seks",
+    "predicted_answer": "seks"
+  },
+  {
+    "qid": 1531,
+    "question": "Med hvem er Trump i konflikt?",
+    "gold_answer": "med Kongressen",
+    "predicted_answer": "Kongressen"
+  },
+  {
+    "qid": 661,
+    "question": "Hvilken bok skal Ståle Solbakken lese ferdig før han leser boka til Bendtner?",
+    "gold_answer": "boka om Reiulf Steen",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 2209,
+    "question": "Hvem kan bli USAs første homofile presidentkandidat?",
+    "gold_answer": "Pete Buttigieg",
+    "predicted_answer": "Pete Buttigieg"
+  },
+  {
+    "qid": 2172,
+    "question": "Hvor mange behandler ikke pollenallergien?",
+    "gold_answer": "én av fem",
+    "predicted_answer": "én av fem"
+  },
+  {
+    "qid": 2,
+    "question": "Hvem er talsperson for RSL?",
+    "gold_answer": "Espen Ettre",
+    "predicted_answer": "Espen Ettre"
+  },
+  {
+    "qid": 1327,
+    "question": "Hvor mye av kampen var spilt da Njoya satte inn sitt mål nummer tre?",
+    "gold_answer": "85 minutter",
+    "predicted_answer": "85 minutter"
+  },
+  {
+    "qid": 2001,
+    "question": "Hvordan budsjetterer danske Horsens?",
+    "gold_answer": "med å selge spillere",
+    "predicted_answer": "med å selge spillere"
+  },
+  {
+    "qid": 79,
+    "question": "Hva sliter Joshua King med?",
+    "gold_answer": "med en bakre lårmuskel",
+    "predicted_answer": "en bakre lårmuskel"
+  },
+  {
+    "qid": 458,
+    "question": "Hvem ligger som nummer to i serien?",
+    "gold_answer": "Liverpool",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1486,
+    "question": "Hvem var keeper for FyllingenBergen?",
+    "gold_answer": "Tord Vårdal",
+    "predicted_answer": "Tord Vårdal"
+  },
+  {
+    "qid": 1259,
+    "question": "Hvor jobber Haavardsdatter Lunde?",
+    "gold_answer": "i Utenriksdepartemente",
+    "predicted_answer": "Utenriksdepartementet"
+  },
+  {
+    "qid": 980,
+    "question": "Hvor gammel er den dømte mannen?",
+    "gold_answer": "i 60-årene",
+    "predicted_answer": "i 60-årene"
+  },
+  {
+    "qid": 237,
+    "question": "Hvor skal ny leder i Venstre velges?",
+    "gold_answer": "på Venstres landsmøte",
+    "predicted_answer": "Venstres landsmøte"
+  },
+  {
+    "qid": 986,
+    "question": "Hva er etternavnet til mannens forsvarer?",
+    "gold_answer": "Wiig",
+    "predicted_answer": "Wiig"
+  },
+  {
+    "qid": 350,
+    "question": "Hvilke land kan legge ned veto mot å forlenge forhandlingsperioden for Brexit?",
+    "gold_answer": "ethvert medlemsland",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1990,
+    "question": "Hvorfor fikk ikke Kryger spille?",
+    "gold_answer": "grunnet rødt kort i en tidlig treningskamp",
+    "predicted_answer": "rødt kort i en tidlig treningskamp"
+  },
+  {
+    "qid": 283,
+    "question": "Når holdt May nyvalg i UK?",
+    "gold_answer": "I 2017",
+    "predicted_answer": "I 2017"
+  },
+  {
+    "qid": 2181,
+    "question": "Hvor høy er norsk oljeproduksjon til sammen?",
+    "gold_answer": "1,3 millioner fat olje per dag",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 515,
+    "question": "Hvem er ordfører i Trondheim kommune?",
+    "gold_answer": "Rita Ottervik",
+    "predicted_answer": "Rita Ottervik"
+  },
+  {
+    "qid": 525,
+    "question": "Hvorfor vil ikke innsatslederen klassifisere brannen som alvorlig?",
+    "gold_answer": "ettersom det ikke stod om liv",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1946,
+    "question": "Hvordan var den økonomiske utviklinga som mange områder i Øst-Europa gjennomgikk etter jernteppets fall?",
+    "gold_answer": "voldsom",
+    "predicted_answer": "voldsom"
+  },
+  {
+    "qid": 2251,
+    "question": "Når var finanskrisen i USA?",
+    "gold_answer": "i 2008",
+    "predicted_answer": "2008"
+  },
+  {
+    "qid": 676,
+    "question": "Når ringte offeret selv til politiet?",
+    "gold_answer": "Mens politiet var på utrykning til åstedet",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1085,
+    "question": "Hvor mange nye hiv-smittede var det i Pakistan i 2017?",
+    "gold_answer": "20.000",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 2161,
+    "question": "Hva heter direktøren i selskapet som ble rammet av ulykken?",
+    "gold_answer": "Shane Carmody",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1733,
+    "question": "Hvor mange studenthybler og leiligheter finnes i Nydalen?",
+    "gold_answer": "3150",
+    "predicted_answer": "3150"
+  },
+  {
+    "qid": 867,
+    "question": "Når fikk politiet inn tips om Manshaus?",
+    "gold_answer": "for et år siden",
+    "predicted_answer": "for et år siden"
+  },
+  {
+    "qid": 2208,
+    "question": "Hva vil kreves for å godkjent en eventuell forespørsel om utsettelse av skilsmisse?",
+    "gold_answer": "enstemmig tilslutning fra samtlige medlemsland, inkludert Storbritannia",
+    "predicted_answer": "enstemmig tilslutning fra samtlige medlemsland, inkludert Storbritannia"
+  },
+  {
+    "qid": 823,
+    "question": "Når bestemte Thorsen seg for å anmelde hendelsen?",
+    "gold_answer": "Etter å ha snakket med de involverte",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1276,
+    "question": "På hvilket stadion spilte Kolstad fjerde runde i cupen i håndball?",
+    "gold_answer": "På Nadderud Arena",
+    "predicted_answer": "Nadderud Arena"
+  },
+  {
+    "qid": 1634,
+    "question": "Hvor mange poeng får man hvis man vinner i armageddon?",
+    "gold_answer": "1,5",
+    "predicted_answer": "1,5"
+  },
+  {
+    "qid": 1529,
+    "question": "Hvem var leder i Høyre da innsender var 14 år gammel?",
+    "gold_answer": "Jan Petersen",
+    "predicted_answer": "Jan Petersen"
+  },
+  {
+    "qid": 1794,
+    "question": "Hva heter den russiske skipresidenten?",
+    "gold_answer": "Jelena Välbe",
+    "predicted_answer": "Jelena Välbe"
+  },
+  {
+    "qid": 2119,
+    "question": "Hvor mange mener at dagens bilavgifter bør byttes ut med veiprising?",
+    "gold_answer": "53 prosent",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1849,
+    "question": "Når går Dan Coats av?",
+    "gold_answer": "15. august",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 495,
+    "question": "Hvem er regjerende mestre i EM?",
+    "gold_answer": "Mol og Sørum",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1015,
+    "question": "Når ble produksjonen i Ekofisk-feltet startet?",
+    "gold_answer": "i 1971",
+    "predicted_answer": "1971"
+  },
+  {
+    "qid": 920,
+    "question": "Hva er det som bestemmer hvilken skole elever havner på ved bruk av nærskoleprinsippet?",
+    "gold_answer": "postnummeret og hvor foreldrene bor",
+    "predicted_answer": "postnummeret og hvor foreldrene bor"
+  },
+  {
+    "qid": 262,
+    "question": "Hvilken minister fikk innført kvotering av kvinner i styrene i store selskaper i Norge?",
+    "gold_answer": "Ansgar Gabrielsen",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1384,
+    "question": "Hvor jobber David Nyblom?",
+    "gold_answer": "i Medicall",
+    "predicted_answer": "Med"
+  },
+  {
+    "qid": 86,
+    "question": "Hva er to av de siktede i saken siktet for?",
+    "gold_answer": "forsettlig drap eller medvirkning til dette",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 2268,
+    "question": "I hvilken by er Bonita registrert?",
+    "gold_answer": "Grimstad",
+    "predicted_answer": "Grimstad"
+  },
+  {
+    "qid": 942,
+    "question": "Hvilket syndrom har Neils sønn Zeke?",
+    "gold_answer": "cerebral parese",
+    "predicted_answer": "cerebral parese"
+  },
+  {
+    "qid": 29,
+    "question": "Hvilken menighet tilhører barne- og familieminister Ropstad?",
+    "gold_answer": "Oslo Misjonskirke Betlehem",
+    "predicted_answer": "Oslo Misjonskirke Betlehem"
+  },
+  {
+    "qid": 290,
+    "question": "Hva kommer Trump til å gjøre hvis ikke en avtale kommer på bordet før 1. mars?",
+    "gold_answer": "øke tollen på kinesiske importvarer",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 241,
+    "question": "Hvor mange ulike ansatte kan eldre pasienter i Oslo måtte forholde seg til per måned?",
+    "gold_answer": "30",
+    "predicted_answer": "30"
+  },
+  {
+    "qid": 937,
+    "question": "Når spilte PSG mot Manchester United sist?",
+    "gold_answer": "for halvannen uke siden",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 276,
+    "question": "Hva var løven Tidemandsen skjøt avlet opp for?",
+    "gold_answer": "å skytes",
+    "predicted_answer": "å skytes"
+  },
+  {
+    "qid": 128,
+    "question": "Hvilken oppslutning fikk Høyre i fylkestingsvalget i Viken?",
+    "gold_answer": "25,1 prosentpoeng",
+    "predicted_answer": "25,1 prosentpoeng"
+  },
+  {
+    "qid": 1353,
+    "question": "Når fikk Bjarte Myrhol et tilbakefall med sykdommen sin?",
+    "gold_answer": "23. desember",
+    "predicted_answer": "23. desember"
   }
 ]
