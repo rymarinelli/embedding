@@ -496,5 +496,143 @@
     "question": "Hvilken person har Manshaus hyllet?",
     "gold_answer": "Vidkun Quisling",
     "predicted_answer": "Vidkun Quisling"
+  },
+  {
+    "qid": 2323,
+    "question": "Hvem skal avhøres i dag?",
+    "gold_answer": "Flere naboer",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1288,
+    "question": "Hvem gjelder dagens 90-dagersfrist for?",
+    "gold_answer": "både for politi og domstoler",
+    "predicted_answer": "voldssaker"
+  },
+  {
+    "qid": 870,
+    "question": "Hvordan synes Kristoffersen det er å tangere Jansruds antall pallplasser?",
+    "gold_answer": "deilig",
+    "predicted_answer": "deilig"
+  },
+  {
+    "qid": 2044,
+    "question": "Hvordan ligger det til rette for at avslutninga på sesongen blir?",
+    "gold_answer": "nervepirrende",
+    "predicted_answer": "nervepirrende"
+  },
+  {
+    "qid": 1620,
+    "question": "Hvor mange bom fikk Vetle Sjåstad Christiansen på siste skyting?",
+    "gold_answer": "én",
+    "predicted_answer": "én"
+  },
+  {
+    "qid": 1879,
+    "question": "Hva grunnla Mao Zedong i 1949?",
+    "gold_answer": "Folkerepublikken Kina",
+    "predicted_answer": "Folkerepublikken Kina"
+  },
+  {
+    "qid": 585,
+    "question": "Hvor jobbet den første varsleren?",
+    "gold_answer": "i CIA",
+    "predicted_answer": "CIA"
+  },
+  {
+    "qid": 1084,
+    "question": "Hva er det som uten behandling forårsaker aids?",
+    "gold_answer": "hiv-viruset",
+    "predicted_answer": "hiv-viruset"
+  },
+  {
+    "qid": 1010,
+    "question": "Hvor mye anslo Per Sandberg at totalkostnaden for Mulla Krekar var på i 2012?",
+    "gold_answer": "minst 20 millioner kroner",
+    "predicted_answer": "minst 20 millioner kroner"
+  },
+  {
+    "qid": 2299,
+    "question": "Når er Den hellige families dag?",
+    "gold_answer": "Første søndag etter juledag",
+    "predicted_answer": "Første søndag etter juledag"
+  },
+  {
+    "qid": 2207,
+    "question": "Hvordan mener May at det er best å forlate EU?",
+    "gold_answer": "på en velordnet måte med en avtale",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1076,
+    "question": "Hvor stor andel av tiåringer har i dag mobiltelefon?",
+    "gold_answer": "Ni av ti",
+    "predicted_answer": "Ni av ti"
+  },
+  {
+    "qid": 2394,
+    "question": "Hvordan har Australia Institute markert seg?",
+    "gold_answer": "som en uttalt kritiker av Equinors prosjekt i South Australia",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1754,
+    "question": "Hva foreslo MDG?",
+    "gold_answer": "å styrke nattogtilbudet til Europa",
+    "predicted_answer": "styrke nattogtilbudet til Europa"
+  },
+  {
+    "qid": 2390,
+    "question": "Hvilken stasjon kommer F-35 flyene fra?",
+    "gold_answer": "Ørland flystasjon",
+    "predicted_answer": "Ørland flystasjon"
+  },
+  {
+    "qid": 1635,
+    "question": "Hvor mange poeng får man hvis man taper i armageddon?",
+    "gold_answer": "0,5",
+    "predicted_answer": "0,5"
+  },
+  {
+    "qid": 1482,
+    "question": "Hvilke nordmenn klarte ikke å kvalifisere seg til kvartfinalen i sprinten?",
+    "gold_answer": "Sjur Røthe og Martin Johnsrud Sundby, Didrik Tønseth og Hans Christer Holund",
+    "predicted_answer": "Sjur Røthe og Martin Johnsrud Sundby, Didrik Tønseth og Hans Christer Holund"
+  },
+  {
+    "qid": 898,
+    "question": "Fra hvilke to land kommer foreldrene til Kamala Harris?",
+    "gold_answer": "fra Jamaica og India",
+    "predicted_answer": "Jamaica og India"
+  },
+  {
+    "qid": 566,
+    "question": "Når vil mye av isen i isbreene forsvinne, ifølge Liss Marie Andreassen?",
+    "gold_answer": "de neste 20 til 50 årene",
+    "predicted_answer": "i løpet av de neste 20 til 50 årene"
+  },
+  {
+    "qid": 2087,
+    "question": "Hvordan skal NRK finansieres?",
+    "gold_answer": "over skatteseddelen",
+    "predicted_answer": "over skatteseddelen"
+  },
+  {
+    "qid": 2021,
+    "question": "I hvilken bane løp Warholm?",
+    "gold_answer": "bane syv",
+    "predicted_answer": "bane syv"
+  },
+  {
+    "qid": 372,
+    "question": "Hvem er toppsjef i Hydro frem til 8.5?",
+    "gold_answer": "Svein Richard Brandtzæg",
+    "predicted_answer": "Svein Richard Brandtzæg"
+  },
+  {
+    "qid": 192,
+    "question": "Hvor finner man en video der Lind spiller jern-lur?",
+    "gold_answer": "på You Tube",
+    "predicted_answer": "You Tube"
   }
 ]
