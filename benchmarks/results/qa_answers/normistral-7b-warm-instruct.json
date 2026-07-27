@@ -304,5 +304,95 @@
     "question": "Hvem har May samarbeidet med i parlamentet siden nyvalget i 2017?",
     "gold_answer": "det nordirske unionistpartiet DUP",
     "predicted_answer": "Theresa May har samarbeidet med det nordirske unionistpartiet DUP siden nyvalget i 2017. Dette samarbeidet gjorde det mulig for henne å opprettholde et flertall i Underhuset, til tross for at Det konservative partiet mistet sitt flertall. DUPs støtte har vært avgjørende for Mays regjering,"
+  },
+  {
+    "qid": 187,
+    "question": "Hva heter samboeren til Amanda Lind?",
+    "gold_answer": "Björn Ola Lind",
+    "predicted_answer": "Samboeren til Amanda Lind er Björn Ola Lind, en multikunstner som lager film, driver med eksperimentell kunst og spiller didgeridoo og butoh-dans. Han er kjent for å lage filmer basert på samisk mytologi og har tilbrakt tid med australske aboriginere"
+  },
+  {
+    "qid": 933,
+    "question": "Hva står for rundt 96 prosent av den samlede kraftproduksjonen i Norge?",
+    "gold_answer": "Vannkraften",
+    "predicted_answer": "Vannkraft står for rundt  96 prosent av den samlede kraftproduksjonen i Norge. Denne informasjonen kan finnes i den vedlagte teksten, som sier at «vannkraft står for rundt 96 prosent av den samlede kraftproduksjonen i Norge». Dette betyr at vannkraft er den dominerende kilden til kraft i Norge, og gir en stabil"
+  },
+  {
+    "qid": 1185,
+    "question": "Hvilken lakseoppdretter er verdens største?",
+    "gold_answer": "Mowi",
+    "predicted_answer": "Verdens største lakseoppdretter er Mowi, tidligere kjent som Marine Harvest. I 2018 mistet Mowi rekordmange 783 000 laks fra sine oppdrettsanlegg, noe som er 34 ganger så mange som i 2017 og 61 ganger så mange som i 2"
+  },
+  {
+    "qid": 326,
+    "question": "Hvem står bak Evil Corp?",
+    "gold_answer": "Personer bosatt i Moskva",
+    "predicted_answer": "De to russerne som er etterlyst av FBI, er Maksim Jakubets og Igor Turasjev. De er medlemmer av en russisk hackergruppe kjent som «Evil Corp.», som er anklaget for å ha stjålet over 100 millioner dollar fra selskaper, organisasjoner, lokale myndigheter"
+  },
+  {
+    "qid": 953,
+    "question": "Hvilken AP-politiker har levert fiktive reiseregninger?",
+    "gold_answer": "Hege Haukeland Liadal",
+    "predicted_answer": "Hege Haukeland Liadal, en AP-politiker, har levert fiktive reiseregninger. Denne avsløringen kom etter at Aftenposten hadde gjennomgått reiseregningene hennes, og funnet ut at hun hadde krevd refusjon for reiser som aldri fant sted eller som var feildatert. Hun har siden innrømmet disse feilene."
+  },
+  {
+    "qid": 413,
+    "question": "Hvordan fløy Magnussen inn i putene etter at han mistet balansen?",
+    "gold_answer": "i stor hastighet",
+    "predicted_answer": "Magnussen fløy inn i putene etter at han mistet balansen i den andre svingen under lagsprinten i enkeltdistanse-VM. Denne hendelsen førte til at Norge ikke fikk fullført løpet, og det ble dessverre ingen medalje for det norske laget. Etter fallet ble Magnussen undersøkt av lege, og det ble bekreftet"
+  },
+  {
+    "qid": 1857,
+    "question": "Når tok Hammerson eierskap over Norwegian Outlet?",
+    "gold_answer": "i 2017",
+    "predicted_answer": "Hammerson tok eierskap over Norwegian Outlet i 2017."
+  },
+  {
+    "qid": 1494,
+    "question": "Hva skrev Mjelva om i BT i mai?",
+    "gold_answer": "om hvor godt det går i Norge, med synkende arbeidsløshet og økte lønninger på grunn av mangel på arbeidskraft",
+    "predicted_answer": "Mjelva skrev om den nåværende tilstanden i det norske arbeidsmarkedet, som han beskrev som «varm». Han nevnte at arbeidsledigheten er lav og lønningene øker på grunn av mangel på arbeidskraft. Han nevnte imidlertid ikke at folk på arbeidsavklaringspenger eller deltidsjobber ikke regnes med i Navs arbeidsledighetsstatistikk"
+  },
+  {
+    "qid": 666,
+    "question": "Hvordan vurderte sveitsiske myndighetere eritreeren frem til for et år siden?",
+    "gold_answer": "som «godt integrert»",
+    "predicted_answer": "Sveitsiske myndigheter vurderte den 40 år gamle eritreiske mannen som «godt integrert» fram til 2019. Dette betyr at han var i stand til å fungere og bidra til samfunnet på en effektiv måte, til tross for eventuelle psykiske helseproblemer."
+  },
+  {
+    "qid": 1516,
+    "question": "Hvor mange spanske journalister har kommet til Oslo før kampen mellom Spania og Norge?",
+    "gold_answer": "et tredvetalls",
+    "predicted_answer": "Det spanske pressekorpset i Oslo før kampen mot Norge består av over 30 journalister."
+  },
+  {
+    "qid": 1455,
+    "question": "Hvilken status har Rikako Ikee i Japan?",
+    "gold_answer": "superstjerne",
+    "predicted_answer": "Rikako Ikee er en superstjerne i Japan, etter å ha vunnet seks gullmedaljer under Asialekene i fjor. Hun er en 19 år gammel kreftpasient som fikk den knusende nyheten om at hun har leukemi i begynnelsen av året. Til tross for sykdommen hennes, er"
+  },
+  {
+    "qid": 858,
+    "question": "Når er det ikke lurt å sette nyttårsforsettene sine?",
+    "gold_answer": "én dag før du begynner",
+    "predicted_answer": "Det er ikke anbefalt å sette nyttårsforsettene sine for nært opp til nyttår, ettersom det kan føre til skuffelse og frustrasjon hvis man ikke klarer å holde forsettene. I stedet er det bedre å planlegge og forberede seg i god tid før nyttår, slik at man kan sette realistiske og oppnåelige mål. Dette vil"
+  },
+  {
+    "qid": 1093,
+    "question": "Hvordan kommenterte Ingvild Østberg løpet?",
+    "gold_answer": "Jeg er så fornøyd og stolt. Det var virkelig en kamp i dag",
+    "predicted_answer": "Ingvild Flugstad Østberg, den sølvvinnende utøveren, uttrykte sin tilfredshet og stolthet over prestasjonen sin i kvinnenes skiathlon under VM i Seefeld. Hun sa: «Jeg er så fornøyd og stolt. Det var virkelig en kamp i dag.» Dette svaret er hentet direkte fra teksten"
+  },
+  {
+    "qid": 292,
+    "question": "Hvem er Guillaume Poupard?",
+    "gold_answer": "sjef for franske ANSSI",
+    "predicted_answer": "Guillaume Poupard er en fransk tjenestemann som innehar stillingen som direktør for National Agency for Information and Cybersecurity (ANSSI). Han gjestet Sikkerhetskonferansen i Oslo onsdag. Dette er en årlig konferanse som fokuserer på cybersikkerhet og arrangeres av Nasjonal sikkerhetsmyndighet (NSM)."
+  },
+  {
+    "qid": 700,
+    "question": "Hvor arrangeres kombinert neste helg?",
+    "gold_answer": "Lahti",
+    "predicted_answer": "Neste helg arrangeres kombinertrennene i Lahti, Finland. Dette ble bekreftet etter at Jarl Magnus Riiber sikret seg krystallkula i verdenscupen i kombinert i tyske Klingenthal. Riibers superform har gjort han til en stor gullkandidat i VM i Seefeld, som arrangeres"
   }
 ]
