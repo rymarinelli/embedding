@@ -1,0 +1,500 @@
+[
+  {
+    "qid": 456,
+    "question": "Når i scorte Milivojevic mot Manchester City?",
+    "gold_answer": "på tampen",
+    "predicted_answer": "ti minutter før slutt"
+  },
+  {
+    "qid": 102,
+    "question": "Når ble det første landsmøtet i Fremskrittspartiet avholdt?",
+    "gold_answer": "i 1974",
+    "predicted_answer": "1974"
+  },
+  {
+    "qid": 1126,
+    "question": "Hvor er Kristian Røkke investeringsdirektør?",
+    "gold_answer": "Aker",
+    "predicted_answer": "Aker"
+  },
+  {
+    "qid": 1003,
+    "question": "Hva heter avdelingen ved Ullevål sykehus som slutter å sende ut anonymiserte tilstandsrapporter om pasienter?",
+    "gold_answer": "Avdeling for traumatologi",
+    "predicted_answer": "Avdeling for traumatologi"
+  },
+  {
+    "qid": 914,
+    "question": "Hvem sørget for sikkerheten under valget i Spania?",
+    "gold_answer": "Rundt 93.000 politifolk",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 571,
+    "question": "Hvem var Ruuds motstander i åttendelsfinalen i Autralia?",
+    "gold_answer": "Henri Laaksonen",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 419,
+    "question": "Når skal Andreas Stjernen avslutte karrieren?",
+    "gold_answer": "etter Raw Air",
+    "predicted_answer": "etter Raw Air"
+  },
+  {
+    "qid": 2233,
+    "question": "Hvem er kritiske til De hvite hjelmene?",
+    "gold_answer": "Det syriske regimet og Russland",
+    "predicted_answer": "Det syriske regimet og Russland"
+  },
+  {
+    "qid": 356,
+    "question": "Hvilken pris vil nye Taycan ligge på i Norge?",
+    "gold_answer": "over én million kroner",
+    "predicted_answer": "godt over én million kroner"
+  },
+  {
+    "qid": 1728,
+    "question": "Hvor finner Idyllfestivalen sted?",
+    "gold_answer": "i Fredrikstad",
+    "predicted_answer": "Fredrikstad"
+  },
+  {
+    "qid": 130,
+    "question": "Når gikk Zuccarello til Dallas?",
+    "gold_answer": "i februar",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 122,
+    "question": "Hvordan kommenterer Casey Stoney den forestående kampen mot Vålerenga på Intility arena?",
+    "gold_answer": "Kampen blir en viktig del av vår sesongoppkjøring, og det blir en veldig fin test for oss mot en god motstander. I tillegg gleder vi oss veldig til å besøke Norge og Oslo som by og ser fram til en spennende kamp med fine rammer rundt, forteller Stoney i en pressemelding",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 383,
+    "question": "Hvilken høyreekstremist mener Filter Nyheter at er pågrepet i Oslo?",
+    "gold_answer": "Greg Johnson",
+    "predicted_answer": "Greg Johnson"
+  },
+  {
+    "qid": 895,
+    "question": "Hvilken type helseforsikring må amerikanere ha?",
+    "gold_answer": "privat",
+    "predicted_answer": "privat helseforsikring"
+  },
+  {
+    "qid": 952,
+    "question": "Når tok Francine Niyonsaba sølv på 800-meter i OL?",
+    "gold_answer": "2016",
+    "predicted_answer": "2016"
+  },
+  {
+    "qid": 2069,
+    "question": "Når vil en åpen høring finne sted i Stortinget?",
+    "gold_answer": "Den 9. januar",
+    "predicted_answer": "9. januar"
+  },
+  {
+    "qid": 108,
+    "question": "Hvor streiket Greta Thunberg?",
+    "gold_answer": "utenfor Riksdagen i Stockholm",
+    "predicted_answer": "utenfor Riksdagen i Stockholm"
+  },
+  {
+    "qid": 2298,
+    "question": "Hva bør man gjøre i stedet for å chatte og surfe?",
+    "gold_answer": "snakke med hverandre",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 814,
+    "question": "Når tror man Hagibis treffer Tokyo?",
+    "gold_answer": "lørdag kveld",
+    "predicted_answer": "lørdag kveld"
+  },
+  {
+    "qid": 2232,
+    "question": "Hvor gammel ble Hvite hjelmer-grunnleggeren?",
+    "gold_answer": "48 år gammel",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1718,
+    "question": "Hvordan endte 2. sett mellom Ruud og Griekspoor?",
+    "gold_answer": "1-6",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 902,
+    "question": "Hvem kunne fint levd med skaden som Henrik Ingebritsen ble operert for?",
+    "gold_answer": "herr og fru Hvermansen",
+    "predicted_answer": "herr og fru Hvermansen"
+  },
+  {
+    "qid": 1839,
+    "question": "Hvem har spesialenheten for politisaker avhørt i helga?",
+    "gold_answer": "blant andre tjenestepersonene som var involvert i hendelsen",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1139,
+    "question": "Hva ropte folkemengden på stadion da de oppdaget at Trump var tilstede?",
+    "gold_answer": "Lås ham inne!",
+    "predicted_answer": "«Lås ham inne!»"
+  },
+  {
+    "qid": 26,
+    "question": "Hvor arrangeres festivalen Palmesus?",
+    "gold_answer": "på Bystranda i Kristiansand",
+    "predicted_answer": "Bystranda i Kristiansand"
+  },
+  {
+    "qid": 653,
+    "question": "Hvilke andre skuespillere, i tillegg til Julia Roberts, hadde store roller i Homecoming?",
+    "gold_answer": "Stephan James, Bobby Cannavale og Sissy Spacek",
+    "predicted_answer": "Stephan James, Bobby Cannavale og Sissy Spacek"
+  },
+  {
+    "qid": 1731,
+    "question": "Hvor mange diamantplater har Zara Larsson?",
+    "gold_answer": "1",
+    "predicted_answer": "1"
+  },
+  {
+    "qid": 1393,
+    "question": "Når spilte Juventus mot Atlético Madrid?",
+    "gold_answer": "lørdag",
+    "predicted_answer": "lørdag"
+  },
+  {
+    "qid": 1138,
+    "question": "Hvor ble kampen mellom Houston Astros og Washington Nationals spilt?",
+    "gold_answer": "på Nationals Park",
+    "predicted_answer": "Nationals Park"
+  },
+  {
+    "qid": 636,
+    "question": "Hvem er talsperson for Sea Watch?",
+    "gold_answer": "Giorgia Linardi",
+    "predicted_answer": "Giorgia Linardi"
+  },
+  {
+    "qid": 881,
+    "question": "Hvorfor har ikke foreldrene fra Naustdal returnert til Norge?",
+    "gold_answer": "På grunn av mistillit mot barnevernet og frykt for rettsforfølging",
+    "predicted_answer": "mistillit mot barnevernet og frykt for rettsforfølging"
+  },
+  {
+    "qid": 1378,
+    "question": "Hvem er Kolstø talsmann for?",
+    "gold_answer": "for den nye norske avdelingen av Extinction Rebellion",
+    "predicted_answer": "den nye norske avdelingen av Extinction Rebellion"
+  },
+  {
+    "qid": 418,
+    "question": "Hvorfor snudde landslagstrener Alexander Stöckl og alle hans trenerkolleger seg bort på filmen av Stjernens fall?",
+    "gold_answer": "for å slippe å se Stjernens brutale møte med unnarennet",
+    "predicted_answer": "for å slippe å se Stjernens brutale møte med unnarennet."
+  },
+  {
+    "qid": 379,
+    "question": "Hvilke to sykloner rammet Mosambik i år?",
+    "gold_answer": "Idai og Kenneth",
+    "predicted_answer": "Idai og Kenneth"
+  },
+  {
+    "qid": 1556,
+    "question": "Hvem måtte ut av regjering da Listhaug ble eldre- og folkehelseminister?",
+    "gold_answer": "Åse Michaelsen",
+    "predicted_answer": "Åse Michaelsen"
+  },
+  {
+    "qid": 396,
+    "question": "Hvilket kjønn har ulven som er funnet?",
+    "gold_answer": "ukjent",
+    "predicted_answer": "ukjent"
+  },
+  {
+    "qid": 1470,
+    "question": "Hvordan skal VAR-prosessen formidles til publikum på stadion?",
+    "gold_answer": "ved hjelp enten av storskjermer eller beskjeder over høyttaleranlegget",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1408,
+    "question": "Hva er den antatte gjerningsmannen siktet for?",
+    "gold_answer": "for drap og drapsforsøk",
+    "predicted_answer": "drap og drapsforsøk"
+  },
+  {
+    "qid": 1083,
+    "question": "Hva frykter foreldrene til de HIV-smittede barna?",
+    "gold_answer": "at deres barns fremtid er påført ubotelig skade fordi de er smittet med hiv",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 177,
+    "question": "Hvordan ble finalen i turneringen avgjort?",
+    "gold_answer": "på straffekast",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1881,
+    "question": "Hvordan endte det første settet?",
+    "gold_answer": "21-11",
+    "predicted_answer": "21-11"
+  },
+  {
+    "qid": 2196,
+    "question": "Hvilke partier ligger an til å bli redusert?",
+    "gold_answer": "De moderate partiene i sentrum-høyre og sentrum-venstre",
+    "predicted_answer": "De moderate partiene i sentrum-høyre og sentrum-venstre"
+  },
+  {
+    "qid": 511,
+    "question": "Hvem var operasjonsleder for politiet?",
+    "gold_answer": "Line Skott",
+    "predicted_answer": "Line Skott"
+  },
+  {
+    "qid": 1550,
+    "question": "Når ble den våteste 17. mai i Bergen målt?",
+    "gold_answer": "i 1993",
+    "predicted_answer": "1993"
+  },
+  {
+    "qid": 322,
+    "question": "Hvor er de to tiltalte russerne nå?",
+    "gold_answer": "på frifot",
+    "predicted_answer": "på frifot"
+  },
+  {
+    "qid": 2261,
+    "question": "Hvor arbeider Christine Korme?",
+    "gold_answer": "i Norsk Rederiforbund",
+    "predicted_answer": "Norsk Rederiforbund"
+  },
+  {
+    "qid": 1200,
+    "question": "Hvem er er det Warren ikke er så populær hos?",
+    "gold_answer": "Mark Zuckerberg",
+    "predicted_answer": "alle"
+  },
+  {
+    "qid": 1481,
+    "question": "Hvilken øvelse kommer på onsdag?",
+    "gold_answer": "klassisk fellesstart",
+    "predicted_answer": "klassisk fellesstart"
+  },
+  {
+    "qid": 2364,
+    "question": "Hvor gammel er Elisabeths datter som spiller fotball?",
+    "gold_answer": "13 år",
+    "predicted_answer": "13 år"
+  },
+  {
+    "qid": 787,
+    "question": "På hvilken plass ligger Mads Østberg i VM?",
+    "gold_answer": "på 13. plass",
+    "predicted_answer": "13. plass"
+  },
+  {
+    "qid": 284,
+    "question": "Hvem har May samarbeidet med i parlamentet siden nyvalget i 2017?",
+    "gold_answer": "det nordirske unionistpartiet DUP",
+    "predicted_answer": "det nordirske unionistpartiet DUP"
+  },
+  {
+    "qid": 187,
+    "question": "Hva heter samboeren til Amanda Lind?",
+    "gold_answer": "Björn Ola Lind",
+    "predicted_answer": "Björn Ola Lind"
+  },
+  {
+    "qid": 933,
+    "question": "Hva står for rundt 96 prosent av den samlede kraftproduksjonen i Norge?",
+    "gold_answer": "Vannkraften",
+    "predicted_answer": "Vannkraften"
+  },
+  {
+    "qid": 1185,
+    "question": "Hvilken lakseoppdretter er verdens største?",
+    "gold_answer": "Mowi",
+    "predicted_answer": "Mowi"
+  },
+  {
+    "qid": 326,
+    "question": "Hvem står bak Evil Corp?",
+    "gold_answer": "Personer bosatt i Moskva",
+    "predicted_answer": "Maksim Jakubets og Igor Turasjev"
+  },
+  {
+    "qid": 953,
+    "question": "Hvilken AP-politiker har levert fiktive reiseregninger?",
+    "gold_answer": "Hege Haukeland Liadal",
+    "predicted_answer": "Hege Haukeland Liadal"
+  },
+  {
+    "qid": 413,
+    "question": "Hvordan fløy Magnussen inn i putene etter at han mistet balansen?",
+    "gold_answer": "i stor hastighet",
+    "predicted_answer": "i stor hastighet"
+  },
+  {
+    "qid": 1857,
+    "question": "Når tok Hammerson eierskap over Norwegian Outlet?",
+    "gold_answer": "i 2017",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1494,
+    "question": "Hva skrev Mjelva om i BT i mai?",
+    "gold_answer": "om hvor godt det går i Norge, med synkende arbeidsløshet og økte lønninger på grunn av mangel på arbeidskraft",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 666,
+    "question": "Hvordan vurderte sveitsiske myndighetere eritreeren frem til for et år siden?",
+    "gold_answer": "som «godt integrert»",
+    "predicted_answer": "«godt integrert»"
+  },
+  {
+    "qid": 1516,
+    "question": "Hvor mange spanske journalister har kommet til Oslo før kampen mellom Spania og Norge?",
+    "gold_answer": "et tredvetalls",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1455,
+    "question": "Hvilken status har Rikako Ikee i Japan?",
+    "gold_answer": "superstjerne",
+    "predicted_answer": "superstjerne"
+  },
+  {
+    "qid": 858,
+    "question": "Når er det ikke lurt å sette nyttårsforsettene sine?",
+    "gold_answer": "én dag før du begynner",
+    "predicted_answer": "én dag før du begynner"
+  },
+  {
+    "qid": 1093,
+    "question": "Hvordan kommenterte Ingvild Østberg løpet?",
+    "gold_answer": "Jeg er så fornøyd og stolt. Det var virkelig en kamp i dag",
+    "predicted_answer": "Jeg er så fornøyd og stolt. Det"
+  },
+  {
+    "qid": 292,
+    "question": "Hvem er Guillaume Poupard?",
+    "gold_answer": "sjef for franske ANSSI",
+    "predicted_answer": "sjef for franske ANSSI"
+  },
+  {
+    "qid": 700,
+    "question": "Hvor arrangeres kombinert neste helg?",
+    "gold_answer": "Lahti",
+    "predicted_answer": "Lahti"
+  },
+  {
+    "qid": 2187,
+    "question": "Hva ønsker Ursula von der Leyen spesifikt å fremme?",
+    "gold_answer": "tidenes første europeiske klimalov",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1002,
+    "question": "Hvilken stilling innehar Elin Floberghagen i Norsk Presseforbund?",
+    "gold_answer": "generalsekretær",
+    "predicted_answer": "Generalsekretær"
+  },
+  {
+    "qid": 669,
+    "question": "Når var den siktede eritreeren i psykiatrisk behandling?",
+    "gold_answer": "i 2019",
+    "predicted_answer": "i 2019"
+  },
+  {
+    "qid": 1893,
+    "question": "Hvor mange priser vant Jakob Ingebrigtsen på fjorårets Idrettsgalla?",
+    "gold_answer": "to",
+    "predicted_answer": "to"
+  },
+  {
+    "qid": 1554,
+    "question": "Hvilke to partier ligger under sperregrensen?",
+    "gold_answer": "Venstre og KrF",
+    "predicted_answer": "Venstre og KrF"
+  },
+  {
+    "qid": 1105,
+    "question": "Hvor mange strafferunder fikk Erlend Bjøntegaard?",
+    "gold_answer": "to",
+    "predicted_answer": "to"
+  },
+  {
+    "qid": 2281,
+    "question": "Hvorfor ble Wayne frikjent?",
+    "gold_answer": "fordi han ikke visste hva nazihilsen var",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 899,
+    "question": "Hvor gammel er Pete Buttigieg?",
+    "gold_answer": "37 år",
+    "predicted_answer": "37 år"
+  },
+  {
+    "qid": 1328,
+    "question": "Hvem skal LSK Kvinner møte i årets cupfinale?",
+    "gold_answer": "Vålerenga",
+    "predicted_answer": "Vålerenga"
+  },
+  {
+    "qid": 229,
+    "question": "Hvilket land i Øst-Europa var det første til å få en ikke-kommunistisk statsminister?",
+    "gold_answer": "Polen",
+    "predicted_answer": "Polen"
+  },
+  {
+    "qid": 938,
+    "question": "Hvem jobber Matthew Peters for?",
+    "gold_answer": "Manchester United",
+    "predicted_answer": "Manchester United"
+  },
+  {
+    "qid": 131,
+    "question": "Hvem spilte Dallas mot på tirsdag?",
+    "gold_answer": "Philadelphia Flyers",
+    "predicted_answer": "Philadelphia Flyers"
+  },
+  {
+    "qid": 1292,
+    "question": "Når i storslalåmrennet kjørte Aamodt Kilde ut?",
+    "gold_answer": "allerede før TV-sendingen fikk fokusert på løpet hans",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 1643,
+    "question": "Hvordan er Sylvi Listhaugs holdning til kjøtt?",
+    "gold_answer": "sørgelig gammeldags",
+    "predicted_answer": "sørgelig gammeldags"
+  },
+  {
+    "qid": 1096,
+    "question": "Hva er Australia Institute?",
+    "gold_answer": "en progressiv tankesmie",
+    "predicted_answer": "en progressiv tankesmie"
+  },
+  {
+    "qid": 271,
+    "question": "Hvilken by er verdens sydligste?",
+    "gold_answer": "Puerto Williams",
+    "predicted_answer": "Puerto Williams"
+  },
+  {
+    "qid": 864,
+    "question": "Hvilken person har Manshaus hyllet?",
+    "gold_answer": "Vidkun Quisling",
+    "predicted_answer": "Vidkun Quisling"
+  }
+]
