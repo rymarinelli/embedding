@@ -448,5 +448,11 @@
     "question": "Hvem skal LSK Kvinner møte i årets cupfinale?",
     "gold_answer": "Vålerenga",
     "predicted_answer": "Ajara Njoya scoret hat trick og sendte Vålerenga til cupfinale mot LSK Kvinner.\n\nI løpet av elleve minutter scoret Ajara Njoya tre mål for å sikre en 4-1-seier for Vålerenga mot Arna-Bjørnar. Njoya ble flyttet opp fra midtbanen til"
+  },
+  {
+    "qid": 229,
+    "question": "Hvilket land i Øst-Europa var det første til å få en ikke-kommunistisk statsminister?",
+    "gold_answer": "Polen",
+    "predicted_answer": "Polen var det første landet i Øst-Europa som fikk en ikke-kommunistisk statsminister. Dette skjedde i august 1989, under oppløsningen av Sovjetunionen og Berlinmurens fall. Den polske statsministeren var den første på 40 år, og hans regjeringstid markerte et viktig skifte fra det kommunistiske styret."
   }
 ]
