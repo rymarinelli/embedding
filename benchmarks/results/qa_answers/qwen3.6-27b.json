@@ -1564,5 +1564,23 @@
     "question": "Hvem er Michael Avenatti?",
     "gold_answer": "advokaten til en av anklagerne",
     "predicted_answer": "advokaten til en av anklagerne"
+  },
+  {
+    "qid": 280,
+    "question": "Når varslet May at hun skulle gå av?",
+    "gold_answer": "i forrige måned",
+    "predicted_answer": "i forrige måned"
+  },
+  {
+    "qid": 278,
+    "question": "Hvor jobber Ragnhild Sollund?",
+    "gold_answer": "Universitetet i Oslo",
+    "predicted_answer": "Universitetet i Oslo"
+  },
+  {
+    "qid": 963,
+    "question": "Hva heter sikkerhetstjenesten i Sverige?",
+    "gold_answer": "Säpo",
+    "predicted_answer": "Säpo"
   }
 ]
