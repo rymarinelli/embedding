@@ -430,5 +430,11 @@
     "question": "Hvor mange strafferunder fikk Erlend Bjøntegaard?",
     "gold_answer": "to",
     "predicted_answer": "Erlend Bjøntegaard pådro seg to bom på stående skyting, som oppgitt i den medfølgende teksten. Denne informasjonen kan finnes i setningen: «Erlend Bjøntegaard skjøt på seg to runder og endte på 32. plass.»"
+  },
+  {
+    "qid": 2281,
+    "question": "Hvorfor ble Wayne frikjent?",
+    "gold_answer": "fordi han ikke visste hva nazihilsen var",
+    "predicted_answer": "Wayne Hennessey ble frikjent for anklagene om å ha gjort en nazihilsen under en lagmiddag. Dette var fordi det ikke var tilstrekkelig bevis for å bevise at han gjorde gesten med vilje. Hennessey har selv forklart at han ikke visste hva en nazihilsen var, og FA trodde på hans"
   }
 ]
