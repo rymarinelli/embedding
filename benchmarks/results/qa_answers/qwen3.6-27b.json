@@ -1582,5 +1582,77 @@
     "question": "Hva heter sikkerhetstjenesten i Sverige?",
     "gold_answer": "Säpo",
     "predicted_answer": "Säpo"
+  },
+  {
+    "qid": 1653,
+    "question": "Hvem scoret det fjerde målet for LSK?",
+    "gold_answer": "Guro Reiten",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 491,
+    "question": "Hvordan endte første sett i kampen?",
+    "gold_answer": "21-17",
+    "predicted_answer": "21-17"
+  },
+  {
+    "qid": 2333,
+    "question": "Når satte Rodrigo inn mål nummer to?",
+    "gold_answer": "etter 33 minutters spill",
+    "predicted_answer": "etter 33 minutters spill"
+  },
+  {
+    "qid": 1008,
+    "question": "Hvem var kommunalminister i Norge i 2003?",
+    "gold_answer": "Erna Solberg",
+    "predicted_answer": "Erna Solberg"
+  },
+  {
+    "qid": 2371,
+    "question": "Hvem tok førsteplassen i volleyball-VM?",
+    "gold_answer": "Oleg Stojanovskij og Vjatsjeslav Krasilnikov",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 162,
+    "question": "Når skjedde det en avsporing ved Helsfyr?",
+    "gold_answer": "ved 21.30-tiden lørdag",
+    "predicted_answer": "21.30-tiden lørdag"
+  },
+  {
+    "qid": 335,
+    "question": "Hvor stor andel av toppledere i Danmark er utlendinger?",
+    "gold_answer": "40 prosent",
+    "predicted_answer": "40 prosent"
+  },
+  {
+    "qid": 1717,
+    "question": "Hvordan endte 3. sett mellom Ruud og Griekspoor?",
+    "gold_answer": "2-6",
+    "predicted_answer": ""
+  },
+  {
+    "qid": 2315,
+    "question": "Hvor stor andel av den norske befolkning ville i dag ha stemt for norsk EU-medlemskap?",
+    "gold_answer": "28 prosent",
+    "predicted_answer": "28 prosent"
+  },
+  {
+    "qid": 2141,
+    "question": "Hva heter trengeren for landslaget?",
+    "gold_answer": "Lars Lagerbäck",
+    "predicted_answer": "Lars Lagerbäck"
+  },
+  {
+    "qid": 1295,
+    "question": "Når skulle Trine Skei Grande etter planen ha besøkt Trondheim i forbindelse med valgkampen?",
+    "gold_answer": "i ettermiddag",
+    "predicted_answer": "i ettermiddag"
+  },
+  {
+    "qid": 1068,
+    "question": "Hva var det politiet bekreftet på en pressekonferanse tirsdag?",
+    "gold_answer": "Mann siktet for drap på sin 15 år gamle sønn på Toten",
+    "predicted_answer": ""
   }
 ]
