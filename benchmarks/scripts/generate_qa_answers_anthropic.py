@@ -18,6 +18,8 @@ from pathlib import Path
 
 import requests
 
+from qa_prompts import SYSTEM_PROMPT, USER_PROMPT_TEMPLATE
+
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 OUT_DIR = Path(__file__).resolve().parent.parent / "results" / "qa_answers"
 
@@ -28,14 +30,6 @@ MODELS = {
     "claude-opus-5": "claude-opus-5",
     "claude-fable-5": "claude-fable-5",
 }
-
-SYSTEM_PROMPT = (
-    "Du er en presis leseforståelsesassistent. Du får en tekst og et spørsmål. "
-    "Svar KUN med det eksakte svaret slik det fremkommer i teksten, så kort "
-    "som mulig — ikke skriv en fullstendig setning, ikke forklar, ikke "
-    "inkluder noe annet enn selve svaret."
-)
-USER_PROMPT_TEMPLATE = "Tekst:\n{context}\n\nSpørsmål: {question}\n\nSvar:"
 
 MAX_TOKENS = 64
 TIMEOUT = 60
