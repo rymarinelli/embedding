@@ -17,11 +17,11 @@ import random
 from pathlib import Path
 
 import pandas as pd
+from datasets import Dataset
 from huggingface_hub import hf_hub_download
 from sentence_transformers import CrossEncoder
+from sentence_transformers.cross_encoder import CrossEncoderTrainer, CrossEncoderTrainingArguments
 from sentence_transformers.cross_encoder.losses import BinaryCrossEntropyLoss
-from torch.utils.data import DataLoader
-from sentence_transformers import InputExample
 
 BASE_MODEL = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
 OUT_DIR = Path(__file__).resolve().parent.parent / "models" / "reranker-norsumm-finetuned"
@@ -40,17 +40,20 @@ def load_norsumm_validation():
 
 def build_examples(articles):
     random.seed(SEED)
-    examples = []
+    summaries, texts, labels = [], [], []
     n = len(articles)
     for i, art in enumerate(articles):
         for summary in art["summaries"]:
-            examples.append(InputExample(texts=[summary, art["article"]], label=1.0))
+            summaries.append(summary)
+            texts.append(art["article"])
+            labels.append(1.0)
             other_idx = [j for j in range(n) if j != i]
             negs = random.sample(other_idx, min(NEGATIVES_PER_POSITIVE, len(other_idx)))
             for j in negs:
-                examples.append(InputExample(texts=[summary, articles[j]["article"]], label=0.0))
-    random.shuffle(examples)
-    return examples
+                summaries.append(summary)
+                texts.append(articles[j]["article"])
+                labels.append(0.0)
+    return Dataset.from_dict({"sentence1": summaries, "sentence2": texts, "label": labels}).shuffle(seed=SEED)
 
 
 def main():
@@ -58,24 +61,29 @@ def main():
     articles = load_norsumm_validation()
     print(f"  {len(articles)} articles")
 
-    examples = build_examples(articles)
-    n_pos = sum(1 for e in examples if e.label == 1.0)
-    print(f"Built {len(examples)} training pairs ({n_pos} positive, {len(examples)-n_pos} negative)")
+    train_dataset = build_examples(articles)
+    n_pos = sum(1 for l in train_dataset["label"] if l == 1.0)
+    print(f"Built {len(train_dataset)} training pairs ({n_pos} positive, {len(train_dataset)-n_pos} negative)")
 
     model = CrossEncoder(BASE_MODEL, num_labels=1)
-    train_dataloader = DataLoader(examples, shuffle=True, batch_size=BATCH_SIZE)
-
-    print(f"Fine-tuning for {EPOCHS} epochs...")
-    model.fit(
-        train_dataloader=train_dataloader,
-        epochs=EPOCHS,
-        loss_fct=BinaryCrossEntropyLoss(model),
-        warmup_steps=int(0.1 * len(train_dataloader) * EPOCHS),
-        show_progress_bar=True,
-    )
+    loss = BinaryCrossEntropyLoss(model)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    model.save(str(OUT_DIR))
+    args = CrossEncoderTrainingArguments(
+        output_dir=str(OUT_DIR / "checkpoints"),
+        num_train_epochs=EPOCHS,
+        per_device_train_batch_size=BATCH_SIZE,
+        warmup_ratio=0.1,
+        logging_steps=10,
+        save_strategy="no",
+        report_to="none",
+    )
+
+    print(f"Fine-tuning for {EPOCHS} epochs...")
+    trainer = CrossEncoderTrainer(model=model, args=args, train_dataset=train_dataset, loss=loss)
+    trainer.train()
+
+    model.save_pretrained(str(OUT_DIR))
     print(f"Saved fine-tuned reranker to {OUT_DIR}")
 
 

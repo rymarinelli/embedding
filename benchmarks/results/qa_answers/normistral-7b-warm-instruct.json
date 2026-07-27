@@ -436,5 +436,17 @@
     "question": "Hvorfor ble Wayne frikjent?",
     "gold_answer": "fordi han ikke visste hva nazihilsen var",
     "predicted_answer": "Wayne Hennessey ble frikjent for anklagene om å ha gjort en nazihilsen under en lagmiddag. Dette var fordi det ikke var tilstrekkelig bevis for å bevise at han gjorde gesten med vilje. Hennessey har selv forklart at han ikke visste hva en nazihilsen var, og FA trodde på hans"
+  },
+  {
+    "qid": 899,
+    "question": "Hvor gammel er Pete Buttigieg?",
+    "gold_answer": "37 år",
+    "predicted_answer": "Pete Buttigieg er 37 år gammel, som oppgitt i teksten. Han er ordfører i South Bend, Indiana, og har gjort seg bemerket i Demokratenes nominasjonsprosess."
+  },
+  {
+    "qid": 1328,
+    "question": "Hvem skal LSK Kvinner møte i årets cupfinale?",
+    "gold_answer": "Vålerenga",
+    "predicted_answer": "Ajara Njoya scoret hat trick og sendte Vålerenga til cupfinale mot LSK Kvinner.\n\nI løpet av elleve minutter scoret Ajara Njoya tre mål for å sikre en 4-1-seier for Vålerenga mot Arna-Bjørnar. Njoya ble flyttet opp fra midtbanen til"
   }
 ]
