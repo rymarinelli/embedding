@@ -142,5 +142,167 @@
     "question": "Hva ropte folkemengden på stadion da de oppdaget at Trump var tilstede?",
     "gold_answer": "Lås ham inne!",
     "predicted_answer": "Teksten indikerer at folkemengden buet da de så president Trump på baseballkampen i Washington. Dette var sannsynligvis på grunn av en rekke årsaker, inkludert det faktum at det var første gang Trump-ekteparet hadde deltatt på en baseballkamp på hjemmebane i svært så demokratiske Washington, og at de ble møtt"
+  },
+  {
+    "qid": 26,
+    "question": "Hvor arrangeres festivalen Palmesus?",
+    "gold_answer": "på Bystranda i Kristiansand",
+    "predicted_answer": "Palmesus-festivalen arrangeres på Bystranda i Kristiansand. Denne vakre beliggenheten ved sjøen gjør den til en unik og populær destinasjon for musikkelskere. Festivalen har blitt holdt årlig siden 2009, og har vokst til å bli en av de største strandfestene i verden, som tiltrekker seg tusenvis av"
+  },
+  {
+    "qid": 653,
+    "question": "Hvilke andre skuespillere, i tillegg til Julia Roberts, hadde store roller i Homecoming?",
+    "gold_answer": "Stephan James, Bobby Cannavale og Sissy Spacek",
+    "predicted_answer": "Julia Roberts var ikke den eneste store skuespilleren i Homecoming. Serien hadde også Stephan James, Bobby Cannavale og Sissy Spacek i fremtredende roller. Stephan James spilte rollen som Luke, en av hovedpersonene som ble innlagt på anlegget. Bobby Cannavale"
+  },
+  {
+    "qid": 1731,
+    "question": "Hvor mange diamantplater har Zara Larsson?",
+    "gold_answer": "1",
+    "predicted_answer": "Zara Larsson har mottatt én diamantplate. Denne utmerkelsen ble tildelt henne for den suksessrike sangen «Invisible», som var filmmusikken til Netflix-filmen Klaus. Denne platen er den høyeste anerkjennelsen som gis av platebransjen i USA. Den er laget av rent gull og har"
+  },
+  {
+    "qid": 1393,
+    "question": "Når spilte Juventus mot Atlético Madrid?",
+    "gold_answer": "lørdag",
+    "predicted_answer": "Juventus spilte mot Atlético Madrid på lørdag, spesifikt på Friends Arena i Stockholm, Sverige. Kampen var en del av Champions Cup-turneringen. Dessverre var ikke Cristiano Ronaldo i stand til å spille på grunn av en skade, noe som skuffet de mange sørkoreanske fansen som"
+  },
+  {
+    "qid": 1138,
+    "question": "Hvor ble kampen mellom Houston Astros og Washington Nationals spilt?",
+    "gold_answer": "på Nationals Park",
+    "predicted_answer": "Kampen mellom Houston Astros og Washington Nationals ble spilt på Nationals Park i Washington. Dette er en baseballstadion som ligger i nærheten av Det hvite hus, som er presidentens offisielle residens. Det var første gang presidentparet besøkte en baseballkamp på hjemmebane i Washington. Til tross for"
+  },
+  {
+    "qid": 636,
+    "question": "Hvem er talsperson for Sea Watch?",
+    "gold_answer": "Giorgia Linardi",
+    "predicted_answer": "Talspersonen for Sea Watch er Giorgia Linardi. Hun er ansvarlig for å gi informasjon og oppdateringer om organisasjonens aktiviteter og pågående saker. I dette tilfellet har hun uttalt seg om situasjonen til migrantene som ble reddet av Sea Watch 3, inkludert deres ankomst i Lampedusa og den påfølgende arre"
+  },
+  {
+    "qid": 881,
+    "question": "Hvorfor har ikke foreldrene fra Naustdal returnert til Norge?",
+    "gold_answer": "På grunn av mistillit mot barnevernet og frykt for rettsforfølging",
+    "predicted_answer": "Foreldrene fra Naustdal har ikke returnert til Norge på grunn av mistillit til barnevernet og frykt for rettsforfølgelse. De ble fratatt sine fem barn i 2015, etter at barnevernet i Naustdal mistenkte foreldrene for fysisk avstraffelse av barna. Foreldrene, som er pinsevenner,"
+  },
+  {
+    "qid": 1378,
+    "question": "Hvem er Kolstø talsmann for?",
+    "gold_answer": "for den nye norske avdelingen av Extinction Rebellion",
+    "predicted_answer": "Kolstø er talsperson for Extinction Rebellion, en ny norsk avdeling av en gruppe som ble dannet i Storbritannia for omtrent ett år siden. Denne gruppen, som ble kjent for sin «Nakenprotest i Underhuset» under en brexitdebatt, har siden gjennomført aksjoner i en rekke storby"
+  },
+  {
+    "qid": 418,
+    "question": "Hvorfor snudde landslagstrener Alexander Stöckl og alle hans trenerkolleger seg bort på filmen av Stjernens fall?",
+    "gold_answer": "for å slippe å se Stjernens brutale møte med unnarennet",
+    "predicted_answer": "Landslagstrener Alexander Stöckl og hans trenerkolleger snudde seg bort under filmingen av Andreas Stjernens fall i Lahti fordi de fant det skremmende å se på. Denne avgjørelsen ble tatt for å beskytte deres følelsesmessige velvære, ettersom fallet var ganske dramatisk og kunne ha en betydelig innvirkning på deres"
+  },
+  {
+    "qid": 379,
+    "question": "Hvilke to sykloner rammet Mosambik i år?",
+    "gold_answer": "Idai og Kenneth",
+    "predicted_answer": "Syklonene som rammet Mosambik i år var Idai og Kenneth. Disse naturkatastrofene er eksempler på klimarelaterte katastrofer som skjer i verden hver eneste uke, ifølge FN. Sykloner er store stormsystemer som dannes over havet og kan forårsake omfattende skade når de treffer land. Idai"
+  },
+  {
+    "qid": 1556,
+    "question": "Hvem måtte ut av regjering da Listhaug ble eldre- og folkehelseminister?",
+    "gold_answer": "Åse Michaelsen",
+    "predicted_answer": "Listhaug måtte ut av regjeringen da hun ble eldre- og folkehelseminister. Dette skjedde 3. mai i år, da hun erstattet Åse Michaelsen i denne rollen. Endringen ble kunngjort i ekstraordinært statsråd på Slottet."
+  },
+  {
+    "qid": 396,
+    "question": "Hvilket kjønn har ulven som er funnet?",
+    "gold_answer": "ukjent",
+    "predicted_answer": "Ulven som ble funnet er av ukjent kjønn, ettersom det ikke var noen ytre kjønnsorganer til stede. Dette er fordi ulvens hode ble funnet uten noen av de reproduktive organene som vanligvis finnes hos moderne ulver."
+  },
+  {
+    "qid": 1470,
+    "question": "Hvordan skal VAR-prosessen formidles til publikum på stadion?",
+    "gold_answer": "ved hjelp enten av storskjermer eller beskjeder over høyttaleranlegget",
+    "predicted_answer": "VAR-prosessen vil bli formidlet til publikum på stadion ved hjelp av enten storskjermer eller høyttalerbeskjeder. Dette er for å sikre at alle involverte, inkludert spillere, trenere og tilskuere, er klar over eventuelle endringer i dommerens avgjørelser. Denne åpenheten er en viktig del av VAR-systemet, da det bidrar til"
+  },
+  {
+    "qid": 1408,
+    "question": "Hva er den antatte gjerningsmannen siktet for?",
+    "gold_answer": "for drap og drapsforsøk",
+    "predicted_answer": "Den antatte gjerningsmannen er siktet for drap og drapsforsøk. Denne informasjonen ble gitt av en kilde i politiet, som sa at den mistenkte var en asylsøker fra Afghanistan. Angrepet fant sted i Villeurbanne, en forstad til Lyon, rundt kl. 17.00 lørdag 14."
+  },
+  {
+    "qid": 1083,
+    "question": "Hva frykter foreldrene til de HIV-smittede barna?",
+    "gold_answer": "at deres barns fremtid er påført ubotelig skade fordi de er smittet med hiv",
+    "predicted_answer": "Foreldrene til de HIV-smittede barna i Pakistan frykter for barnas fremtid på grunn av viruset. I Pakistan, spesielt i rurale områder, mangler mange mennesker kunnskap om HIV og tilgang til behandling. Denne mangelen på informasjon og ressurser kan føre til langvarige helsekomplikasjoner og en usikker fremtid for barna. Det er viktig"
+  },
+  {
+    "qid": 177,
+    "question": "Hvordan ble finalen i turneringen avgjort?",
+    "gold_answer": "på straffekast",
+    "predicted_answer": "Finalen i den nylige turneringen ble avgjort på straffekastkonkurranse. Etter at kampen endte uavgjort 31-31 etter ordinær tid, gikk begge lag over i ekstraomganger. Disse var også målløse, og til slutt ble det hele avgjort på straffekastkonkurranse. Frankrike vant denne 5-4,"
+  },
+  {
+    "qid": 1881,
+    "question": "Hvordan endte det første settet?",
+    "gold_answer": "21-11",
+    "predicted_answer": "Det første settet ble vunnet av Mol og Sørum med en score på 21-11. Denne informasjonen kan finnes i den gitte teksten, som beskriver nordmennenes tidlige kontroll over kampen og deres overlegne seier i det første settet."
+  },
+  {
+    "qid": 2196,
+    "question": "Hvilke partier ligger an til å bli redusert?",
+    "gold_answer": "De moderate partiene i sentrum-høyre og sentrum-venstre",
+    "predicted_answer": "Grønne partier ligger an til å bli redusert i dette EU-parlamentsvalget. Dette er fordi de moderate partiene i sentrum-høyre og sentrum-venstre ser ut til å miste plasser. Denne nedgangen er et resultat av framveksten av partier på ytre høyre fløy, som ser ut til å få betydelig oppslutning"
+  },
+  {
+    "qid": 511,
+    "question": "Hvem var operasjonsleder for politiet?",
+    "gold_answer": "Line Skott",
+    "predicted_answer": "Operasjonsleder Line Skott var ansvarlig for å håndtere hendelsen på Majorstuen. Hun ga oppdateringer på Twitter-kontoen til Oslo-politiet, og informerte offentligheten om situasjonen og handlingene til politiet."
+  },
+  {
+    "qid": 1550,
+    "question": "Når ble den våteste 17. mai i Bergen målt?",
+    "gold_answer": "i 1993",
+    "predicted_answer": "Den våteste 17. mai i Bergen, mellom kl. 07.00 og 19.00, var 23,6 mm, som ble målt på Florida i 1993. Dette er den våteste 17. mai-en som er registrert i Bergen."
+  },
+  {
+    "qid": 322,
+    "question": "Hvor er de to tiltalte russerne nå?",
+    "gold_answer": "på frifot",
+    "predicted_answer": "De to tiltalte russerne, Maksim Jakubets og Igor Turasjev, er for tiden på frifot. Det amerikanske justisdepartementet har utlovet en belønning på 5 millioner dollar for informasjon som fører til pågripelse og domfellelse av Jakubets. Han antas å ha vært involvert"
+  },
+  {
+    "qid": 2261,
+    "question": "Hvor arbeider Christine Korme?",
+    "gold_answer": "i Norsk Rederiforbund",
+    "predicted_answer": "Christine Korme er kommunikasjonsdirektør i Norsk Rederiforbund. Dette er en organisasjon som representerer den norske skipsfartsnæringen og dens medlemmer. Rederiforbundet jobber for å fremme medlemmenes interesser og sikre en sterk og konkurransedyktig norsk skipsfartsnæring. Christine Korme er ansvarlig for kommunikasjon og myndighetskontakt i"
+  },
+  {
+    "qid": 1200,
+    "question": "Hvem er er det Warren ikke er så populær hos?",
+    "gold_answer": "Mark Zuckerberg",
+    "predicted_answer": "Elizabeth Warren er ikke særlig populær blant Facebook-sjef Mark Zuckerberg. Dette skyldes hovedsakelig hennes standpunkt om å bryte opp store teknologiselskaper, som Facebook, Amazon og Google. I et lekket lydopptak uttrykte Zuckerberg sin forventning om at enhver juridisk utfordring mot hans selskap, hvis War"
+  },
+  {
+    "qid": 1481,
+    "question": "Hvilken øvelse kommer på onsdag?",
+    "gold_answer": "klassisk fellesstart",
+    "predicted_answer": "Prologen i sprinten i Val Müstair i Sveits ble vunnet av Johannes Høsflot Klæbo, som var 1,71 sekunder foran Emil Iversen. Tiden i mål var 3:04.69. Klæbo viste at han behersket kulene og hoppet i løypa perfekt, og"
+  },
+  {
+    "qid": 2364,
+    "question": "Hvor gammel er Elisabeths datter som spiller fotball?",
+    "gold_answer": "13 år",
+    "predicted_answer": "Elisabeths datter er 13 år gammel."
+  },
+  {
+    "qid": 787,
+    "question": "På hvilken plass ligger Mads Østberg i VM?",
+    "gold_answer": "på 13. plass",
+    "predicted_answer": "Mads Østberg ligger for øyeblikket på 13. plass i VM-runden i Tyskland. Denne informasjonen er basert på teksten som er oppgitt, som nevner at Østberg har fullført 12 fartsetapper og ligger på 13. plass totalt."
+  },
+  {
+    "qid": 284,
+    "question": "Hvem har May samarbeidet med i parlamentet siden nyvalget i 2017?",
+    "gold_answer": "det nordirske unionistpartiet DUP",
+    "predicted_answer": "Theresa May har samarbeidet med det nordirske unionistpartiet DUP siden nyvalget i 2017. Dette samarbeidet gjorde det mulig for henne å opprettholde et flertall i Underhuset, til tross for at Det konservative partiet mistet sitt flertall. DUPs støtte har vært avgjørende for Mays regjering,"
   }
 ]
