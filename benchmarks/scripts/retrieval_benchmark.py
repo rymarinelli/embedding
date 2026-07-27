@@ -16,21 +16,26 @@ from sentence_transformers import SentenceTransformer
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 
-# (model_id, query_prefix, passage_prefix) — E5-family and Qwen3-Embedding
-# require instruction/prefix strings to work as documented; pplx-embed-v1
-# deliberately requires none (see its model card).
+# (model_id, query_prefix, passage_prefix, batch_size) — E5-family and
+# Qwen3-Embedding require instruction/prefix strings to work as documented;
+# pplx-embed-v1 deliberately requires none (see its model card). pplx-embed's
+# custom architecture scales badly with batch_size on CPU (batch_size=64 on
+# realistic-length passages measured ~4.6x slower per-item than batch_size=8
+# — likely quadratic-ish cost from padding to the batch's longest sequence),
+# so it gets a much smaller batch size than the rest.
 MODELS = [
-    ("NbAiLab/nb-sbert-base", "", ""),
-    ("sentence-transformers/paraphrase-multilingual-mpnet-base-v2", "", ""),
-    ("intfloat/multilingual-e5-small", "query: ", "passage: "),
-    ("intfloat/multilingual-e5-base", "query: ", "passage: "),
-    ("intfloat/multilingual-e5-large", "query: ", "passage: "),
-    ("BAAI/bge-m3", "", ""),
-    ("perplexity-ai/pplx-embed-v1-0.6b", "", ""),
+    ("NbAiLab/nb-sbert-base", "", "", 64),
+    ("sentence-transformers/paraphrase-multilingual-mpnet-base-v2", "", "", 64),
+    ("intfloat/multilingual-e5-small", "query: ", "passage: ", 64),
+    ("intfloat/multilingual-e5-base", "query: ", "passage: ", 64),
+    ("intfloat/multilingual-e5-large", "query: ", "passage: ", 64),
+    ("BAAI/bge-m3", "", "", 64),
+    ("perplexity-ai/pplx-embed-v1-0.6b", "", "", 8),
     (
         "Qwen/Qwen3-Embedding-0.6B",
         "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery:",
         "",
+        64,
     ),
 ]
 
@@ -48,8 +53,8 @@ def dcg_at_k(rank, k):
     return 1.0 / np.log2(rank + 1)
 
 
-def evaluate(model_id, query_prefix, passage_prefix, corpus, queries):
-    print(f"\n=== {model_id} ===")
+def evaluate(model_id, query_prefix, passage_prefix, corpus, queries, batch_size=64):
+    print(f"\n=== {model_id} (batch_size={batch_size}) ===")
     t0 = time.time()
     model = SentenceTransformer(model_id, trust_remote_code=True)
 
@@ -58,11 +63,11 @@ def evaluate(model_id, query_prefix, passage_prefix, corpus, queries):
     questions = [query_prefix + q["question"] for q in queries]
 
     passage_emb = model.encode(
-        passages, batch_size=64, normalize_embeddings=True,
+        passages, batch_size=batch_size, normalize_embeddings=True,
         show_progress_bar=True, convert_to_numpy=True,
     ).astype(np.float32)
     query_emb = model.encode(
-        questions, batch_size=64, normalize_embeddings=True,
+        questions, batch_size=batch_size, normalize_embeddings=True,
         show_progress_bar=True, convert_to_numpy=True,
     ).astype(np.float32)
 
@@ -114,9 +119,9 @@ def main():
         for row in pd.read_csv(out_path).to_dict("records"):
             existing[row["model"]] = row
 
-    for model_id, qp, pp in models_to_run:
+    for model_id, qp, pp, bs in models_to_run:
         try:
-            row = evaluate(model_id, qp, pp, corpus, queries)
+            row = evaluate(model_id, qp, pp, corpus, queries, batch_size=bs)
         except Exception as e:
             print(f"  FAILED: {model_id}: {e}")
             row = {"model": model_id, "error": str(e)}
