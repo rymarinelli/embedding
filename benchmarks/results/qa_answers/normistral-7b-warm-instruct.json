@@ -1,0 +1,146 @@
+[
+  {
+    "qid": 456,
+    "question": "Når i scorte Milivojevic mot Manchester City?",
+    "gold_answer": "på tampen",
+    "predicted_answer": "Raheem Sterling scoret det første målet for Manchester City i kampen mot Crystal Palace. Dette skjedde etter 15 minutter, da han ble spilt gjennom av Kevin De Bruyne og satte ballen i det motsatte hjørnet med et vakkert skudd. Dessverre bommet Sterling på en lignende mulighet bare fem minutter tidligere, da"
+  },
+  {
+    "qid": 102,
+    "question": "Når ble det første landsmøtet i Fremskrittspartiet avholdt?",
+    "gold_answer": "i 1974",
+    "predicted_answer": "Det første landsmøtet i Fremskrittspartiet ble holdt på Nøkling pensjonat på Hjelmeland i 1974. Dette var etter kommunevalget i september, og det var på dette møtet at partiet bestemte seg for å utvide virksomheten utover å være en enkelt bystyregruppe i Stavanger. Overgangen fra en Facebook-"
+  },
+  {
+    "qid": 1126,
+    "question": "Hvor er Kristian Røkke investeringsdirektør?",
+    "gold_answer": "Aker",
+    "predicted_answer": "Teksten som er gitt nevner at Kristian Røkke, eldste sønn av Kjell Inge Røkke og investeringsdirektør i farens børsnoterte selskap, skal spille på The Villa i Oslo. Derfor er svaret på spørsmålet «Hvor er Kristian Røkke investeringsdirektør?» at han er investeringsdirektør i farens selskap, som er et"
+  },
+  {
+    "qid": 1003,
+    "question": "Hva heter avdelingen ved Ullevål sykehus som slutter å sende ut anonymiserte tilstandsrapporter om pasienter?",
+    "gold_answer": "Avdeling for traumatologi",
+    "predicted_answer": "Avdelingen det er snakk om er Avdeling for traumatologi ved Ullevål sykehus. Denne avdelingen har besluttet å slutte å sende ut anonymiserte tilstandsrapporter om pasienter, med den begrunnelse at «informasjonen tilhører til syvende og sist kun pasienten og deres pårørende». Denne avgjørelsen har skapt reaksjoner fra Norsk Presseforbund og Norsk Redaktør"
+  },
+  {
+    "qid": 914,
+    "question": "Hvem sørget for sikkerheten under valget i Spania?",
+    "gold_answer": "Rundt 93.000 politifolk",
+    "predicted_answer": "Sikkerheten under valget i Spania ble ivaretatt av rundt 93 000 politifolk. Dette er en betydelig økning fra de rundt 20 000 politifolkene som var utplassert under valget i april. Den økte tilstedeværelsen var nødvendig på grunn av den lave valgdeltakelsen, som var forventet å være lavere"
+  },
+  {
+    "qid": 571,
+    "question": "Hvem var Ruuds motstander i åttendelsfinalen i Autralia?",
+    "gold_answer": "Henri Laaksonen",
+    "predicted_answer": "Casper Ruud gikk videre til kvartfinalen i challengerturneringen i Australia etter å ha slått Henri Laaksonen 2-0 i sett. Det første settet ble vunnet 6-3, mens det andre settet ble vunnet 6-4. Ruud møtte litt motstand, men hadde god kontroll på kampen. I kvart"
+  },
+  {
+    "qid": 419,
+    "question": "Når skal Andreas Stjernen avslutte karrieren?",
+    "gold_answer": "etter Raw Air",
+    "predicted_answer": "Andreas Stjernen har kunngjort at han vil avslutte karrieren etter Raw Air-turneringen i mars. Dette vil markere slutten på karrieren hans i en alder av 30, etter å ha opplevd et skremmende fall under prøveomgangen i Lahti, Finland. Før dette fallet hadde Stjernen vært forskånet"
+  },
+  {
+    "qid": 2233,
+    "question": "Hvem er kritiske til De hvite hjelmene?",
+    "gold_answer": "Det syriske regimet og Russland",
+    "predicted_answer": "De hvite hjelmene, en humanitær organisasjon som opererer i opprørskontrollerte områder av Syria, har møtt kritikk fra flere hold. Det syriske regimet og Russland har anklaget dem for å være utenlandske spioner og terrorister, og iscenesette kjemiske angrep. Denne kritikken har blitt uttrykt offentlig av det syriske regimet og"
+  },
+  {
+    "qid": 356,
+    "question": "Hvilken pris vil nye Taycan ligge på i Norge?",
+    "gold_answer": "over én million kroner",
+    "predicted_answer": "Tesla-topp Elon Musk har utfordret Porsche til en duell på deres hjemmebane i Tyskland, spesifikt på Nürburgring-banen. Tesla Model S-en, som Musk har kalt «Model S på Nürburgring neste uke», er bekreftet å ha ankommet Tyskland på mandag. B"
+  },
+  {
+    "qid": 1728,
+    "question": "Hvor finner Idyllfestivalen sted?",
+    "gold_answer": "i Fredrikstad",
+    "predicted_answer": "Idyllfestivalen finner sted i Fredrikstad, Norge. Dette er en årlig musikkfestival som har blitt arrangert siden 2016. Festivalen har en kapasitet på 12 000 mennesker per dag og har en rekke populære artister fra både inn- og utland. I 2020 vil festivalen finne sted fra"
+  },
+  {
+    "qid": 130,
+    "question": "Når gikk Zuccarello til Dallas?",
+    "gold_answer": "i februar",
+    "predicted_answer": "Mats Zuccarello Aasen begynte å spille for Dallas Stars 28. februar 2019, etter å ha blitt med i laget fra New York Rangers. Han ble skadet i debutkampen og var ute av spill i en måned. Han gjorde comeback i kampen mot Philadelphia Flyers"
+  },
+  {
+    "qid": 122,
+    "question": "Hvordan kommenterer Casey Stoney den forestående kampen mot Vålerenga på Intility arena?",
+    "gold_answer": "Kampen blir en viktig del av vår sesongoppkjøring, og det blir en veldig fin test for oss mot en god motstander. I tillegg gleder vi oss veldig til å besøke Norge og Oslo som by og ser fram til en spennende kamp med fine rammer rundt, forteller Stoney i en pressemelding",
+    "predicted_answer": "Casey Stoney, manager for Manchester Uniteds kvinnelag, ser fram til kampen mot Vålerenga på Intility arena. Hun uttaler at det blir en viktig del av lagets sesongoppkjøring, og at det blir en god test mot en sterk motstander. Stoney framhever også at hun ser fram til å besøke Norge"
+  },
+  {
+    "qid": 383,
+    "question": "Hvilken høyreekstremist mener Filter Nyheter at er pågrepet i Oslo?",
+    "gold_answer": "Greg Johnson",
+    "predicted_answer": "Den høyreekstreme personen som ble pågrepet i Oslo er Greg Johnson. Han er en amerikansk statsborger som er kjent for sine høyreekstreme synspunkter. Johnson var en av arrangørene av en konferanse arrangert av det høyreekstreme nettverket Scandza Forum. Han har blant annet uttrykt støtte til Anders Behring Breiviks begrunnelse for 2"
+  },
+  {
+    "qid": 895,
+    "question": "Hvilken type helseforsikring må amerikanere ha?",
+    "gold_answer": "privat",
+    "predicted_answer": "Amerikanere må vanligvis ha privat helseforsikring for å dekke helseutgiftene sine. Dette er fordi den amerikanske regjeringen ikke tilbyr universell helsehjelp, i motsetning til mange andre utviklede land. Det finnes imidlertid noen unntak, som Medicare, Medicaid og CHIP-programmet, som gir helsehjelp til visse lavinntektspersoner og"
+  },
+  {
+    "qid": 952,
+    "question": "Når tok Francine Niyonsaba sølv på 800-meter i OL?",
+    "gold_answer": "2016",
+    "predicted_answer": "Francine Niyonsaba tok sølvmedaljen på 800-meter under OL i  2016."
+  },
+  {
+    "qid": 2069,
+    "question": "Når vil en åpen høring finne sted i Stortinget?",
+    "gold_answer": "Den 9. januar",
+    "predicted_answer": "Den åpne høringen i Stortingets kontroll- og konstitusjonskomité er planlagt til 9. januar 2020. Denne datoen ble bekreftet av Skatteetaten og statsministeren."
+  },
+  {
+    "qid": 108,
+    "question": "Hvor streiket Greta Thunberg?",
+    "gold_answer": "utenfor Riksdagen i Stockholm",
+    "predicted_answer": "Greta Thunberg har ikke streiket på noe spesifikt sted. I stedet har hun brukt sosiale medier til å mobilisere millioner av unge mennesker over hele verden til å delta i skolestreiker for klimahandling. Den første skolestreiken hennes fant sted utenfor Riksdagen i Stockholm, Sverige, 20. august 2"
+  },
+  {
+    "qid": 2298,
+    "question": "Hva bør man gjøre i stedet for å chatte og surfe?",
+    "gold_answer": "snakke med hverandre",
+    "predicted_answer": "Teksten foreslår at man bør legge vekk telefonen og engasjere seg i samtaler med andre i stedet. Dette er fordi paven, under en messe i Roma, oppfordret folk til å legge vekk telefonene sine og bruke tiden til å snakke med hverandre i stedet for å surfe og chatte. Denne anbefalingen er basert på pavens"
+  },
+  {
+    "qid": 814,
+    "question": "Når tror man Hagibis treffer Tokyo?",
+    "gold_answer": "lørdag kveld",
+    "predicted_answer": "Tyfonen Hagibis er ventet å treffe Tokyo lørdag kveld. Ifølge Japans meteorologiske institutt (JMA) er det en svært sterk storm, som er den første som treffer fastlandet rundt Tokyo siden instituttets varslingssystem ble innført i 1991. Hagibis er ventet å bringe med seg kraftige vin"
+  },
+  {
+    "qid": 2232,
+    "question": "Hvor gammel ble Hvite hjelmer-grunnleggeren?",
+    "gold_answer": "48 år gammel",
+    "predicted_answer": "James Le Mesurier, grunnleggeren av White Helmets, døde 48 år gammel. Denne informasjonen kan finnes i teksten som er gitt, som nevner at han ble 48 år gammel da han døde."
+  },
+  {
+    "qid": 1718,
+    "question": "Hvordan endte 2. sett mellom Ruud og Griekspoor?",
+    "gold_answer": "1-6",
+    "predicted_answer": "Andre sett endte i favør Tallpon Griekspoor. Til tross for at Casper Ruud startet sterkt, klarte Griekspoor å bryte Ruuds serve to ganger og tok en klar ledelse. Han vant settet 6-1, og etterlot Ruud ute av turneringen."
+  },
+  {
+    "qid": 902,
+    "question": "Hvem kunne fint levd med skaden som Henrik Ingebritsen ble operert for?",
+    "gold_answer": "herr og fru Hvermansen",
+    "predicted_answer": "Basert på den gitte teksten, ser det ut til at skaden som Henrik Ingebrigtsen ble operert for var en som han kunne levd med, men som hindret ham i å satse fullt ut på et internasjonalt toppnivå. Denne skaden ville sannsynligvis ha forårsaket ubehag eller smerte, men den var ikke alvorlig nok til å kreve en betydelig endring eller"
+  },
+  {
+    "qid": 1839,
+    "question": "Hvem har spesialenheten for politisaker avhørt i helga?",
+    "gold_answer": "blant andre tjenestepersonene som var involvert i hendelsen",
+    "predicted_answer": "Spesialenheten for politisaker har avhørt flere personer, inkludert de politibetjentene som var involvert i hendelsen. De har også avhørt den skadde mannen, som er i 30-årene og en kjenning av politiet. Mannen er for tiden innlagt på Ullevål sykehus i Oslo. Kvinnen i 40-årene"
+  },
+  {
+    "qid": 1139,
+    "question": "Hva ropte folkemengden på stadion da de oppdaget at Trump var tilstede?",
+    "gold_answer": "Lås ham inne!",
+    "predicted_answer": "Teksten indikerer at folkemengden buet da de så president Trump på baseballkampen i Washington. Dette var sannsynligvis på grunn av en rekke årsaker, inkludert det faktum at det var første gang Trump-ekteparet hadde deltatt på en baseballkamp på hjemmebane i svært så demokratiske Washington, og at de ble møtt"
+  }
+]
