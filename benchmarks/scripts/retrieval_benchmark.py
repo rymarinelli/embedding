@@ -18,11 +18,13 @@ RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 
 # (model_id, query_prefix, passage_prefix, batch_size) — E5-family and
 # Qwen3-Embedding require instruction/prefix strings to work as documented;
-# pplx-embed-v1 deliberately requires none (see its model card). pplx-embed's
-# custom architecture scales badly with batch_size on CPU (batch_size=64 on
-# realistic-length passages measured ~4.6x slower per-item than batch_size=8
-# — likely quadratic-ish cost from padding to the batch's longest sequence),
-# so it gets a much smaller batch size than the rest.
+# pplx-embed-v1 deliberately requires none (see its model card). Both
+# Qwen3-based models (pplx-embed-v1 is a Qwen3 continued-pretrain; Qwen3-
+# Embedding is Qwen3 natively) scale badly with batch_size on CPU at
+# realistic passage length (~500 tokens): batch_size=64 measured 15-30x
+# slower per-item than batch_size=8, apparently from attention/padding cost
+# on this architecture without a CPU-optimized kernel. Non-Qwen3 models are
+# unaffected and keep batch_size=64.
 MODELS = [
     ("NbAiLab/nb-sbert-base", "", "", 64),
     ("sentence-transformers/paraphrase-multilingual-mpnet-base-v2", "", "", 64),
@@ -35,7 +37,7 @@ MODELS = [
         "Qwen/Qwen3-Embedding-0.6B",
         "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery:",
         "",
-        64,
+        8,
     ),
 ]
 
