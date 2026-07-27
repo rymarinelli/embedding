@@ -394,5 +394,11 @@
     "question": "Hvor arrangeres kombinert neste helg?",
     "gold_answer": "Lahti",
     "predicted_answer": "Neste helg arrangeres kombinertrennene i Lahti, Finland. Dette ble bekreftet etter at Jarl Magnus Riiber sikret seg krystallkula i verdenscupen i kombinert i tyske Klingenthal. Riibers superform har gjort han til en stor gullkandidat i VM i Seefeld, som arrangeres"
+  },
+  {
+    "qid": 2187,
+    "question": "Hva ønsker Ursula von der Leyen spesifikt å fremme?",
+    "gold_answer": "tidenes første europeiske klimalov",
+    "predicted_answer": "Ursula von der Leyen har lovet å fremme en «grønn avtale» for Europa i løpet av sine første 100 dager som president for EU-kommisjonen. Denne planen vil omfatte en klimalov som vil lovfeste EUs 2050-mål om klimanøytralitet. Dette målet innebærer å"
   }
 ]
