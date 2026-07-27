@@ -634,5 +634,29 @@
     "question": "Hvor finner man en video der Lind spiller jern-lur?",
     "gold_answer": "på You Tube",
     "predicted_answer": "You Tube"
+  },
+  {
+    "qid": 449,
+    "question": "Hvorfor kan ikke søket etter de fire savnede fortsette, ifølge Augensen?",
+    "gold_answer": "ut fra værforholdene",
+    "predicted_answer": "dårlig sikt og stor snøskredfare"
+  },
+  {
+    "qid": 626,
+    "question": "Hva heter selvbiografien til Svindal?",
+    "gold_answer": "«Større enn meg»",
+    "predicted_answer": "«Større enn meg»"
+  },
+  {
+    "qid": 655,
+    "question": "Hvilken type serie er Homecoming?",
+    "gold_answer": "en mørk psykologisk thriller",
+    "predicted_answer": "mørk psykologisk thriller"
+  },
+  {
+    "qid": 1729,
+    "question": "Når lanserte Zara Larsson \"Uncover\"?",
+    "gold_answer": "i 2013",
+    "predicted_answer": "2013"
   }
 ]
