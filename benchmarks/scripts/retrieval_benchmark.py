@@ -11,34 +11,79 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import torch
 from sentence_transformers import SentenceTransformer
+from transformers import AutoModel, AutoTokenizer
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 
-# (model_id, query_prefix, passage_prefix, batch_size) — E5-family and
-# Qwen3-Embedding require instruction/prefix strings to work as documented;
-# pplx-embed-v1 deliberately requires none (see its model card). Both
-# Qwen3-based models (pplx-embed-v1 is a Qwen3 continued-pretrain; Qwen3-
-# Embedding is Qwen3 natively) scale badly with batch_size on CPU at
-# realistic passage length (~500 tokens): batch_size=64 measured 15-30x
-# slower per-item than batch_size=8, apparently from attention/padding cost
-# on this architecture without a CPU-optimized kernel. Non-Qwen3 models are
-# unaffected and keep batch_size=64.
+
+class MeanPoolingEncoder:
+    """.encode(...)-compatible wrapper for plain transformers encoders (like
+    ltg/norbert4-*) that aren't packaged as sentence-transformers models —
+    mean-pools the last hidden state over non-padding tokens, the standard
+    way to turn a raw BERT-family encoder into a sentence embedding.
+    """
+
+    def __init__(self, model_id):
+        self.tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
+        self.model = AutoModel.from_pretrained(model_id, trust_remote_code=True)
+        self.model.eval()
+
+    def encode(self, texts, batch_size=64, normalize_embeddings=True,
+               show_progress_bar=False, convert_to_numpy=True):
+        all_emb = []
+        rng = range(0, len(texts), batch_size)
+        if show_progress_bar:
+            from tqdm.auto import tqdm
+            rng = tqdm(rng)
+        for i in rng:
+            batch = texts[i:i + batch_size]
+            enc = self.tokenizer(batch, padding=True, truncation=True,
+                                  max_length=512, return_tensors="pt")
+            with torch.inference_mode():
+                out = self.model(**enc)
+            hidden = out.last_hidden_state  # [B, T, H]
+            mask = enc["attention_mask"].unsqueeze(-1).float()  # [B, T, 1]
+            summed = (hidden * mask).sum(dim=1)
+            counts = mask.sum(dim=1).clamp(min=1e-9)
+            emb = summed / counts
+            if normalize_embeddings:
+                emb = torch.nn.functional.normalize(emb, p=2, dim=1)
+            all_emb.append(emb.numpy() if convert_to_numpy else emb)
+        return np.concatenate(all_emb, axis=0) if convert_to_numpy else all_emb
+
+
+# (model_id, query_prefix, passage_prefix, batch_size, loader) — E5-family
+# and Qwen3-Embedding require instruction/prefix strings to work as
+# documented; pplx-embed-v1 deliberately requires none (see its model
+# card). Both Qwen3-based models (pplx-embed-v1 is a Qwen3 continued-
+# pretrain; Qwen3-Embedding is Qwen3 natively) scale badly with batch_size
+# on CPU at realistic passage length (~500 tokens): batch_size=64 measured
+# 15-30x slower per-item than batch_size=8, apparently from attention/
+# padding cost on this architecture without a CPU-optimized kernel.
+# Non-Qwen3 models are unaffected and keep batch_size=64. loader "st" uses
+# SentenceTransformer; "meanpool" uses MeanPoolingEncoder for raw encoders
+# (ltg/norbert4-*) that aren't packaged as sentence-transformers models.
 MODELS = [
-    ("NbAiLab/nb-sbert-base", "", "", 64),
-    ("sentence-transformers/paraphrase-multilingual-mpnet-base-v2", "", "", 64),
-    ("intfloat/multilingual-e5-small", "query: ", "passage: ", 64),
-    ("intfloat/multilingual-e5-base", "query: ", "passage: ", 64),
-    ("intfloat/multilingual-e5-large", "query: ", "passage: ", 64),
-    ("BAAI/bge-m3", "", "", 64),
-    ("perplexity-ai/pplx-embed-v1-0.6b", "", "", 8),
+    ("NbAiLab/nb-sbert-base", "", "", 64, "st"),
+    ("NbAiLab/nb-sentence-bert-base-mnli-test", "", "", 64, "st"),
+    ("sentence-transformers/paraphrase-multilingual-mpnet-base-v2", "", "", 64, "st"),
+    ("intfloat/multilingual-e5-small", "query: ", "passage: ", 64, "st"),
+    ("intfloat/multilingual-e5-base", "query: ", "passage: ", 64, "st"),
+    ("intfloat/multilingual-e5-large", "query: ", "passage: ", 64, "st"),
+    ("BAAI/bge-m3", "", "", 64, "st"),
+    ("perplexity-ai/pplx-embed-v1-0.6b", "", "", 8, "st"),
     (
         "Qwen/Qwen3-Embedding-0.6B",
         "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery:",
         "",
         8,
+        "st",
     ),
+    ("ltg/norbert4-base", "", "", 32, "meanpool"),
+    ("ltg/norbert4-large", "", "", 16, "meanpool"),
 ]
 
 TOP_K = 10
@@ -55,10 +100,13 @@ def dcg_at_k(rank, k):
     return 1.0 / np.log2(rank + 1)
 
 
-def evaluate(model_id, query_prefix, passage_prefix, corpus, queries, batch_size=64):
-    print(f"\n=== {model_id} (batch_size={batch_size}) ===")
+def evaluate(model_id, query_prefix, passage_prefix, corpus, queries, batch_size=64, loader="st"):
+    print(f"\n=== {model_id} (batch_size={batch_size}, loader={loader}) ===")
     t0 = time.time()
-    model = SentenceTransformer(model_id, trust_remote_code=True)
+    if loader == "meanpool":
+        model = MeanPoolingEncoder(model_id)
+    else:
+        model = SentenceTransformer(model_id, trust_remote_code=True)
 
     doc_ids = [c["doc_id"] for c in corpus]
     passages = [passage_prefix + c["text"] for c in corpus]
@@ -122,9 +170,9 @@ def main():
             existing[row["model"]] = row
 
     RESULTS_DIR.mkdir(exist_ok=True)
-    for model_id, qp, pp, bs in models_to_run:
+    for model_id, qp, pp, bs, loader in models_to_run:
         try:
-            row = evaluate(model_id, qp, pp, corpus, queries, batch_size=bs)
+            row = evaluate(model_id, qp, pp, corpus, queries, batch_size=bs, loader=loader)
         except Exception as e:
             print(f"  FAILED: {model_id}: {e}")
             row = {"model": model_id, "error": str(e)}
