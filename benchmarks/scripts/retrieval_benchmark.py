@@ -4,6 +4,7 @@ For each model: encode the corpus and the questions, rank passages by cosine
 similarity, and score against the single gold passage per question with
 Recall@1, Recall@5, Recall@10, MRR@10 and nDCG@10.
 """
+import sys
 import json
 import time
 from pathlib import Path
@@ -15,8 +16,9 @@ from sentence_transformers import SentenceTransformer
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 
-# (model_id, query_prefix, passage_prefix) — E5-family models require the
-# "query: " / "passage: " instruction prefixes to work as documented.
+# (model_id, query_prefix, passage_prefix) — E5-family and Qwen3-Embedding
+# require instruction/prefix strings to work as documented; pplx-embed-v1
+# deliberately requires none (see its model card).
 MODELS = [
     ("NbAiLab/nb-sbert-base", "", ""),
     ("sentence-transformers/paraphrase-multilingual-mpnet-base-v2", "", ""),
@@ -24,6 +26,12 @@ MODELS = [
     ("intfloat/multilingual-e5-base", "query: ", "passage: "),
     ("intfloat/multilingual-e5-large", "query: ", "passage: "),
     ("BAAI/bge-m3", "", ""),
+    ("perplexity-ai/pplx-embed-v1-0.6b", "", ""),
+    (
+        "Qwen/Qwen3-Embedding-0.6B",
+        "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery:",
+        "",
+    ),
 ]
 
 TOP_K = 10
@@ -97,17 +105,25 @@ def main():
     corpus = load_jsonl(DATA_DIR / "corpus.jsonl")
     queries = load_jsonl(DATA_DIR / "queries.jsonl")
 
-    rows = []
-    for model_id, qp, pp in MODELS:
+    only = set(sys.argv[1:]) or None  # run everything if no args given
+    models_to_run = [m for m in MODELS if only is None or m[0] in only]
+
+    out_path = RESULTS_DIR / "norquad_retrieval_results.csv"
+    existing = {}
+    if out_path.exists():
+        for row in pd.read_csv(out_path).to_dict("records"):
+            existing[row["model"]] = row
+
+    for model_id, qp, pp in models_to_run:
         try:
-            rows.append(evaluate(model_id, qp, pp, corpus, queries))
+            row = evaluate(model_id, qp, pp, corpus, queries)
         except Exception as e:
             print(f"  FAILED: {model_id}: {e}")
-            rows.append({"model": model_id, "error": str(e)})
+            row = {"model": model_id, "error": str(e)}
+        existing[model_id] = row
 
-    df = pd.DataFrame(rows)
+    df = pd.DataFrame(list(existing.values()))
     RESULTS_DIR.mkdir(exist_ok=True)
-    out_path = RESULTS_DIR / "norquad_retrieval_results.csv"
     df.to_csv(out_path, index=False)
     print(f"\nSaved: {out_path}")
     print(df.to_string(index=False))
