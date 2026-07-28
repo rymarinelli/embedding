@@ -4,20 +4,21 @@
 
 403 passages, 2398 questions (combined news answers_1.json + answers_2.json).
 
-| model                                                       |   recall@1 |   recall@5 |   recall@10 |     mrr@10 |   ndcg@10 |   seconds |
-|:------------------------------------------------------------|-----------:|-----------:|------------:|-----------:|----------:|----------:|
-| multilingual-e5-large+rerank(mmarco-mMiniLMv2-L12-H384-v1)  | 0.801501   |  0.908257  |   0.929525  | 0.849118   | 0.868882  |    5645.6 |
-| intfloat/multilingual-e5-large                              | 0.732277   |  0.879066  |   0.91618   | 0.797691   | 0.826575  |     638   |
-| intfloat/multilingual-e5-base                               | 0.707673   |  0.863219  |   0.913261  | 0.775967   | 0.809146  |     237.6 |
-| BAAI/bge-m3                                                 | 0.703086   |  0.857381  |   0.900751  | 0.77141    | 0.802838  |     691.1 |
-| intfloat/multilingual-e5-small                              | 0.692244   |  0.852794  |   0.89241   | 0.762227   | 0.793906  |      96.5 |
-| perplexity-ai/pplx-embed-v1-0.6b                            | 0.685571   |  0.849041  |   0.896163  | 0.75629    | 0.790148  |    1343.7 |
-| Qwen/Qwen3-Embedding-0.6B                                   | 0.61593    |  0.773561  |   0.825271  | 0.684311   | 0.718238  |    3762.3 |
-| NbAiLab/nb-sentence-bert-base-mnli-test                     | 0.537531   |  0.778982  |   0.851543  | 0.640003   | 0.691034  |     240.4 |
-| NbAiLab/nb-sbert-base                                       | 0.454128   |  0.673478  |   0.751043  | 0.548875   | 0.597378  |      68.2 |
-| sentence-transformers/paraphrase-multilingual-mpnet-base-v2 | 0.415346   |  0.619266  |   0.690158  | 0.50396    | 0.548704  |      80.3 |
-| ltg/norbert4-base                                           | 0.00250209 |  0.0145955 |   0.0321101 | 0.00845728 | 0.0138259 |     705.7 |
-| ltg/norbert4-large                                          | 0.00250209 |  0.0145955 |   0.0321101 | 0.00845728 | 0.0138259 |    1159.8 |
+| model                                                                        |   recall@1 |   recall@5 |   recall@10 |     mrr@10 |   ndcg@10 |   seconds |
+|:-----------------------------------------------------------------------------|-----------:|-----------:|------------:|-----------:|----------:|----------:|
+| multilingual-e5-large+rerank(mmarco-mMiniLMv2-L12-H384-v1+norsumm-finetuned) | 0.810259   |  0.907423  |   0.930776  | 0.854602   | 0.873246  |    7044.7 |
+| multilingual-e5-large+rerank(mmarco-mMiniLMv2-L12-H384-v1)                   | 0.801501   |  0.908257  |   0.929525  | 0.849118   | 0.868882  |    5645.6 |
+| intfloat/multilingual-e5-large                                               | 0.732277   |  0.879066  |   0.91618   | 0.797691   | 0.826575  |     638   |
+| intfloat/multilingual-e5-base                                                | 0.707673   |  0.863219  |   0.913261  | 0.775967   | 0.809146  |     237.6 |
+| BAAI/bge-m3                                                                  | 0.703086   |  0.857381  |   0.900751  | 0.77141    | 0.802838  |     691.1 |
+| intfloat/multilingual-e5-small                                               | 0.692244   |  0.852794  |   0.89241   | 0.762227   | 0.793906  |      96.5 |
+| perplexity-ai/pplx-embed-v1-0.6b                                             | 0.685571   |  0.849041  |   0.896163  | 0.75629    | 0.790148  |    1343.7 |
+| Qwen/Qwen3-Embedding-0.6B                                                    | 0.61593    |  0.773561  |   0.825271  | 0.684311   | 0.718238  |    3762.3 |
+| NbAiLab/nb-sentence-bert-base-mnli-test                                      | 0.537531   |  0.778982  |   0.851543  | 0.640003   | 0.691034  |     240.4 |
+| NbAiLab/nb-sbert-base                                                        | 0.454128   |  0.673478  |   0.751043  | 0.548875   | 0.597378  |      68.2 |
+| sentence-transformers/paraphrase-multilingual-mpnet-base-v2                  | 0.415346   |  0.619266  |   0.690158  | 0.50396    | 0.548704  |      80.3 |
+| ltg/norbert4-large                                                           | 0.00250209 |  0.0145955 |   0.0321101 | 0.00845728 | 0.0138259 |    1159.8 |
+| ltg/norbert4-base                                                            | 0.00250209 |  0.0145955 |   0.0321101 | 0.00845728 | 0.0138259 |     705.7 |
 
 
 ## NorQuAD news — QA benchmark (Anthropic native API, 300-question sample)

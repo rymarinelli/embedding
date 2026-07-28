@@ -51,6 +51,44 @@ fixing this would mean fine-tuning norbert4 for sentence similarity, out of scop
 `last_hidden_state` over non-padding tokens via `attention_mask`, then L2-normalize) for models not
 packaged as sentence-transformers.
 
+### Retrieve-then-rerank
+
+`scripts/retrieval_rerank_benchmark.py` adds a second stage on top of the best bi-encoder
+(`multilingual-e5-large`): retrieve a top-20 candidate pool, then re-score it with a `CrossEncoder`
+reranker and re-sort. Uses the identical metrics and appends to the same
+`norquad_retrieval_results.csv`, so the rows are directly comparable to the pure bi-encoder ones.
+Stage-1 embeddings are cached to `data/_stage1_cache_*.npz` so re-running with a different reranker
+doesn't repeat the ~35min encode.
+
+```
+python3 scripts/retrieval_rerank_benchmark.py <reranker_model_or_path> <result_label> \
+    [bi_encoder_id] [pool_size] [batch_size]
+```
+
+| stage | recall@1 | recall@5 | recall@10 | mrr@10 | ndcg@10 |
+|---|---|---|---|---|---|
+| bi-encoder only (multilingual-e5-large) | 0.732 | 0.879 | 0.916 | 0.798 | 0.827 |
+| + `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` | 0.802 | 0.908 | 0.930 | 0.849 | 0.869 |
+| + same reranker, fine-tuned on NorSumm | 0.810 | 0.907 | 0.931 | 0.855 | 0.873 |
+
+Reranking gives a clear lift, concentrated at rank 1 (it can only reorder the stage-1 pool, not
+recover a stage-1 miss, so recall@10's ceiling tracks the ~93% coverage of a top-20 pool regardless
+of reranker quality).
+
+`scripts/finetune_reranker_norsumm.py` fine-tunes the same reranker on NorSumm (summary, article)
+pairs — 30 articles × 3 summaries from the nb **validation** split (not `test`, which is reserved for
+the NorSumm summarization benchmark below) = 90 positive pairs + 4 sampled negatives each, trained
+4 epochs with `CrossEncoderTrainer` + `BinaryCrossEntropyLoss`. This mirrors `main.py`'s own design
+(NorSumm dev split as training data, NorQuAD as held-out eval). The fine-tune gives a small but
+consistent further improvement (recall@1 +0.009, mrr@10 +0.006, ndcg@10 +0.004) — a real directional
+signal, but 90 positive pairs is tiny for a cross-encoder fine-tune, so treat the magnitude as
+illustrative rather than robust.
+
+Note: `CrossEncoder.fit()` (the pre-v4 deprecated training wrapper) has an internal bug in this
+installed sentence-transformers/transformers version combo — it passes `prompt`/`task` kwargs into
+`BinaryCrossEntropyLoss.forward()`, which doesn't accept them. Worked around by using
+`CrossEncoderTrainer` + a `datasets.Dataset` directly (the documented modern API) instead.
+
 ### Data integrity note: NorQuAD `id` is not globally unique
 
 NorQuAD's own `qa["id"]` field is only unique *within* each annotator file — combining
