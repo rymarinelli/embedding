@@ -496,5 +496,17 @@
     "question": "Hvilken person har Manshaus hyllet?",
     "gold_answer": "Vidkun Quisling",
     "predicted_answer": "Philip Manshaus har uttrykt høyreekstreme holdninger, blant annet ved å hylle Vidkun Quisling. Quisling var en norsk offiser og politiker som ledet regjeringen under den tyske okkupasjonen av Norge under andre verdenskrig. Manshaus' beundring for Quisling er en indikasjon på hans ekstreme ideologi og"
+  },
+  {
+    "qid": 2323,
+    "question": "Hvem skal avhøres i dag?",
+    "gold_answer": "Flere naboer",
+    "predicted_answer": "Basert på den gitte teksten, er det tydelig at politiet etterforsker boligbrannen i Lierskogen, og at de vil avhøre flere vitner i dag. Disse vitnene inkluderer naboer som bor i nærområdet. Politiet etterforsker saken bredt og undersøker flere hypoteser, inkludert muligheten for at brannen kan ha vært påsatt. De vil"
+  },
+  {
+    "qid": 1288,
+    "question": "Hvem gjelder dagens 90-dagersfrist for?",
+    "gold_answer": "både for politi og domstoler",
+    "predicted_answer": "Dagens 90-dagersfrist gjelder for voldssaker generelt, ikke bare for saker som involverer mishandling og overgrep mot barn. Denne fristen er fastsatt av Riksadvokaten og gjelder for både politi og domstoler. Ved å innføre en tidsfrist for barnevoldssaker, vil imidlertid denne fristen bli erstattet."
   }
 ]
