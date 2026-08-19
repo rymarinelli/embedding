@@ -1546,5 +1546,23 @@
     "question": "Hvilke folk lever i ufrie regimer i dag?",
     "gold_answer": "kinesere og iranere, tyrkere og palestinere",
     "predicted_answer": "Folk som lever i ufrie regimer i dag er hovedsakelig de som bor i land med autoritære regimer, som Kina, Iran, Tyrkia og Palestina. Disse landene har begrensede sivile friheter og politiske rettigheter, og innbyggerne deres blir ofte utsatt for menneskerettighetsbrudd, som sensur, politisk forfølgelse og undertrykkelse"
+  },
+  {
+    "qid": 2080,
+    "question": "Når møtes NHO, LO og YS til mekling?",
+    "gold_answer": "Lørdag og søndag",
+    "predicted_answer": "LO-leder Hans-Christian Gabrielsen og NHO-sjef Ole Erik Almlid har ikke klart å bli enige i lønnsforhandlingene, og LO har varslet streik fra 1. april. Denne streiken vil omfatte nærmere 23 000 arbeidstakere i bedrifter som er medlemmer av Næringslivets Hovedorganisasjon (NHO)"
+  },
+  {
+    "qid": 328,
+    "question": "Hvilke mennesker er inkludert når man regner bruttoledighet?",
+    "gold_answer": "arbeidssøkere som deltar i arbeidsmarkedstiltak",
+    "predicted_answer": "Bruttoledigheten, som nevnt i den vedlagte teksten, refererer til summen av helt arbeidsledige og arbeidssøkere på tiltak. Dette begrepet brukes av NAV for å beskrive antallet personer som er arbeidsledige eller aktivt søker arbeid, og som er tilgjengelige for å begynne å jobbe umiddelbart. Det er viktig å merke seg at"
+  },
+  {
+    "qid": 761,
+    "question": "Hvem er Michael Avenatti?",
+    "gold_answer": "advokaten til en av anklagerne",
+    "predicted_answer": "Michael Avenatti er en amerikansk advokat som spesialiserer seg på strafferett og sivilrett. Han er kjent for sitt arbeid med høyprofilerte saker, inkludert de som involverer kjendiser. I dette tilfellet er han advokaten til en av kvinnene som har anklaget R. Kelly for seksuelle overgrep. Avenattis uttalelse"
   }
 ]
