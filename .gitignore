@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .env
 benchmarks/models/
+
+# Proprietary Amedia article text (retrieval corpus) — never commit, only the
+# derived metrics in benchmarks/results/ are shareable.
+benchmarks/data/amedia_corpus.jsonl
+benchmarks/data/amedia_queries.jsonl
