@@ -1372,5 +1372,161 @@
     "question": "Hva er det Tyrkia skal kjøpe av Russland?",
     "gold_answer": "luftvernraketter",
     "predicted_answer": "Tyrkia har gått med på å kjøpe S-400 luftforsvarssystemer fra Russland. Dette er et betydelig kjøp for Tyrkia, ettersom det er en stor handelspartner for USA. Faktisk lager Tyrkia den strukturelle stålrammen for våre F-35 jagerfly. Dette er en av grunnene til at Trump har uttrykt"
+  },
+  {
+    "qid": 1642,
+    "question": "Hvem er leder i Sp?",
+    "gold_answer": "Trygve Slagsvold Vedum",
+    "predicted_answer": "Lederen av Sp er Trygve Slagsvold Vedum. I den gitte teksten nevnes det at han har uttrykt støtte til kritikken mot det kjøttfrie skolemåltidet og målet om å halvere kjøttforbruket i Oslo kommunes kantiner og institusjoner innen utgangen av 2023. Dette viser at Vedum har sluttet seg til"
+  },
+  {
+    "qid": 240,
+    "question": "Hvem er pasientombud i Oslo?",
+    "gold_answer": "Anne-Lise Kristensen",
+    "predicted_answer": "Pasientombudet i Oslo er Anne-Lise Kristensen. Hun er ansvarlig for å beskytte rettighetene til pasienter og brukere av helsetjenester i Oslo. I en nylig artikkel i Dagsavisen uttrykte Kristensen bekymring for situasjonen til eldre pasienter som mottar hjemmehjelpstjenester i Oslo. Hun pekte på at disse pasientene kan møte så mange som 30 forskjellige ansatte"
+  },
+  {
+    "qid": 674,
+    "question": "Hvorfor er den angrepne 16-åringen sendt til legevakten?",
+    "gold_answer": "for behandling av mulige bruddskader og flere kutt i hodet",
+    "predicted_answer": "Den angrepne 16-åringen ble sendt til legevakten på grunn av mulige bruddskader og flere kutt i hodet. Dette er beskrevet av politiet som en alvorlig hendelse."
+  },
+  {
+    "qid": 1552,
+    "question": "Når kan det bli frisk bris på kysten?",
+    "gold_answer": "På kvelden",
+    "predicted_answer": "Det er meldt frisk bris på kysten på kvelden 17. mai. Dette kan føre til en kjøligere temperatur, spesielt langs kysten. Vær oppmerksom på at dette kan endre seg, og det er alltid best å sjekke lokale værmeldinger for oppdateringer."
+  },
+  {
+    "qid": 8,
+    "question": "Hvor mye nedbør hadde Bergen i november 2005?",
+    "gold_answer": "ti ganger så mye som i år",
+    "predicted_answer": "Teksten du oppga nevner at november 2019 ligger an til å bli den tørreste på 98 år i Bergen. For å svare på spørsmålet ditt, er det nøyaktige svaret fra teksten 51,1 mm nedbør. Dette er det minste som er målt i november siden 1876 og 19"
+  },
+  {
+    "qid": 1599,
+    "question": "Hvorfor ble Cybertruck skutt på og slått på med slegge under presentasjonen?",
+    "gold_answer": "for å vise hvor robust den er",
+    "predicted_answer": "Cybertruck ble utsatt for en serie tester under presentasjonen for å demonstrere dens robusthet. En av testene var å skyte på den med en pistol. Dessverre knuste en rute som følge av dette. For å gjøre ting verre, ble bilen også slått på med en slegge, noe som resulterte i at en annen"
+  },
+  {
+    "qid": 1086,
+    "question": "Hvor mange kvakksalvere er det i Paksitan ifølge FN-organisasjonen UNAIDS?",
+    "gold_answer": "600.000",
+    "predicted_answer": "Ifølge FN-organisasjonen UNAIDS er det omtrent 270 000 kvakksalvere i Sindh-provinsen i Pakistan. Dette er basert på anslag og er et estimat, ettersom nøyaktige data om antallet kvakksalvere i Pakistan ikke er lett tilgjengelig. Det er viktig å merke seg"
+  },
+  {
+    "qid": 1863,
+    "question": "Hvor ligger Helsinki Outlet?",
+    "gold_answer": "rett utenfor Helsingfors sentrum",
+    "predicted_answer": "Helsinki Outlet ligger i Helsingfors, Finland. Dette kan bekreftes fra teksten som er oppgitt, som sier at Søndrål jobber med å utvikle et lignende konsept i Finland, rett utenfor Helsingfors sentrum. Teksten nevner også at outlet-byen åpnet forrige fredag."
+  },
+  {
+    "qid": 1168,
+    "question": "Når mener Boris Johnson at brexit skal gjennomføres?",
+    "gold_answer": "31. oktober",
+    "predicted_answer": "Boris Johnson har gjentatte ganger uttalt at han ønsker å gjennomføre brexit 31. oktober 2019. Denne datoen ble satt da Storbritannia forlot EU, og Johnson var statsminister. Imidlertid har hans harde linje på brexit ført til at han har kommet på kant med parlamentet, som har satt foten ned for brexit"
+  },
+  {
+    "qid": 1732,
+    "question": "Hvor mange gullplater har Zara Larsson?",
+    "gold_answer": "30",
+    "predicted_answer": "Zara Larsson har mottatt totalt 30 gullplater. Denne informasjonen kan finnes i teksten som er gitt, spesifikt i setningen: «Hun har ved flere anledninger spilt på Ellen DeGeneres Show.» Gullplater er en pris som gis til artister for å selge et visst antall plater, og i dette tilfellet har"
+  },
+  {
+    "qid": 2276,
+    "question": "Hvor mange forskningsartikler publiserte Lars?",
+    "gold_answer": "mer enn 300",
+    "predicted_answer": "Professor Kaare R. Norum, som døde fredag etter kort tids sykeleie, publiserte mer enn 300 forskningsartikler i løpet av sin lange karriere. Hans forskning fokuserte hovedsakelig på fettsyrer, kolesterol, vitamin A og ernæringspolitikk. Norums arbeid har hatt en betydelig innvirkning på det norske kostholdet og har bidratt"
+  },
+  {
+    "qid": 1993,
+    "question": "Langs hvilken grense gikk Ben-Arne og de to britene på tur?",
+    "gold_answer": "den norsk-russiske grensen",
+    "predicted_answer": "Ben-Arne og de to britiske turistene var på tur langs den norsk-russiske grensen. Denne unike grensen er en av de få gjenværende grensene i Europa som er anerkjent av begge land, og den strekker seg over nesten 2000 kilometer gjennom det nordøstlige Russland og det nordlige Norge. Pasvikdalen"
+  },
+  {
+    "qid": 634,
+    "question": "Hvorfor ble 13 av migrantene ført til Lampedusa?",
+    "gold_answer": "av humanitære eller medisinske grunner",
+    "predicted_answer": "Kaptein Carola Rackete og mannskapet hennes på Sea Watch 3-båten ble arrestert etter å ha trosset et italiensk forbud mot å gå inn i italiensk territorialfarvann og legge til kai med 40 migranter om bord. Migrantene hadde vært til sjøs i to uker i en hetebøl"
+  },
+  {
+    "qid": 777,
+    "question": "Hvor mye kan Ruud tjene på ATP 1000-turneringen i Ohio?",
+    "gold_answer": "seks millioner dollar",
+    "predicted_answer": "Casper Ruud er klar for ATP 1000-turneringen i Ohio og kan potensielt tjene seks millioner dollar hvis han går hele veien i turneringen. Denne informasjonen er basert på teksten som er gitt, som nevner at «dersom Ruud går hele veien, stikker han av med seks millioner dollar»."
+  },
+  {
+    "qid": 1215,
+    "question": "Hvorfor vant ikke Martin Fourcade?",
+    "gold_answer": "to bom på stående",
+    "predicted_answer": "Thingnes Bø vant sprinten i verdenscupen i skiskyting i Sverige fordi han traff på ni av ti skudd og gikk fort i sporet. Tarjei Bø ble nummer to, og var 19 sekunder bak. Russiske Matveij Eliseev ble nummer tre, bare 0,9 sekunder bak. F"
+  },
+  {
+    "qid": 891,
+    "question": "Hvor lenge har Frode Myrhol tenkt på navnebytte for FNB?",
+    "gold_answer": "siden 2015",
+    "predicted_answer": "Frode Myrhol har tenkt på navnebytte for Folkeaksjonen nei til mer bompenger (FNB) siden 2015. Denne avgjørelsen ble ikke tatt som følge av beskyldninger om å være et ensaksparti, men som et resultat av en lengre prosess med å finne et navn som bedre gjenspeiler partiets virksomhet."
+  },
+  {
+    "qid": 239,
+    "question": "Hvorfor mener Raja det er naturlig at han går offentlig ut med at hans tiller seg til disposisjon som leder i Venstre?",
+    "gold_answer": "siden de andre kandidatene har gått offentlig ut og sagt at de har stilt seg til disposisjon",
+    "predicted_answer": "Raja har kunngjort at han har meldt seg til valgkomiteen om at han er villig til å stille som kandidat til ledervervet i Venstre. Dette er fordi han mener det er viktig å være åpen og ærlig om intensjonene sine, spesielt med tanke på at andre kandidater allerede har gått offentlig ut med at de er villige"
+  },
+  {
+    "qid": 2372,
+    "question": "Hvorfor ble det et opphold under kampen til Anders og Christian?",
+    "gold_answer": "på grunn av problemer med lyset i arenaen",
+    "predicted_answer": "Det var et lysproblem under kampen mellom Anders Mol og Christian Sørum mot Oleg Stojanovskij og Vjatsjeslav Krasilnikov. Dette førte til en midlertidig stans i spillet, som varte til problemet var løst. Det er viktig å merke seg at dette ikke hadde noen betydelig innvirkning på"
+  },
+  {
+    "qid": 2220,
+    "question": "Hvor mange måneder må Nicki Bille sitte i kasjotten?",
+    "gold_answer": "fire",
+    "predicted_answer": "Nicki Bille er dømt til fire måneders ubetinget fengsel. Dette betyr at han må sone fire måneder i fengsel uten mulighet for prøveløslatelse. Denne dommen kommer i tillegg til en tidligere dom for vold, som ikke tillot en betinget dom. Til tross for dette kan Bille søke om å sone"
+  },
+  {
+    "qid": 249,
+    "question": "Hva er det som omtales som et hull i velfredsstaten?",
+    "gold_answer": "Tannhelse",
+    "predicted_answer": "Teksten som er oppgitt nevner at tannhelse ofte blir ansett som et hull i velferdsstaten. Dette betyr at det er et område av helsetjenester som ikke er godt nok ivaretatt eller finansiert av staten, noe som resulterer i ulikheter i tilgangen til og kvaliteten på tannpleie. Denne mangelen på likhet kan føre til negative konsekvenser,"
+  },
+  {
+    "qid": 1284,
+    "question": "Hvordan kan regjeringen bidra til at systemet blir bedre til å ta vare på de sårbare barna i barnevoldssaker?\n",
+    "gold_answer": "Ved å innføre en saksbehandlingsfrist i barnevoldssaker",
+    "predicted_answer": "Teksten foreslår å innføre tidsfrister for behandling av saker om barnemishandling for å forbedre effektiviteten og rettssikkerheten. Dette forslaget er basert på en rapport fra en arbeidsgruppe som har undersøkt årsakene til den lange saksbehandlingstiden i disse sakene. Arbeidsgruppen foreslår å erstatte den nåværende tidsfristen på 90 dager for voldssaker med"
+  },
+  {
+    "qid": 234,
+    "question": "Når meldte Abid Raja sitt kandidatur til ledervervet i Venstre?",
+    "gold_answer": "etter at han deltok på et møte i jusstudentforeningen Mino. jur i Bergen",
+    "predicted_answer": "Abid Raja kunngjorde sitt kandidatur til ledervervet i Venstre under et møte i jusstudentforeningen Mino. jur i Bergen. Dette ble bekreftet av Raja selv, etter at han hadde informert om at han hadde stilt seg til disposisjon for valgkomiteen. Han sa at siden de andre kandidatene hadde gått offentlig ut"
+  },
+  {
+    "qid": 205,
+    "question": "Når ringte Novak sin fire år gamle sønn?",
+    "gold_answer": "før kampen",
+    "predicted_answer": "Novak Djokovic ringte sønnen sin før kampen mot Lucas Pouille. Dette kan utledes fra svaret hans under seiersintervjuet, der han nevnte at sønnen var på vei til barnehagen og at han hadde ønsket ham lykke til og bedt ham vinne. Derfor visste Novak at sønnen var på vei til"
+  },
+  {
+    "qid": 2392,
+    "question": "Hvor ofte flyr kampfly over Vestlandet?",
+    "gold_answer": "ikke så ofte",
+    "predicted_answer": "Kampfly flyr over hele landet, inkludert Vestlandet, på jevnlig basis. Imidlertid er det spesifikke flymønsteret som involverer julestjerneformasjonen, ikke en vanlig hendelse. Denne formasjonen er en del av Luftforsvarets årlige julemarkering, som inkluderer å fly over flere byer og tettsteder for å spre julestemning"
+  },
+  {
+    "qid": 1952,
+    "question": "Når på mandag starter kampen?",
+    "gold_answer": "klokka 19",
+    "predicted_answer": "Kampen mellom Odd og Rosenborg starter kl. 19.00 på mandag."
+  },
+  {
+    "qid": 2059,
+    "question": "Hvordan kjørte Nina ned henget ifølge henne selv?",
+    "gold_answer": "litt pinglete",
+    "predicted_answer": "Nina Haver-Løseth kjørte ned henget i Levi-løypa med en «pinglete» tilnærming, som hun selv beskrev det. Denne tilnærmingen førte til at hun gjorde noen feil som kostet henne tid."
   }
 ]
