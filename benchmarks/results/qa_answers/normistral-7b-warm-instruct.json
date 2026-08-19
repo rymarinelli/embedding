@@ -1366,5 +1366,11 @@
     "question": "Hvilke virus utelukkes som årsaker til hundesykdomstilfellene?",
     "gold_answer": "valpesyke, circovirus og coronavirus",
     "predicted_answer": "Basert på den gitte teksten, er det tydelig at flere virus er utelukket som potensielle årsaker til hundesykdommen. Disse inkluderer valpesyke, circovirus og coronavirus. Veterinærinstituttet har bekreftet at disse virusene ikke er til stede i prøvene fra de berørte hundene. Denne informasjonen er viktig fordi den"
+  },
+  {
+    "qid": 875,
+    "question": "Hva er det Tyrkia skal kjøpe av Russland?",
+    "gold_answer": "luftvernraketter",
+    "predicted_answer": "Tyrkia har gått med på å kjøpe S-400 luftforsvarssystemer fra Russland. Dette er et betydelig kjøp for Tyrkia, ettersom det er en stor handelspartner for USA. Faktisk lager Tyrkia den strukturelle stålrammen for våre F-35 jagerfly. Dette er en av grunnene til at Trump har uttrykt"
   }
 ]
