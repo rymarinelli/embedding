@@ -1024,5 +1024,347 @@
     "question": "Hvilken minister fikk innført kvotering av kvinner i styrene i store selskaper i Norge?",
     "gold_answer": "Ansgar Gabrielsen",
     "predicted_answer": "Ansgar Gabrielsen, som var næringsminister i Kjell Magne Bondeviks andre regjering fra 2004 til 2005, var ministeren som fikk innført kvotering av kvinner i styrene i store selskaper i Norge. Dette var et viktig skritt for å fremme likestilling og mangfold i næringslivet. Gabrielsen"
+  },
+  {
+    "qid": 1384,
+    "question": "Hvor jobber David Nyblom?",
+    "gold_answer": "i Medicall",
+    "predicted_answer": "David Nyblom er administrerende direktør i Medicall, som er en underleverandør av Medhelp. Medicall tar seg av samtaler fra 1177 Vårdguiden, en rådgivningstjeneste som eies av Sveriges kommuner og Landsting. Denne tjenesten tilbyr informasjon om offentlige helse- og omsorgstjenester, og samtalene blir tatt opp og lagret"
+  },
+  {
+    "qid": 86,
+    "question": "Hva er to av de siktede i saken siktet for?",
+    "gold_answer": "forsettlig drap eller medvirkning til dette",
+    "predicted_answer": "De to mennene som er siktet i forbindelse med voldshendelsen i Trondheim, er siktet for forsettlig drap eller medvirkning til dette. Dette er basert på etterforskningen som ble gjort på mandag, og den foreløpige obduksjonsrapporten som ble mottatt samme dag. Det er viktig å merke seg at ingen av de to siktede"
+  },
+  {
+    "qid": 2268,
+    "question": "I hvilken by er Bonita registrert?",
+    "gold_answer": "Grimstad",
+    "predicted_answer": "Bonita, skipet som ble kidnappet utenfor Benin, er registrert i Cotonou, en by i Benin. Dette er en viktig detalj å merke seg, ettersom det indikerer at hendelsen fant sted i nærheten av havnen i Cotonou, som er en travel havneby i Vest-Afrika. Denne informasjonen"
+  },
+  {
+    "qid": 942,
+    "question": "Hvilket syndrom har Neils sønn Zeke?",
+    "gold_answer": "cerebral parese",
+    "predicted_answer": "Neil Youngs sønn Zeke har cerebral parese, som beskrevet i teksten. Cerebral parese er en samlebetegnelse for en rekke tilstander som påvirker barnets motoriske funksjon og som ofte påvirker barnets evne til å kontrollere frivillige bevegelser. Zeke ble født med cerebral parese, som er en tilstand"
+  },
+  {
+    "qid": 29,
+    "question": "Hvilken menighet tilhører barne- og familieminister Ropstad?",
+    "gold_answer": "Oslo Misjonskirke Betlehem",
+    "predicted_answer": "Barne- og familieminister Kjell Ingolf Ropstad tilhører Oslo misjonskirke Betlehem. Denne informasjonen kan finnes i den vedlagte teksten, spesifikt i setningen: «Ropstads egen menighet Oslo misjonskirke Betlehem er et av de 90 menighetene som tilhører Misjonskirken Norge, som igjen er"
+  },
+  {
+    "qid": 290,
+    "question": "Hva kommer Trump til å gjøre hvis ikke en avtale kommer på bordet før 1. mars?",
+    "gold_answer": "øke tollen på kinesiske importvarer",
+    "predicted_answer": "President Trump har truet med å øke tollsatsene på kinesiske importvarer til en verdi av 200 milliarder dollar fra 10 % til 25 % hvis det ikke oppnås en avtale før 1. mars. Dette er i tråd med hans tidligere uttalelser om at han er villig til å gå til ytterligere skritt hvis Kina"
+  },
+  {
+    "qid": 241,
+    "question": "Hvor mange ulike ansatte kan eldre pasienter i Oslo måtte forholde seg til per måned?",
+    "gold_answer": "30",
+    "predicted_answer": "Basert på den gitte teksten, kan eldre pasienter i Oslo måtte forholde seg til opptil 30 ulike ansatte hver måned. Dette er ifølge pasientombudet Anne-Lise Kristensen, som uttrykker bekymring for den hyppige utskiftingen av ansatte og den uforutsigbare naturen til tjenestene som tilbys. Hun mener at dette resulterer i usikkerhet, inkon"
+  },
+  {
+    "qid": 937,
+    "question": "Når spilte PSG mot Manchester United sist?",
+    "gold_answer": "for halvannen uke siden",
+    "predicted_answer": "PSG spilte mot Manchester United i Champions League-gruppespillet. Kampen ble spilt 13. desember 2021, og Manchester United vant 2-1 på Old Trafford. Denne informasjonen er basert på den oppgitte teksten, som nevner at PSG spilte mot Manchester United i Champions League-gruppespillet"
+  },
+  {
+    "qid": 276,
+    "question": "Hva var løven Tidemandsen skjøt avlet opp for?",
+    "gold_answer": "å skytes",
+    "predicted_answer": "Løven som Øivind Tidemandsen importerte og skjøt i 2018 var avlet opp i fangenskap. Dette betyr at løven ble oppdrettet i en dyrepark eller et beskyttet område for jaktformål. Når en løve er avlet opp i fangenskap, er den ikke"
+  },
+  {
+    "qid": 128,
+    "question": "Hvilken oppslutning fikk Høyre i fylkestingsvalget i Viken?",
+    "gold_answer": "25,1 prosentpoeng",
+    "predicted_answer": "Høyres oppslutning i fylkestingsvalget i Viken var 25,1 %. Dette er en betydelig nedgang fra deres valgresultat i 2015, da de fikk 29,8 % av stemmene. Til tross for dette er Høyre fortsatt det største partiet i Viken, og vil sannsynligvis kreve fylkesrådslederen i"
+  },
+  {
+    "qid": 1353,
+    "question": "Når fikk Bjarte Myrhol et tilbakefall med sykdommen sin?",
+    "gold_answer": "23. desember",
+    "predicted_answer": "Bjarte Myrhol fikk et tilbakefall 23. desember. Dette er en sykdom han har slitt med siden i sommer. Han ble operert for et hull i tarmen i november, men dessverre fikk han et tilbakefall 2. januar i Herning. Dette betyr at han ikke kan delta i EM. Tom Kåre Nikolaisen"
+  },
+  {
+    "qid": 2105,
+    "question": "Når vil The Tall Ships Races foregå?",
+    "gold_answer": "i midten av juli",
+    "predicted_answer": "The Tall Ships Races i Fredrikstad vil finne sted fra 12. til 15. juli 2019. Dette er en firedagers feiring av seilskuter, sjøfart og maritim kultur. Arrangementet vil inneholde en rekke aktiviteter, verksteder, konserter og forestillinger, og vil være åpent for alle."
+  },
+  {
+    "qid": 974,
+    "question": "Hvem blir kaptein på det norske laget i mixed-konkurransen?",
+    "gold_answer": "Maren Lundby",
+    "predicted_answer": "Maren Lundby vil være kapteinen for det norske laget i mixed-konkurransen. Dette er fordi hun har oppnådd de beste resultatene blant de norske kvinnene i løpet av VM, og har vist seg å være en sterk og pålitelig utøver. Som verdensmester i normalbakken og en generelt sterk utøver, er hun et naturlig"
+  },
+  {
+    "qid": 1140,
+    "question": "Hvor ligger Washington?",
+    "gold_answer": "I District of Columbia",
+    "predicted_answer": "Washington ligger i District of Columbia, som er en delstat i USA. Denne informasjonen kan finnes i den første setningen i teksten som er gitt. Teksten nevner at president Trump og hans kone besøkte en baseballkamp på Nationals Park i Washington, som ligger i District of Columbia."
+  },
+  {
+    "qid": 1988,
+    "question": "Hvordan regna det tirsdag kveld?",
+    "gold_answer": "heftig",
+    "predicted_answer": "Det regnet kraftig i Gjesdal-området tirsdag kveld. En mann varslet Gjesdal brannvesen umiddelbart da han kjørte på et hull i veien rett utenfor huset sitt i Bjørkeveien i Gjesdal. Han gikk ut av bilen og så bakken bule, noe som indikerte at vannmengdene i bakken"
+  },
+  {
+    "qid": 877,
+    "question": "Hvilken geriljagruppe samarbeider YPG med?",
+    "gold_answer": "PKK-geriljaen",
+    "predicted_answer": "YPG-geriljaen, som er den militære greina til det kurdiske partiet PYD, samarbeider med PKK-geriljaen. Denne informasjonen kan finnes i teksten som er gitt, spesifikt i uttalelsen fra Det hvite hus etter en samtale mellom president Trump og Erdogan: «Vi er"
+  },
+  {
+    "qid": 541,
+    "question": "Hvem er Neprjajevas tyske trener?",
+    "gold_answer": "Markus Cramer",
+    "predicted_answer": "Neprjajeva's tyske trener er Markus Cramer. Han har vært ansvarlig for hennes utvikling som langrennsløper siden hun ble med på det russiske landslaget i 2018. Cramer forstår at Jelena Välbes ordre om å få gravide langrennsløpere kan virke «litt rar»,"
+  },
+  {
+    "qid": 2338,
+    "question": "Hva har partene enda ikke kommet til enighet om?",
+    "gold_answer": "retningslinjer for sosiale medier",
+    "predicted_answer": "Partene har ikke kommet til enighet om retningslinjer for sosiale medier. Dette er et tema som har skapt diskusjon mellom Norges Skiforbund og Johannes Høsflot Klæbos team. Det er uklart hvordan utøverne skal representere landslaget og når de kan dele innhold på sosiale medier."
+  },
+  {
+    "qid": 2360,
+    "question": "Hvordan synes Kjetil det er å stå på ski?",
+    "gold_answer": "gøy",
+    "predicted_answer": "Kjetil Jansrud finner utforkjøringskonkurransen i Andorra til å være en spennende og hyggelig opplevelse. Han er fornøyd med prestasjonen sin, og bemerker at det er «gøy å stå på ski». Jansrud setter pris på utforkjøringssesongen, til tross for at den har"
+  },
+  {
+    "qid": 1936,
+    "question": "Hva jobber Hannah som?",
+    "gold_answer": "forsker",
+    "predicted_answer": "Hannah Joan Jørgensen er forsker ved Veterinærinstituttet. Hun jobber med å sammenstille sykdomsinformasjon for å finne ut om den økte forekomsten av tilfeller med blodig diaré hos hunder kan skyldes et utbrudd eller en naturlig sesongvariasjon. Dette er en utfordrende oppgave fordi Veterinærinstituttet ikke har et sentralt register over hunder eller"
+  },
+  {
+    "qid": 995,
+    "question": "Hvor går siste etappe av Tour of Norway i år?",
+    "gold_answer": "fra Gran til Hønefoss",
+    "predicted_answer": "Den siste etappen av Tour of Norway i år starter i Gran og avsluttes i Hønefoss, som ligger omtrent 175 kilometer unna. Denne etappen er den siste i årets ritt, og den markerer slutten på Alexander Kristoffs jakt på sin 8. etappeseier i Tour of Norway. Kristoff er for"
+  },
+  {
+    "qid": 1937,
+    "question": "Hvor jobber Hannah?",
+    "gold_answer": "ved Veterinærinstituttet",
+    "predicted_answer": "Hannah jobber som forsker ved Veterinærinstituttet, som er en nasjonal forskningsinstitusjon som gir kunnskap om sunn mat og helse for både dyr og mennesker. Hun er ekspert på smittsomme sykdommer hos dyr og jobber for tiden med å undersøke den pågående hundesykdommen."
+  },
+  {
+    "qid": 1667,
+    "question": "Hvem er næringsminister?",
+    "gold_answer": "Torbjørn Røe Isaksen",
+    "predicted_answer": "Næringsministerens navn er Torbjørn Røe Isaksen."
+  },
+  {
+    "qid": 779,
+    "question": "Hvilken rangering har Federico Delbonis i verdenssammenheng?",
+    "gold_answer": "nummer 63",
+    "predicted_answer": "Federico Delbonis, som er Casper Ruuds motstander i ATP 1000-turneringen i Ohio, er for øyeblikket rangert som nummer 63 i verden. Denne rangeringen er basert på hans prestasjoner og prestasjoner på ATP-touren. Det er viktig å merke seg at"
+  },
+  {
+    "qid": 386,
+    "question": "Hvorfor benyttet politiet helikopter i formindelse med demonstrasjonen mot Scandza Forum?",
+    "gold_answer": "for å observere fra lufta",
+    "predicted_answer": "Politiet brukte helikopter for å observere demonstrasjonen mot Scandza Forum på grunn av den verbalt høylytte, men ikke-voldelige, stemningen blant de 40-50 demonstrantene. Dette var for å sikre at demonstrasjonen gikk fredelig for seg og for å opprettholde orden."
+  },
+  {
+    "qid": 397,
+    "question": "Når vant Manchester United sist Premier League?",
+    "gold_answer": "i 2012/13-sesongen",
+    "predicted_answer": "Manchester United vant sist Premier League i 2012-2013-sesongen. Dette var også den siste sesongen til Sir Alex Ferguson, som hadde vært manager for klubben i 26 år. Den nåværende manageren, Ole Gunnar Solskjær, tok over etter Ferguson og ledet laget"
+  },
+  {
+    "qid": 1765,
+    "question": "Hvor mange omkomne er henta ut så langt?",
+    "gold_answer": "sju",
+    "predicted_answer": "Ni omkomne er henta ut så langt, ifølgje dei nyaste opplysningane frå brannvesenet."
+  },
+  {
+    "qid": 1451,
+    "question": "Når utlignet bortelaget?",
+    "gold_answer": "etter pausen",
+    "predicted_answer": "Teksten som er oppgitt, nevner at Los Angeles Kings utlignet til 1-1 i første periode. Dette skjedde etter 5,50 minutter av kampen. Teksten nevner også at Wild tok ledelsen igjen i andre periode, men den gir ikke informasjon om når Kings utlignet igjen. Derfor er det mest nøyaktige"
+  },
+  {
+    "qid": 1734,
+    "question": "Hvorfor krever en aksjonsgruppe at Oslo kommune kjøper tilbake eller omregulerer T-banetomta i Sandakerveien?",
+    "gold_answer": "slik at det kan anlegges en park på tomten",
+    "predicted_answer": "Aksjonsgruppen «Ja til stor park i Nydalen» krever at Oslo kommune kjøper tilbake eller omregulerer T-banetomten i Sandakerveien for å anlegge en park på området. Dette er fordi T-banetomten for øyeblikket er regulert til industriformål, men eies av det private eiendom"
+  },
+  {
+    "qid": 1683,
+    "question": "Hvorfor ønsker mange filmprodusenter å lansere filmene sine om høsten?",
+    "gold_answer": "for å maksimere sine sjanser i kinomarkedet",
+    "predicted_answer": "Produsenter ønsker ofte å lansere filmene sine om høsten for å maksimere sjansene for suksess på kino. Dette er fordi kinosesongen vanligvis er mer intens om høsten, noe som fører til høyere seertall for nye utgivelser. Denne strategien kan bidra til å motvirke kannibalisering, der en films utgivelse konkurrerer med seg"
+  },
+  {
+    "qid": 1912,
+    "question": "Hvilke nivåer deler Johan Kaggestad intensitet opp i?",
+    "gold_answer": "pratefart og over pratefart",
+    "predicted_answer": "Johan Kaggestad deler intensitetsnivåer inn i to kategorier: «snakkefart» og «over snakkefart». Dette er basert på hans erfaring som trener for noen av Norges beste langdistanseløpere, samt hans arbeid ved Modum Bad. «Snakkefart»-intensitet refererer"
+  },
+  {
+    "qid": 221,
+    "question": "Når fikk Viking Sky motortrøbbel?",
+    "gold_answer": "ved 14-tiden lørdag",
+    "predicted_answer": "Teksten som er oppgitt nevner at motorene på Viking Sky sluttet å virke på lørdag ettermiddag. Denne informasjonen kan finnes i den første setningen i teksten, som lyder: «Amerikansk ektepar: - Det kunne ha blitt en forferdelig tragedie». Derfor er svaret på spørsmålet «Når fikk Viking Sky motortrø"
+  },
+  {
+    "qid": 403,
+    "question": "Hvordan ble Norway cup åpnet i år?",
+    "gold_answer": "med parade og åpningsshow på Ekebergsletta i Oslo",
+    "predicted_answer": "Norway Cup ble åpnet med en parade og et åpningsshow på Ekebergsletta i Oslo. Paraden ble ledet av en brasiliansk sambadanser, og artister som TIX, Hkeem, Vidar Villa, Hanne Mjøen og eMMa opptrådte på scenen. I tillegg var statsminister Erna"
+  },
+  {
+    "qid": 248,
+    "question": "Hvor stor andel av Høyre-velgerne ønsker å ha tannhelse som et offentlig tilbud?",
+    "gold_answer": "83 prosent",
+    "predicted_answer": "Ni av ti av de spurte Høyre-velgerne ønsker å ha tannhelse som en del av det offentlige helsetilbudet."
+  },
+  {
+    "qid": 1649,
+    "question": "Hvor mange kvinnelige politikere har, ifølge Amnesty, opplevd hat på Internett?",
+    "gold_answer": "to av tre",
+    "predicted_answer": "Ifølge Amnesty International-rapporten «Women online: Freedom of Expression and Online Harassment» fra 2021, har to av tre kvinnelige politikere og 12 % av kvinner generelt opplevd netthets. Denne statistikken understreker viktigheten av å adressere netthets og sikre at alle, uavhengig av kjønn,"
+  },
+  {
+    "qid": 1389,
+    "question": "Hvem tapte Juventus mot på lørdag?",
+    "gold_answer": "mot Atlético Madrid",
+    "predicted_answer": "Sint sørkoreansk supporter tapte flyet til Stockholm for å konfrontere Ronaldo om ikke å spille i Sør-Korea\n\nTekst:\nSint sørkoreansk supporter tok flyet til Stockholm for å konfrontere Ronaldo om ikke å spille i Sør-Korea\n\nFOTO: AP Photo/Paul White"
+  },
+  {
+    "qid": 447,
+    "question": "Hvem er de fire savnede personene?",
+    "gold_answer": "en svensk kvinne og tre finske menn",
+    "predicted_answer": "De fire savnede personene er en svensk kvinne og tre finske menn. De var på tur i fjellområdet i Indre Troms da de ble meldt savnet. De ble sist sett rundt kl. 14.00, og etter noen timer ble den femte personen i følget bekymret og varslet politiet. Det er ikke noen"
+  },
+  {
+    "qid": 1018,
+    "question": "Hvor fant Philips Petroleum Ekofisk-feltet?",
+    "gold_answer": "på norsk sokkel",
+    "predicted_answer": "Teksten som er gitt sier at «Oljefondet har passert 10.000 milliarder kroner». Dette betyr at fondets verdi har oversteget 10.000 milliarder kroner. Teksten nevner også at rundt halvparten av fondets verdi er avkastning på investeringene, og resten er svingninger i kronek"
+  },
+  {
+    "qid": 784,
+    "question": "Hvor skal det norske landslaget trene den kommende uka?",
+    "gold_answer": "i høyden i Anterselva",
+    "predicted_answer": "Det norske skiskytterlandslaget vil trene i høyden i Anterselva den kommende uken. Dette er en strategisk beslutning for å forberede seg best mulig til de kommende verdenscupkonkurransene i Canmore og Salt Lake City i Nord-Amerika. Landslagssjef Per Arne Botnan har uttalt at laget vil bli værende i An"
+  },
+  {
+    "qid": 1837,
+    "question": "Hva stemte Ligaen mot?",
+    "gold_answer": "å godkjenne tyske Ursula von der Leyen som EU-kommisjonens nye president",
+    "predicted_answer": "Ligaen, som er ett av de to partiene i den italienske koalisjonsregjeringen, stemte mot Ursula von der Leyen som ny president i Europakommisjonen. Dette var i strid med politikken til deres koalisjonspartner, Femstjernersbevegelsen (M5S), som stemte for å"
+  },
+  {
+    "qid": 574,
+    "question": "Hvorfor tror redningslederen at den savnede mannen er omkommet?",
+    "gold_answer": "summen av tid, værforhold og temperatur",
+    "predicted_answer": "Basert på informasjonen som er oppgitt, tror redningslederen at den savnede mannen er antatt omkommet på grunn av summen av tid, værforhold og temperatur som har gått siden kantringen. Denne vurderingen er basert på det faktum at det ikke har vært noen livstegn fra mannen siden kantringen, og at det ikke"
+  },
+  {
+    "qid": 751,
+    "question": "Hvorfor har en vaksinemotstander på Samoa blitt arrestert og siktet av politiet?",
+    "gold_answer": "for tilskyndelse til lovbrudd",
+    "predicted_answer": "Vaksinemotstanderen på Samoa, Edwin Tamasese, ble arrestert og siktet av politiet for å ha oppfordret til lovbrudd. Han ble advart mot handlingene sine, men valgte likevel å spre feilinformasjon på sosiale medier om massevaksinasjonskampanjen mot meslinger. Dette har ført til at barn har mistet"
+  },
+  {
+    "qid": 1894,
+    "question": "Hvordan endte kampen mellom Spania og Sverige?",
+    "gold_answer": "3 – 0",
+    "predicted_answer": "Spania vant kampen mot Sverige med en score på 3-0. Spanias første mål ble scoret av Sergio Ramos på straffespark i det 63. minutt. Det andre målet ble tildelt av William Collum i det 72. minutt da Filip Helander felte Álvaro Morata"
+  },
+  {
+    "qid": 1023,
+    "question": "Hvem er Trond Jensrud?",
+    "gold_answer": "generalsekretær i Yrkestrafikkforbundet",
+    "predicted_answer": "Trond Jensrud er en generalsekretær som jobber for Yrkestrafikkforbundet. Yrkestrafikkforbundet er en norsk fagforening som representerer yrkesbilsjåfører, lagerarbeidere, buss- og langtransportsjåfører, samt ansatte i selskaper som driver vedlikehold, godshåndtering og logistikk. I sin rolle som generalsekretær oppfordrer Trond Jens"
+  },
+  {
+    "qid": 308,
+    "question": "I hvilket land bor Solvik-Olsen for tiden?",
+    "gold_answer": "USA",
+    "predicted_answer": "Ketil Solvik-Olsen bor for tiden i USA. Han er en tidligere norsk politiker som var samferdselsminister fra 2013 til 2018 og andre nestleder i Fremskrittspartiet fra 2011 til 2019. Han er for tiden aktuell med en selvbiografisk bok med tittelen «På vei"
+  },
+  {
+    "qid": 1815,
+    "question": "Hva har de fire flyvertene blitt siktet for?",
+    "gold_answer": "hvitvasking av penger",
+    "predicted_answer": "De fire flyvertinnene ble siktet for to lovbrudd: hvitvasking av penger og å unnlate å rapportere om betydelige pengesummer. Hvitvasking av penger innebærer å konvertere ulovlige penger til lovlige midler, mens å unnlate å rapportere om betydelige pengesummer innebærer å unnlate å rapportere om betydelige pengesummer til de"
+  },
+  {
+    "qid": 2254,
+    "question": "Hvorfor hadde gjerningskvinnen og offeret truffet hverandre jevnlig?",
+    "gold_answer": "for å ha sex",
+    "predicted_answer": "Kvinnen og offeret hadde truffet hverandre jevnlig for å ha sex. Denne informasjonen kan finnes i den første setningen i teksten som er gitt. Det er derfor tydelig at de to hadde et seksuelt forhold, noe som førte til at de traff hverandre regelmessig."
+  },
+  {
+    "qid": 401,
+    "question": "Når kom van Persie til Arsenal?",
+    "gold_answer": "2004",
+    "predicted_answer": "Robin van Persie kom til Arsenal i 2004, og ble værende i klubben i åtte sesonger før han flyttet til Manchester United i 2012. Han spilte en viktig rolle i Uniteds suksess i 2012/13-sesongen, og scoret 26 mål i alle konkurranser. Van"
+  },
+  {
+    "qid": 207,
+    "question": "Hvorfor trakk Nishikori seg fra kvartfinalekampen mot Djokovic?",
+    "gold_answer": "på grunn av skade",
+    "predicted_answer": "Nishikori trakk seg fra kvartfinalekampen mot Djokovic på grunn av en skade. Det var første gang siden 2010 at en franskmann hadde nådd semifinalen i turneringen, men dessverre ble det en kort affære for Pouille. Djokovic var ustoppelig og vant kampen i strake sett"
+  },
+  {
+    "qid": 2214,
+    "question": "Hvor mange demokratiske presidentkandidater stiller til valg i 2020?",
+    "gold_answer": "et sted mellom 15 og 30",
+    "predicted_answer": "Det er forventet at mellom 15 og 30 demokratiske presidentkandidater vil stille til valg i 2020. Dette er basert på historiske trender og det store antallet kandidater som har meldt seg på i tidligere valg. Det er viktig å merke seg at dette tallet kan endre seg etter hvert som flere kandidater kunngjør sine kandid"
+  },
+  {
+    "qid": 60,
+    "question": "Hva handler Ronald Sagatuns YouTube-kanal om?",
+    "gold_answer": "norsk kultur",
+    "predicted_answer": "Ronald Sagatuns YouTube-kanal handler om norsk kultur, spesifikt den norske matpakke-tradisjonen. Han forklarer at matpakken, som består av flate skiver med kjedelig pålegg, er en skuffelse i Norge. Dette er fordi den skal være tørr, smakløs og hovedsakelig beige av farge. Denne tradisjonen har"
+  },
+  {
+    "qid": 382,
+    "question": "Hvor har vi sett en hetebølge i det siste?",
+    "gold_answer": "i Europa",
+    "predicted_answer": "Teksten som er oppgitt nevner en hetebølge som har funnet sted i Europa i det siste. Dette er et faktum, ikke en tolkning eller en mening."
+  },
+  {
+    "qid": 968,
+    "question": "Til hvilket sykehus dro Kelly Clarksom etter Billboard-utdelingen?",
+    "gold_answer": "Cedars Sinai Hospital",
+    "predicted_answer": "Kelly Clarkson dro til Cedars Sinai Hospital etter Billboard Music Awards. Hun avslørte dette på Twitter, der hun skrev: «Skal ikke lyve... Det kan være eller ikke være at jeg brøt sammen i tårer etter showet på grunn av smertene. Men takk til alle fantastiske mennesker på C"
+  },
+  {
+    "qid": 681,
+    "question": "Hvem var det som fulgte 16-åringen til legevakta?",
+    "gold_answer": "En politipatrulje",
+    "predicted_answer": "Operasjonssentralen i Oslo-politiet fulgte 16-åringen til legevakten etter at han hadde blitt angrepet med balltre og truet med kniv. Dette er en del av den pågående etterforskningen for å identifisere gjerningsmennene og innhente mer informasjon."
+  },
+  {
+    "qid": 1664,
+    "question": "Hva kan HPV-viruset føre til?",
+    "gold_answer": "livmorhalskreft",
+    "predicted_answer": "HPV-viruset, eller humant papillomavirus, kan føre til flere alvorlige helseproblemer, inkludert livmorhalskreft. Ifølge Centers for Disease Control and Prevention (CDC) er livmorhalskreft den nest vanligste typen kreft hos kvinner i USA, og HPV er den primære årsaken til denne sykdommen.\n\nI"
+  },
+  {
+    "qid": 1989,
+    "question": "Hvilken del av huset var oversvømt?",
+    "gold_answer": "kjellerleiligheten",
+    "predicted_answer": "Teksten som er oppgitt nevner at tre hus ble evakuert på grunn av fare for at de skulle rase ut. Den sier imidlertid ikke eksplisitt at ett av disse husene hadde en oversvømt kjellerleilighet. Basert på konteksten kan det utledes at ett av de tre husene som ble evakuert hadde en oversvømt kjeller"
+  },
+  {
+    "qid": 1971,
+    "question": "Hvilke virus utelukkes som årsaker til hundesykdomstilfellene?",
+    "gold_answer": "valpesyke, circovirus og coronavirus",
+    "predicted_answer": "Basert på den gitte teksten, er det tydelig at flere virus er utelukket som potensielle årsaker til hundesykdommen. Disse inkluderer valpesyke, circovirus og coronavirus. Veterinærinstituttet har bekreftet at disse virusene ikke er til stede i prøvene fra de berørte hundene. Denne informasjonen er viktig fordi den"
   }
 ]
