@@ -1642,5 +1642,59 @@
     "question": "Hva heter trengeren for landslaget?",
     "gold_answer": "Lars Lagerbäck",
     "predicted_answer": "Landslagstreneren for det norske herrelandslaget i fotball er Lars Lagerbäck. Han har vært trener for laget siden 2017 og har kontrakt til 2022. Lagerbäck er kjent for sin evne til å utvikle unge talenter og bygge et sterkt lag rundt dem. Han"
+  },
+  {
+    "qid": 1295,
+    "question": "Når skulle Trine Skei Grande etter planen ha besøkt Trondheim i forbindelse med valgkampen?",
+    "gold_answer": "i ettermiddag",
+    "predicted_answer": "Trine Skei Grande var planlagt å besøke Trondheim i dag, som en del av hennes valgkampopplegg. Dessverre har hun avlyst disse planene, ettersom hun ikke lenger er i Trondheim. Dette er på grunn av den pågående bompengestriden i regjeringen, der statsminister Erna Solberg har avlyst sitt valgkampopplegg i Porsgrunn, og Venstre-"
+  },
+  {
+    "qid": 1068,
+    "question": "Hva var det politiet bekreftet på en pressekonferanse tirsdag?",
+    "gold_answer": "Mann siktet for drap på sin 15 år gamle sønn på Toten",
+    "predicted_answer": "Politiet bekreftet at en mann er siktet for drap på sin 15 år gamle sønn på Toten. Denne informasjonen ble gitt under en pressekonferanse på tirsdag. Mannen vil bli begjært varetektsfengslet for en ny siktelse, som vil bli presentert for ham i nær fremtid. Mannens forsvarer, advokat Håkon Fremstad, har ikke"
+  },
+  {
+    "qid": 836,
+    "question": "Når er neste landsmøte i Venstre?",
+    "gold_answer": "19. – 20. april neste år",
+    "predicted_answer": "Neste Venstre-landsmøte er planlagt til 19.-20. april 2020."
+  },
+  {
+    "qid": 1286,
+    "question": "Hvorfor mener en arbeidsgruppe som er oppnevnt av Justisdepartementet at det innføres tidsfrist for behandling av barnevoldssaker?",
+    "gold_answer": "slik at barnevoldssaker havner lenger opp i saksbunken",
+    "predicted_answer": "Arbeidsgruppa som er satt sammen av medlemmer fra Riksadvokaten, Kripos, Sør-Øst politidistrikt, Oslo tingrett og advokatfirmaet Mette Y. Larsen & Co, foreslår å innføre tidsfrister for behandling av barnevoldssaker. Dette er fordi de mener at en slik tidsfrist vil bidra til å forbedre rettssikkerheten til både"
+  },
+  {
+    "qid": 977,
+    "question": "Hvem ble beste norske i normalbakkerennet på fredag?",
+    "gold_answer": "Johansson",
+    "predicted_answer": "Beste norske i normalbakkerennet på fredag var Johann André Forfang, som endte på 16. plass. Dette er en presis gjengivelse av teksten, ettersom den eksplisitt sier at «Beste nordmann ble Johann André Forfang, som endte på 16. plass.» Svaret er kortfattet og rett på sak"
+  },
+  {
+    "qid": 1087,
+    "question": "Hvor var ski-VM i 2015?",
+    "gold_answer": "i Falun",
+    "predicted_answer": "Ski-VM i 2015 ble holdt i Falun, Sverige. Mesterskapet fant sted fra 18. februar til 1. mars 2015, og det var første gang Falun var vertsby for arrangementet. Therese Johaug, som vant gull i skiathlon-øvelsen, var en av de"
+  },
+  {
+    "qid": 1621,
+    "question": "Hva forårsakte reduksjon av rennets lengde?",
+    "gold_answer": "sprengkulde",
+    "predicted_answer": "Rennet ble forkortet til 15 kilometer på grunn av ekstreme kuldeforhold i Canmore. Arrangørene ønsket å minimere risikoen for skader og sikre sikkerheten til utøverne. Den ekstreme kulden gjorde det utfordrende for utøverne å prestere på sitt beste, og en kortere distanse tillot dem å gjøre det uten å risikere helsen og"
+  },
+  {
+    "qid": 536,
+    "question": "Hvilket lag skal Manchester United spille mot på lørdag?",
+    "gold_answer": "Crystal Palace",
+    "predicted_answer": "Manchester United skal spille mot Crystal Palace på Old Trafford på lørdag. Dette er basert på den gitte teksten, som nevner at «Crystal Palace er neste motstander ut på Old Trafford lørdag»."
+  },
+  {
+    "qid": 1228,
+    "question": "Hvordan er glasset på brillene til Jeng?",
+    "gold_answer": "mørkt",
+    "predicted_answer": "Glasset på Jengs briller er mørkt, som i et par solbriller. Det er imidlertid ikke den primære grunnen til at han bruker dem. Jeng har et «veldig dårlig syn», noe som gjør ham svært følsom for lys. For å beskytte øynene mot sterkt lys har han gjennomgått en operasjon som har korriger"
   }
 ]
