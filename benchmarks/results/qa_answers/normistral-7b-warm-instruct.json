@@ -1696,5 +1696,17 @@
     "question": "Hvordan er glasset på brillene til Jeng?",
     "gold_answer": "mørkt",
     "predicted_answer": "Glasset på Jengs briller er mørkt, som i et par solbriller. Det er imidlertid ikke den primære grunnen til at han bruker dem. Jeng har et «veldig dårlig syn», noe som gjør ham svært følsom for lys. For å beskytte øynene mot sterkt lys har han gjennomgått en operasjon som har korriger"
+  },
+  {
+    "qid": 1872,
+    "question": "Hvem er president i Kina?",
+    "gold_answer": "Xi Jinping",
+    "predicted_answer": "Presidenten i Kina er Xi Jinping. Han har vært president siden 2013 og er den mektigste lederen Kina har hatt siden Deng Xiaoping, som begynte å åpne Kina for 40 år siden. Xi er på vei til å matche Mao Zedong, som grunnla Folkere"
+  },
+  {
+    "qid": 297,
+    "question": "Hvilken stilling har Stephanie Bia i Altran?",
+    "gold_answer": "kommunikasjonssjef",
+    "predicted_answer": "Stephanie Bia er kommunikasjonssjef i Altran Technologies, som ble rammet av LockerGoga-viruset i januar. Dette er en presis og kortfattet respons på spørsmålet, i henhold til instruksjonene som er gitt. Svaret er hentet direkte fra teksten som er oppgitt, uten noen tillegg eller tolkning."
   }
 ]
