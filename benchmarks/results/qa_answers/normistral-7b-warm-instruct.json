@@ -1564,5 +1564,35 @@
     "question": "Hvem er Michael Avenatti?",
     "gold_answer": "advokaten til en av anklagerne",
     "predicted_answer": "Michael Avenatti er en amerikansk advokat som spesialiserer seg på strafferett og sivilrett. Han er kjent for sitt arbeid med høyprofilerte saker, inkludert de som involverer kjendiser. I dette tilfellet er han advokaten til en av kvinnene som har anklaget R. Kelly for seksuelle overgrep. Avenattis uttalelse"
+  },
+  {
+    "qid": 280,
+    "question": "Når varslet May at hun skulle gå av?",
+    "gold_answer": "i forrige måned",
+    "predicted_answer": "May kunngjorde sin avgang i forrige måned, i en tårevåt tale. Denne kunngjøringen kom etter en serie med nederlag i Underhuset, inkludert tre avvisninger av utmeldingsavtalen med Den europeiske union."
+  },
+  {
+    "qid": 278,
+    "question": "Hvor jobber Ragnhild Sollund?",
+    "gold_answer": "Universitetet i Oslo",
+    "predicted_answer": "Ragnhild Sollund er en norsk kriminolog som jobber ved Universitetet i Oslo. Hun er professor ved Institutt for kriminologi og rettssosiologi og har spesialisert seg på temaer som dyremishandling, miljøkriminalitet og vold i hjemmet. I 2008 ga hun ut boken \"Dyrevern eller"
+  },
+  {
+    "qid": 963,
+    "question": "Hva heter sikkerhetstjenesten i Sverige?",
+    "gold_answer": "Säpo",
+    "predicted_answer": "Säkerhetspolisen, ofte forkortet Säpo, er den nasjonale sikkerhetstjenesten i Sverige. Den er ansvarlig for å beskytte landets regjering og interesser mot eksterne trusler, som terrorisme og spionasje. I dette tilfellet har Säpo blitt informert om hendelsen og samarbeider med politiet."
+  },
+  {
+    "qid": 1653,
+    "question": "Hvem scoret det fjerde målet for LSK?",
+    "gold_answer": "Guro Reiten",
+    "predicted_answer": "Guro Reiten scoret det fjerde målet for LSK i kampen mot Kolbotn. Etter å ha ligget under 3-1 med under 23 minutter igjen å spille, scoret hun to mål på de siste 20 minuttene for å snu kampen til en 4-3-seier. Det første målet hennes kom etter 73 minutter"
+  },
+  {
+    "qid": 491,
+    "question": "Hvordan endte første sett i kampen?",
+    "gold_answer": "21-17",
+    "predicted_answer": "Første sett endte i favør Mol og Sørum, med en score på 21-17. Denne seieren markerte slutten på kvartfinalen i EM, der de møtte Julius Thole og Clemens Wickler, de tyske spillerne som hadde slått dem i VM-semifinalen i sommer."
   }
 ]
