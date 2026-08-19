@@ -1780,5 +1780,23 @@
     "question": "Når går siste etappe av årets Tour of Norway?",
     "gold_answer": "søndag",
     "predicted_answer": "Den siste etappen av Tour of Norway 2022 er planlagt å finne sted på søndag, med en distanse på 175 kilometer som strekker seg fra Gran til Hønefoss. Denne etappen vil markere slutten på årets ritt, som har blitt dominert av den regjerende mesteren Eduard Prades og den mestvinn"
+  },
+  {
+    "qid": 1513,
+    "question": "Hvem er kaptein på det spanske landslaget?",
+    "gold_answer": "Sergio Ramos",
+    "predicted_answer": "Kapteinen på det spanske landslaget er Sergio Ramos. Han har vært kaptein siden 2016 og har spilt 167 kamper for laget, og scoret 21 mål. Ramos er en viktig figur i det spanske landslaget og har vært instrumental i lagets suksess, både på og utenfor banen. Han er"
+  },
+  {
+    "qid": 1167,
+    "question": "Når samles det konservative parti til landsmøte?",
+    "gold_answer": "På søndag",
+    "predicted_answer": "Det konservative partiet er planlagt å holde et firedagers landsmøte på søndag. Dette landsmøtet vil hovedsakelig fokusere på hvordan partiet og regjeringen skal forholde seg til den forestående brexit-datoen 31. oktober. Statsminister Boris Johnson har uttalt at han ønsker å få brexit overstått innen denne datoen. Landsmøtet vil"
+  },
+  {
+    "qid": 646,
+    "question": "Hvorfor ble Arild Bergs karriere noe kortere enn brødrenes?",
+    "gold_answer": "Berg var plaget av sykdommen ME",
+    "predicted_answer": "Arild Bergs karriere ble avsluttet tidligere enn brødrene Ørjan og Runars på grunn av sykdommen ME. Denne sykdommen påvirket hans evne til å prestere på toppnivå i fotball, noe som førte til at han måtte legge opp i en alder av 26. Dette var flere år tidligere enn brødrene, som begge fortsatte å spille"
   }
 ]
