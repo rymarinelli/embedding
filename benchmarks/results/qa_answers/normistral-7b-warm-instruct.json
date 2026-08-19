@@ -1594,5 +1594,29 @@
     "question": "Hvordan endte første sett i kampen?",
     "gold_answer": "21-17",
     "predicted_answer": "Første sett endte i favør Mol og Sørum, med en score på 21-17. Denne seieren markerte slutten på kvartfinalen i EM, der de møtte Julius Thole og Clemens Wickler, de tyske spillerne som hadde slått dem i VM-semifinalen i sommer."
+  },
+  {
+    "qid": 2333,
+    "question": "Når satte Rodrigo inn mål nummer to?",
+    "gold_answer": "etter 33 minutters spill",
+    "predicted_answer": "Rodrigo scoret det andre målet for Valencia etter 33 minutter. Dette kan bekreftes av teksten som er gitt, som sier at «Rodrigo gjorde 2-0 etter 33 minutter». Dette målet kom etter at Gameiro hadde scoret det første målet for Valencia i det 23."
+  },
+  {
+    "qid": 1008,
+    "question": "Hvem var kommunalminister i Norge i 2003?",
+    "gold_answer": "Erna Solberg",
+    "predicted_answer": "Erna Solberg var kommunalminister i Norge i 2003. Hun forsøkte å kaste ut mulla Krekar, men lyktes ikke. Dette var før hun ble statsminister."
+  },
+  {
+    "qid": 2371,
+    "question": "Hvem tok førsteplassen i volleyball-VM?",
+    "gold_answer": "Oleg Stojanovskij og Vjatsjeslav Krasilnikov",
+    "predicted_answer": "Russerne, Oleg Stojanovskij og Vjatsjeslav Krasilnikov, vant verdensmesterskapet i sandvolleyball i 2022. De slo nordmennene, Anders Mol og Christian Sørum, i semifinalen i Roma. Finalen ble spilt på søndag, og Mol og Sørum sikret seg"
+  },
+  {
+    "qid": 162,
+    "question": "Når skjedde det en avsporing ved Helsfyr?",
+    "gold_answer": "ved 21.30-tiden lørdag",
+    "predicted_answer": "Avsporingen fant sted ved Helsfyr T-banestasjon ved 21:30-tiden lørdag. Dette førte til at T-banetrafikken ble innstilt mellom Tøyen og Brynseng, noe som resulterte i at det ble satt opp buss for bane på den berørte strekningen."
   }
 ]
