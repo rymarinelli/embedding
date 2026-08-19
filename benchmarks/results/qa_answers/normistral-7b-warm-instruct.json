@@ -508,5 +508,239 @@
     "question": "Hvem gjelder dagens 90-dagersfrist for?",
     "gold_answer": "både for politi og domstoler",
     "predicted_answer": "Dagens 90-dagersfrist gjelder for voldssaker generelt, ikke bare for saker som involverer mishandling og overgrep mot barn. Denne fristen er fastsatt av Riksadvokaten og gjelder for både politi og domstoler. Ved å innføre en tidsfrist for barnevoldssaker, vil imidlertid denne fristen bli erstattet."
+  },
+  {
+    "qid": 870,
+    "question": "Hvordan synes Kristoffersen det er å tangere Jansruds antall pallplasser?",
+    "gold_answer": "deilig",
+    "predicted_answer": "Kristoffersen synes det er gledelig å tangere Kjetil Jansruds antall pallplasser i karrieren. Han sier at det er noe å ta med seg, og at det er motiverende å være på samme nivå som en så merittert alpinist som Jansrud. Dette viser at han har etablert seg som"
+  },
+  {
+    "qid": 2044,
+    "question": "Hvordan ligger det til rette for at avslutninga på sesongen blir?",
+    "gold_answer": "nervepirrende",
+    "predicted_answer": "Basert på den gitte teksten, ser det ut til at Manchester Citys sesongavslutning vil bli ganske spennende. De ligger for øyeblikket på toppen av tabellen, men Liverpool er bare ett poeng bak dem. De to neste rundene vil være avgjørende for City, ettersom de møter Tottenham og Manchester United. Hvis de kan sikre seg"
+  },
+  {
+    "qid": 1620,
+    "question": "Hvor mange bom fikk Vetle Sjåstad Christiansen på siste skyting?",
+    "gold_answer": "én",
+    "predicted_answer": "Vetle Sjåstad Christiansen bommet dessverre på det siste skuddet under sin siste skyting. Dette fratok ham muligheten til å sikre seg en pallplass. Til tross for dette leverte han et imponerende løp og endte på andreplass, noe som sikret dobbelt norsk i Canmore. Johannes Thingnes Bø vant rennet"
+  },
+  {
+    "qid": 1879,
+    "question": "Hva grunnla Mao Zedong i 1949?",
+    "gold_answer": "Folkerepublikken Kina",
+    "predicted_answer": "Mao Zedong grunnla Folkerepublikken Kina i 1949. Denne kommunistiske staten ble etablert etter den kinesiske borgerkrigen, som Mao ledet de kinesiske kommunistenes styrker til seier over nasjonalistene, ledet av Chiang Kai-shek. Etter seieren proklamerte Mao etableringen"
+  },
+  {
+    "qid": 585,
+    "question": "Hvor jobbet den første varsleren?",
+    "gold_answer": "i CIA",
+    "predicted_answer": "Den første varsleren er ansatt i etterretningsapparatet. Dette er eksplisitt oppgitt i teksten."
+  },
+  {
+    "qid": 1084,
+    "question": "Hva er det som uten behandling forårsaker aids?",
+    "gold_answer": "hiv-viruset",
+    "predicted_answer": "Hiv, eller humant immunsviktvirus, er et retrovirus som angriper immunsystemet, noe som gjør det vanskelig for kroppen å bekjempe infeksjoner og sykdommer. Uten riktig medisinsk behandling kan hiv utvikle seg til aids, en dødelig tilstand som forårsaker opportunistiske infeksjoner og kreft. Aids er preget av et lavt"
+  },
+  {
+    "qid": 1010,
+    "question": "Hvor mye anslo Per Sandberg at totalkostnaden for Mulla Krekar var på i 2012?",
+    "gold_answer": "minst 20 millioner kroner",
+    "predicted_answer": "Kostnaden for Mulla Krekar, som anslått av Per Sandberg i 2012, var omtrent 20 millioner kroner. Dette estimatet inkluderte rundt 3 millioner kroner i fri rettshjelp, 5 millioner kroner til tolketjenester, 4 millioner til politi, påtalemyndighet og domstoler, og 12 årsverk i"
+  },
+  {
+    "qid": 2299,
+    "question": "Når er Den hellige families dag?",
+    "gold_answer": "Første søndag etter juledag",
+    "predicted_answer": "Den hellige families dag feires første søndag etter juledag. Denne dagen minnes Jesu, Marias og Josefs fødsel, og paven oppfordrer folk til å bruke mer tid sammen med sine kjære og legge bort mobiltelefonene."
+  },
+  {
+    "qid": 2207,
+    "question": "Hvordan mener May at det er best å forlate EU?",
+    "gold_answer": "på en velordnet måte med en avtale",
+    "predicted_answer": "Statsminister Theresa May har anbefalt at det britiske parlamentet tar stilling til om Storbritannia skal forlate Den europeiske union uten en avtale, også kjent som en «no deal»-utgang. Denne avgjørelsen vil bli tatt i en avstemning allerede onsdag kveld.\n\nMay har understreket at hun mener det er best å forlate"
+  },
+  {
+    "qid": 1076,
+    "question": "Hvor stor andel av tiåringer har i dag mobiltelefon?",
+    "gold_answer": "Ni av ti",
+    "predicted_answer": "Mer enn ni av ti tiåringer har en mobiltelefon i dag. Dette er et faktum basert på teksten som er gitt, som nevner at ni av ti tiåringer har en mobiltelefon, og at alle tenåringer på ungdomsskolen har en."
+  },
+  {
+    "qid": 2394,
+    "question": "Hvordan har Australia Institute markert seg?",
+    "gold_answer": "som en uttalt kritiker av Equinors prosjekt i South Australia",
+    "predicted_answer": "Australia Institute, en progressiv tankesmie, har vært en høylytt kritiker av Equinors prosjekt i Australbukta. De har gjentatte ganger uttrykt sin bekymring for de potensielle negative effektene av oljeboring i dette området, som er kjent for sitt rike marine liv. Tankesmien har argumentert for at"
+  },
+  {
+    "qid": 1754,
+    "question": "Hva foreslo MDG?",
+    "gold_answer": "å styrke nattogtilbudet til Europa",
+    "predicted_answer": "MDG foreslo å styrke nattogtilbudet til Europa."
+  },
+  {
+    "qid": 2390,
+    "question": "Hvilken stasjon kommer F-35 flyene fra?",
+    "gold_answer": "Ørland flystasjon",
+    "predicted_answer": "F-35-kampflyene som skal fly i julestjerneformasjon over Trondheim, kommer fra Ørland flystasjon. Dette er en del av Luftforsvarets tradisjonelle julemarkering, som innebærer å fly formasjonsflygninger med ulike flytyper. I år er det første gang F-35-fly"
+  },
+  {
+    "qid": 1635,
+    "question": "Hvor mange poeng får man hvis man taper i armageddon?",
+    "gold_answer": "0,5",
+    "predicted_answer": "Svar: 0,5 poeng\n\nForklaring:\nI armageddon-systemet som brukes i Norway Chess, er det designet for å gi en rask avgjørelse i tilfelle uavgjort. Hvis kampen ender i uavgjort, får svart 1,5 poeng og hvit 0,5 poeng. Dette er fordi armagedd"
+  },
+  {
+    "qid": 1482,
+    "question": "Hvilke nordmenn klarte ikke å kvalifisere seg til kvartfinalen i sprinten?",
+    "gold_answer": "Sjur Røthe og Martin Johnsrud Sundby, Didrik Tønseth og Hans Christer Holund",
+    "predicted_answer": "Johannes Høsflot Klæbo og Sjur Røthe klarte ikke å kvalifisere seg til kvartfinalen i sprinten i Val Müstair i Sveits. De var begge en del av det norske laget som deltok i sprinten, men dessverre klarte de ikke å ta seg videre fra prologen. Dette"
+  },
+  {
+    "qid": 898,
+    "question": "Fra hvilke to land kommer foreldrene til Kamala Harris?",
+    "gold_answer": "fra Jamaica og India",
+    "predicted_answer": "Kamala Harris' foreldre kommer fra to forskjellige land: Jamaica og India. Denne informasjonen kan finnes i den vedlagte teksten, spesifikt i setningen: «Harris, som har foreldre fra Jamaica og India, kritiserte blant annet Biden for å ha samarbeidet med senatorer som på 1970-"
+  },
+  {
+    "qid": 566,
+    "question": "Når vil mye av isen i isbreene forsvinne, ifølge Liss Marie Andreassen?",
+    "gold_answer": "de neste 20 til 50 årene",
+    "predicted_answer": "Basert på informasjonen som er oppgitt i teksten, vil mye av isen i isbreene forsvinne i løpet av de neste 20 til 50 årene. Denne uttalelsen kommer fra Liss Marie Andreassen, en breforsker i Norges vassdrags- og energidirektorat (NVE). Hun mener at breene er sensitive for"
+  },
+  {
+    "qid": 2087,
+    "question": "Hvordan skal NRK finansieres?",
+    "gold_answer": "over skatteseddelen",
+    "predicted_answer": "NRK skal finansieres over skatteseddelen. Dermed vil det ikke lenger sendes ut en faktura på kringkastingsavgiften. De nye skattesatsene vil bli differensiert for å sikre at de som har dårligst råd skal betale minst for tjenestene. Samtidig må nå alle norske borgere begynne å betale for finansieringen av NRK, også"
+  },
+  {
+    "qid": 2021,
+    "question": "I hvilken bane løp Warholm?",
+    "gold_answer": "bane syv",
+    "predicted_answer": "Karsten Warholm løp i bane 7 under Diamond League-stevnet i Paris. Dette er en strategisk avgjørelse, ettersom han da har fordelen av å løpe mot klokka, noe som kan gi en liten fordel tidsmessig. Warholms offensive og aggressive løpestil er godt kjent, og han skuffet ikke denne gangen"
+  },
+  {
+    "qid": 372,
+    "question": "Hvem er toppsjef i Hydro frem til 8.5?",
+    "gold_answer": "Svein Richard Brandtzæg",
+    "predicted_answer": "Svein Richard Brandtzæg er toppsjef i Hydro fram til 8. mai."
+  },
+  {
+    "qid": 192,
+    "question": "Hvor finner man en video der Lind spiller jern-lur?",
+    "gold_answer": "på You Tube",
+    "predicted_answer": "Videoen du refererer til kan finnes på YouTube-kanalen til Andris Fågelviskaren. Dette er en kanal som er dedikert til å dele ulike videoer av Andris Fågelviskaren, en svensk kunstner som er kjent for sine unike opptredener og musikk. I videoen du nevnte, kan du se Få"
+  },
+  {
+    "qid": 449,
+    "question": "Hvorfor kan ikke søket etter de fire savnede fortsette, ifølge Augensen?",
+    "gold_answer": "ut fra værforholdene",
+    "predicted_answer": "Søket etter de fire savnede i snøskredområdet i Troms kan ikke fortsette på grunn av dårlig sikt og høy snøskredfare i fjellet, ifølge Morten Augensen i Troms politidistrikt. Søket ble avsluttet rundt kl. 22.00 onsdag kveld, og helikoptrene som hadde bistått i søket,"
+  },
+  {
+    "qid": 626,
+    "question": "Hva heter selvbiografien til Svindal?",
+    "gold_answer": "«Større enn meg»",
+    "predicted_answer": "Aksel Lund Svindals selvbiografi heter «Større enn meg». Denne boken ble utgitt i november 2019 og har ligget på andreplass på bestselgerlisten for generell litteratur siden den ble utgitt. Boken gir et unikt innblikk i livet og karrieren til en av Norges største idrettsutøvere gjennom tidene. Den er"
+  },
+  {
+    "qid": 655,
+    "question": "Hvilken type serie er Homecoming?",
+    "gold_answer": "en mørk psykologisk thriller",
+    "predicted_answer": "Homecoming er en psykologisk thrillerserie. Dette er basert på en podkast med samme navn, som Julia Roberts spilte i som Heidi, en av terapeutene som hjelper krigsveteraner med å tilpasse seg et vanlig liv. Serien er produsert av Amazon Prime og har også Stephan James, Bobby Cannav"
+  },
+  {
+    "qid": 1729,
+    "question": "Når lanserte Zara Larsson \"Uncover\"?",
+    "gold_answer": "i 2013",
+    "predicted_answer": "Zara Larsson ga ut debutalbumet sitt, «Uncover», i 2013. Dette var da hun var 17 år gammel og allerede hadde oppnådd stor suksess med singlene «Lush Life» og «Ain't My Fault». Albumet ble en massiv suksess og"
+  },
+  {
+    "qid": 260,
+    "question": "Hva heter målvakten til Storhamar?",
+    "gold_answer": "Oskar Östlund",
+    "predicted_answer": "Nicklas Dahlberg er målvakten til Storhamar. I den siste og avgjørende kampen i NM-sluttspillet i ishockey vant Frisk Asker 4-2 i kamper, etter å ha avgjort i overtidsperioden. Frisk Askers Christian Kåsastul scoret vinnermålet to minutter og 19 sekunder inn i overtidsperioden,"
+  },
+  {
+    "qid": 1576,
+    "question": "Hvor mange prosent støtte har Høyre i den nye målingen?",
+    "gold_answer": "22,1",
+    "predicted_answer": "Høyres partibarometer er for tiden på 22,1 %. Dette er basert på en fersk måling utført av Opinion på oppdrag fra FriFagbevegelse, ANB og Dagsavisen."
+  },
+  {
+    "qid": 1563,
+    "question": "Hvem synes Thue at Lie lager stråmenn av?",
+    "gold_answer": "av meningsmotstandere",
+    "predicted_answer": "Statssekretær Magnus Thue svarer på denne kronikken fra UiTs Svein Anders Noer Lie. Thue hevder at Lie lager stråmenn av seg selv ved å fremstille motstanderne av gruveprosjektet i Kvalsund som å tro at gruvedrift og sjødeponi vil ødelegge naturen, og at Nærings- og fiskeride"
+  },
+  {
+    "qid": 1917,
+    "question": "Hva slags storm er det meldt fredag morgen?",
+    "gold_answer": "full vestlig storm",
+    "predicted_answer": "Det er meldt full vestlig storm på fredag. Dette er en vindretning som er karakterisert av sterke vinder som blåser fra vest, som kan merkes godt inn over land. Denne typen storm kan føre til vanskelige kjøreforhold, strømbrudd og andre forstyrrelser. Meteorologisk institutt har utstedt et gult farevarsel for landsdelen"
+  },
+  {
+    "qid": 2167,
+    "question": "Hva er Elyounoussis jobb som spiss?",
+    "gold_answer": "å score mål og skape sjanser for laget",
+    "predicted_answer": "Mohamed Elyounoussi er en spiss i fotballklubben Celtic. Jobben hans er å score mål og skape sjanser for laget. Denne informasjonen er basert på teksten som er oppgitt, som sier at «Jobben min som spiss er å score mål og skape sjanser for laget.» Derfor er svaret"
+  },
+  {
+    "qid": 1029,
+    "question": "Hvem skal makten vinnes tilbake fra, ifølge Den nordiske motstandsbevegelsen?",
+    "gold_answer": "fra den globale sionistiske eliten, som økonomisk og rent militært har okkupert store deler av verden",
+    "predicted_answer": "Den nordiske motstandsbevegelsen, en høyreekstrem gruppe som omtaler seg selv som nasjonalsosialister, har som mål å vinne tilbake makten fra den globale sionistiske eliten, som de hevder har okkupert store deler av verden gjennom økonomisk og militær makt. Denne eliten blir ofte referert til som «maktjøder»"
+  },
+  {
+    "qid": 2266,
+    "question": "Hvor har Ugland-rederiet sitt hovedkontor?",
+    "gold_answer": "i Grimstad",
+    "predicted_answer": "Ugland-rederiet har sitt hovedkontor i Grimstad, Norge. Denne informasjonen kan finnes i teksten som er gitt, som sier at «Rederiet Ugland har hovedkontor i Grimstad, og Bonita er registrert der.»"
+  },
+  {
+    "qid": 47,
+    "question": "Hvem er leder i Kvinnegruppa Ottar?",
+    "gold_answer": "Ane Stø",
+    "predicted_answer": "Lederen av Kvinnegruppa Ottar er Ane Stø. Hun har vært leder av organisasjonen siden 2014. Stø er en norsk politiker og feminist som har vært aktiv i Kvinnegruppa Ottar siden 1991. Hun har vært en fremtredende figur i den norske kvinnebevegelsen og har vært en sterk"
+  },
+  {
+    "qid": 469,
+    "question": "Når var Cenk Sahin i duell med Giannelli Imbula?",
+    "gold_answer": "i fjor sommer",
+    "predicted_answer": "Cenk Sahin var i duell med Giannelli Imbula i en treningskamp i fjor sommer. Denne informasjonen kan finnes i den vedlagte teksten, spesifikt i setningen: «25 år gamle Sahin, som er lagkamerat med norske Mats Møller Dæhli og Leo Skiri Østigård"
+  },
+  {
+    "qid": 2199,
+    "question": "Hvor mange personer døde natt til søndag?",
+    "gold_answer": "syv",
+    "predicted_answer": "Basert på den gitte teksten, døde syv personer natt til søndag. Denne informasjonen kan finnes i den andre setningen i teksten, som sier: «I alt krevde de landsomfattende protestene syv menneskeliv.»"
+  },
+  {
+    "qid": 1092,
+    "question": "Hva sa Therese Johaug etter skiathlon-rennet i Seefeld?",
+    "gold_answer": "Dette betyr så utrolig mye",
+    "predicted_answer": "Therese Johaug sa at gullmedaljen i kvinnenes skiathlon i Seefeld betydde «alt» for henne. Dette var hennes åttende VM-gull i karrieren og hennes første siden hun sonet en dopingdom. Hun var tydelig rørt og uttrykte sin takknemlighet til det norske publikummet."
+  },
+  {
+    "qid": 1202,
+    "question": "Når angrep Warren Zuckerberg på Twitter?",
+    "gold_answer": "Tirsdag morgen",
+    "predicted_answer": "Elizabeth Warren angrep Mark Zuckerberg på Twitter tirsdag morgen. Angrepet kom som svar på Zuckerbergs kommentarer om at det ville «suge» hvis Facebook måtte kjempe mot planene hans om å bryte opp teknologigiganter. Warren skrev, «Det som virkelig ville «suge» er"
+  },
+  {
+    "qid": 1780,
+    "question": "Hvilken by vokste Myra McKee opp i?",
+    "gold_answer": "Belfast",
+    "predicted_answer": "Lyra McKee ble født og oppvokst i Derry, som også er kjent som Londonderry. Hun var en 29 år gammel journalist, forfatter og homoaktivist som ble tragisk drept mens hun dekket opptøyene i Derry på skjærtorsdag kveld. Den nordirske politistyrken mener at hun"
+  },
+  {
+    "qid": 647,
+    "question": "Hva gjorde Arild Berg da han var 26 år?",
+    "gold_answer": "Han ga seg som toppspiller",
+    "predicted_answer": "Arild Berg pensjonerte seg fra fotballkarrieren sin da han var 26 år gammel. Dette var på grunn av sykdommen ME, som hadde en betydelig innvirkning på prestasjonen hans på banen. Til tross for at han bare spilte 113 kamper og scoret 24 mål for Bodø/Glimt fra 1993"
   }
 ]
