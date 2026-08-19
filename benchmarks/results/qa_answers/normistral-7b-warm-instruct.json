@@ -874,5 +874,155 @@
     "question": "Hva er etternavnet til mannens forsvarer?",
     "gold_answer": "Wiig",
     "predicted_answer": "Etternavnet til mannens forsvarer er Wiig."
+  },
+  {
+    "qid": 350,
+    "question": "Hvilke land kan legge ned veto mot å forlenge forhandlingsperioden for Brexit?",
+    "gold_answer": "ethvert medlemsland",
+    "predicted_answer": "EUs sjefforhandler Michel Barnier har bekreftet at det for øyeblikket ikke er noen formell forespørsel om å forlenge forhandlingsperioden for Brexit. Denne informasjonen kommer fra London, der kravene om en utsettelse blir stadig høyere.\n\nOpposisjonen i Storbritannia har bedt statsminister Theresa May om en garanti for at landet"
+  },
+  {
+    "qid": 1990,
+    "question": "Hvorfor fikk ikke Kryger spille?",
+    "gold_answer": "grunnet rødt kort i en tidlig treningskamp",
+    "predicted_answer": "Kent Håvard Eriksen spiller sin første seriekamp i Sandnes siden 21. mai i fjor. Dessverre for hjemmefansen måtte Axel Kryger stå over på grunn av et rødt kort i en tidlig treningskamp. Straffen er nå sonet, men Kryger er innforstått med at han starter årets første seriek"
+  },
+  {
+    "qid": 283,
+    "question": "Når holdt May nyvalg i UK?",
+    "gold_answer": "I 2017",
+    "predicted_answer": "May holdt nyvalg i Storbritannia i  2017. Dette var et forsøk på å sikre et sterkere mandat for hennes Brexit-plan, men det førte i stedet til et tap av flertall i Underhuset og en mer splittet nasjon. Nyvalget var et av de største feilene i Mays tid som statsminister"
+  },
+  {
+    "qid": 2181,
+    "question": "Hvor høy er norsk oljeproduksjon til sammen?",
+    "gold_answer": "1,3 millioner fat olje per dag",
+    "predicted_answer": "Den norske oljeproduksjonen er omtrent 1,3 millioner fat per dag, som er en betydelig del av den globale produksjonen. Denne informasjonen er basert på dataene som er tilgjengelige for meg, og den er nøyaktig som av 2021. Det er verdt å merke seg at produksjonen kan ha endret seg siden da, men den"
+  },
+  {
+    "qid": 515,
+    "question": "Hvem er ordfører i Trondheim kommune?",
+    "gold_answer": "Rita Ottervik",
+    "predicted_answer": "Teksten som er gitt nevner at Trondheim-ordfører Rita Ottervik er glad for tilskuddet på 180 millioner kroner til investeringer i Granåsen. Dette svaret er en presis gjengivelse av informasjonen som er oppgitt i teksten, og det er ikke lagt til noe ekstra innhold eller tolkning. Svaret er kortfattet og til"
+  },
+  {
+    "qid": 525,
+    "question": "Hvorfor vil ikke innsatslederen klassifisere brannen som alvorlig?",
+    "gold_answer": "ettersom det ikke stod om liv",
+    "predicted_answer": "Innsatsleder Ole-Petter Smørsgård klassifiserte ikke brannen som alvorlig, ettersom den ikke var livstruende. Han nevnte at to arbeidere ble evakuert på grunn av innånding av røyk, men de ble ikke alvorlig skadet. Brannen forårsaket kun mindre skader på produksjonshallen, og fabrikken forventes å være i drift igjen snart."
+  },
+  {
+    "qid": 1946,
+    "question": "Hvordan var den økonomiske utviklinga som mange områder i Øst-Europa gjennomgikk etter jernteppets fall?",
+    "gold_answer": "voldsom",
+    "predicted_answer": "Den økonomiske utviklingen i mange områder i Øst-Europa har vært ganske positiv siden fallet av Berlinmuren i 1989. Dette skyldes hovedsakelig den økte økonomiske støtten og investeringene fra Vest-Europa og Nord-Amerika. I tillegg har innlemmelsen av disse regionene i EU og NATO også bidratt betydelig til deres økonomiske vekst"
+  },
+  {
+    "qid": 2251,
+    "question": "Når var finanskrisen i USA?",
+    "gold_answer": "i 2008",
+    "predicted_answer": "Finanskrisen i USA fant sted i 2008. Dette var en periode med økonomisk nedgang og økonomisk ustabilitet, som begynte i 2007 og fortsatte inn i 2009. Krisen ble forårsaket av en kombinasjon av faktorer, inkludert en boligboble, subprime-lån og kollap"
+  },
+  {
+    "qid": 676,
+    "question": "Når ringte offeret selv til politiet?",
+    "gold_answer": "Mens politiet var på utrykning til åstedet",
+    "predicted_answer": "Offeret ringte politiet kl. 10:37."
+  },
+  {
+    "qid": 1085,
+    "question": "Hvor mange nye hiv-smittede var det i Pakistan i 2017?",
+    "gold_answer": "20.000",
+    "predicted_answer": "I  2017 rapporterte Pakistan om 20 000 nye tilfeller av HIV-smitte. Dette tallet er en betydelig økning fra tidligere år og understreker den raske spredningen av viruset i landet. Ifølge FN er hovedårsaken til denne økningen bruken av urene sprøyter av kvakksalvere, som ansl"
+  },
+  {
+    "qid": 2161,
+    "question": "Hva heter direktøren i selskapet som ble rammet av ulykken?",
+    "gold_answer": "Shane Carmody",
+    "predicted_answer": "Direktøren i selskapet som ble rammet av ulykken er Shane Carmody."
+  },
+  {
+    "qid": 1733,
+    "question": "Hvor mange studenthybler og leiligheter finnes i Nydalen?",
+    "gold_answer": "3150",
+    "predicted_answer": "Det er omtrent 3150 studenthybler og leiligheter i Nydalen. Denne informasjonen kan finnes i teksten som er gitt, som nevner at det er 3150 leiligheter og studenthybler, samt 3000 nye boliger under oppføring eller planlegging. Dette området er kjent for sin høye befolkningstetthet og"
+  },
+  {
+    "qid": 867,
+    "question": "Når fikk politiet inn tips om Manshaus?",
+    "gold_answer": "for et år siden",
+    "predicted_answer": "Politiet mottok et tips om Philip Manshaus for omtrent et år siden. Dette var et år før han utførte angrepet på Al-Noor-moskeen i Bærum. Tipset ble ikke fulgt opp av politiet, noe som har blitt kritisert i etterkant. Denne hendelsen vil bli evaluert av et eksternt ledet"
+  },
+  {
+    "qid": 2208,
+    "question": "Hva vil kreves for å godkjent en eventuell forespørsel om utsettelse av skilsmisse?",
+    "gold_answer": "enstemmig tilslutning fra samtlige medlemsland, inkludert Storbritannia",
+    "predicted_answer": "Teksten du har gitt nevner at Underhuset har stemt ned Brexit-avtalen på nytt, og at det nå er planlagt en avstemning om hvorvidt Storbritannia skal gå ut av EU uten en avtale. Hvis denne avstemningen resulterer i et nei, vil det bli holdt en tredje avstemning om hvorvidt Storbritannia skal be om en"
+  },
+  {
+    "qid": 823,
+    "question": "Når bestemte Thorsen seg for å anmelde hendelsen?",
+    "gold_answer": "Etter å ha snakket med de involverte",
+    "predicted_answer": "Basert på informasjonen som er oppgitt i teksten, ble den nåværende Frp-tillitsvalgte i Rogaland informert om den uønskede hendelsen søndag morgen. Hun bestemte seg da for å anmelde saken."
+  },
+  {
+    "qid": 1276,
+    "question": "På hvilket stadion spilte Kolstad fjerde runde i cupen i håndball?",
+    "gold_answer": "På Nadderud Arena",
+    "predicted_answer": "Kolstad spilte fjerde runde i cupen i håndball på Nadderud Arena. Denne informasjonen kan finnes i den vedlagte teksten, som nevner at «Haslum har lange tradisjoner innen håndball og i mange år var de Norges beste.» og «Kolstad markerte seg tidlig og ledet med flere mål etter de første minuttene"
+  },
+  {
+    "qid": 1634,
+    "question": "Hvor mange poeng får man hvis man vinner i armageddon?",
+    "gold_answer": "1,5",
+    "predicted_answer": "Carlsen vant Norway Chess med 4 poeng. Dette er fordi i armageddon, hvis det ender i remis, vinner svart med 1,5 poeng og hvit med 0,5 poeng. Dette er fordi i armageddon har svart ti minutter og hvit har sju minutter, og svart vinner hvis"
+  },
+  {
+    "qid": 1529,
+    "question": "Hvem var leder i Høyre da innsender var 14 år gammel?",
+    "gold_answer": "Jan Petersen",
+    "predicted_answer": "Lederen i Høyre på det tidspunktet da brukeren var 14 år gammel, var Jan Petersen. Han var partileder fra 1994 til 2004 og var kjent for sin sterke forkjemper for valgfrihet. Denne uttalelsen resonnerte med brukeren, og de fant den til å være en av de"
+  },
+  {
+    "qid": 1794,
+    "question": "Hva heter den russiske skipresidenten?",
+    "gold_answer": "Jelena Välbe",
+    "predicted_answer": "Den russiske skipresidenten heter Jelena Välbe. Hun er kjent for å være en innflytelsesrik figur i russisk langrenn og har vært president for Federation of Russian Ski Federation siden 2018. Välbe har vært en fremtredende figur i sporten i mange år, etter å ha konkur"
+  },
+  {
+    "qid": 2119,
+    "question": "Hvor mange mener at dagens bilavgifter bør byttes ut med veiprising?",
+    "gold_answer": "53 prosent",
+    "predicted_answer": "Teksten foreslår at det ikke er flertall i transport- og kommunikasjonskomiteen på Stortinget for å utrede veiprising til erstatning for dagens bompenger. Dette er basert på informasjonen som er gitt i teksten, som sier at både Arbeiderpartiet og Kristelig Folkeparti har tatt til orde for en slik utredning, men at regjeringspartiene Høyre, Fremskrittspartiet"
+  },
+  {
+    "qid": 1849,
+    "question": "Når går Dan Coats av?",
+    "gold_answer": "15. august",
+    "predicted_answer": "Dan Coats går av som USAs nasjonale etterretningsdirektør 15. august. Denne informasjonen ble bekreftet av USAs president Donald Trump. Coats har vært i stillingen siden mars 2017, og har vært i strid med president Trump i flere saker, blant annet Russland og presidentens kritikk av etterretningsvesenet. Co"
+  },
+  {
+    "qid": 495,
+    "question": "Hvem er regjerende mestre i EM?",
+    "gold_answer": "Mol og Sørum",
+    "predicted_answer": "Mol og Sørum er regjerende mestere i EM i sandvolleyball. De har vært dominerende i sporten i det siste, og vunnet tre turneringer på rad i verdensserien. Den nylige seieren deres i femstjernersturneringen i Wien var deres tiende på rad. Duoen er for øyeblikket rangert som verdens beste par"
+  },
+  {
+    "qid": 1015,
+    "question": "Når ble produksjonen i Ekofisk-feltet startet?",
+    "gold_answer": "i 1971",
+    "predicted_answer": "Produksjonen i Ekofisk-feltet startet 25. oktober 1971. Dette markerte begynnelsen på det norske oljeeventyret. Feltet ble oppdaget av Philips Petroleum i 1969, og produksjonen begynte mindre enn et år senere. Ekofisk er ansett som et av de største oljefeltene som"
+  },
+  {
+    "qid": 920,
+    "question": "Hva er det som bestemmer hvilken skole elever havner på ved bruk av nærskoleprinsippet?",
+    "gold_answer": "postnummeret og hvor foreldrene bor",
+    "predicted_answer": "Elevens postnummer bestemmer hvilken skole elevene havner på ved bruk av nærskoleprinsippet. Dette er en løsning som er foreslått av Arbeiderpartiet, SV, Senterpartiet og Rødt for å erstatte elevenes rett til å velge skole selv i nye Troms og Finnmark. Denne løsningen innebærer å tildele elever til den nærmeste skolen basert på deres postnummer"
+  },
+  {
+    "qid": 262,
+    "question": "Hvilken minister fikk innført kvotering av kvinner i styrene i store selskaper i Norge?",
+    "gold_answer": "Ansgar Gabrielsen",
+    "predicted_answer": "Ansgar Gabrielsen, som var næringsminister i Kjell Magne Bondeviks andre regjering fra 2004 til 2005, var ministeren som fikk innført kvotering av kvinner i styrene i store selskaper i Norge. Dette var et viktig skritt for å fremme likestilling og mangfold i næringslivet. Gabrielsen"
   }
 ]
