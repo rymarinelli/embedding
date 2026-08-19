@@ -1774,5 +1774,11 @@
     "question": "Når ble Brexit bestemt i Storbritannia?",
     "gold_answer": "i 2016",
     "predicted_answer": "Brexit ble bestemt i Storbritannia i 2016. Den britiske regjeringen, ledet av daværende statsminister Theresa May, lanserte formelt Brexit-prosessen etter en folkeavstemning som resulterte i et flertall for å forlate Den europeiske union. Denne avgjørelsen markerte begynnelsen på en kompleks og kontroversiell prosess som har hatt vidtrekkende"
+  },
+  {
+    "qid": 1000,
+    "question": "Når går siste etappe av årets Tour of Norway?",
+    "gold_answer": "søndag",
+    "predicted_answer": "Den siste etappen av Tour of Norway 2022 er planlagt å finne sted på søndag, med en distanse på 175 kilometer som strekker seg fra Gran til Hønefoss. Denne etappen vil markere slutten på årets ritt, som har blitt dominert av den regjerende mesteren Eduard Prades og den mestvinn"
   }
 ]
