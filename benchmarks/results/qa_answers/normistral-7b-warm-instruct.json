@@ -760,5 +760,119 @@
     "question": "Hvorfor mener digitaliseringsministeren at foreldre ikke bør gi mobiltelefon til barna før de er 13?",
     "gold_answer": "Han er bekymret for digital avhengighet og for potensielle digitale fallgruver på internett",
     "predicted_answer": "Digitaliseringsminister Nikolai Astrup mener at foreldre ikke bør gi mobiltelefoner til barna sine før de er 13 år gamle. Han uttrykker bekymring for digital avhengighet og potensielle digitale fallgruver på nettet. Astrup oppfordrer foreldre til å lage kollektive regler for tilgang og bruk av mobiltelefoner. Det er imidlertid viktig å merke seg at"
+  },
+  {
+    "qid": 2050,
+    "question": "Hvorfor er turister på øya Boracay stranda?",
+    "gold_answer": "siden ferjene til og fra øya er kansellert",
+    "predicted_answer": "Turister på øya Boracay er strandet på grunn av at ferjene til og fra øya er kansellert på grunn av tyfonen. Dette er fordi tyfonen har forårsaket betydelig skade på Boracay-ferjeterminalen, som er en populær destinasjon for turister som besøker Filippinene."
+  },
+  {
+    "qid": 731,
+    "question": "Hva mener Borchsenius vi bør spise mer av?",
+    "gold_answer": "grønnsaker",
+    "predicted_answer": "Borchsenius foreslår at man bør spise mer grønnsaker, spesielt tomater og gulrøtter, som kan oppbevares på kjøkkenbenken og i vesken for enkel tilgang. I tillegg foreslår hun at man bør bytte ut brød med knekkebrød og begrense antall skiver eller knekkebrød til to. Disse endringene kan hjelpe deg med å gå ned i"
+  },
+  {
+    "qid": 2079,
+    "question": "Hvor tidlig vil en ev. utvidelse av streiken varsles?",
+    "gold_answer": "fire dager før den kan iverksettes",
+    "predicted_answer": "Svar: En utvidelse av streiken vil bli varslet fire dager før den kan iverksettes. Dette er i henhold til reglene for varsling av streik, som er fastsatt i Arbeidstvistloven. Denne informasjonen er basert på teksten som er oppgitt, og jeg har ikke tilgang til andre ressurser eller informasjon som kan gi mer detaljert eller oppdatert"
+  },
+  {
+    "qid": 435,
+    "question": "Når kom det ut i offentligheten at Leine skulle slutte å studere ved VID?",
+    "gold_answer": "I november",
+    "predicted_answer": "Kristine Leine kunngjorde offentlig at hun ville avslutte sykepleierstudiene ved VID vitenskapelige høyskole i november 2018. Denne avgjørelsen ble tatt på grunn av en konflikt mellom studiene og hennes fotballambisjoner."
+  },
+  {
+    "qid": 1222,
+    "question": "Hvor mange drap var det i Oslo i 2018?",
+    "gold_answer": "seks",
+    "predicted_answer": "Det var seks drap i Oslo i 2018."
+  },
+  {
+    "qid": 1531,
+    "question": "Med hvem er Trump i konflikt?",
+    "gold_answer": "med Kongressen",
+    "predicted_answer": "President Donald Trump er i konflikt med Kongressen om finansieringen av den omstridte grensemuren mot Mexico. Han har gjentatte ganger luftet ideen om å erklære unntakstilstand for å omgå Kongressen og finansiere muren, men det er uklart om han har tatt en endelig avgjørelse i saken. Det hvite hus har"
+  },
+  {
+    "qid": 661,
+    "question": "Hvilken bok skal Ståle Solbakken lese ferdig før han leser boka til Bendtner?",
+    "gold_answer": "boka om Reiulf Steen",
+    "predicted_answer": "Ståle Solbakken har til hensikt å lese ferdig en bok før han begynner på Nicklas Bendtners nye bok, som har tittelen «Begge sider». Denne boken handler om Bendtners ville fotballkarriere og er planlagt utgitt tirsdag. Solbakken fikk et eksemplar av boken for gjennomlesning, men ble advart"
+  },
+  {
+    "qid": 2209,
+    "question": "Hvem kan bli USAs første homofile presidentkandidat?",
+    "gold_answer": "Pete Buttigieg",
+    "predicted_answer": "Pete Buttigieg, en 37 år gammel åpent homofil borgermester i South Bend, Indiana, kan potensielt bli USAs første homofile presidentkandidat. Hvis han vinner nominasjonen, vil han ikke bare være den yngste som stiller som presidentkandidat for Demokratene, men også den første åpent homofile. Dette vil være"
+  },
+  {
+    "qid": 2172,
+    "question": "Hvor mange behandler ikke pollenallergien?",
+    "gold_answer": "én av fem",
+    "predicted_answer": "Teksten du har gitt nevner at «klimaendringer gjør at vi er mer utsatt for allergi enn tidligere, og mye tyder på at pollensesongen i år kan bli lengre og dermed mer plagsom, samt påvirke flere av oss enn tidligere.» Dette antyder at pollenallergikere kan oppleve hyppigere og mer alvorlige symptomer i"
+  },
+  {
+    "qid": 2,
+    "question": "Hvem er talsperson for RSL?",
+    "gold_answer": "Espen Ettre",
+    "predicted_answer": "Talspersonen for RSL, som er ansvarlig for å gi informasjon og oppdateringer om Moss lufthavn Rygges situasjon, er Espen Ettre. Han har vært styremedlem i RSL og har fungert som talsperson for selskapet i forbindelse med deres innsats for å gjenåpne flyplassen. Ettre har uttalt at de fortsatt er i"
+  },
+  {
+    "qid": 1327,
+    "question": "Hvor mye av kampen var spilt da Njoya satte inn sitt mål nummer tre?",
+    "gold_answer": "85 minutter",
+    "predicted_answer": "Teksten spør etter svaret på spørsmålet: «Hvor mye av kampen var spilt da Njoya satte inn sitt mål nummer tre?» Svaret er at Njoya scoret sitt tredje mål i det 85. minutt, som var 25 minutter inn i den andre omgangen. Dette kan bekreftes av den vedlagte teksten, som"
+  },
+  {
+    "qid": 2001,
+    "question": "Hvordan budsjetterer danske Horsens?",
+    "gold_answer": "med å selge spillere",
+    "predicted_answer": "Horsens, en dansk fotballklubb, budsjetterer med å selge spillere. Denne informasjonen er basert på uttalelsen fra klubbens manager, Bo Henriksen, som sier at alle spillerne deres, inkludert Sivert Heltne Nilsen, er til salgs, men bare hvis prisen er riktig. Klubben er kjent for å selge spillere for å opprettholde"
+  },
+  {
+    "qid": 79,
+    "question": "Hva sliter Joshua King med?",
+    "gold_answer": "med en bakre lårmuskel",
+    "predicted_answer": "Joshua King sliter med en bakre lårmuskel. Denne skaden ble nevnt under en pressekonferanse holdt av det norske herrelandslaget i fotball. Det er viktig å merke seg at dette er en pågående situasjon, og han vil ikke være i stand til å delta i den kommende landskampen mot Romania på fredag."
+  },
+  {
+    "qid": 458,
+    "question": "Hvem ligger som nummer to i serien?",
+    "gold_answer": "Liverpool",
+    "predicted_answer": "Manchester City ligger for øyeblikket på andreplass i Premier League-tabellen. De har for øyeblikket 66 poeng, noe som er ett poeng bak Liverpool på førsteplass. City har en kamp mindre spilt enn Liverpool, så de har fortsatt en sjanse til å ta igjen dem. De har en kamp igjen mot Tottenham og Manchester"
+  },
+  {
+    "qid": 1486,
+    "question": "Hvem var keeper for FyllingenBergen?",
+    "gold_answer": "Tord Vårdal",
+    "predicted_answer": "Teksten du har gitt nevner at FyllingenBergen-målvakten som sto for seieren var Tord Vårdal. Han spilte en avgjørende rolle i lagets comeback i den første kvartfinalen mot Runar Sandefjord. Etter å ha ligget under 10-18 i første omgang, klarte FyllingenBergen å snu kampen fullstendig i andre"
+  },
+  {
+    "qid": 1259,
+    "question": "Hvor jobber Haavardsdatter Lunde?",
+    "gold_answer": "i Utenriksdepartemente",
+    "predicted_answer": "Haavardsdatter Lunde jobber som underdirektør i det norske utenriksdepartementet. Dette er en høytstående stilling i den norske utenrikstjenesten, som er ansvarlig for å representere den norske regjeringen i internasjonale anliggender. I denne rollen er hun ansvarlig for å håndtere saker knyttet til norsk utenrikspolitikk, diplomati og utviklingssamarbeid"
+  },
+  {
+    "qid": 980,
+    "question": "Hvor gammel er den dømte mannen?",
+    "gold_answer": "i 60-årene",
+    "predicted_answer": "Den dømte mannen er i dag i  60-årene."
+  },
+  {
+    "qid": 237,
+    "question": "Hvor skal ny leder i Venstre velges?",
+    "gold_answer": "på Venstres landsmøte",
+    "predicted_answer": "Venstres landsmøte, som skal holdes 19.-20. april neste år, vil velge den nye lederen for Venstre. Abid Raja, som har kunngjort sitt kandidatur, vil delta på dette møtet. Han har også bekreftet overfor  at han stiller seg til disposisjon for valgkomiteen."
+  },
+  {
+    "qid": 986,
+    "question": "Hva er etternavnet til mannens forsvarer?",
+    "gold_answer": "Wiig",
+    "predicted_answer": "Etternavnet til mannens forsvarer er Wiig."
   }
 ]
