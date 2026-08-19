@@ -21,13 +21,17 @@ OUT_DIR = Path(__file__).resolve().parent.parent / "results" / "qa_answers"
 
 def main():
     if len(sys.argv) < 3:
-        print("usage: generate_qa_answers_local_gguf.py <gguf_path> <output_name> [n_ctx] [n_threads] [max_tokens]")
+        print("usage: generate_qa_answers_local_gguf.py <gguf_path> <output_name> "
+              "[n_ctx] [n_threads] [max_tokens] [repeat_penalty]")
         sys.exit(1)
     gguf_path = sys.argv[1]
     out_name = sys.argv[2]
     n_ctx = int(sys.argv[3]) if len(sys.argv) > 3 else 4096
     n_threads = int(sys.argv[4]) if len(sys.argv) > 4 else 4
     max_tokens = int(sys.argv[5]) if len(sys.argv) > 5 else 64
+    # 1.0 = off (preserves earlier committed runs); pass e.g. 1.1 on a fairer
+    # Borealis re-run to suppress degenerate repetition. See AZURE_BOREALIS.md.
+    repeat_penalty = float(sys.argv[6]) if len(sys.argv) > 6 else 1.0
 
     examples = json.loads((DATA_DIR / "norquad_qa_sample.json").read_text(encoding="utf-8"))
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -49,7 +53,8 @@ def main():
         t0 = time.time()
         messages = build_messages(ex["context"], ex["question"])
         try:
-            resp = llm.create_chat_completion(messages=messages, max_tokens=max_tokens, temperature=0.0)
+            resp = llm.create_chat_completion(messages=messages, max_tokens=max_tokens,
+                                              temperature=0.0, repeat_penalty=repeat_penalty)
             content = resp["choices"][0]["message"]["content"]
             answer = (content or "").strip()
         except Exception as e:

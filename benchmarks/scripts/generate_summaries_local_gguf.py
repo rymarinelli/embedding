@@ -23,7 +23,8 @@ OUT_DIR = Path(__file__).resolve().parent.parent / "results" / "generated_summar
 
 def main():
     if len(sys.argv) < 3:
-        print("usage: generate_summaries_local_gguf.py <gguf_path> <output_name> [n_ctx] [n_threads] [max_tokens]")
+        print("usage: generate_summaries_local_gguf.py <gguf_path> <output_name> "
+              "[n_ctx] [n_threads] [max_tokens] [repeat_penalty]")
         sys.exit(1)
     gguf_path = sys.argv[1]
     out_name = sys.argv[2]
@@ -33,6 +34,11 @@ def main():
     # of the completion budget on hidden chain-of-thought before the answer,
     # same issue as the OpenRouter reasoning models — give them more room.
     max_tokens = int(sys.argv[5]) if len(sys.argv) > 5 else 500
+    # 1.0 = off (llama.cpp default, preserves earlier committed runs). The
+    # aggressive Q3_K_M Borealis run produced degenerate verbatim sentence
+    # repetition and short outputs; pass e.g. 1.1 to suppress that on a fairer
+    # (higher-quant / bigger-RAM) re-run — see benchmarks/AZURE_BOREALIS.md.
+    repeat_penalty = float(sys.argv[6]) if len(sys.argv) > 6 else 1.0
 
     articles = json.loads((DATA_DIR / "norsumm_test.json").read_text(encoding="utf-8"))
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -56,6 +62,7 @@ def main():
         try:
             resp = llm.create_chat_completion(
                 messages=messages, max_tokens=max_tokens, temperature=0.2,
+                repeat_penalty=repeat_penalty,
             )
             content = resp["choices"][0]["message"]["content"]
             summary = (content or "").strip()

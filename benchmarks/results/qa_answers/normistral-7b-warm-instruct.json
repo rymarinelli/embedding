@@ -1618,5 +1618,23 @@
     "question": "Når skjedde det en avsporing ved Helsfyr?",
     "gold_answer": "ved 21.30-tiden lørdag",
     "predicted_answer": "Avsporingen fant sted ved Helsfyr T-banestasjon ved 21:30-tiden lørdag. Dette førte til at T-banetrafikken ble innstilt mellom Tøyen og Brynseng, noe som resulterte i at det ble satt opp buss for bane på den berørte strekningen."
+  },
+  {
+    "qid": 335,
+    "question": "Hvor stor andel av toppledere i Danmark er utlendinger?",
+    "gold_answer": "40 prosent",
+    "predicted_answer": "Teksten som er oppgitt nevner at kun ti prosent av topplederne i de 20 største norske selskapene er utlendinger. Dette er betydelig lavere enn i Danmark, hvor tilsvarende tall er 40 prosent. Denne informasjonen kan finnes i den første setningen i det andre avsnittet i teksten."
+  },
+  {
+    "qid": 1717,
+    "question": "Hvordan endte 3. sett mellom Ruud og Griekspoor?",
+    "gold_answer": "2-6",
+    "predicted_answer": "Tredje sett endte på samme måte som de to foregående settene, med en klar seier til Griekspoor. Ruud klarte ikke å hente seg inn igjen etter den dårlige starten, og Griekspoor vant settet 6-2. Dette førte til at Ruud røk ut av turneringen. Det er verdt å merke seg"
+  },
+  {
+    "qid": 2315,
+    "question": "Hvor stor andel av den norske befolkning ville i dag ha stemt for norsk EU-medlemskap?",
+    "gold_answer": "28 prosent",
+    "predicted_answer": "Det er tydelig at det norske folk har et sterkt standpunkt mot EU-medlemskap. Ifølge teksten du ga, ville 60 % av respondentene ha stemt mot EU-medlemskap hvis det var en folkeavstemning i dag. Dette står i sterk kontrast til de 28 % som ville ha stemt for medlemskap i 1994"
   }
 ]
