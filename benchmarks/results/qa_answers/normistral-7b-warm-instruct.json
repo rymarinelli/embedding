@@ -742,5 +742,23 @@
     "question": "Hva gjorde Arild Berg da han var 26 år?",
     "gold_answer": "Han ga seg som toppspiller",
     "predicted_answer": "Arild Berg pensjonerte seg fra fotballkarrieren sin da han var 26 år gammel. Dette var på grunn av sykdommen ME, som hadde en betydelig innvirkning på prestasjonen hans på banen. Til tross for at han bare spilte 113 kamper og scoret 24 mål for Bodø/Glimt fra 1993"
+  },
+  {
+    "qid": 1858,
+    "question": "Hvor mye tjente Ådne Søndrål i 2017?",
+    "gold_answer": "18,8 millioner kroner",
+    "predicted_answer": "Ådne Søndrål tjente 18,8 millioner kroner i 2017. Denne informasjonen kan finnes i den vedlagte teksten, som beskriver hans økonomiske situasjon etter salget av Norwegian Outlet i 2017. Inntektene hans falt fra 18,8 millioner kroner i 2017 til 93"
+  },
+  {
+    "qid": 13,
+    "question": "Hvem er det som melder at Krekar er dømt til 12 års fengsel?",
+    "gold_answer": "Italienske medier",
+    "predicted_answer": "Italienske medier, spesifikt Rai News, har rapportert at Najmuddin Faraj Ahmad, kjent som mulla Krekar, har blitt dømt til 12 års fengsel. Denne dommen er en del av en større etterforskning utført av italienske myndigheter, som anklager Krekar for å lede et terror"
+  },
+  {
+    "qid": 1078,
+    "question": "Hvorfor mener digitaliseringsministeren at foreldre ikke bør gi mobiltelefon til barna før de er 13?",
+    "gold_answer": "Han er bekymret for digital avhengighet og for potensielle digitale fallgruver på internett",
+    "predicted_answer": "Digitaliseringsminister Nikolai Astrup mener at foreldre ikke bør gi mobiltelefoner til barna sine før de er 13 år gamle. Han uttrykker bekymring for digital avhengighet og potensielle digitale fallgruver på nettet. Astrup oppfordrer foreldre til å lage kollektive regler for tilgang og bruk av mobiltelefoner. Det er imidlertid viktig å merke seg at"
   }
 ]
