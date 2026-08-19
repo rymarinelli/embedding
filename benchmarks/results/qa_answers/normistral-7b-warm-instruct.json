@@ -1528,5 +1528,23 @@
     "question": "Hvordan kjørte Nina ned henget ifølge henne selv?",
     "gold_answer": "litt pinglete",
     "predicted_answer": "Nina Haver-Løseth kjørte ned henget i Levi-løypa med en «pinglete» tilnærming, som hun selv beskrev det. Denne tilnærmingen førte til at hun gjorde noen feil som kostet henne tid."
+  },
+  {
+    "qid": 2175,
+    "question": "Hvor jobber Helge?",
+    "gold_answer": "i DNB Markets",
+    "predicted_answer": "Helge André Martinsen er oljeanalytiker i DNB Markets. Dette er en stilling som innebærer at han analyserer og forutsier oljepriser og markedstrender. Som oljeanalytiker er han ansvarlig for å gi innsikt og anbefalinger til bankens kunder om oljeprisbevegelser og deres implikasjoner for ulike sektorer. I tillegg gir han råd til"
+  },
+  {
+    "qid": 644,
+    "question": "Hva heter den avdøde sønnen til Harald Berg?",
+    "gold_answer": "Arild Berg",
+    "predicted_answer": "Arild Berg, født 26. september 1973, var den avdøde sønnen til Harald «Dutte» Berg, en kjent norsk fotballspiller. Han var også bror til Ørjan Berg og Runar Berg, som begge var profesjonelle fotballspillere. Arild Berg spilte 113 serie- og cupkamper for Bodø"
+  },
+  {
+    "qid": 232,
+    "question": "Hvilke folk lever i ufrie regimer i dag?",
+    "gold_answer": "kinesere og iranere, tyrkere og palestinere",
+    "predicted_answer": "Folk som lever i ufrie regimer i dag er hovedsakelig de som bor i land med autoritære regimer, som Kina, Iran, Tyrkia og Palestina. Disse landene har begrensede sivile friheter og politiske rettigheter, og innbyggerne deres blir ofte utsatt for menneskerettighetsbrudd, som sensur, politisk forfølgelse og undertrykkelse"
   }
 ]
