@@ -1636,5 +1636,11 @@
     "question": "Hvor stor andel av den norske befolkning ville i dag ha stemt for norsk EU-medlemskap?",
     "gold_answer": "28 prosent",
     "predicted_answer": "Det er tydelig at det norske folk har et sterkt standpunkt mot EU-medlemskap. Ifølge teksten du ga, ville 60 % av respondentene ha stemt mot EU-medlemskap hvis det var en folkeavstemning i dag. Dette står i sterk kontrast til de 28 % som ville ha stemt for medlemskap i 1994"
+  },
+  {
+    "qid": 2141,
+    "question": "Hva heter trengeren for landslaget?",
+    "gold_answer": "Lars Lagerbäck",
+    "predicted_answer": "Landslagstreneren for det norske herrelandslaget i fotball er Lars Lagerbäck. Han har vært trener for laget siden 2017 og har kontrakt til 2022. Lagerbäck er kjent for sin evne til å utvikle unge talenter og bygge et sterkt lag rundt dem. Han"
   }
 ]
