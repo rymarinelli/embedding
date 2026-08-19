@@ -1708,5 +1708,71 @@
     "question": "Hvilken stilling har Stephanie Bia i Altran?",
     "gold_answer": "kommunikasjonssjef",
     "predicted_answer": "Stephanie Bia er kommunikasjonssjef i Altran Technologies, som ble rammet av LockerGoga-viruset i januar. Dette er en presis og kortfattet respons på spørsmålet, i henhold til instruksjonene som er gitt. Svaret er hentet direkte fra teksten som er oppgitt, uten noen tillegg eller tolkning."
+  },
+  {
+    "qid": 38,
+    "question": "Når var skatt siste en hovedsak i norsk politikk?",
+    "gold_answer": "stortingsvalget i 2001",
+    "predicted_answer": "Skatt var sist en hovedsak i norsk politikk i 2001. Dette er basert på det faktum at, bortsett fra den spesielle debatten om bompenger, har ikke skatt vært en viktig sak i noe valg siden stortingsvalget i 2001. I dag er velgerne mer opptatt av velferdssaker som helse, eldre,"
+  },
+  {
+    "qid": 1877,
+    "question": "Når ble folkerepublikken Kina grunnlagt?",
+    "gold_answer": "i 1949",
+    "predicted_answer": "Grunnleggelsen av Folkerepublikken Kina fant sted 1. oktober 1949. Denne hendelsen markerte slutten på den kinesiske borgerkrigen og etableringen av en kommunistisk regjering i landet. President Xi Jinping nevnte dette i talen sin under 70-årsjubileet for Folkerepublikken Kina, som ble holdt"
+  },
+  {
+    "qid": 2306,
+    "question": "Hva ønsker USA at danske styrker skal gjøre i Syria?",
+    "gold_answer": "bistå med å trene den kurdiske YPG-militsen",
+    "predicted_answer": "Basert på teksten som er oppgitt, ser det ut til at USA har bedt Danmark om å sende bakkestyrker til Syria. Spesielt nevner Politiken at USA har bedt om at Danmark sender spesialsoldater fra hæren og marinen til det nordøstlige Syria. Det er viktig å merke seg at dette er basert på ikke-navn"
+  },
+  {
+    "qid": 409,
+    "question": "Når går temperaturene i Oslo ned igjen?",
+    "gold_answer": "Fra tirsdag",
+    "predicted_answer": "Basert på informasjonen som er oppgitt i teksten, vil temperaturene i Oslo begynne å synke fra og med tirsdag. Dette betyr at fra tirsdag vil været bli mer behagelig og mer egnet for å spille fotball. Teksten nevner at det vil bli kjøligere vær, og at det vil ligne mer på en normal, norsk sommer."
+  },
+  {
+    "qid": 300,
+    "question": "Hvem er sjef i senatet i USA?",
+    "gold_answer": "Mitch McConnell",
+    "predicted_answer": "Senatets leder er Mitch McConnell. Han er en amerikansk republikansk politiker som har vært majoritetsleder i Senatet siden 2015. McConnell er kjent for sin sterke konservative holdning og har vært en fremtredende motstander av mange av president Donald Trumps politikk, inkludert hans klimapolitikk"
+  },
+  {
+    "qid": 2202,
+    "question": "Hvem er president i Chile?",
+    "gold_answer": "Sebastián Piñera",
+    "predicted_answer": "Presidenten i Chile er Sebastián Piñera. Han har vært president siden 2018 og er medlem av det høyreorienterte partiet til den siste diktatoren i Chile, Augusto Pinochet. Piñera har møtt kritikk for håndteringen av de pågående protestene i Chile, som har"
+  },
+  {
+    "qid": 873,
+    "question": "Hvor vant Kristoffersen sist i storslalåm?",
+    "gold_answer": "Meribel",
+    "predicted_answer": "Kristoffersen vant sist i storslalåm i Meribel, Frankrike, i mars 2015."
+  },
+  {
+    "qid": 2072,
+    "question": "Hvorfor satt politiet inn helikopter?",
+    "gold_answer": "for å observere fra lufta",
+    "predicted_answer": "Politiet brukte et helikopter for å observere og overvåke arrangementet på Sinsen i Oslo der en amerikansk høyreekstremist ble pågrepet. Dette ble gjort for å sikre at det ikke var noen voldelige hendelser eller forsøk på å forstyrre arrangementet. Det er viktig å merke seg at bruk av helikopter er et verktøy som brukes av politiet for å opprettholde"
+  },
+  {
+    "qid": 542,
+    "question": "Hvem vant verdenscupen sammenlagt i fjor vinter?",
+    "gold_answer": "Therese Johaug",
+    "predicted_answer": "Natalja Neprjajeva vant verdenscupen sammenlagt i fjor. Hun ble nummer to, bare slått av Therese Johaug. Neprjajeva har satt seg som mål å være nærmere Johaug denne sesongen og har som mål å slå henne. Hun vil også bli best i verden på langrennsski."
+  },
+  {
+    "qid": 1429,
+    "question": "Hvem er Øystein Ronander?",
+    "gold_answer": "aksjonær og styreleder i Baglerbrønnen Drift AS",
+    "predicted_answer": "Øystein Ronander er en av aksjonærene og styrelederen i Baglerbrønnen Drift AS, som er selskapet som driver Slottsfjellfestivalen. Han har vært involvert i festivalen siden oppstarten i 2003 og har spilt en viktig rolle i å få festivalen på rett kjøl etter de økonomiske vanskelighetene den har"
+  },
+  {
+    "qid": 281,
+    "question": "Når ble Brexit bestemt i Storbritannia?",
+    "gold_answer": "i 2016",
+    "predicted_answer": "Brexit ble bestemt i Storbritannia i 2016. Den britiske regjeringen, ledet av daværende statsminister Theresa May, lanserte formelt Brexit-prosessen etter en folkeavstemning som resulterte i et flertall for å forlate Den europeiske union. Denne avgjørelsen markerte begynnelsen på en kompleks og kontroversiell prosess som har hatt vidtrekkende"
   }
 ]
