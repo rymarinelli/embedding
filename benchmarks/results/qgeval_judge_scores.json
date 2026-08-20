@@ -1,0 +1,857 @@
+[
+  {
+    "qid": 21,
+    "doc_id": 440,
+    "answer": "hver fredag",
+    "fable_question": "Hvor ofte kommer podkasten Trond Moi og den sultne naboen ut?",
+    "reference_question": "Når kommer podcasten Trond Moi og den sultne naboen ut?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Fluent and grammatically correct Norwegian.",
+      "clarity": "Clearly asks about frequency of release, unambiguous.",
+      "conciseness": "No unnecessary information.",
+      "relevance": "Asks about the podcast's release frequency, explicitly mentioned in the passage.",
+      "consistency": "Fully consistent with the passage.",
+      "answerability": "Answerable directly: it comes out every Friday.",
+      "answer_consistency": "'hver fredag' answers the frequency question directly."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian, though 'podcasten' is spelled with c while passage uses 'podkasten'.",
+      "clarity": "Clear question about the release time of the podcast; slight ambiguity whether it asks for a date or frequency.",
+      "conciseness": "Concise with no redundant information.",
+      "relevance": "Relates to the podcast's release schedule, a stated but somewhat secondary detail.",
+      "consistency": "Consistent with the passage's statement that the podcast comes out every Friday.",
+      "answerability": "Passage explicitly states it comes out every Friday.",
+      "answer_consistency": "The answer 'hver fredag' directly answers when it comes out."
+    }
+  },
+  {
+    "qid": 2393,
+    "doc_id": 298,
+    "answer": "nær 8,1 milliarder australske dollar",
+    "fable_question": "Hvor mye anslår Australia Institute at den norske stat kommer til å tjene på Equinors olje- og gassproduksjon i Australbukta?",
+    "reference_question": "Hvor mye regner Australia Institute med at Norge vil tjene på olja og gassen i Australbukta?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clearly specifies who estimates, who earns, and from what.",
+      "conciseness": "All details are necessary for precision.",
+      "relevance": "Targets the central figure of the passage's main claim.",
+      "consistency": "Matches the passage exactly.",
+      "answerability": "The passage states the amount explicitly.",
+      "answer_consistency": "The provided answer directly answers the question."
+    },
+    "reference_reasons": {
+      "fluency": "Fluent, slightly colloquial ('olja og gassen') but correct.",
+      "clarity": "Clear enough, though 'Norge' vs 'den norske stat' and 'olja og gassen' is a bit loose.",
+      "conciseness": "Short with no redundancy.",
+      "relevance": "Asks about the key estimate in the passage.",
+      "consistency": "Consistent with the passage, referring to the Norwegian state's earnings from the production.",
+      "answerability": "The passage gives the figure explicitly.",
+      "answer_consistency": "The answer directly provides the requested amount."
+    }
+  },
+  {
+    "qid": 2215,
+    "doc_id": 225,
+    "answer": "Margrethe Vestager",
+    "fable_question": "Hvem er EUs konkurransekommissær?",
+    "reference_question": "Hvem jobber som konkurransekommissær i EU?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clear and specific question with a single interpretation.",
+      "conciseness": "Very brief, no redundancy.",
+      "relevance": "Relates to Vestager, a central figure in the article, though her title is secondary detail.",
+      "consistency": "Passage explicitly states Vestager is EU's competition commissioner.",
+      "answerability": "Directly answerable from the caption text.",
+      "answer_consistency": "The answer Margrethe Vestager fully answers it."
+    },
+    "reference_reasons": {
+      "fluency": "Fluent and grammatically correct phrasing.",
+      "clarity": "Clear and unambiguous.",
+      "conciseness": "Concise, slightly wordier but no real redundancy.",
+      "relevance": "Concerns Vestager's role, relevant but a minor detail in the passage.",
+      "consistency": "Matches the passage's statement about her position.",
+      "answerability": "Can be answered definitively from the passage.",
+      "answer_consistency": "The provided answer directly answers the question."
+    }
+  },
+  {
+    "qid": 1715,
+    "doc_id": 183,
+    "answer": "en gassdrevet bil",
+    "fable_question": "Hva slags bil kjørte av veien på Klokkarstua i Hurum?",
+    "reference_question": "Hva slags bil kjørte av veien i Hurum?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Specific location and clear what is asked.",
+      "conciseness": "No redundant information.",
+      "relevance": "Refers to a concrete incident in the passage, though a minor detail.",
+      "consistency": "Matches the passage exactly.",
+      "answerability": "The passage states a gas-powered car drove off the road there.",
+      "answer_consistency": "The answer 'en gassdrevet bil' answers it directly."
+    },
+    "reference_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Slightly less specific (only Hurum), but still unambiguous given the passage.",
+      "conciseness": "Short and to the point.",
+      "relevance": "Relates to an incident described in the passage.",
+      "consistency": "Klokkarstua is in Hurum, so consistent with the passage.",
+      "answerability": "Answerable definitively from the passage.",
+      "answer_consistency": "The provided answer directly answers the question."
+    }
+  },
+  {
+    "qid": 475,
+    "doc_id": 551,
+    "answer": "mandag",
+    "fable_question": "Hvilken dag bekreftet St. Pauli at Sahin ikke skal trene eller spille kamper med laget i tiden som kommer?",
+    "reference_question": "Når kom den endelige beskjeden om at Cenk Sahin ikke skal spille for St. Pauli fremover?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Very specific about what day and what was confirmed, no ambiguity.",
+      "conciseness": "Slightly wordy by restating the full announcement, but not distracting.",
+      "relevance": "Addresses the key decision described in the passage.",
+      "consistency": "Wording mirrors the passage exactly.",
+      "answerability": "Answer is stated explicitly in the passage.",
+      "answer_consistency": "'mandag' is exactly the required answer."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Asks when the decision was announced; slightly vague ('endelige beskjeden') but clearly points to the club's announcement.",
+      "conciseness": "Compact with no redundant information.",
+      "relevance": "Targets the central event of the passage, the club's decision.",
+      "consistency": "Matches the passage: the club confirmed Monday that he would not train or play.",
+      "answerability": "The passage explicitly says 'mandag bekreftet klubben'.",
+      "answer_consistency": "The answer 'mandag' directly answers the question."
+    }
+  },
+  {
+    "qid": 1825,
+    "doc_id": 213,
+    "answer": "77 prosent",
+    "fable_question": "Hvor mye har Idex-aksjen falt i verdi de siste tre årene?",
+    "reference_question": "Hvor mye har Idex-aksjen falt de siste 3 åra?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Fullstendig flytende og grammatisk korrekt.",
+      "clarity": "Helt tydelig og spesifikt formulert.",
+      "conciseness": "\"i verdi\" er nesten overflødig, men spørsmålet er kort.",
+      "relevance": "Spør om sentral opplysning i passasjen.",
+      "consistency": "Fullt i samsvar med opplysningen om 77 prosent fall over tre år.",
+      "answerability": "Kan besvares definitivt ut fra teksten.",
+      "answer_consistency": "Svaret \"77 prosent\" passer direkte."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatisk korrekt, men \"3 åra\" er noe uformelt/blandet stil.",
+      "clarity": "Spørsmålet er klart og spesifikt om Idex-aksjens fall.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Gjelder sentral informasjon om Woodfords tapsinvesteringer i teksten.",
+      "consistency": "Samsvarer med teksten som sier Idex falt 77 prosent på tre år.",
+      "answerability": "Teksten gir et entydig svar.",
+      "answer_consistency": "Svaret \"77 prosent\" besvarer spørsmålet direkte."
+    }
+  },
+  {
+    "qid": 1522,
+    "doc_id": 664,
+    "answer": "Norges vassdrag- og energidirektorat",
+    "fable_question": "Hva står forkortelsen NVE for?",
+    "reference_question": "Hva er NVE?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 2
+    },
+    "fable_reasons": {
+      "fluency": "Grammatisk korrekt og naturlig norsk.",
+      "clarity": "Presist formulert med entydig forventet svar.",
+      "conciseness": "Kort og uten unødvendig informasjon.",
+      "relevance": "Relatert til teksten, men forkortelsens fulle navn er en mindre viktig detalj.",
+      "consistency": "Fullt i samsvar med teksten.",
+      "answerability": "Teksten sier eksplisitt «Norges vassdrag- og energidirektorat (NVE)».",
+      "answer_consistency": "Svaret er nøyaktig det spørsmålet ber om."
+    },
+    "reference_reasons": {
+      "fluency": "Kort, korrekt og flytende spørsmål.",
+      "clarity": "Spørsmålet er noe åpent – «Hva er NVE?» kan besvares med både navn og rolle, litt tvetydig.",
+      "conciseness": "Helt uten overflødig informasjon.",
+      "relevance": "NVE er sentral aktør i teksten, men forkortelsens betydning er en detalj.",
+      "consistency": "Ingen motsigelser mot teksten.",
+      "answerability": "Teksten oppgir at NVE står for Norges vassdrag- og energidirektorat, så det kan besvares.",
+      "answer_consistency": "Svaret gir navnet, som besvarer spørsmålet, men litt indirekte gitt formuleringen «Hva er»."
+    }
+  },
+  {
+    "qid": 553,
+    "doc_id": 571,
+    "answer": "i Torpet Fiskeoppdrettsanlegg på Røros",
+    "fable_question": "Hvor ble rakfisken som mistenkes å ha forårsaket botulisme produsert?",
+    "reference_question": "Hvor er Erik Strickert daglig leder?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clearly asks where the suspect rakfisk was produced, unambiguous.",
+      "conciseness": "Short and free of redundancy.",
+      "relevance": "Targets the central fact of the article: the source of the contaminated rakfisk.",
+      "consistency": "Matches the passage's framing that botulism is suspected from rakfisk from this producer.",
+      "answerability": "The passage identifies Torpet Fiskeoppdrettsanlegg på Røros as the producer recalling the fish, so it can be answered.",
+      "answer_consistency": "The given answer directly answers the question."
+    },
+    "reference_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Specific and unambiguous question about Strickert's position.",
+      "conciseness": "Very concise wording.",
+      "relevance": "Asks about a source's job affiliation, a peripheral rather than crucial detail.",
+      "consistency": "Fully consistent with the passage, which names him as daglig leder there.",
+      "answerability": "The passage states explicitly he is daglig leder in Torpet Fiskeoppdrettsanlegg på Røros.",
+      "answer_consistency": "The provided answer answers the question exactly."
+    }
+  },
+  {
+    "qid": 132,
+    "doc_id": 467,
+    "answer": "«Zuke!»",
+    "fable_question": "Hva roper hjemmepublikummet taktfast når Mats Zuccarello er på isen?",
+    "reference_question": "Hvilket kallenavn har Mats Zuccarello i NHL?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clearly asks what the home crowd chants, unambiguous.",
+      "conciseness": "No redundant information.",
+      "relevance": "Refers to a detail in the passage, though not central to the main news; still explicitly described.",
+      "consistency": "Matches the passage statement that the crowd chants «Zuke!».",
+      "answerability": "The passage states the crowd chants «Zuke!», so it is answerable.",
+      "answer_consistency": "The answer «Zuke!» directly answers the question."
+    },
+    "reference_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Specific and unambiguous question about his nickname.",
+      "conciseness": "Short and to the point.",
+      "relevance": "Asks about a minor detail (nickname) rather than crucial content, but it is mentioned in the passage.",
+      "consistency": "Passage says «Zuke!» is the nickname he is known by in NHL.",
+      "answerability": "Definitively answerable from the passage.",
+      "answer_consistency": "The provided answer «Zuke!» is exactly the nickname asked for."
+    }
+  },
+  {
+    "qid": 347,
+    "doc_id": 520,
+    "answer": "Theresa May",
+    "fable_question": "Hvem var statsminister i Storbritannia da opposisjonen krevde en garanti mot å forlate EU uten avtale?",
+    "reference_question": "Hvem er statsminister i Storbritannia?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clearly asks for the name of the prime minister in the described context.",
+      "conciseness": "Context clause is slightly long but relevant and not redundant.",
+      "relevance": "Relates directly to the passage's account of the opposition demanding a guarantee from the PM.",
+      "consistency": "Matches the passage: opposition wants a guarantee May won't let Britain crash out without a deal.",
+      "answerability": "The passage explicitly names statsminister Theresa May.",
+      "answer_consistency": "The answer 'Theresa May' answers the question directly."
+    },
+    "reference_reasons": {
+      "fluency": "Short, fluent and grammatically correct.",
+      "clarity": "Clear but very general, lacking any anchoring to the passage's context or time.",
+      "conciseness": "Extremely concise with no redundancy.",
+      "relevance": "Related to the passage but asks a peripheral general fact rather than crucial content.",
+      "consistency": "No contradiction with the passage, which mentions May as prime minister.",
+      "answerability": "The passage states Theresa May is prime minister, so it can be answered.",
+      "answer_consistency": "The provided answer fully answers the question."
+    }
+  },
+  {
+    "qid": 1590,
+    "doc_id": 139,
+    "answer": "2010",
+    "fable_question": "Hvilket år gikk Sissel Berdal Haga av med pensjon som dommer i Oslo byrett?",
+    "reference_question": "I hvilket år begynte Sissel Berdal Haga å jobbe for Olav Thon Gruppen?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clearly asks for the retirement year, unambiguous.",
+      "conciseness": "No redundant information.",
+      "relevance": "Concerns a detail of Haga's career, relevant though not central to the main news.",
+      "consistency": "Matches the passage: she was a judge in Oslo byrett until retiring in 2010.",
+      "answerability": "The passage explicitly states she retired in 2010.",
+      "answer_consistency": "The answer 2010 answers the question directly."
+    },
+    "reference_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Clear question about the starting year of her employment at Olav Thon Gruppen.",
+      "conciseness": "Brief and free of redundancy.",
+      "relevance": "Asks about a secondary biographical detail, related but not crucial.",
+      "consistency": "The passage says she has been employed at Olav Thon Gruppen from 2010, consistent.",
+      "answerability": "The passage clearly states 'Fra 2010 har hun ogsÃ¥ vÃ¦rt ansatt i Olav Thon Gruppen'.",
+      "answer_consistency": "The provided answer 2010 answers it directly."
+    }
+  },
+  {
+    "qid": 1127,
+    "doc_id": 500,
+    "answer": "38",
+    "fable_question": "Hvor gammel er Nils Olav Lausund?",
+    "reference_question": "Hvor gammel er DJ Nils Noa?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Setningen er språklig korrekt og naturlig.",
+      "clarity": "Entydig spørsmål om en navngitt persons alder.",
+      "conciseness": "Ingen unødvendig informasjon.",
+      "relevance": "Gjelder en av tekstens hovedpersoner, men er en mindre detalj.",
+      "consistency": "Fullt i samsvar med passasjen, som oppgir Lausund (38).",
+      "answerability": "Kan besvares definitivt ut fra teksten.",
+      "answer_consistency": "Svaret 38 er presis besvarelse."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatisk korrekt og flytende spørsmål.",
+      "clarity": "Klart og spesifikt; Nils Noa er entydig identifisert i teksten.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Alderen er en detalj, men knyttet til en sentral person i teksten.",
+      "consistency": "Stemmer med teksten som oppgir Nils Noa som artistnavn for Lausund (38).",
+      "answerability": "Teksten oppgir alderen 38 eksplisitt.",
+      "answer_consistency": "Svaret 38 besvarer spørsmålet direkte."
+    }
+  },
+  {
+    "qid": 2354,
+    "doc_id": 289,
+    "answer": "regionrådene i Øst- og Vest-Finnmark og fylkeslegen i de to nordligste fylkene i Alta",
+    "fable_question": "Hvem skal helseminister Bent Høie møte tirsdag kveld?",
+    "reference_question": "Hvem skal Høie treffe tirsdag kveld?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clearly asks who Høie will meet Tuesday evening, unambiguous given the passage.",
+      "conciseness": "No redundant information, though full name and title are included appropriately.",
+      "relevance": "Targets a key detail about the minister's itinerary during the crisis.",
+      "consistency": "Matches the passage exactly; Høie is the health minister meeting on Tuesday evening.",
+      "answerability": "The passage states directly who he meets Tuesday evening.",
+      "answer_consistency": "The provided answer directly answers the question."
+    },
+    "reference_reasons": {
+      "fluency": "Short, fluent and grammatically correct.",
+      "clarity": "Clear who and when, though it uses only the surname; still identifiable from the passage.",
+      "conciseness": "Very concise with no superfluous words.",
+      "relevance": "Asks about an important detail of the minister's planned meetings.",
+      "consistency": "Consistent with the passage's description of Tuesday evening meetings.",
+      "answerability": "Definitively answerable from the third paragraph.",
+      "answer_consistency": "The given answer fully answers the question."
+    }
+  },
+  {
+    "qid": 2374,
+    "doc_id": 290,
+    "answer": "sykdom",
+    "fable_question": "Hvorfor møtte ikke den italienske duoen Enrico Rossi/Adrian Carambula opp til kamp mot Mol og Sørum?",
+    "reference_question": "Hva gjorde at Mol og Sørum vant med walkover mot Rossi og Carambula?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 2,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Velformulert og grammatisk korrekt.",
+      "clarity": "Helt tydelig hva som etterspørres: årsaken til at italienerne ikke stilte.",
+      "conciseness": "Inneholder fulle navn, som er noe utfyllende men ikke forstyrrende.",
+      "relevance": "Spørsmålet gjelder en mindre detalj i teksten, ikke kjerneinnholdet om semifinaletapet.",
+      "consistency": "Fullt i samsvar med passasjen, som sier at duoen ikke møtte opp.",
+      "answerability": "Passasjen oppgir eksplisitt at årsaken var sykdom.",
+      "answer_consistency": "Svaret 'sykdom' svarer presist på spørsmålet."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatisk korrekt og flytende norsk.",
+      "clarity": "Spørsmålet er forståelig, men 'vant med walkover' er en tolkning som ikke står eksplisitt i teksten, noe som gjør det litt uklart hva som etterspørres.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Gjelder en detalj i turneringsforløpet, ikke hovedsaken (semifinaletapet), men er nevnt i teksten.",
+      "consistency": "Teksten sier at italienerne ikke møtte opp, men bruker ikke ordet walkover; det er en rimelig men ikke eksplisitt beskrevet slutning.",
+      "answerability": "Årsaken (sykdom) står klart i passasjen.",
+      "answer_consistency": "Svaret 'sykdom' besvarer spørsmålet direkte."
+    }
+  },
+  {
+    "qid": 1934,
+    "doc_id": 255,
+    "answer": "programleder",
+    "fable_question": "Hvilken rolle har Daniel Røed-Johansen i Sprekpodden?",
+    "reference_question": "Hva jobber Daniel som?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 2,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clearly asks about Daniel Røed-Johansen's role in Sprekpodden.",
+      "conciseness": "Short and free of redundant information.",
+      "relevance": "Targets a detail from the photo caption, not central to the article's message about training and the brain.",
+      "consistency": "Matches the passage, which names him as programleder of Sprekpodden.",
+      "answerability": "The caption explicitly states he is the host, so it can be answered definitively.",
+      "answer_consistency": "The answer 'programleder' answers the question directly."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatically fine though colloquial in tone.",
+      "clarity": "Uses only the first name and asks broadly about his job rather than his role in the podcast, leaving some ambiguity.",
+      "conciseness": "Very brief with no superfluous content.",
+      "relevance": "Concerns a peripheral caption detail rather than the article's core topic.",
+      "consistency": "No contradiction with the passage, which identifies him as host.",
+      "answerability": "The passage states his podcast role, but not his profession in general, so the answer is only partly determined.",
+      "answer_consistency": "'Programleder' serves as a fitting answer to what he works as."
+    }
+  },
+  {
+    "qid": 67,
+    "doc_id": 456,
+    "answer": "FriFagbevegelse",
+    "fable_question": "Hvilket nettsted jobber Helge Rønning Birkelund for?",
+    "reference_question": "Hvem har intervjuet Geir Pollestad fra Sp?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 2,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 2,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clearly asks which website/outlet the named journalist works for.",
+      "conciseness": "Short and without redundancy.",
+      "relevance": "Concerns the byline, peripheral to the passage's main content about Telenor.",
+      "consistency": "The byline 'Helge Rønning Birkelund/FriFagbevegelse' matches the question's premise.",
+      "answerability": "Answer must be inferred from the byline format rather than an explicit statement, but is fairly clear.",
+      "answer_consistency": "The answer FriFagbevegelse directly answers the question."
+    },
+    "reference_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Slightly ambiguous since 'hvem' suggests a person while the expected answer is a media outlet.",
+      "conciseness": "Concise, no superfluous information.",
+      "relevance": "Focuses on who did the interview rather than the substantive news about Telenor.",
+      "consistency": "Consistent with the passage, which states Pollestad spoke to FriFagbevegelse.",
+      "answerability": "The passage says he spoke 'til FriFagbevegelse', so it can be answered, though the interviewer as a person is not named.",
+      "answer_consistency": "The provided answer FriFagbevegelse serves as the answer, though as an outlet rather than a person."
+    }
+  },
+  {
+    "qid": 198,
+    "doc_id": 481,
+    "answer": "21 minutter inn i 2. omgang",
+    "fable_question": "Når kom selvmålet til Aleksandar Sofranac som gjorde at England ledet 6-0?",
+    "reference_question": "Når kom det sjette målet til England?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatisk korrekt og flytende norsk.",
+      "clarity": "Spørsmålet er tydelig og spesifikt om tidspunktet for selvmålet.",
+      "conciseness": "Litt ekstra informasjon om 6-0-ledelsen, men den er hjelpsom og ikke forstyrrende.",
+      "relevance": "Handler om en av scoringene i kampen som er tekstens hovedtema.",
+      "consistency": "Stemmer med teksten: selvmål av Sofranac ga 6-0.",
+      "answerability": "Teksten sier eksplisitt 21 minutter inn i 2. omgang.",
+      "answer_consistency": "Svaret gitt er nøyaktig det teksten oppgir."
+    },
+    "reference_reasons": {
+      "fluency": "Kort, korrekt og flytende formulering.",
+      "clarity": "Noe uklart da \"sjette målet\" krever at leseren teller scoringene, men det kan utledes.",
+      "conciseness": "Meget kort uten overflødig informasjon.",
+      "relevance": "Spør om en scoring i kampen, sentralt for teksten.",
+      "consistency": "6-0-målet er beskrevet i teksten, så ingen motsigelse.",
+      "answerability": "Teksten oppgir tidspunktet for 6-0-målet direkte.",
+      "answer_consistency": "Svaret \"21 minutter inn i 2. omgang\" besvarer spørsmålet direkte."
+    }
+  },
+  {
+    "qid": 412,
+    "doc_id": 541,
+    "answer": "tilbake til hotellet",
+    "fable_question": "Hvor dro Bjørn Magnussen etter å ha snakket med faren og bestefaren på tribunen?",
+    "reference_question": "Hvor dro Bjørn Magnussen etter å ha snakket med bestefar og far på tribunen?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Flytende og grammatisk korrekt.",
+      "clarity": "Tydelig og entydig formulert.",
+      "conciseness": "Konsis uten unødvendig informasjon.",
+      "relevance": "Handler om en mindre detalj til slutt i artikkelen, men relatert.",
+      "consistency": "Samsvarer med teksten.",
+      "answerability": "Teksten gir et entydig svar.",
+      "answer_consistency": "Det oppgitte svaret besvarer spørsmålet direkte."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatisk korrekt og flytende norsk.",
+      "clarity": "Spørsmålet er klart og spesifikt om hvor han dro etterpå.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Gjelder en detalj i slutten av teksten, ikke kjerneinnholdet, men klart knyttet til passasjen.",
+      "consistency": "Stemmer med teksten om samtalen med far og bestefar på tribunen.",
+      "answerability": "Teksten sier eksplisitt at han dro tilbake til hotellet.",
+      "answer_consistency": "Svaret \"tilbake til hotellet\" besvarer spørsmålet direkte."
+    }
+  },
+  {
+    "qid": 1511,
+    "doc_id": 659,
+    "answer": "Martin Ødegaard",
+    "fable_question": "Hvilken norsk spiller ble kåret til månedens spiller i Spania for september?",
+    "reference_question": "Hvem ble månedens spiller i Spania i september?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Very specific, indicating both nationality and the award, no ambiguity.",
+      "conciseness": "Slightly longer with the 'norsk spiller' qualifier, but this aids precision rather than adding clutter.",
+      "relevance": "Targets a central detail about Ødegaard in the passage.",
+      "consistency": "Fully consistent with the passage, which notes Ødegaard (a Norwegian) won the award.",
+      "answerability": "The passage explicitly gives the answer.",
+      "answer_consistency": "'Martin Ødegaard' is exactly the answer sought."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clear and specific, asks for a named person; minor wording 'ble månedens spiller' rather than 'ble kåret til', but no ambiguity.",
+      "conciseness": "Short with no redundant information.",
+      "relevance": "Relates to a key detail mentioned in the passage about Ødegaard being named player of the month.",
+      "consistency": "Matches the passage statement exactly.",
+      "answerability": "The passage states directly that Ødegaard was named player of the month in Spain for September.",
+      "answer_consistency": "The answer 'Martin Ødegaard' answers the question directly."
+    }
+  }
+]
