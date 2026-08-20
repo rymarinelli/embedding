@@ -1,0 +1,23 @@
+% Table 3: Evalueringsresultater for gjenfinning med embeddingmodeller
+% NorQuAD (nyhetsdelen): 403 avsnitt, 2 398 spørringer
+% Rangert etter nDCG@10; beste verdi per kolonne er uthevet med \bfseries
+\begin{table}[t]
+  \centering
+  \caption{Evalueringsresultater for gjenfinning med embeddingmodeller på NorQuAD (nyhetsdelen; 403 avsnitt, 2\,398 spørringer). Rangert etter nDCG@10.}
+  \label{tab:norquad-retrieval}
+  \begin{tabular}{@{}l S[table-format=1.4] S[table-format=1.4] S[table-format=1.4] S[table-format=1.4] S[table-format=1.4] S[table-format=4.1]@{}}
+    \toprule
+    \textbf{Modell} & \textbf{Recall@1} & \textbf{Recall@5} & \textbf{Recall@10} & \textbf{MRR@10} & \textbf{nDCG@10} & \textbf{Sekunder} \\
+    \midrule
+    intfloat/multilingual-e5-large            & \bfseries 0.7323 & \bfseries 0.8791 & \bfseries 0.9162 & \bfseries 0.7977 & \bfseries 0.8266 & 638.0 \\
+    intfloat/multilingual-e5-base             & 0.7077          & 0.8632          & 0.9133          & 0.7759          & 0.8091          & 237.6 \\
+    BAAI/bge-m3                               & 0.7031          & 0.8574          & 0.9008          & 0.7714          & 0.8028          & 691.1 \\
+    intfloat/multilingual-e5-small            & 0.6922          & 0.8528          & 0.8924          & 0.7623          & 0.7939          & 96.5  \\
+    perplexity-ai/pplx-embed-v1-0.6b          & 0.6856          & 0.8490          & 0.8962          & 0.7563          & 0.7901          & 1343.7 \\
+    Qwen/Qwen3-Embedding-0.6b                 & 0.6159          & 0.7736          & 0.8253          & 0.6843          & 0.7182          & 3762.3 \\
+    NbAiLab/nb-sentence-bert-base-mnli-test   & 0.5375          & 0.7799          & 0.8515          & 0.6400          & 0.6910          & 240.4 \\
+    NbAiLab/nb-sbert-base                     & 0.4541          & 0.6735          & 0.7510          & 0.5489          & 0.5974          & 68.2  \\
+    sentence-transformers/paraphrase-multilingual-mpnet-base-v2 & 0.4135 & 0.6193 & 0.6902 & 0.5040 & 0.5487 & 80.3 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
