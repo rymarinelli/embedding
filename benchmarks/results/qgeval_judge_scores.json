@@ -8593,5 +8593,410 @@
       "answerability": "Teksten sier eksplisitt at skattebetalerne tar regningen.",
       "answer_consistency": "Svaret «skattebetalerne» besvarer spørsmålet direkte."
     }
+  },
+  {
+    "qid": 1311,
+    "doc_id": 574,
+    "answer": "fordi ingen kvinner vant pris",
+    "fable_question": "Hvorfor forlot Sigrid Bonde Tusvik Humorprisen?",
+    "reference_question": "Hvorfor forlot Sigrid Tusvik Humorprisen?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatisk korrekt og flytende spørsmål.",
+      "clarity": "Klart og spesifikt, uten tvetydighet.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Spør om kjernehendelsen i teksten.",
+      "consistency": "Helt i samsvar med passasjen.",
+      "answerability": "Teksten sier eksplisitt at hun forlot fordi ingen kvinner vant pris.",
+      "answer_consistency": "Svaret besvarer spørsmålet direkte."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatisk korrekt og flytende, kun forkortet navn.",
+      "clarity": "Navnet er noe forkortet, men referansen er entydig i konteksten.",
+      "conciseness": "Kort og presist uten overflødig informasjon.",
+      "relevance": "Retter seg mot den sentrale hendelsen i teksten.",
+      "consistency": "Innholdet stemmer med passasjen; navnet er bare delvis gjengitt.",
+      "answerability": "Kan besvares definitivt fra teksten.",
+      "answer_consistency": "Det oppgitte svaret besvarer spørsmålet direkte."
+    }
+  },
+  {
+    "qid": 398,
+    "doc_id": 534,
+    "answer": "på Old Trafford",
+    "fable_question": "Hvor har Ole Gunnar Solskjær managerjobben?",
+    "reference_question": "Hvor har Ole Gunnar Solskjær sjefsstolen?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 2,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 2,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatisk korrekt, men formuleringen «Hvor har ... managerjobben» er noe uidiomatisk.",
+      "clarity": "Det er rimelig klart at man spør om stedet/klubben der Solskjær er manager.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Knyttet til kjerneinnholdet om Solskjær som United-manager.",
+      "consistency": "Stemmer med teksten om at han er manager på Old Trafford/United.",
+      "answerability": "Teksten sier han har sjefsstolen på Old Trafford, så svaret kan utledes klart.",
+      "answer_consistency": "Svaret «på Old Trafford» passer direkte til spørsmålet."
+    },
+    "reference_reasons": {
+      "fluency": "Setningen er grammatisk, men «har sjefsstolen» er en litt klumpete formulering.",
+      "clarity": "Metaforen «sjefsstolen» er tatt fra teksten og spørsmålet er forståelig, men noe uklart uttrykt.",
+      "conciseness": "Kort og direkte uten overflødig informasjon.",
+      "relevance": "Handler om Solskjærs managerstilling, som er sentralt i teksten.",
+      "consistency": "Samsvarer med teksten «sjefsstolen på Old Trafford».",
+      "answerability": "Teksten gir eksplisitt svaret «i sjefsstolen på Old Trafford».",
+      "answer_consistency": "Svaret «på Old Trafford» besvarer spørsmålet direkte."
+    }
+  },
+  {
+    "qid": 805,
+    "doc_id": 644,
+    "answer": "lett diesel",
+    "fable_question": "Hvilket drivstoff seiler alle Hurtigrutens skip på i dag?",
+    "reference_question": "Hvilket drivstoff bruker Hurtigrutens fartøyer?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Formuleringen er flytende og grammatisk korrekt.",
+      "clarity": "Meget spesifikt med tidsangivelse 'i dag', ingen tvetydighet.",
+      "conciseness": "Konsist, ingen unødvendig informasjon.",
+      "relevance": "Direkte relevant for passasjens sentrale poeng om drivstoff.",
+      "consistency": "Helt i samsvar med teksten.",
+      "answerability": "Teksten svarer eksplisitt: alle Hurtigrutens skip seiler på lett diesel.",
+      "answer_consistency": "Svaret 'lett diesel' passer perfekt."
+    },
+    "reference_reasons": {
+      "fluency": "Setningen er grammatisk korrekt og flyter godt.",
+      "clarity": "Spørsmålet er klart, men mangler tidsangivelse ('i dag') som gjør det marginalt mindre presist.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Knyttet til passasjens poeng om at Hurtigruten seiler på lett diesel og vil forby tungolje.",
+      "consistency": "Ingen faktafeil eller motsigelser mot teksten.",
+      "answerability": "Teksten sier eksplisitt at alle Hurtigrutens skip seiler på lett diesel.",
+      "answer_consistency": "Svaret 'lett diesel' besvarer spørsmålet direkte."
+    }
+  },
+  {
+    "qid": 1058,
+    "doc_id": 460,
+    "answer": "at sannsynligheten er lavere for å nå styringsmålet satt i 2012",
+    "fable_question": "Hva erkjenner programdirektør i Forsvarsdepartementet, generalmajor Morten Klever, overfor Bergens Tidende?",
+    "reference_question": "Hva erkjenner generalmajor Klever overfor BT?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 2,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatisk korrekt og flytende, om noe langt.",
+      "clarity": "Helt tydelig hvem og hvilken sammenheng det spørres om.",
+      "conciseness": "Inneholder full tittel og navn, litt redundant men ikke forstyrrende.",
+      "relevance": "Retter seg mot sentral informasjon i teksten.",
+      "consistency": "Alle detaljer samsvarer med passasjen.",
+      "answerability": "Entydig besvart i teksten.",
+      "answer_consistency": "Svaret besvarer spørsmålet direkte."
+    },
+    "reference_reasons": {
+      "fluency": "Kort og grammatisk korrekt spørsmål.",
+      "clarity": "Klart hvem som spørres om, men 'BT' er en forkortelse som først står i tittelen; likevel forståelig.",
+      "conciseness": "Svært konsist uten overflødig informasjon.",
+      "relevance": "Går rett på kjerneinnholdet om styringsmålet.",
+      "consistency": "Stemmer med teksten (Klever uttaler seg til Bergens Tidende/BT).",
+      "answerability": "Kan besvares direkte fra passasjen.",
+      "answer_consistency": "Det oppgitte svaret er nøyaktig svaret på spørsmålet."
+    }
+  },
+  {
+    "qid": 1951,
+    "doc_id": 262,
+    "answer": "Ingenting",
+    "fable_question": "Hva er bedre enn å slå Rosenborg på Lerkendal, ifølge Sander Svendsen?",
+    "reference_question": "Hva synes Svendsen er bedre enn å slå Rosenborg?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Velformulert og grammatisk korrekt.",
+      "clarity": "Klart og spesifikt med kildeangivelse og stedsdetalj.",
+      "conciseness": "Konsist; tillegget \"på Lerkendal\" og \"ifølge Svendsen\" er presiserende, ikke overflødig.",
+      "relevance": "Retter seg mot det sentrale sitatet i artikkelen.",
+      "consistency": "Fullt i samsvar med passasjens innhold.",
+      "answerability": "Kan besvares entydig ut fra teksten.",
+      "answer_consistency": "\"Ingenting\" er nøyaktig det svaret spørsmålet ber om."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatisk korrekt og flytende norsk.",
+      "clarity": "Spørsmålet er noe merkelig formulert (\"Hva synes Svendsen er bedre\"), men meningen er utledbar fra sitatet.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Knyttet til hovedsitatet i artikkelen om Svendsens holdning til Rosenborg.",
+      "consistency": "Samsvarer med sitatet \"Ingenting er bedre enn å slå Rosenborg\".",
+      "answerability": "Kan besvares direkte fra teksten med \"ingenting\".",
+      "answer_consistency": "Svaret \"Ingenting\" besvarer spørsmålet direkte."
+    }
+  },
+  {
+    "qid": 837,
+    "doc_id": 653,
+    "answer": "siden 2010",
+    "fable_question": "Hvor lenge har Grande ledet Venstre?",
+    "reference_question": "Hvor lenge har Trine Skei Grande ledet Venstre?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 2,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clear and specific about who and what is asked.",
+      "conciseness": "Very brief with no redundant information.",
+      "relevance": "Grande's tenure as party leader is central information in the passage.",
+      "consistency": "Fully consistent with the passage, which states Grande has led the party since 2010.",
+      "answerability": "The passage explicitly states the answer.",
+      "answer_consistency": "\"siden 2010\" directly answers how long she has led the party."
+    },
+    "reference_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Full name makes the referent unambiguous and specific.",
+      "conciseness": "Concise; the full name is not redundant clutter.",
+      "relevance": "Targets the key fact about the party leader's tenure.",
+      "consistency": "The passage only mentions \"Grande\", not the full name \"Trine Skei Grande\", so this detail is not stated in the text though not contradictory.",
+      "answerability": "The passage clearly states she has led the party since 2010.",
+      "answer_consistency": "The provided answer directly resolves the question."
+    }
+  },
+  {
+    "qid": 115,
+    "doc_id": 471,
+    "answer": "ved Svartisen",
+    "fable_question": "Hvor ligger Engabreen?",
+    "reference_question": "Hvor ligger Engabreen?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clear and specific question about location.",
+      "conciseness": "Very short, no redundancy.",
+      "relevance": "Engabreen is mentioned but its location is a minor detail in the passage.",
+      "consistency": "Consistent with the passage, which states Engabreen ved Svartisen.",
+      "answerability": "The passage explicitly states Engabreen ved Svartisen.",
+      "answer_consistency": "The answer 'ved Svartisen' answers the question directly."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatically correct and fluent.",
+      "clarity": "Clear, unambiguous question.",
+      "conciseness": "Concise with no extra information.",
+      "relevance": "Related to the passage but asks for a peripheral detail.",
+      "consistency": "Matches the passage information.",
+      "answerability": "Answerable directly from the text.",
+      "answer_consistency": "The given answer directly resolves the question."
+    }
+  },
+  {
+    "qid": 742,
+    "doc_id": 623,
+    "answer": "Cleveland",
+    "fable_question": "Hvilket lag spiller Myles Garrett for?",
+    "reference_question": "Hvilket lag vant kampen mellom Pittsburgh og Cleveland?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Clear and specific question about Garrett's team.",
+      "conciseness": "Very short, no redundancy.",
+      "relevance": "Relates to the central actor in the incident, though team affiliation is a detail.",
+      "consistency": "Passage repeatedly refers to 'Clevelands Myles Garrett', fully consistent.",
+      "answerability": "The passage states explicitly that Garrett plays for Cleveland.",
+      "answer_consistency": "The answer 'Cleveland' answers the question directly."
+    },
+    "reference_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Clear and unambiguous, asks which team won.",
+      "conciseness": "Concise with only needed context.",
+      "relevance": "The result is mentioned only as a side note; the passage focuses on the fight.",
+      "consistency": "Consistent with the passage stating Cleveland won 21-7 against Pittsburgh.",
+      "answerability": "The final line answers it definitively.",
+      "answer_consistency": "'Cleveland' directly answers the question."
+    }
+  },
+  {
+    "qid": 1481,
+    "doc_id": 645,
+    "answer": "klassisk fellesstart",
+    "fable_question": "Hvilken type renn skal gås i Oberstdorf onsdag?",
+    "reference_question": "Hvilken øvelse kommer på onsdag?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 2,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Fluent and grammatically correct.",
+      "clarity": "Specifies both place and day, leaving no ambiguity.",
+      "conciseness": "Concise with only necessary context.",
+      "relevance": "Concerns a peripheral detail about the next race, not the article's core content.",
+      "consistency": "Fully consistent with the passage's mention of Oberstdorf on Wednesday.",
+      "answerability": "The passage explicitly answers it.",
+      "answer_consistency": "'klassisk fellesstart' is exactly the answer."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatically correct and natural Norwegian.",
+      "clarity": "Lacks the location context; 'hvilken øvelse kommer på onsdag' is understandable but somewhat vague without mentioning Oberstdorf.",
+      "conciseness": "Very brief, no redundancy.",
+      "relevance": "Refers to a minor detail (the upcoming race in Oberstdorf) rather than the main topic of the prologue.",
+      "consistency": "Matches the passage's statement about Wednesday's classic mass start.",
+      "answerability": "The passage states there is a classic mass start on Wednesday, so it can be answered.",
+      "answer_consistency": "The answer 'klassisk fellesstart' directly answers it."
+    }
   }
 ]
