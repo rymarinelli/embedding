@@ -853,5 +853,140 @@
       "answerability": "The passage states directly that Ødegaard was named player of the month in Spain for September.",
       "answer_consistency": "The answer 'Martin Ødegaard' answers the question directly."
     }
+  },
+  {
+    "qid": 902,
+    "doc_id": 673,
+    "answer": "herr og fru Hvermansen",
+    "fable_question": "Ifølge legen Ove Talsnes, hvem kunne fint ha levd med skaden Henrik Ingebrigtsen hadde i tåa?",
+    "reference_question": "Hvem kunne fint levd med skaden som Henrik Ingebritsen ble operert for?",
+    "fable_slot": "B",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 2,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Fluent, correct Norwegian with correct spelling of the name.",
+      "clarity": "Attribution to the doctor and the toe injury makes it precise and unambiguous.",
+      "conciseness": "Slight extra framing ('Ifølge legen Ove Talsnes') but it aids precision without redundancy issues.",
+      "relevance": "Targets the doctor's key statement about the injury.",
+      "consistency": "Matches the passage: Talsnes made that statement about the toe injury.",
+      "answerability": "Directly answerable from the quoted statement.",
+      "answer_consistency": "The given answer matches exactly."
+    },
+    "reference_reasons": {
+      "fluency": "Grammatically fine, but the name is misspelled as 'Ingebritsen'; minor error not hindering understanding.",
+      "clarity": "Clearly asks who could have lived with the injury, matching the quote.",
+      "conciseness": "Short and to the point with no redundancy.",
+      "relevance": "Relates to the doctor's central quote about the injury, though somewhat rhetorical detail.",
+      "consistency": "Consistent with the passage's statement about the injury.",
+      "answerability": "The passage states ordinary people ('herr og fru Hvermansen') could live with it.",
+      "answer_consistency": "The answer 'herr og fru Hvermansen' answers it directly."
+    }
+  },
+  {
+    "qid": 778,
+    "doc_id": 636,
+    "answer": "nivået under Grand Slam-turneringene",
+    "fable_question": "Hvilket nivå er en ATP 1000-turnering på?",
+    "reference_question": "På hvilket nivå er ATP 1000-turneringer?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatisk korrekt og naturlig norsk.",
+      "clarity": "Spørsmålet er klart og spesifikt om nivået til ATP 1000-turneringer.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Informasjonen er nevnt i teksten, men er en bakgrunnsdetalj snarere enn hovedpoenget.",
+      "consistency": "Ingen motsigelser mot teksten.",
+      "answerability": "Teksten sier eksplisitt at nivået er under Grand Slam-turneringene.",
+      "answer_consistency": "Svaret besvarer spørsmålet direkte."
+    },
+    "reference_reasons": {
+      "fluency": "Flytende og grammatisk korrekt.",
+      "clarity": "Klart og entydig hva som etterspørres.",
+      "conciseness": "Kortfattet uten unødvendig informasjon.",
+      "relevance": "Relatert til teksten, men gjelder en supplerende detalj.",
+      "consistency": "Samsvarer med opplysningene i teksten.",
+      "answerability": "Teksten oppgir direkte at nivået er under Grand Slam.",
+      "answer_consistency": "Det oppgitte svaret svarer presist på spørsmålet."
+    }
+  },
+  {
+    "qid": 1963,
+    "doc_id": 273,
+    "answer": "Tyrkia",
+    "fable_question": "I hvilket land ligger konsulatet der Jamal Khashoggi ble drept?",
+    "reference_question": "I hvilket land ligger Istanbul?",
+    "fable_slot": "A",
+    "judge_model": "anthropic/claude-opus-5",
+    "fable_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 3,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "reference_scores": {
+      "fluency": 3,
+      "clarity": 3,
+      "conciseness": 3,
+      "relevance": 2,
+      "consistency": 3,
+      "answerability": 3,
+      "answer_consistency": 3
+    },
+    "fable_reasons": {
+      "fluency": "Grammatisk korrekt og flytende norsk.",
+      "clarity": "Klart og spesifikt spørsmål om landet der konsulatet ligger.",
+      "conciseness": "Kort og uten overflødig informasjon.",
+      "relevance": "Gjelder sentral informasjon om drapsstedet i teksten.",
+      "consistency": "Stemmer med teksten som sier konsulatet ligger i Istanbul i Tyrkia.",
+      "answerability": "Teksten gir entydig svar: den tyrkiske storbyen Istanbul.",
+      "answer_consistency": "Svaret 'Tyrkia' besvarer spørsmålet direkte."
+    },
+    "reference_reasons": {
+      "fluency": "Kort, korrekt og flytende formulert.",
+      "clarity": "Spørsmålet er tydelig, men helt løsrevet fra artikkelens tema.",
+      "conciseness": "Meget konsist.",
+      "relevance": "Spør om ren geografisk allmennkunnskap, perifert i forhold til passasjens hovedinnhold.",
+      "consistency": "Teksten omtaler «den tyrkiske storbyen Istanbul», så ingen motsigelse.",
+      "answerability": "Kan besvares ut fra formuleringen i teksten.",
+      "answer_consistency": "Svaret 'Tyrkia' passer direkte."
+    }
   }
 ]
