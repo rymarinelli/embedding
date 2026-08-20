@@ -698,5 +698,96 @@
     "answer": "en stor feil i Barcelona-forsvaret",
     "reference_question": "Hva brukte Rodrigo til sin fordel?",
     "generated_question": "Hva utnyttet Rodrigo da han rundet keeper Cillessen etter kun fem minutters spill?"
+  },
+  {
+    "qid": 1032,
+    "doc_id": 453,
+    "answer": "hele 2,27 sekunder",
+    "reference_question": "Hvor langt bak vinneren var Sophie Caldwell?",
+    "generated_question": "Hvor langt foran Sophie Caldwell gikk Nilsson over målstreken?"
+  },
+  {
+    "qid": 1409,
+    "doc_id": 612,
+    "answer": "det lokale politiet",
+    "reference_question": "Hvem tar seg foreløpig av granskingen av hendelsen?",
+    "generated_question": "Hvem tar seg foreløpig av granskingen av knivangrepet i Villeurbanne?"
+  },
+  {
+    "qid": 100,
+    "doc_id": 462,
+    "answer": "Folkeaksjonen Nei til mer bompenger",
+    "reference_question": "Hva står FNB for?",
+    "generated_question": "Hva står forkortelsen FNB for?"
+  },
+  {
+    "qid": 1010,
+    "doc_id": 445,
+    "answer": "minst 20 millioner kroner",
+    "reference_question": "Hvor mye anslo Per Sandberg at totalkostnaden for Mulla Krekar var på i 2012?",
+    "generated_question": "Hvor mye anslo Per Sandberg i 2012 at mulla Krekar-saken totalt hadde kostet?"
+  },
+  {
+    "qid": 1937,
+    "doc_id": 260,
+    "answer": "ved Veterinærinstituttet",
+    "reference_question": "Hvor jobber Hannah?",
+    "generated_question": "Hvor jobber forskeren Hannah Joan Jørgensen?"
+  },
+  {
+    "qid": 1028,
+    "doc_id": 451,
+    "answer": "at de er sterke i alle land, at det fins handlingskraft og at det kan eskalere til ting som er mer voldsomme",
+    "reference_question": "Hva mener Ranstorp Den nordiske motstandsbevegelsen ønsker å vise med aksjonene sine=",
+    "generated_question": "Hva mener terrorforsker Magnus Ranstorp at Den nordiske motstandsbevegelsen forsøker å vise med hærverket mot jødiske mål i Norden?"
+  },
+  {
+    "qid": 1123,
+    "doc_id": 498,
+    "answer": "i oktober",
+    "reference_question": "Når begynner Hege Kosberg i Dagens Næringsliv?",
+    "generated_question": "Når starter Hege Kosberg i sin nye stilling i Dagens Næringsliv?"
+  },
+  {
+    "qid": 369,
+    "doc_id": 526,
+    "answer": "i Barcarena i Pará-delstaten nordøst i Brasil",
+    "reference_question": "Hvor ligger Alunorte-raffineriet?",
+    "generated_question": "Hvor ligger aluminaraffineriet Alunorte?"
+  },
+  {
+    "qid": 2043,
+    "doc_id": 315,
+    "answer": "Crystal Palace",
+    "reference_question": "Hvilket lag spilte Luka Milivojevic for?",
+    "generated_question": "Hvilket lag tapte 1–3 hjemme mot Manchester City?"
+  },
+  {
+    "qid": 660,
+    "doc_id": 599,
+    "answer": "til pressen",
+    "reference_question": "Hvem hadde Reiulf Steen et supert forhold til?",
+    "generated_question": "Hva hadde Reiulf Steen et fantastisk forhold til?"
+  },
+  {
+    "qid": 2083,
+    "doc_id": 144,
+    "answer": "«Nå gjelder det. Hele veien fra første j*vla stavtak. Kom igjen da, kom igjen.»",
+    "reference_question": "Hva kunne man høre at Henrik Kristoffersen sa til seg selv før rennets start?",
+    "generated_question": "Hva sa Henrik Kristoffersen til seg selv før start i storslalåmrennet i Åre-VM?"
+  },
+  {
+    "qid": 1100,
+    "doc_id": 487,
+    "answer": "en miljøplan må først bli godkjent",
+    "reference_question": "Hva må skje før Equinor kan bore letebrønn i South Australia?",
+    "generated_question": "Hva må skje før Equinor kan starte arbeidet med å bore en letebrønn i Australbukta?"
+  },
+  {
+    "qid": 25,
+    "doc_id": 441,
+    "answer": "fra New York",
+    "reference_question": "Fra hvilken amerikansk by kommer Rakim Mayers?",
+    "generated_question": "Hvor kommer rapperen Asap Rocky fra?"
   }
 ]
