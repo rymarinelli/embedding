@@ -30,6 +30,8 @@ RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 JUDGE_PATH = RESULTS_DIR / "qgeval_judge_scores.json"
 TABLE_PATH = RESULTS_DIR / "qgeval_dimension_scores.csv"
 PLOT_PATH = RESULTS_DIR / "qgeval_dimension_comparison.png"
+CORR_PATH = RESULTS_DIR / "qgeval_metric_judge_correlation.csv"
+CORR_PLOT_PATH = RESULTS_DIR / "qgeval_metric_judge_correlation.png"
 
 FABLE_COLOR = "#1F6F78"
 REF_COLOR = "#96712B"
@@ -138,6 +140,44 @@ def main():
     fig.tight_layout()
     fig.savefig(PLOT_PATH, bbox_inches="tight")
     print(f"Saved plot -> {PLOT_PATH}")
+
+    plot_correlation_heatmap()
+
+
+def plot_correlation_heatmap():
+    """Render the metric-vs-judge correlation table (QGEval's Table 5) as a heatmap."""
+    if not CORR_PATH.exists():
+        print(f"(skipping correlation heatmap — run score_qgeval_metrics.py first)")
+        return
+
+    corr = pd.read_csv(CORR_PATH, index_col="metric")
+    data = corr.to_numpy(dtype=float)
+
+    fig, ax = plt.subplots(figsize=(9, 3.4), dpi=200)
+    # Symmetric scale centred on 0 so sign is readable at a glance; |r| here is
+    # small, so a fixed +/-1 scale would render everything as flat white.
+    lim = max(0.2, float(np.nanmax(np.abs(data))))
+    im = ax.imshow(data, cmap="RdBu_r", vmin=-lim, vmax=lim, aspect="auto")
+
+    ax.set_xticks(range(len(corr.columns)))
+    ax.set_xticklabels([c.replace(" ", "\n") for c in corr.columns], fontsize=8.5)
+    ax.set_yticks(range(len(corr.index)))
+    ax.set_yticklabels(corr.index, fontsize=9)
+
+    for i in range(data.shape[0]):
+        for j in range(data.shape[1]):
+            v = data[i, j]
+            txt = "n/a" if np.isnan(v) else f"{v:.3f}"
+            ax.text(j, i, txt, ha="center", va="center", fontsize=8.5,
+                    color="#16202A")
+
+    ax.set_title("Pearson-korrelasjon: automatisk metrikk vs. dommerskår\n"
+                 "(alle nær null — overlapp med referansen forutsier ikke kvalitet)",
+                 fontsize=10.5, pad=10)
+    fig.colorbar(im, ax=ax, fraction=0.02, pad=0.02)
+    fig.tight_layout()
+    fig.savefig(CORR_PLOT_PATH, bbox_inches="tight")
+    print(f"Saved correlation heatmap -> {CORR_PLOT_PATH}")
 
 
 if __name__ == "__main__":
