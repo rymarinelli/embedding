@@ -177,6 +177,45 @@ def load_norsumm_test():
     return [{"id": r["id"], "article": r["article"]} for _, r in df.iterrows()]
 
 
+def verify_unquantized(model):
+    """Prove from the loaded model that nothing was quantized.
+
+    The point of this run is precision, so 'it is unquantized because the script
+    does not import bitsandbytes' is not good enough — a stray config or a
+    prequantized checkpoint would defeat that. This inspects what is actually in
+    memory: parameter dtypes, the layer classes bitsandbytes swaps in, and the
+    total parameter count.
+    """
+    print("\n--- precision check ---")
+    by_dtype = {}
+    for p in model.parameters():
+        by_dtype[str(p.dtype)] = by_dtype.get(str(p.dtype), 0) + p.numel()
+    total = sum(by_dtype.values())
+    for dt, n in sorted(by_dtype.items(), key=lambda kv: -kv[1]):
+        print(f"  {dt:<16} {n/1e9:7.2f} B params  ({100*n/total:5.1f}%)")
+    print(f"  {'TOTAL':<16} {total/1e9:7.2f} B params")
+
+    # bitsandbytes replaces nn.Linear with these; their presence means quantized.
+    bad = {"Linear4bit", "Linear8bitLt", "Params4bit", "Int8Params"}
+    found = {type(m).__name__ for m in model.modules()} & bad
+    quantized_dtypes = {d for d in by_dtype if "int8" in d or "uint8" in d or "int4" in d}
+
+    if found or quantized_dtypes:
+        raise SystemExit(
+            f"\nQUANTIZED WEIGHTS DETECTED — this run would not answer the question.\n"
+            f"  quantized layer classes: {found or 'none'}\n"
+            f"  integer param dtypes:    {quantized_dtypes or 'none'}\n"
+            "Check that bitsandbytes is not installed and no quantization_config is set."
+        )
+
+    if total < 20e9:
+        print(f"\n  WARNING: only {total/1e9:.1f}B parameters materialised. Expected ~27B.\n"
+              "  Some weights may have failed to load — do not trust the scores.")
+    else:
+        print(f"  OK: all {total/1e9:.1f}B parameters are bf16. Nothing quantized.")
+    print("-----------------------\n")
+
+
 def load_model():
     print(f"Loading {MODEL_ID} at bf16 (no quantization) — this downloads ~51 GiB.")
     os.makedirs(OFFLOAD_DIR, exist_ok=True)
@@ -191,6 +230,7 @@ def load_model():
         low_cpu_mem_usage=True,
     )
     model.eval()
+    verify_unquantized(model)
 
     # Report the split so it is obvious how much ended up off-GPU (and therefore
     # how slow to expect this to be), plus what RAM survived the load.
