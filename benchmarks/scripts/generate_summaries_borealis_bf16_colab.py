@@ -55,7 +55,7 @@ USAGE (Colab)
     from google.colab import drive; drive.mount("/content/drive")   # optional but recommended
     # then paste this file and call main()
 
-Output: borealis-27b-bf16.json, in the same {id, summary} shape the other
+Output: borealis-27b-bf16-full.json, in the same {id, summary} shape the other
 models produce, so score_summaries.py picks it up unchanged.
 """
 import json
@@ -99,9 +99,18 @@ REPETITION_PENALTY = 1.0
 GREEDY = False
 
 # Checkpoint to Drive if it is mounted, so a disconnect does not lose the run.
-OUT_NAME = "borealis-27b-bf16.json"
-DRIVE_DIR = "/content/drive/MyDrive/borealis_bench"
-OUT_PATH = os.path.join(DRIVE_DIR, OUT_NAME) if os.path.isdir("/content/drive/MyDrive") else OUT_NAME
+# Filename must match the label wanted in norsumm_lexical_results.csv —
+# score_summaries.py takes the model name from the filename stem.
+OUT_NAME = "borealis-27b-bf16-full.json"
+# Each benchmark gets its own subdirectory: the QA run writes the SAME filename
+# (it needs the same label in its own table), so a shared folder would have the
+# second run silently overwrite the first.
+DRIVE_DIR = "/content/drive/MyDrive/borealis_bench/norsumm"
+if os.path.isdir("/content/drive/MyDrive"):
+    os.makedirs(DRIVE_DIR, exist_ok=True)
+    OUT_PATH = os.path.join(DRIVE_DIR, OUT_NAME)
+else:
+    OUT_PATH = OUT_NAME
 
 WEIGHTS_GIB = 51.1          # bf16 total, from the safetensors index
 GPU_HEADROOM_GIB = 6        # KV cache + activations must not compete with weights
@@ -275,9 +284,18 @@ def load_model():
     return processor, model
 
 
-def main():
-    preflight()
-    processor, model = load_model()
+def main(model=None, processor=None):
+    """Run the NorSumm benchmark.
+
+    Accepts an already-loaded model so a Colab session can run this and the
+    NorQuAD QA benchmark off one 51 GiB load instead of two.
+    """
+    if model is None or processor is None:
+        preflight()
+        processor, model = load_model()
+    else:
+        print("Reusing the already-loaded model — no second 51 GiB download.")
+        verify_unquantized(model)
     articles = load_norsumm_test()
 
     outputs = []
