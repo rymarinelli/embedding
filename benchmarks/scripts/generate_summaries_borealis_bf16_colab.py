@@ -26,13 +26,27 @@ The GPU/CPU split is sized from the card actually assigned, so if Colab hands
 out an 80 GB A100 the model becomes fully GPU-resident and the run drops from
 hours to minutes without any edit here.
 
-ISOLATING THE VARIABLE
-----------------------
-The earlier low score was attributed to two things at once: 4-bit quantization
-AND a missing repetition penalty. Changing both at the same time cannot tell you
-which mattered. REPETITION_PENALTY therefore defaults to 1.0 (off), matching the
-original quantized run, so this run isolates the effect of precision alone. Set
-it to 1.1 for a second run if you want the combined effect.
+WHAT THIS IS COMPARED AGAINST, AND THE ONE CONFOUND
+---------------------------------------------------
+The committed borealis-27b row (ROUGE-L 0.2702) came from
+generate_summaries_local_gguf.py: llama.cpp, GGUF-quantized, on CPU, with
+temperature=0.2, max_tokens=500 and repeat_penalty=1.0.
+
+Everything controllable is matched to that run — dataset, prompts (asserted
+identical to prompts.py), article truncation, decoding settings, and the scorer.
+REPETITION_PENALTY stays 1.0 rather than 1.1, because the earlier diagnosis
+blamed quantization AND a missing repetition penalty together; changing both at
+once could not attribute the result.
+
+One difference cannot be removed: the inference stack. The baseline ran through
+llama.cpp on GGUF weights, this runs through transformers on safetensors. So a
+score change here is "bf16-via-transformers vs quant-via-llama.cpp", not
+purely a precision effect — tokenization, chat templating and sampling all
+differ slightly between the two runtimes.
+
+To attribute the difference to precision alone, also run
+generate_summaries_borealis_colab.py (4-bit, same transformers stack) and
+compare against that instead. Then only the precision changes.
 
 USAGE (Colab)
 -------------
@@ -69,10 +83,20 @@ USER_PROMPT_TEMPLATE = (
     "Artikkel:\n{article}\n\nSammendrag:"
 )
 MAX_ARTICLE_CHARS = 6000
-MAX_NEW_TOKENS = 400
 
-# 1.0 = off, matching the original quantized run so precision is the only change.
+# Decoding settings below are matched to the ORIGINAL Borealis run, which used
+# generate_summaries_local_gguf.py (llama.cpp, GGUF-quantized, on CPU) — not the
+# 4-bit Colab script. That run used temperature=0.2, max_tokens=500 and
+# repeat_penalty=1.0. Any of these left unmatched becomes a second variable
+# alongside precision and makes the comparison unattributable.
+MAX_NEW_TOKENS = 500
+TEMPERATURE = 0.2
 REPETITION_PENALTY = 1.0
+
+# Set True for greedy decoding instead. Cleaner and reproducible, but then this
+# run differs from the original in decoding as well as precision — only do it if
+# you are re-running the GGUF baseline greedily too.
+GREEDY = False
 
 # Checkpoint to Drive if it is mounted, so a disconnect does not lose the run.
 OUT_NAME = "borealis-27b-bf16.json"
@@ -281,11 +305,10 @@ def main():
             gen = model.generate(
                 **inputs,
                 max_new_tokens=MAX_NEW_TOKENS,
-                do_sample=False,
-                temperature=None,
-                top_p=None,
-                top_k=None,
                 repetition_penalty=REPETITION_PENALTY,
+                **({"do_sample": False, "temperature": None, "top_p": None, "top_k": None}
+                   if GREEDY else
+                   {"do_sample": True, "temperature": TEMPERATURE}),
             )
         new_tokens = gen[0][inputs["input_ids"].shape[-1]:]
         summary = processor.decode(new_tokens, skip_special_tokens=True).strip()
