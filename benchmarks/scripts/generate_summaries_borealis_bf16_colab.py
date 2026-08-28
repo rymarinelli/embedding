@@ -16,8 +16,15 @@ Colab disconnect costs one article, not the whole job.
 REQUIRED COLAB RUNTIME
 ----------------------
     Runtime > Change runtime type > A100 GPU  +  High-RAM
+On Colab Pro+, also turn on background execution so the run survives a closed
+browser — this takes hours, and an interrupted runtime loses the GPU.
+
 Anything less (T4 16 GB, L4 22.5 GB, or standard-RAM) will not complete: the
-preflight check below will tell you so before the download starts.
+preflight check below says so before the 51 GiB download starts, not after.
+
+The GPU/CPU split is sized from the card actually assigned, so if Colab hands
+out an 80 GB A100 the model becomes fully GPU-resident and the run drops from
+hours to minutes without any edit here.
 
 ISOLATING THE VARIABLE
 ----------------------
@@ -72,11 +79,30 @@ OUT_NAME = "borealis-27b-bf16.json"
 DRIVE_DIR = "/content/drive/MyDrive/borealis_bench"
 OUT_PATH = os.path.join(DRIVE_DIR, OUT_NAME) if os.path.isdir("/content/drive/MyDrive") else OUT_NAME
 
-# Leave headroom on the GPU for KV cache and activations; the remainder spills
-# to CPU RAM. Tune down if you hit OOM during generation rather than loading.
-GPU_BUDGET = "34GiB"
-CPU_BUDGET = "44GiB"
+WEIGHTS_GIB = 51.1          # bf16 total, from the safetensors index
+GPU_HEADROOM_GIB = 6        # KV cache + activations must not compete with weights
+CPU_HEADROOM_GIB = 8        # leave room for the OS, dataset and Python itself
 OFFLOAD_DIR = "/content/offload"
+
+
+def memory_budgets():
+    """Size the GPU/CPU split from the hardware actually assigned.
+
+    Colab hands out different cards (T4 16 GB, L4 22.5 GB, A100 40 GB, rarely
+    A100 80 GB). Hardcoding a 40 GB split would leave an 80 GB card half idle —
+    and on an 80 GB card the whole model is GPU-resident, which is roughly an
+    order of magnitude faster than offloading.
+    """
+    vram = torch.cuda.get_device_properties(0).total_memory / 1024**3
+    try:
+        import psutil
+        ram = psutil.virtual_memory().total / 1024**3
+    except Exception:
+        ram = 50.0
+    gpu_budget = max(1.0, vram - GPU_HEADROOM_GIB)
+    fits_on_gpu = gpu_budget >= WEIGHTS_GIB
+    cpu_budget = max(1.0, ram - CPU_HEADROOM_GIB)
+    return gpu_budget, cpu_budget, fits_on_gpu, vram, ram
 
 
 def preflight():
@@ -88,29 +114,34 @@ def preflight():
             "On CPU alone this would take days."
         )
     name = torch.cuda.get_device_name(0)
-    vram = torch.cuda.get_device_properties(0).total_memory / 1024**3
-    try:
-        import psutil
-        ram = psutil.virtual_memory().total / 1024**3
-    except Exception:
-        ram = float("nan")
-    print(f"GPU:  {name}  ({vram:.1f} GiB)")
-    print(f"RAM:  {ram:.1f} GiB")
-    print(f"Need: 51.1 GiB of bf16 weights, split across GPU + RAM")
+    gpu_budget, cpu_budget, fits_on_gpu, vram, ram = memory_budgets()
+
+    print(f"GPU:    {name}  ({vram:.1f} GiB, {gpu_budget:.1f} GiB usable for weights)")
+    print(f"RAM:    {ram:.1f} GiB  ({cpu_budget:.1f} GiB usable)")
+    print(f"Weights: {WEIGHTS_GIB} GiB bf16 — nothing quantized")
+
+    if fits_on_gpu:
+        print("\nEntire model fits on the GPU. No offload — expect fast generation\n"
+              "(tens of tokens/sec) and roughly 10-20 minutes for all 33 articles.")
+    else:
+        spill = WEIGHTS_GIB - gpu_budget
+        print(f"\n{gpu_budget:.1f} GiB on GPU, ~{spill:.1f} GiB offloaded to CPU RAM.")
+        print("Offloaded layers are streamed per token, so expect ~1-3 tokens/sec\n"
+              "and roughly 1.5-4 hours for all 33 articles.")
+        if spill > cpu_budget:
+            raise SystemExit(
+                f"\nThe ~{spill:.1f} GiB spill does not fit in {cpu_budget:.1f} GiB of RAM.\n"
+                "Switch to a High-RAM runtime (Runtime > Change runtime type)."
+            )
+        print("\nOn Colab Pro+, enable background execution so the run survives a\n"
+              "closed browser — a job this long will otherwise be interrupted.")
     print("=" * 70)
 
-    if vram + (0 if ram != ram else ram) < 60:
-        print(
-            "\nWARNING: GPU + RAM looks too small for 51.1 GiB of weights plus\n"
-            "activations. If this is a T4/L4 or a standard-RAM runtime, stop now\n"
-            "and switch to A100 + High-RAM — otherwise the load will OOM or the\n"
-            "run will fall back to disk offload and take many hours.\n"
-        )
     if vram < 30:
         raise SystemExit(
-            f"{name} has only {vram:.1f} GiB. Full bf16 needs an A100 (40 GB).\n"
-            "Colab has no 80 GB option, so there is no configuration where these\n"
-            "weights fit on the GPU alone."
+            f"\n{name} has only {vram:.1f} GiB. Even with CPU offload this card will\n"
+            "spill ~{:.0f} GiB to RAM and thrash. Switch to an A100 runtime.".format(
+                WEIGHTS_GIB - gpu_budget)
         )
 
 
@@ -127,12 +158,13 @@ def load_norsumm_test():
 def load_model():
     print(f"Loading {MODEL_ID} at bf16 (no quantization) — this downloads ~51 GiB.")
     os.makedirs(OFFLOAD_DIR, exist_ok=True)
+    gpu_budget, cpu_budget, _, _, _ = memory_budgets()
     processor = AutoProcessor.from_pretrained(MODEL_ID)
     model = Gemma3ForConditionalGeneration.from_pretrained(
         MODEL_ID,
         dtype=torch.bfloat16,          # full precision — nothing is quantized
         device_map="auto",
-        max_memory={0: GPU_BUDGET, "cpu": CPU_BUDGET},
+        max_memory={0: f"{gpu_budget:.0f}GiB", "cpu": f"{cpu_budget:.0f}GiB"},
         offload_folder=OFFLOAD_DIR,
         low_cpu_mem_usage=True,
     )
