@@ -81,7 +81,7 @@ OUT_PATH = os.path.join(DRIVE_DIR, OUT_NAME) if os.path.isdir("/content/drive/My
 
 WEIGHTS_GIB = 51.1          # bf16 total, from the safetensors index
 GPU_HEADROOM_GIB = 6        # KV cache + activations must not compete with weights
-CPU_HEADROOM_GIB = 8        # leave room for the OS, dataset and Python itself
+DISK_NEEDED_GIB = 56.0      # the download itself, plus a little slack
 OFFLOAD_DIR = "/content/offload"
 
 
@@ -92,6 +92,12 @@ def memory_budgets():
     A100 80 GB). Hardcoding a 40 GB split would leave an 80 GB card half idle —
     and on an 80 GB card the whole model is GPU-resident, which is roughly an
     order of magnitude faster than offloading.
+
+    The CPU budget is deliberately well under total RAM. accelerate fills the
+    budget it is given, and the loading process, torch, CUDA context and the
+    dataset all need room on top. A budget near total RAM gets the kernel
+    OOM-killed mid-load, which Colab surfaces only as a WebSocket CloseEvent
+    in the browser with no traceback.
     """
     vram = torch.cuda.get_device_properties(0).total_memory / 1024**3
     try:
@@ -101,8 +107,23 @@ def memory_budgets():
         ram = 50.0
     gpu_budget = max(1.0, vram - GPU_HEADROOM_GIB)
     fits_on_gpu = gpu_budget >= WEIGHTS_GIB
-    cpu_budget = max(1.0, ram - CPU_HEADROOM_GIB)
+    cpu_budget = max(1.0, min(ram * 0.70, ram - 14.0))
     return gpu_budget, cpu_budget, fits_on_gpu, vram, ram
+
+
+def check_disk():
+    """The 51 GiB download needs somewhere to land before anything else matters."""
+    import shutil
+    free = shutil.disk_usage("/").free / 1024**3
+    print(f"Disk:   {free:.1f} GiB free (need ~{DISK_NEEDED_GIB:.0f} GiB for the download)")
+    if free < DISK_NEEDED_GIB:
+        raise SystemExit(
+            f"\nOnly {free:.1f} GiB free. The bf16 weights are {WEIGHTS_GIB} GiB and will\n"
+            "not fit. Free space, or use a runtime with a larger disk. Clearing a\n"
+            "previous partial download often recovers enough:\n"
+            "    !rm -rf /root/.cache/huggingface/hub/models--NbAiLab--borealis-27b"
+        )
+    return free
 
 
 def preflight():
@@ -117,7 +138,8 @@ def preflight():
     gpu_budget, cpu_budget, fits_on_gpu, vram, ram = memory_budgets()
 
     print(f"GPU:    {name}  ({vram:.1f} GiB, {gpu_budget:.1f} GiB usable for weights)")
-    print(f"RAM:    {ram:.1f} GiB  ({cpu_budget:.1f} GiB usable)")
+    print(f"RAM:    {ram:.1f} GiB  ({cpu_budget:.1f} GiB budgeted, rest reserved for the process)")
+    check_disk()
     print(f"Weights: {WEIGHTS_GIB} GiB bf16 — nothing quantized")
 
     if fits_on_gpu:
@@ -171,13 +193,21 @@ def load_model():
     model.eval()
 
     # Report the split so it is obvious how much ended up off-GPU (and therefore
-    # how slow to expect this to be).
+    # how slow to expect this to be), plus what RAM survived the load.
     devs = {}
     for _, dev in getattr(model, "hf_device_map", {}).items():
         devs[str(dev)] = devs.get(str(dev), 0) + 1
     print(f"Layer placement: {devs}")
-    if any(d not in ("0", "cuda:0") for d in devs):
-        print("Some layers are off-GPU — generation will be slow. This is expected.")
+    try:
+        import psutil
+        print(f"RAM after load: {psutil.virtual_memory().available/1024**3:.1f} GiB still free")
+    except Exception:
+        pass
+    if any("disk" in d for d in devs):
+        print("WARNING: layers landed on DISK. Generation will be extremely slow —\n"
+              "use a High-RAM runtime so the spill fits in memory instead.")
+    elif any(d not in ("0", "cuda:0") for d in devs):
+        print("Some layers are on CPU — generation will be slow. This is expected.")
     return processor, model
 
 
