@@ -1,0 +1,8 @@
+dimension,delta,ci_low,ci_high,non_tied,rank_biserial,ci_excludes_0
+Fluency,0.095,0.05,0.145,24,0.75,True
+Clarity,0.39,0.31,0.47,80,0.9,True
+Conciseness,-0.045,-0.08,-0.01,13,-0.6923076923076923,True
+Relevance,0.08,0.035,0.13,24,0.6666666666666666,True
+Consistency,0.135,0.075,0.195,26,0.9230769230769231,True
+Answerability,0.155,0.095,0.22,33,0.8787878787878788,True
+Answer Consistency,0.105,0.05,0.165,22,0.8181818181818182,True

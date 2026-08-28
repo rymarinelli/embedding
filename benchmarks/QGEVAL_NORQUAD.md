@@ -165,13 +165,73 @@ Correlations here are flatter than the paper's (which reached ~0.4). Expected:
 they compared 15 systems spanning a wide quality range, while this is a single
 system, so there is far less quality spread for a metric to track.
 
+## Further validation (`scripts/qgeval_deep_analysis.py`)
+
+Five checks beyond the headline numbers, all from the existing artifacts.
+Outputs land in `results/qgeval_analysis/`.
+
+**Blinding held.** Splitting Fable's own scores by which slot it was presented
+in tests whether presentation order leaked into the judging: **0 of 7
+dimensions** show a slot effect (Mann-Whitney, all p ≥ 0.10). Fable drew slot A
+103 times and B 97 times and scored the same either way.
+
+**Effect sizes.** All seven 95% bootstrap CIs (10 000 resamples) exclude zero,
+with rank-biserial 0.67–0.92. But every result rests on **13–80 non-tied pairs
+of 200** — the rest tie at 3/3. Real, and small outside Clarity.
+
+**Score distributions.** Clarity is the only dimension where either system
+leaves the ceiling: 40% of NorQuAD's questions score below 3, against 4% of
+Fable's. Score-1 ratings across all dimensions: Fable 3, NorQuAD 18 (of 1 400).
+
+**The dimensions are not redundant.** Inter-dimension correlations run
+−0.06–0.72 against the paper's 0.04–0.67, so the rubric transfers rather than
+collapsing into one axis. Answerability↔Answer Consistency is tightest (0.72);
+**Conciseness correlates ≈0.00 with all six others** — it measures something
+genuinely separate, and it is the one dimension Fable loses.
+
+**The Clarity/Conciseness trade-off is measurable, not just anecdotal.**
+Correlating the extra words Fable uses against each score difference:
+
+| | r | p |
+|---|---|---|
+| Clarity | **+0.259** | 0.0002 |
+| Conciseness | **−0.441** | 6.2 × 10⁻¹¹ |
+
+Same variable, opposite signs. Fable averages 10.1 words per question against
+NorQuAD's 7.7 and is longer in 70% of pairs — but when it *loses* a Conciseness
+point it has added **+7.7 words**, versus **+2.2** when it ties. It is not
+verbose in general; it is penalised on the minority of questions where it
+front-loads context.
+
+## Reproducing the reported numbers
+
+`scripts/qgeval_validate_results.py` re-derives every figure reported here
+straight from `results/qgeval_judge_scores.json` — means, deltas, win/tie/loss
+counts, p-values, perfect-score rates, metric means, and each quoted example's
+scores — plus integrity checks that the gold answers still match the sample and
+that both presentation slots were used.
+
+It reads the raw judge output rather than the summary CSVs, so a bug in the
+reporting layer cannot validate itself. 39 checks, currently all passing.
+
+```
+python3 scripts/qgeval_validate_results.py   # 39 checks
+python3 scripts/qgeval_deep_analysis.py      # -> results/qgeval_analysis/*.csv
+```
+
 ## Caveats
 
+* **The judge and the generator are from the same family.** Claude Opus 5
+  judging Claude Fable 5 cannot rule out self-preference, and none of the
+  validation above tests for it — the blinding check only rules out *position*
+  bias. This is the single biggest open question here, and only a judge from a
+  different model family (Gemini, GPT, Qwen) settles it.
 * **Single LLM judge, not three humans.** The paper's own data shows
   GPT-4+G-EVAL reaching only r≈0.36 with human annotators. These are an
   automated proxy, not human ground truth. A second judge plus a
   Krippendorff's α agreement analysis (as the paper reports for its
-  annotators) is the honest next step before citing these numbers.
+  annotators) is the honest next step before citing these numbers — and it
+  doubles as the self-preference test above.
 * **Ceiling effects.** Most pairs tie at 3/3 (e.g. 176/200 on Fluency), so the
   Wilcoxon p-values rest on a small number of discordant pairs. The results are
   statistically significant but the effect sizes are small outside Clarity.

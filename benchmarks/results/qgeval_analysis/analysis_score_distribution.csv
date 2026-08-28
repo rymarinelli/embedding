@@ -1,0 +1,15 @@
+dimension,system,pct_1,pct_2,pct_3
+Fluency,Fable,0.0,2.0,98.0
+Fluency,NorQuAD,0.5,10.5,89.0
+Clarity,Fable,0.0,4.0,96.0
+Clarity,NorQuAD,3.0,37.0,60.0
+Conciseness,Fable,0.0,5.5,94.5
+Conciseness,NorQuAD,0.0,1.0,99.0
+Relevance,Fable,0.0,26.0,74.0
+Relevance,NorQuAD,0.0,34.0,66.0
+Consistency,Fable,0.5,0.0,99.5
+Consistency,NorQuAD,2.0,10.5,87.5
+Answerability,Fable,0.5,2.0,97.5
+Answerability,NorQuAD,1.5,15.5,83.0
+Answer Consistency,Fable,0.5,1.5,98.0
+Answer Consistency,NorQuAD,2.0,9.0,89.0
