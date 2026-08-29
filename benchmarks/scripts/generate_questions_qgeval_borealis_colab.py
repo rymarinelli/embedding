@@ -16,6 +16,11 @@ local repo checkout). Copy it into results/qgeval_questions/ in the repo —
 that's the directory score_qgeval_dimensions_multi.py globs, so no separate
 registration is needed once it's there.
 
+main() returns (model, processor) so a caller looping over several MODEL_IDs
+in one session (the notebook's multi-variant QGEval cell does this for both
+Borealis variants) can explicitly free each model before loading the next,
+rather than relying on Python to notice the old one is unreferenced.
+
 Usage (Colab, after loading the model via generate_summaries_borealis_bf16_colab):
     import generate_questions_qgeval_borealis_colab as qg
     qg.main(model=model, processor=processor)
@@ -144,6 +149,11 @@ def main(model=None, processor=None):
     print(f"\nDone. {n_ok}/{len(samples)} generated -> {out_path}")
     print("Copy it into results/qgeval_questions/ in the repo and run:")
     print("    python3 benchmarks/scripts/score_qgeval_dimensions_multi.py")
+    # Returned so a caller looping over multiple models (see the notebook's
+    # multi-variant QGEval cell) can explicitly `del` these and free GPU/CPU
+    # memory before loading the next model, rather than relying on the local
+    # variables here going out of scope on their own.
+    return model, processor
 
 
 if __name__ == "__main__":
