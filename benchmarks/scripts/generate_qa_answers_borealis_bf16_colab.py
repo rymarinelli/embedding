@@ -28,7 +28,10 @@ USAGE (Colab)
     qa.main(model=run.model, processor=run.processor)   # reuse the loaded model
     # or qa.main()                                       # load it itself
 
-Output: borealis-27b-bf16-full.json in the {question, gold_answer,
+Model follows generate_summaries_borealis_bf16_colab.MODEL_ID, so setting it
+once covers both benchmarks in a session.
+
+Output: <model-name>-bf16-full.json in the {question, gold_answer,
 predicted_answer} shape score_qa.py expects.
 """
 import json
@@ -43,21 +46,28 @@ import torch
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from qa_prompts import SYSTEM_PROMPT, USER_PROMPT_TEMPLATE  # noqa: E402
 
-MODEL_ID = "NbAiLab/borealis-27b"
-OUT_NAME = "borealis-27b-bf16-full.json"
+# Follows whatever the summarization module is set to, so both benchmarks in one
+# Colab session run the same model without setting it twice.
+import generate_summaries_borealis_bf16_colab as _summ  # noqa: E402
+MODEL_ID = _summ.MODEL_ID
 
 # Matched to generate_qa_answers_local_gguf.py.
 MAX_NEW_TOKENS = 64
 REPETITION_PENALTY = 1.0
 
-# Own subdirectory — the summarization run writes the same filename, since both
-# tables want the same model label.
-DRIVE_DIR = "/content/drive/MyDrive/borealis_bench/qa"
-if os.path.isdir("/content/drive/MyDrive"):
-    os.makedirs(DRIVE_DIR, exist_ok=True)
-    OUT_PATH = os.path.join(DRIVE_DIR, OUT_NAME)
-else:
-    OUT_PATH = OUT_NAME
+def derive_paths(model_id):
+    """Own subdirectory — the summarization run writes the same filename, since
+    both tables want the same model label."""
+    label = model_id.split("/")[-1] + "-bf16-full"
+    name = label + ".json"
+    if os.path.isdir("/content/drive/MyDrive"):
+        d = "/content/drive/MyDrive/borealis_bench/qa"
+        os.makedirs(d, exist_ok=True)
+        return label, name, os.path.join(d, name)
+    return label, name, name
+
+
+RUN_LABEL, OUT_NAME, OUT_PATH = None, None, None
 
 # The 300-question sample lives in the repo checkout, not on HF.
 SAMPLE_PATH = Path(__file__).resolve().parent.parent / "data" / "norquad_qa_sample.json"
@@ -75,16 +85,20 @@ def clean_answer(text):
 
 
 def main(model=None, processor=None):
+    # Pick up any MODEL_ID the caller set on the summarization module.
+    global MODEL_ID, RUN_LABEL, OUT_NAME, OUT_PATH
+    MODEL_ID = _summ.MODEL_ID
+    RUN_LABEL, OUT_NAME, OUT_PATH = derive_paths(MODEL_ID)
+    print(f"Model: {MODEL_ID}")
+
     if model is None or processor is None:
         # Reuse the loader (and its precision check) from the summarization script.
-        import generate_summaries_borealis_bf16_colab as summ
-        summ.preflight()
-        processor, model = summ.load_model()
+        _summ.preflight()
+        processor, model = _summ.load_model()
     else:
-        print("Reusing the already-loaded model — no second 51 GiB download.")
+        print("Reusing the already-loaded model — no second multi-GiB download.")
         # Still prove it is unquantized, in case a different model was passed in.
-        import generate_summaries_borealis_bf16_colab as summ
-        summ.verify_unquantized(model)
+        _summ.verify_unquantized(model)
 
     if not SAMPLE_PATH.exists():
         raise SystemExit(
