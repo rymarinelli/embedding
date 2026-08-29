@@ -32,7 +32,6 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from qgeval_dimensions import DIMENSIONS, rubric_block  # noqa: E402
-from generate_questions_qgeval_multi import MODELS  # noqa: E402
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
@@ -153,12 +152,17 @@ def load_system_questions():
     """{qid: {system_label: question_text}} across every model that produced
     output, plus the NorQuAD reference. A model missing a qid (failed
     generation) is simply absent from that passage's dict — every passage can
-    therefore have a different roster, which the per-passage schema handles."""
+    therefore have a different roster, which the per-passage schema handles.
+
+    Scans every *.json in QGEN_DIR rather than just the OpenRouter MODELS
+    roster, so Norwegian models generated locally (GGUF) or on Colab (Borealis
+    bf16) — which never appear in MODELS, since they don't go through
+    OpenRouter — are picked up too."""
     by_qid = {}
-    for label in MODELS:
-        path = QGEN_DIR / f"{label}.json"
-        if not path.exists():
-            continue
+    if not QGEN_DIR.exists():
+        return by_qid
+    for path in sorted(QGEN_DIR.glob("*.json")):
+        label = path.stem
         for rec in json.loads(path.read_text(encoding="utf-8")):
             if not rec.get("generated_question") or rec.get("error"):
                 continue
