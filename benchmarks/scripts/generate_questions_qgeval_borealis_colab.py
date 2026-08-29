@@ -10,8 +10,11 @@ that module covers all three benchmarks.
 Same prompt as generate_questions_qgeval_fable.py / _multi.py /
 _local_gguf.py, so scores are comparable across every generation path.
 
-Output: results/qgeval_questions/<model-name>.json — the directory
-score_qgeval_dimensions_multi.py globs, so no separate registration needed.
+Output: <model-name>.json, checkpointed to
+/content/drive/MyDrive/borealis_bench/qgeval/ if Drive is mounted (else the
+local repo checkout). Copy it into results/qgeval_questions/ in the repo —
+that's the directory score_qgeval_dimensions_multi.py globs, so no separate
+registration is needed once it's there.
 
 Usage (Colab, after loading the model via generate_summaries_borealis_bf16_colab):
     import generate_questions_qgeval_borealis_colab as qg
@@ -29,9 +32,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import generate_summaries_borealis_bf16_colab as _summ  # noqa: E402
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
-RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
-OUT_DIR = RESULTS_DIR / "qgeval_questions"
 SAMPLE_PATH = DATA_DIR / "qgeval_sample.json"
+
+# Checkpoint to Drive if mounted, matching the norsumm/qa scripts' pattern —
+# a disconnect during a 200-passage run should cost nothing, not the whole run.
+DRIVE_DIR = "/content/drive/MyDrive/borealis_bench/qgeval"
+LOCAL_DIR = Path(__file__).resolve().parent.parent / "results" / "qgeval_questions"
 
 # Verbatim from the other three qgeval generators — any drift breaks
 # comparability.
@@ -62,8 +68,12 @@ def clean_question(text):
 
 
 def out_path_for(model_id):
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    return OUT_DIR / f"{model_id.split('/')[-1]}.json"
+    name = f"{model_id.split('/')[-1]}.json"
+    if os.path.isdir("/content/drive/MyDrive"):
+        os.makedirs(DRIVE_DIR, exist_ok=True)
+        return Path(DRIVE_DIR) / name
+    LOCAL_DIR.mkdir(parents=True, exist_ok=True)
+    return LOCAL_DIR / name
 
 
 def main(model=None, processor=None):
