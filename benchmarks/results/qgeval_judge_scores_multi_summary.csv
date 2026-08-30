@@ -1,0 +1,5 @@
+system,Fluency,Clarity,Conciseness,Relevance,Consistency,Answerability,Answer Consistency,overall
+claude-fable-5,2.99,3.0,2.985,2.95,2.99,2.99,3.0,2.9864285714285717
+norquad-reference,2.885,2.825,2.995,2.915,2.855,2.86,2.86,2.885
+borealis-27b,2.985,2.715,2.99,2.93,2.845,2.795,2.555,2.8307142857142855
+borealis-27b-instruct-preview,2.965,2.755,3.0,2.93,2.8,2.75,2.475,2.8107142857142855
