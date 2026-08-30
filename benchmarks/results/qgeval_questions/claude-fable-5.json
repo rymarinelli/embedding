@@ -1,0 +1,1402 @@
+[
+  {
+    "qid": 21,
+    "doc_id": 440,
+    "answer": "hver fredag",
+    "reference_question": "Når kommer podcasten Trond Moi og den sultne naboen ut?",
+    "generated_question": "Hvor ofte kommer podkasten Trond Moi og den sultne naboen ut?"
+  },
+  {
+    "qid": 2393,
+    "doc_id": 298,
+    "answer": "nær 8,1 milliarder australske dollar",
+    "reference_question": "Hvor mye regner Australia Institute med at Norge vil tjene på olja og gassen i Australbukta?",
+    "generated_question": "Hvor mye anslår Australia Institute at den norske stat kommer til å tjene på Equinors olje- og gassproduksjon i Australbukta?"
+  },
+  {
+    "qid": 2215,
+    "doc_id": 225,
+    "answer": "Margrethe Vestager",
+    "reference_question": "Hvem jobber som konkurransekommissær i EU?",
+    "generated_question": "Hvem er EUs konkurransekommissær?"
+  },
+  {
+    "qid": 1715,
+    "doc_id": 183,
+    "answer": "en gassdrevet bil",
+    "reference_question": "Hva slags bil kjørte av veien i Hurum?",
+    "generated_question": "Hva slags bil kjørte av veien på Klokkarstua i Hurum?"
+  },
+  {
+    "qid": 475,
+    "doc_id": 551,
+    "answer": "mandag",
+    "reference_question": "Når kom den endelige beskjeden om at Cenk Sahin ikke skal spille for St. Pauli fremover?",
+    "generated_question": "Hvilken dag bekreftet St. Pauli at Sahin ikke skal trene eller spille kamper med laget i tiden som kommer?"
+  },
+  {
+    "qid": 1825,
+    "doc_id": 213,
+    "answer": "77 prosent",
+    "reference_question": "Hvor mye har Idex-aksjen falt de siste 3 åra?",
+    "generated_question": "Hvor mye har Idex-aksjen falt i verdi de siste tre årene?"
+  },
+  {
+    "qid": 1522,
+    "doc_id": 664,
+    "answer": "Norges vassdrag- og energidirektorat",
+    "reference_question": "Hva er NVE?",
+    "generated_question": "Hva står forkortelsen NVE for?"
+  },
+  {
+    "qid": 553,
+    "doc_id": 571,
+    "answer": "i Torpet Fiskeoppdrettsanlegg på Røros",
+    "reference_question": "Hvor er Erik Strickert daglig leder?",
+    "generated_question": "Hvor ble rakfisken som mistenkes å ha forårsaket botulisme produsert?"
+  },
+  {
+    "qid": 132,
+    "doc_id": 467,
+    "answer": "«Zuke!»",
+    "reference_question": "Hvilket kallenavn har Mats Zuccarello i NHL?",
+    "generated_question": "Hva roper hjemmepublikummet taktfast når Mats Zuccarello er på isen?"
+  },
+  {
+    "qid": 347,
+    "doc_id": 520,
+    "answer": "Theresa May",
+    "reference_question": "Hvem er statsminister i Storbritannia?",
+    "generated_question": "Hvem var statsminister i Storbritannia da opposisjonen krevde en garanti mot å forlate EU uten avtale?"
+  },
+  {
+    "qid": 1590,
+    "doc_id": 139,
+    "answer": "2010",
+    "reference_question": "I hvilket år begynte Sissel Berdal Haga å jobbe for Olav Thon Gruppen?",
+    "generated_question": "Hvilket år gikk Sissel Berdal Haga av med pensjon som dommer i Oslo byrett?"
+  },
+  {
+    "qid": 1127,
+    "doc_id": 500,
+    "answer": "38",
+    "reference_question": "Hvor gammel er DJ Nils Noa?",
+    "generated_question": "Hvor gammel er Nils Olav Lausund?"
+  },
+  {
+    "qid": 2354,
+    "doc_id": 289,
+    "answer": "regionrådene i Øst- og Vest-Finnmark og fylkeslegen i de to nordligste fylkene i Alta",
+    "reference_question": "Hvem skal Høie treffe tirsdag kveld?",
+    "generated_question": "Hvem skal helseminister Bent Høie møte tirsdag kveld?"
+  },
+  {
+    "qid": 2374,
+    "doc_id": 290,
+    "answer": "sykdom",
+    "reference_question": "Hva gjorde at Mol og Sørum vant med walkover mot Rossi og Carambula?",
+    "generated_question": "Hvorfor møtte ikke den italienske duoen Enrico Rossi/Adrian Carambula opp til kamp mot Mol og Sørum?"
+  },
+  {
+    "qid": 1934,
+    "doc_id": 255,
+    "answer": "programleder",
+    "reference_question": "Hva jobber Daniel som?",
+    "generated_question": "Hvilken rolle har Daniel Røed-Johansen i Sprekpodden?"
+  },
+  {
+    "qid": 67,
+    "doc_id": 456,
+    "answer": "FriFagbevegelse",
+    "reference_question": "Hvem har intervjuet Geir Pollestad fra Sp?",
+    "generated_question": "Hvilket nettsted jobber Helge Rønning Birkelund for?"
+  },
+  {
+    "qid": 198,
+    "doc_id": 481,
+    "answer": "21 minutter inn i 2. omgang",
+    "reference_question": "Når kom det sjette målet til England?",
+    "generated_question": "Når kom selvmålet til Aleksandar Sofranac som gjorde at England ledet 6-0?"
+  },
+  {
+    "qid": 412,
+    "doc_id": 541,
+    "answer": "tilbake til hotellet",
+    "reference_question": "Hvor dro Bjørn Magnussen etter å ha snakket med bestefar og far på tribunen?",
+    "generated_question": "Hvor dro Bjørn Magnussen etter å ha snakket med faren og bestefaren på tribunen?"
+  },
+  {
+    "qid": 1511,
+    "doc_id": 659,
+    "answer": "Martin Ødegaard",
+    "reference_question": "Hvem ble månedens spiller i Spania i september?",
+    "generated_question": "Hvilken norsk spiller ble kåret til månedens spiller i Spania for september?"
+  },
+  {
+    "qid": 902,
+    "doc_id": 673,
+    "answer": "herr og fru Hvermansen",
+    "reference_question": "Hvem kunne fint levd med skaden som Henrik Ingebritsen ble operert for?",
+    "generated_question": "Ifølge legen Ove Talsnes, hvem kunne fint ha levd med skaden Henrik Ingebrigtsen hadde i tåa?"
+  },
+  {
+    "qid": 778,
+    "doc_id": 636,
+    "answer": "nivået under Grand Slam-turneringene",
+    "reference_question": "På hvilket nivå er ATP 1000-turneringer?",
+    "generated_question": "Hvilket nivå er en ATP 1000-turnering på?"
+  },
+  {
+    "qid": 1963,
+    "doc_id": 273,
+    "answer": "Tyrkia",
+    "reference_question": "I hvilket land ligger Istanbul?",
+    "generated_question": "I hvilket land ligger konsulatet der Jamal Khashoggi ble drept?"
+  },
+  {
+    "qid": 852,
+    "doc_id": 657,
+    "answer": "for å la tausheten tale",
+    "reference_question": "Hva er Jon Fosse berømt for?",
+    "generated_question": "Hva var Jon Fosse kjent for?"
+  },
+  {
+    "qid": 2213,
+    "doc_id": 178,
+    "answer": "senator",
+    "reference_question": "Hva jobber Bernie Sanders som for tida?",
+    "generated_question": "Hvilken politisk stilling har Kamala Harris?"
+  },
+  {
+    "qid": 410,
+    "doc_id": 536,
+    "answer": "statsmeteorolog",
+    "reference_question": "Hvem er Marianne Andersen?",
+    "generated_question": "Hvilken yrkestittel har Marianne Skolem Andersen?"
+  },
+  {
+    "qid": 1432,
+    "doc_id": 627,
+    "answer": "klokken 16.11",
+    "reference_question": "Når meldte politiet først om trussel-situasjonen?",
+    "generated_question": "Når meldte politiet om hendelsen i Haakon Tveters vei?"
+  },
+  {
+    "qid": 1619,
+    "doc_id": 146,
+    "answer": "satse",
+    "reference_question": "Hva må man gjøre for å vinne ifølge Thingnes Bø?",
+    "generated_question": "Hva må man gjøre for å vinne, ifølge Johannes Thingnes Bø?"
+  },
+  {
+    "qid": 927,
+    "doc_id": 682,
+    "answer": "8,1 prosent",
+    "reference_question": "Hvor mye mer koster kjøttdeig i år enn i fjor?",
+    "generated_question": "Hvor mye har prisen på kjedenes billigste kjøttdeig steget i prosent siden slutten av fjoråret?"
+  },
+  {
+    "qid": 1528,
+    "doc_id": 666,
+    "answer": "alt annet enn ideologi",
+    "reference_question": "Hva har blitt diskutert i denne valgkampen?",
+    "generated_question": "Hva har blitt diskutert i denne valgkampen, ifølge skribenten?"
+  },
+  {
+    "qid": 1654,
+    "doc_id": 165,
+    "answer": "Ragne Hagen Svastuen og Synne Sofie Christiansen",
+    "reference_question": "Hvem scoret for Røa i kampen mot Sandviken?",
+    "generated_question": "Hvem scoret målene da Røa slo Sandviken 2-0?"
+  },
+  {
+    "qid": 1171,
+    "doc_id": 514,
+    "answer": "ved Queen Mary-universitetet i London",
+    "reference_question": "Hvor er Tim Bale professor?",
+    "generated_question": "Hvor er Tim Bale professor?"
+  },
+  {
+    "qid": 1818,
+    "doc_id": 210,
+    "answer": "klubbambassadør",
+    "reference_question": "Hva er Bryan i dag?",
+    "generated_question": "Hvilken rolle har Bryan Robson i Manchester United?"
+  },
+  {
+    "qid": 80,
+    "doc_id": 458,
+    "answer": "Romania",
+    "reference_question": "Hvilket lag spiller Norge mot på fredag på Ullevål Stadion?",
+    "generated_question": "Hvilket lag skal Norge møte på Ullevaal fredag?"
+  },
+  {
+    "qid": 1195,
+    "doc_id": 527,
+    "answer": "KrF",
+    "reference_question": "Hvilket parti sin politikk er Ole Tom Guse mest enig med?",
+    "generated_question": "Hvilket parti melder flere medlemmer seg ut av i protest etter at partiet gikk i regjering med Frp?"
+  },
+  {
+    "qid": 1215,
+    "doc_id": 533,
+    "answer": "to bom på stående",
+    "reference_question": "Hvorfor vant ikke Martin Fourcade?",
+    "generated_question": "Hva ødela seiersmulighetene for Martin Fourcade i sprinten?"
+  },
+  {
+    "qid": 2325,
+    "doc_id": 322,
+    "answer": "perioder med sol",
+    "reference_question": "Hva kan Østlandet vente seg neste uke?",
+    "generated_question": "Hva kan Østlandet vente seg neste uke, til tross for at det er ventet lavere temperaturer?"
+  },
+  {
+    "qid": 796,
+    "doc_id": 642,
+    "answer": "for å bli fisker",
+    "reference_question": "Hvorfor flytta Kjenes til Austevoll?",
+    "generated_question": "Hvorfor flyttet Hans Jørgen Kjenes alene til Austevoll da han var 16 år gammel?"
+  },
+  {
+    "qid": 1780,
+    "doc_id": 196,
+    "answer": "Belfast",
+    "reference_question": "Hvilken by vokste Myra McKee opp i?",
+    "generated_question": "Hva heter hovedstaden i Nord-Irland?"
+  },
+  {
+    "qid": 232,
+    "doc_id": 489,
+    "answer": "kinesere og iranere, tyrkere og palestinere",
+    "reference_question": "Hvilke folk lever i ufrie regimer i dag?",
+    "generated_question": "Hvilke folkegrupper håper man kan finne håp i historien om folkets riving av Berlinmuren?"
+  },
+  {
+    "qid": 871,
+    "doc_id": 662,
+    "answer": "Henrik Kristoffersen",
+    "reference_question": "Hvem ledet i Sveits etter første omgang?",
+    "generated_question": "Hvilken norsk alpinist ble nummer to bak Marcel Hirscher i storslalåmrennet i Adelboden?"
+  },
+  {
+    "qid": 1918,
+    "doc_id": 252,
+    "answer": "lilla",
+    "reference_question": "Hvilken farge har områdene med sterkest vind på kartet?",
+    "generated_question": "Hvilken farge på kartet viser områdene med sterkest vind?"
+  },
+  {
+    "qid": 1693,
+    "doc_id": 174,
+    "answer": "lovende",
+    "reference_question": "Hvordan ser valgutsiktene ut for den rødgrønne sida?",
+    "generated_question": "Hvordan ser valgutsiktene ut for den rødgrønne siden?"
+  },
+  {
+    "qid": 1960,
+    "doc_id": 267,
+    "answer": "kraftig",
+    "reference_question": "Hvordan må rekrutteringa til helsesektoren øke de neste åra for å løse samfunnets utfordringer i bransjen?",
+    "generated_question": "Hvor mye må rekrutteringen til helsebransjen øke i årene som kommer for å løse samfunnets utfordringer i helsesektoren?"
+  },
+  {
+    "qid": 589,
+    "doc_id": 581,
+    "answer": "Johanne Zhangjia Ihle-Hansen",
+    "reference_question": "Hvem er Philip Manshaus stesøster?",
+    "generated_question": "Hva heter stesøsteren til Philip Manshaus som ble funnet drept?"
+  },
+  {
+    "qid": 1572,
+    "doc_id": 688,
+    "answer": "drama",
+    "reference_question": "Hva er det Isabelle Eriksen misliker sterkt?",
+    "generated_question": "Hva hater Isabelle Eriksen, ifølge Erik Sæter?"
+  },
+  {
+    "qid": 1221,
+    "doc_id": 535,
+    "answer": "som utfordringer",
+    "reference_question": "Hvordan beskriver politiet kriminelle miljøer i Oslo øst og sør og ungdomskriminelle nettverk?",
+    "generated_question": "Hvordan beskrives kriminelle miljøer i Oslo øst og sør og ungdomskriminelle nettverk?"
+  },
+  {
+    "qid": 560,
+    "doc_id": 573,
+    "answer": "Jeg er ikke dommer og jeg vet ikke hvor mange år i fengsel de fortjener. Men jeg vet at dette ikke er misbruk, dette er voldtekt",
+    "reference_question": "Hva skrev Barcelonas ordfører på Twitter?",
+    "generated_question": "Hva skrev Barcelonas ordfører Ada Colau på Twitter etter frifinnelsen?"
+  },
+  {
+    "qid": 1042,
+    "doc_id": 454,
+    "answer": "Bergans AS",
+    "reference_question": "Hvem jobber Yngvill Ofstad for?",
+    "generated_question": "Hvilket selskap startet med en panteordning for bruktklær for to år siden?"
+  },
+  {
+    "qid": 361,
+    "doc_id": 522,
+    "answer": "på Twitter",
+    "reference_question": "Hvor slenger Trump med leppa mot Porche?",
+    "generated_question": "Hvor kritiserte Elon Musk Porsches bruk av uttrykket «turbo»?"
+  },
+  {
+    "qid": 655,
+    "doc_id": 626,
+    "answer": "en mørk psykologisk thriller",
+    "reference_question": "Hvilken type serie er Homecoming?",
+    "generated_question": "Hva slags serie er «Homecoming»?"
+  },
+  {
+    "qid": 2173,
+    "doc_id": 201,
+    "answer": "i ulike perioder på våren og sommeren",
+    "reference_question": "Når frigjør planter pollen?",
+    "generated_question": "Når frigjør de ulike plantene sitt pollen?"
+  },
+  {
+    "qid": 1679,
+    "doc_id": 169,
+    "answer": "mellom klokken 21.30 og 21.45 søndag kveld",
+    "reference_question": "Når mener politiet at overfallet skjedde?",
+    "generated_question": "Når skjedde overfallet på kvinnen med barnevogn?"
+  },
+  {
+    "qid": 765,
+    "doc_id": 630,
+    "answer": "Hacienda Helthcare",
+    "reference_question": "Hvilket selskap driver pleiehjemmet som kvinenn var innlagt på?",
+    "generated_question": "Hva heter selskapet som driver pleiehjemmet der kvinnen i vegetativ tilstand fødte et barn?"
+  },
+  {
+    "qid": 374,
+    "doc_id": 532,
+    "answer": "for voksne pasienter som har moderat til kraftig pollenallergisk rhinitt eller konjunktivitt",
+    "reference_question": "Hvem er den nye pillen fra ALK godkjent for?",
+    "generated_question": "Hvem er vaksinepillen Itulazax godkjent for?"
+  },
+  {
+    "qid": 1289,
+    "doc_id": 566,
+    "answer": "ikke helt etter planen",
+    "reference_question": "Hvordan syntes Aleksander Aamodt kilde selv at VM gikk?",
+    "generated_question": "Hvordan sa Kilde at VM hadde gått?"
+  },
+  {
+    "qid": 1844,
+    "doc_id": 218,
+    "answer": "Terje Skauen",
+    "reference_question": "Hvem sitter som pressekontakt i ExxonMobil?",
+    "generated_question": "Hva heter pressekontakten i ExxonMobil som uttalte seg om årsaken til at selskapet besluttet å selge sine andeler på norsk sokkel?"
+  },
+  {
+    "qid": 1268,
+    "doc_id": 559,
+    "answer": "konsernsjef",
+    "reference_question": "Hvilken stillingstittel har Bjørn Kjos?",
+    "generated_question": "Hvilken stilling har Bjørn Kjos i Norwegian?"
+  },
+  {
+    "qid": 702,
+    "doc_id": 611,
+    "answer": "om få uker",
+    "reference_question": "Når kommer VM i Seefeld?",
+    "generated_question": "Når er VM?"
+  },
+  {
+    "qid": 1401,
+    "doc_id": 610,
+    "answer": "Jon Georg Dale",
+    "reference_question": "Hvem er nå samferdselsminister?",
+    "generated_question": "Hvem var samferdselsminister da toppene fra Jernbanedirektoratet, Bane Nor og Vy måtte møte for å redegjøre for sommerens togstans?"
+  },
+  {
+    "qid": 1176,
+    "doc_id": 516,
+    "answer": "på onsdag",
+    "reference_question": "Når fikk de ansatte i JPMorgan en tekstmelding fra ledelsen?",
+    "generated_question": "Når mottok de ansatte hos JPMorgan i Hongkong tekstmeldingen om å søke tilflukt?"
+  },
+  {
+    "qid": 1725,
+    "doc_id": 185,
+    "answer": "Barcelona",
+    "reference_question": "Hvilken spansk klubb skal Frenkie de Jong gå over til?",
+    "generated_question": "Hvilken klubb har Frenkie de Jong signert for?"
+  },
+  {
+    "qid": 1145,
+    "doc_id": 507,
+    "answer": "22. februar i fjor",
+    "reference_question": "Når gikk Veireno konkurs?",
+    "generated_question": "Når slo Enger selskapet konkurs?"
+  },
+  {
+    "qid": 1234,
+    "doc_id": 543,
+    "answer": "i Trøndelag",
+    "reference_question": "Hvor holdt Trond Giske årets 1. mai-tale?",
+    "generated_question": "Hvor holdt Giske sin 1. mai-tale?"
+  },
+  {
+    "qid": 988,
+    "doc_id": 438,
+    "answer": "for å lade opp til VM",
+    "reference_question": "Hvorfor hopper Fourcade over verdenscuprennene i Nord-Amerika?",
+    "generated_question": "Hvorfor dropper Martin Fourcade verdenscuprennene i Nord-Amerika?"
+  },
+  {
+    "qid": 1895,
+    "doc_id": 234,
+    "answer": "William Collum",
+    "reference_question": "Hvem dømte kampen mellom Spania og Sverige?",
+    "generated_question": "Hvem dømte kampen mellom Spania og Sverige?"
+  },
+  {
+    "qid": 2147,
+    "doc_id": 194,
+    "answer": "stor utenlandsgjeld og økonomisk stagnasjon",
+    "reference_question": "Hva byrder Italia?",
+    "generated_question": "Hva er Italia tynget av?"
+  },
+  {
+    "qid": 1851,
+    "doc_id": 221,
+    "answer": "James Clapper",
+    "reference_question": "Hvem var etterretningsdirektør i USA før Dan Coats fikk stillingen?",
+    "generated_question": "Hvem hadde stillingen som USAs nasjonale etterretningsdirektør før Dan Coats tok over i mars 2017?"
+  },
+  {
+    "qid": 811,
+    "doc_id": 646,
+    "answer": "John Christian Elden",
+    "reference_question": "Hvem representerer Laila Bertheussen?",
+    "generated_question": "Hvem er Laila Anita Bertheussens forsvarer?"
+  },
+  {
+    "qid": 2154,
+    "doc_id": 171,
+    "answer": "i 2013",
+    "reference_question": "Når avsluttet Gary Neville sin fotballkarriere?",
+    "generated_question": "Når la Phil Neville opp som fotballspiller?"
+  },
+  {
+    "qid": 1161,
+    "doc_id": 512,
+    "answer": "politiet",
+    "reference_question": "Hvem har brukt tåregass og batonger mot demonstranter i Hong Kong?",
+    "generated_question": "Hvem kastet en demonstrant et egg mot under en antiregjeringens-protest i slutten av august?"
+  },
+  {
+    "qid": 910,
+    "doc_id": 675,
+    "answer": "Santiago Abascal",
+    "reference_question": "Hvem er leder for Vox?",
+    "generated_question": "Hvem er partileder i det spanske ytre høyre-partiet Vox?"
+  },
+  {
+    "qid": 35,
+    "doc_id": 446,
+    "answer": "gratis skolemat i grunnskolen og gratis SFO for førsteklassingene",
+    "reference_question": "Hvilket to forslag lanserte Støre på premieredagen?",
+    "generated_question": "Hvilke forslag fra Støre likte forfatteren av artikkelen godt?"
+  },
+  {
+    "qid": 603,
+    "doc_id": 584,
+    "answer": "et nyvalg",
+    "reference_question": "Hva mener Corbyn er den beste muligheten for Storbritannia å forlate EU uten en sluttavtale?",
+    "generated_question": "Hva mener Corbyn er den beste muligheten for å hindre at britene forlater EU uten en sluttavtale?"
+  },
+  {
+    "qid": 580,
+    "doc_id": 579,
+    "answer": "på grunn av svært grunt farvann",
+    "reference_question": "Hvorfor ble det brukt små båter under søket?",
+    "generated_question": "Hvorfor var båtene som bisto i søket av det mindre slaget?"
+  },
+  {
+    "qid": 760,
+    "doc_id": 628,
+    "answer": "13 til 17 år",
+    "reference_question": "Hvilken aldersgruppe tilhørte ofrene til R. Kelly?",
+    "generated_question": "Hvor gamle var de fire ofrene R. Kelly er tiltalt for seksuelle overgrep mot?"
+  },
+  {
+    "qid": 2091,
+    "doc_id": 147,
+    "answer": "for å frigjøre midler til byggingen av grensemuren mot Mexico",
+    "reference_question": "Hvorfor vurderer USA å droppe finansieringen av oppgradering på militærflyplassen på Rygge?",
+    "generated_question": "Hvorfor vurderer amerikanerne å trekke finansieringen av oppgraderingen av den militære flyplassen på Rygge?"
+  },
+  {
+    "qid": 1813,
+    "doc_id": 209,
+    "answer": "9000 dollar",
+    "reference_question": "Hvor mye penger hadde den mannlige flyverten faktisk med seg?",
+    "generated_question": "Hvor mye penger hadde flyverten Carlos Alberto Munoz-Moyano faktisk med seg?"
+  },
+  {
+    "qid": 2339,
+    "doc_id": 286,
+    "answer": "at det er gjort endringer i detaljer i avtalen",
+    "reference_question": "Hva er grunnen til at signeringsfristen har blitt utsatt?",
+    "generated_question": "Hvorfor er fristen for å signere utøveravtalen med Norges Skiforbund utsatt til 10. juni?"
+  },
+  {
+    "qid": 437,
+    "doc_id": 544,
+    "answer": "41",
+    "reference_question": "Hvor mange nye millionærer ble trukket på lørdag?",
+    "generated_question": "Hvor mange nye Lotto-millionærer ble trukket i supertrekningen?"
+  },
+  {
+    "qid": 1117,
+    "doc_id": 496,
+    "answer": "i den danske landslagsleiren",
+    "reference_question": "Hvor møtte Eriksen journalistene?",
+    "generated_question": "Hvor møtte Christian Eriksen pressen da han antydet at han kan forlate Tottenham?"
+  },
+  {
+    "qid": 2159,
+    "doc_id": 207,
+    "answer": "157",
+    "reference_question": "Hvor mange mennesker mistet livet i ulykka?",
+    "generated_question": "Hvor mange mennesker omkom i flystyrten i Etiopia søndag?"
+  },
+  {
+    "qid": 422,
+    "doc_id": 540,
+    "answer": "Dries Mertens og Fernando Llorente",
+    "reference_question": "Hvem scorte målene til Napoli mot Liverpool?",
+    "generated_question": "Hvem scoret målene da Napoli slo Liverpool 2–0 i Champions League-åpningen?"
+  },
+  {
+    "qid": 1905,
+    "doc_id": 241,
+    "answer": "bortimot ti milliarder",
+    "reference_question": "Hva kan kostnaden for NTNUs nye campus ende på?",
+    "generated_question": "Hvor mye kan NTNUs campus totalt komme til å koste?"
+  },
+  {
+    "qid": 1610,
+    "doc_id": 143,
+    "answer": "Sør-Afrika",
+    "reference_question": "I hvilket land ligger Johannesburg?",
+    "generated_question": "I hvilket land er Johannesburg, byen der Ryan Giggs er på turné med mesterligatrofeet?"
+  },
+  {
+    "qid": 2064,
+    "doc_id": 320,
+    "answer": "med bekymring, sørgmodighet og sjokk",
+    "reference_question": "Hvordan ser innenriksministeren på sammenstøtene?",
+    "generated_question": "Hvordan sier innenriksminister Raya al-Hassan at hun ser på sammenstøtene?"
+  },
+  {
+    "qid": 750,
+    "doc_id": 625,
+    "answer": "de har lyttet til budskap fra vaksinemotstandere",
+    "reference_question": "Hvorfor har mange foreldre holdt sine syke barn hjemme lenge?",
+    "generated_question": "Hva har myndighetene på Samoa avdekket når de har undersøkt hvorfor foreldre holdt syke barn hjemme så lenge?"
+  },
+  {
+    "qid": 2392,
+    "doc_id": 259,
+    "answer": "ikke så ofte",
+    "reference_question": "Hvor ofte flyr kampfly over Vestlandet?",
+    "generated_question": "Hvor ofte flyr Luftforsvaret over deler av Vestlandet?"
+  },
+  {
+    "qid": 9,
+    "doc_id": 631,
+    "answer": "på Florida",
+    "reference_question": "Hvor ligger Meteorologisk institutts målestasjon i Bergen?",
+    "generated_question": "Hvor ligger Meteorologisk institutts målestasjon i Bergen?"
+  },
+  {
+    "qid": 2203,
+    "doc_id": 220,
+    "answer": "Chile",
+    "reference_question": "I hvilket land er Sebastián Piñera president?",
+    "generated_question": "I hvilket land utvider myndighetene portforbudet etter voldsomme opptøyer og demonstrasjoner?"
+  },
+  {
+    "qid": 191,
+    "doc_id": 480,
+    "answer": "kulturminister",
+    "reference_question": "Hvilken jobb har Amanda Lind nylig fått?",
+    "generated_question": "Hvilken ministerpost har Amanda Lind i Sverige?"
+  },
+  {
+    "qid": 421,
+    "doc_id": 539,
+    "answer": "136,5 meter",
+    "reference_question": "Hvor langt hoppet Andreas Stjernen i Lillehammer?",
+    "generated_question": "Hvor langt hoppet Andreas Stjernen i kvalifiseringen på Lillehammer?"
+  },
+  {
+    "qid": 1700,
+    "doc_id": 177,
+    "answer": "populisme",
+    "reference_question": "Hva kan man enkelt anklage Trygve Slagsvold Vedum for?",
+    "generated_question": "Hva er det lett å anklage Sp-lederen Trygve Slagsvold Vedum for?"
+  },
+  {
+    "qid": 1206,
+    "doc_id": 529,
+    "answer": "Bill de Blasio",
+    "reference_question": "Hvem er borgermester i NY?",
+    "generated_question": "Hvem sammenlignet Trump Londons borgermester Sadiq Khan med?"
+  },
+  {
+    "qid": 2023,
+    "doc_id": 302,
+    "answer": "gøy",
+    "reference_question": "Hvordan synes Warholm det er å vinne?",
+    "generated_question": "Hva sa Warholm at det alltid er å vinne?"
+  },
+  {
+    "qid": 711,
+    "doc_id": 616,
+    "answer": "Si ;D",
+    "reference_question": "Hva heter Aftenpostens debattsider for ungdom?",
+    "generated_question": "Hva heter Aftenpostens debattsider for ungdom mellom 13 og 21 år?"
+  },
+  {
+    "qid": 459,
+    "doc_id": 547,
+    "answer": "Tottenham og Manchester United",
+    "reference_question": "Hvilke lag skal City møte de neste to rundene i Premier League?",
+    "generated_question": "Hvilke lag skal Manchester City møte i de to kommende rundene?"
+  },
+  {
+    "qid": 1046,
+    "doc_id": 459,
+    "answer": "i mannens bolig i Oslo, på hoteller og på en festival der han jobbet",
+    "reference_question": "Hvor skal kulturtoppen ha utført voldtektene?",
+    "generated_question": "Hvor skal voldtektene ha funnet sted?"
+  },
+  {
+    "qid": 2032,
+    "doc_id": 307,
+    "answer": "kaldt",
+    "reference_question": "Hvordan skal vannet til vindusvasken være?",
+    "generated_question": "Hva slags vann bør man bruke sammen med mikrofiberklut når man vasker vinduer?"
+  },
+  {
+    "qid": 1921,
+    "doc_id": 251,
+    "answer": "En av Europas viktigste studentfestivaler",
+    "reference_question": "Hva regnes Isfit som?",
+    "generated_question": "Hva er Isfit i Trondheim regnet som?"
+  },
+  {
+    "qid": 2332,
+    "doc_id": 242,
+    "answer": "en stor feil i Barcelona-forsvaret",
+    "reference_question": "Hva brukte Rodrigo til sin fordel?",
+    "generated_question": "Hva utnyttet Rodrigo da han rundet keeper Cillessen etter kun fem minutters spill?"
+  },
+  {
+    "qid": 1032,
+    "doc_id": 453,
+    "answer": "hele 2,27 sekunder",
+    "reference_question": "Hvor langt bak vinneren var Sophie Caldwell?",
+    "generated_question": "Hvor langt foran Sophie Caldwell gikk Nilsson over målstreken?"
+  },
+  {
+    "qid": 1409,
+    "doc_id": 612,
+    "answer": "det lokale politiet",
+    "reference_question": "Hvem tar seg foreløpig av granskingen av hendelsen?",
+    "generated_question": "Hvem tar seg foreløpig av granskingen av knivangrepet i Villeurbanne?"
+  },
+  {
+    "qid": 100,
+    "doc_id": 462,
+    "answer": "Folkeaksjonen Nei til mer bompenger",
+    "reference_question": "Hva står FNB for?",
+    "generated_question": "Hva står forkortelsen FNB for?"
+  },
+  {
+    "qid": 1010,
+    "doc_id": 445,
+    "answer": "minst 20 millioner kroner",
+    "reference_question": "Hvor mye anslo Per Sandberg at totalkostnaden for Mulla Krekar var på i 2012?",
+    "generated_question": "Hvor mye anslo Per Sandberg i 2012 at mulla Krekar-saken totalt hadde kostet?"
+  },
+  {
+    "qid": 1937,
+    "doc_id": 260,
+    "answer": "ved Veterinærinstituttet",
+    "reference_question": "Hvor jobber Hannah?",
+    "generated_question": "Hvor jobber forskeren Hannah Joan Jørgensen?"
+  },
+  {
+    "qid": 1028,
+    "doc_id": 451,
+    "answer": "at de er sterke i alle land, at det fins handlingskraft og at det kan eskalere til ting som er mer voldsomme",
+    "reference_question": "Hva mener Ranstorp Den nordiske motstandsbevegelsen ønsker å vise med aksjonene sine=",
+    "generated_question": "Hva mener terrorforsker Magnus Ranstorp at Den nordiske motstandsbevegelsen forsøker å vise med hærverket mot jødiske mål i Norden?"
+  },
+  {
+    "qid": 1123,
+    "doc_id": 498,
+    "answer": "i oktober",
+    "reference_question": "Når begynner Hege Kosberg i Dagens Næringsliv?",
+    "generated_question": "Når starter Hege Kosberg i sin nye stilling i Dagens Næringsliv?"
+  },
+  {
+    "qid": 369,
+    "doc_id": 526,
+    "answer": "i Barcarena i Pará-delstaten nordøst i Brasil",
+    "reference_question": "Hvor ligger Alunorte-raffineriet?",
+    "generated_question": "Hvor ligger aluminaraffineriet Alunorte?"
+  },
+  {
+    "qid": 2043,
+    "doc_id": 315,
+    "answer": "Crystal Palace",
+    "reference_question": "Hvilket lag spilte Luka Milivojevic for?",
+    "generated_question": "Hvilket lag tapte 1–3 hjemme mot Manchester City?"
+  },
+  {
+    "qid": 660,
+    "doc_id": 599,
+    "answer": "til pressen",
+    "reference_question": "Hvem hadde Reiulf Steen et supert forhold til?",
+    "generated_question": "Hva hadde Reiulf Steen et fantastisk forhold til?"
+  },
+  {
+    "qid": 2083,
+    "doc_id": 144,
+    "answer": "«Nå gjelder det. Hele veien fra første j*vla stavtak. Kom igjen da, kom igjen.»",
+    "reference_question": "Hva kunne man høre at Henrik Kristoffersen sa til seg selv før rennets start?",
+    "generated_question": "Hva sa Henrik Kristoffersen til seg selv før start i storslalåmrennet i Åre-VM?"
+  },
+  {
+    "qid": 1100,
+    "doc_id": 487,
+    "answer": "en miljøplan må først bli godkjent",
+    "reference_question": "Hva må skje før Equinor kan bore letebrønn i South Australia?",
+    "generated_question": "Hva må skje før Equinor kan starte arbeidet med å bore en letebrønn i Australbukta?"
+  },
+  {
+    "qid": 25,
+    "doc_id": 441,
+    "answer": "fra New York",
+    "reference_question": "Fra hvilken amerikansk by kommer Rakim Mayers?",
+    "generated_question": "Hvor kommer rapperen Asap Rocky fra?"
+  },
+  {
+    "qid": 1422,
+    "doc_id": 621,
+    "answer": "utviklingssamtale",
+    "reference_question": "Hvilken samtale gruer noen elever seg til?",
+    "generated_question": "Hva gruer elever seg til når de ikke får vite om anmerkningene sine?"
+  },
+  {
+    "qid": 1184,
+    "doc_id": 519,
+    "answer": "å markedsføre diesel- og bensinbiler og kun presentere drømmebilen som kommer om et par år",
+    "reference_question": "Hvilket merkevareråd har Christopher Mortensen til bilimportørene?",
+    "generated_question": "Hva var Christopher Mortensens merkevareråd til bilimportører og forhandlere?"
+  },
+  {
+    "qid": 1016,
+    "doc_id": 447,
+    "answer": "Ved utgangen av 1950-årene var det få som trodde på olje- og gassrikdommer langs norskekysten. 50 år senere er næringen Norges viktigste, både når det gjelder inntekter til statskassen, investeringer og andel av total verdiskaping",
+    "reference_question": "Hva skriver Oljedepartementet på sine nettsider?",
+    "generated_question": "Hva skriver Oljedepartementet på sin nettside om utviklingen av olje- og gassnæringen i Norge?"
+  },
+  {
+    "qid": 820,
+    "doc_id": 650,
+    "answer": "en SMS",
+    "reference_question": "Hva har advokat Elden sendt til BT?",
+    "generated_question": "Hvordan formidlet advokat John Christian Elden sin klients reaksjon til BT?"
+  },
+  {
+    "qid": 1153,
+    "doc_id": 510,
+    "answer": "fra Kristiansand",
+    "reference_question": "Fra hvilken by kommer Einar Johan Rasmussen?",
+    "generated_question": "Hvor kommer skipsreder Einar Johan Rasmussen fra?"
+  },
+  {
+    "qid": 1085,
+    "doc_id": 477,
+    "answer": "20.000",
+    "reference_question": "Hvor mange nye hiv-smittede var det i Pakistan i 2017?",
+    "generated_question": "Hvor mange nye hivsmittede ble rapportert i Pakistan i 2017?"
+  },
+  {
+    "qid": 340,
+    "doc_id": 517,
+    "answer": "høye",
+    "reference_question": "Hva slags forventninger har folketrygdfondet til norske selskaper?",
+    "generated_question": "Hvilken type forventninger har Folketrygdfondet til selskapenes styrer?"
+  },
+  {
+    "qid": 1929,
+    "doc_id": 254,
+    "answer": "det å hente sitt eget juletre i skogen",
+    "reference_question": "Hva var et av julas koseligste ritualer?",
+    "generated_question": "Hva var et av julens koseligste og mest uforglemmelige ritual for ikke lenge siden?"
+  },
+  {
+    "qid": 181,
+    "doc_id": 479,
+    "answer": "for å gjøre soningsforholdene hans best mulig",
+    "reference_question": "Hvorfor har ambassaden i Moskva fulgt opp Frode Berg?",
+    "generated_question": "Hvorfor har norske myndigheter ved ambassaden i Moskva fulgt opp Frode Berg?"
+  },
+  {
+    "qid": 1626,
+    "doc_id": 148,
+    "answer": "bl.a. avhør av evt. vitner",
+    "reference_question": "Hva innebærer det å sjekke foranledningen til dødsfallet?",
+    "generated_question": "Hva innebærer politiets arbeid med å sjekke foranledningen til hendelsen?"
+  },
+  {
+    "qid": 128,
+    "doc_id": 466,
+    "answer": "25,1 prosentpoeng",
+    "reference_question": "Hvilken oppslutning fikk Høyre i fylkestingsvalget i Viken?",
+    "generated_question": "Hvor stor oppslutning fikk Høyre i fylkestingsvalget i Viken?"
+  },
+  {
+    "qid": 166,
+    "doc_id": 614,
+    "answer": "1, 2, 3 og 4",
+    "reference_question": "Hvilke linjer får endringer på grunn av planlagt arbeid mellom Tøyen og Brynseng?",
+    "generated_question": "Hvilke T-banelinjer får endringer på grunn av arbeidet i tunnelene mellom Tøyen og Brynseng?"
+  },
+  {
+    "qid": 1830,
+    "doc_id": 214,
+    "answer": "alt fra den menneskelig faktor til dårlige veiforhold",
+    "reference_question": "Hva kan skyldes at det skjer ulykker?",
+    "generated_question": "Hva kan ulykker på veiene skyldes?"
+  },
+  {
+    "qid": 692,
+    "doc_id": 607,
+    "answer": "i forbindelse med de palestinske demonstrasjonene ved Israels grensegjerde i fjor",
+    "reference_question": "Når har Israel drept 34 palestinske barn?",
+    "generated_question": "I hvilken sammenheng drepte israelske styrker 34 barn i fjor, ifølge FN?"
+  },
+  {
+    "qid": 961,
+    "doc_id": 694,
+    "answer": "en mann i 60-årene",
+    "reference_question": "Hvem skal ha vært tilstede under eksplosjonen?",
+    "generated_question": "Hvem ønsker politiet å komme i kontakt med etter eksplosjonen i Vårberg?"
+  },
+  {
+    "qid": 1063,
+    "doc_id": 464,
+    "answer": "som reservedeler for de øvrige fregattene",
+    "reference_question": "Hvordan kan noen av delene fra fregatten Helge Ingstad brukes?",
+    "generated_question": "Hva pekes delene fra KNM Helge Ingstad på som mest aktuelle som?"
+  },
+  {
+    "qid": 2274,
+    "doc_id": 277,
+    "answer": "i både norske og internasjonale organisasjoner og ernæringsfora",
+    "reference_question": "Hvor hadde Kaare R. Norum verv?",
+    "generated_question": "Hvor har Kaare R. Norum hatt verv?"
+  },
+  {
+    "qid": 1643,
+    "doc_id": 157,
+    "answer": "sørgelig gammeldags",
+    "reference_question": "Hvordan er Sylvi Listhaugs holdning til kjøtt?",
+    "generated_question": "Hvordan beskrives Sylvi Listhaugs holdning til kjøtt?"
+  },
+  {
+    "qid": 1415,
+    "doc_id": 615,
+    "answer": "i mai",
+    "reference_question": "Når starter ny sesong for oljerigging i Barentshavet?",
+    "generated_question": "Når starter den nye sesongen for oljeboring i Barentshavet?"
+  },
+  {
+    "qid": 1991,
+    "doc_id": 282,
+    "answer": "en forkjølelse",
+    "reference_question": "Hva har Jasmin klart å pådra seg?",
+    "generated_question": "Hva har Jasmin Bogdanovic pådratt seg?"
+  },
+  {
+    "qid": 1105,
+    "doc_id": 490,
+    "answer": "to",
+    "reference_question": "Hvor mange strafferunder fikk Erlend Bjøntegaard?",
+    "generated_question": "Hvor mange år varte dopingstraffen som Loginov sonet etter EPO-avsløringen i 2014?"
+  },
+  {
+    "qid": 1302,
+    "doc_id": 570,
+    "answer": "Casey DeSmith",
+    "reference_question": "Hvem var keeper for Penguins?",
+    "generated_question": "Hvem sto i mål for Pittsburgh Penguins?"
+  },
+  {
+    "qid": 140,
+    "doc_id": 468,
+    "answer": "Skottland",
+    "reference_question": "Hvilket lag spiller mot Sverige i semifinalen?",
+    "generated_question": "Hvilket lag skal møte Sverige i semifinalen i curling-EM?"
+  },
+  {
+    "qid": 1443,
+    "doc_id": 629,
+    "answer": "Ingvild Flugstad Østberg",
+    "reference_question": "Hvem ble slått av Helene Fossenholm på oppløpet i kvinneklassen?",
+    "generated_question": "Hvem slo Helene Fossesholm på oppløpet i kvinnenes 10 kilometer fellesstart?"
+  },
+  {
+    "qid": 943,
+    "doc_id": 690,
+    "answer": "i lang tid",
+    "reference_question": "Hvor lenge var Neil påvirket av at begge sønnene hans hadde cerebral parese?",
+    "generated_question": "Hvor lenge preget sorgen over sønnenes cerebral parese Neil Youngs karriere?"
+  },
+  {
+    "qid": 647,
+    "doc_id": 594,
+    "answer": "Han ga seg som toppspiller",
+    "reference_question": "Hva gjorde Arild Berg da han var 26 år?",
+    "generated_question": "Hva gjorde Arild Berg som 26-åring?"
+  },
+  {
+    "qid": 1365,
+    "doc_id": 596,
+    "answer": "14. mai",
+    "reference_question": "Når døde veidirektør Gustavsen?",
+    "generated_question": "Når døde veidirektør Tore Moe Gustavsen?"
+  },
+  {
+    "qid": 1490,
+    "doc_id": 647,
+    "answer": "3. april",
+    "reference_question": "Når møtes Runar Sandefjord og FyllingenBergen neste gang?",
+    "generated_question": "Når møtes lagene igjen i Bergen?"
+  },
+  {
+    "qid": 306,
+    "doc_id": 509,
+    "answer": "i april",
+    "reference_question": "Når ble Søviknes valgt til nestleder i Frp?",
+    "generated_question": "Når ble Terje Søviknes og Sylvi Listhaug valgt som nestledere i Frp?"
+  },
+  {
+    "qid": 2140,
+    "doc_id": 166,
+    "answer": "for å få med brexit-skeptikere på laget",
+    "reference_question": "Hvorfor vil Theresa May gå av som statsminister hvis Underhuset godtar brexit-avtalen hennes med EU?",
+    "generated_question": "Hvorfor er Theresa May villig til å gå av dersom brexit-avtalen hennes blir vedtatt?"
+  },
+  {
+    "qid": 1072,
+    "doc_id": 473,
+    "answer": "to",
+    "reference_question": "Hvor mange ganger har den siktede i saken blitt avhørt?",
+    "generated_question": "Hvor mange ganger er siktede blitt avhørt?"
+  },
+  {
+    "qid": 1957,
+    "doc_id": 263,
+    "answer": "siden utbyggingsplanene allerede har kommet langt",
+    "reference_question": "Hvorfor er det i siste liten å endre mening om et nytt boligområde på Kastbrekka nå?",
+    "generated_question": "Hvorfor er politikernes snuoperasjon om Kastbrekka i siste liten?"
+  },
+  {
+    "qid": 452,
+    "doc_id": 555,
+    "answer": "bratt",
+    "reference_question": "Hvordan var området der skredet gikk?",
+    "generated_question": "Hvordan var terrenget i området der skredet gikk?"
+  },
+  {
+    "qid": 1630,
+    "doc_id": 164,
+    "answer": "Magnus Carlsen",
+    "reference_question": "Hvem var vinneren av Norway Chess?",
+    "generated_question": "Hvem vant Norway Chess?"
+  },
+  {
+    "qid": 1561,
+    "doc_id": 684,
+    "answer": "i 2015",
+    "reference_question": "Når ga Miljødirektoratet sin utslippstillatelse for Repparfjorden?",
+    "generated_question": "Når ga Miljødirektoratet utslippstillatelse til gruvedrift i Kvalsund?"
+  },
+  {
+    "qid": 887,
+    "doc_id": 667,
+    "answer": "omfattende",
+    "reference_question": "Hvordan var skadene på Notre-Dame etter brannen mandag?",
+    "generated_question": "Hvor store skader fikk katedralen i brannen?"
+  },
+  {
+    "qid": 2122,
+    "doc_id": 266,
+    "answer": "onsdag ettermiddag",
+    "reference_question": "Når kan Sverre dra fra sykehuset?",
+    "generated_question": "Når skrives Sverre Lunde Pedersen ut fra sykehuset?"
+  },
+  {
+    "qid": 1319,
+    "doc_id": 576,
+    "answer": "både sørgående og nordgående avganger",
+    "reference_question": "Hvilke avganger hadde Hurtigruta innstilt den aktuelle lørdagen?",
+    "generated_question": "Hvilke avganger forbi Hustadvika hadde Hurtigruten innstilt på grunn av uværet?"
+  },
+  {
+    "qid": 1911,
+    "doc_id": 245,
+    "answer": "Stort sett alle",
+    "reference_question": "Hvem kan gå?",
+    "generated_question": "Hvor mange kan ifølge Johan Kaggestad gå som mosjon?"
+  },
+  {
+    "qid": 823,
+    "doc_id": 652,
+    "answer": "Etter å ha snakket med de involverte",
+    "reference_question": "Når bestemte Thorsen seg for å anmelde hendelsen?",
+    "generated_question": "Når anbefalte Bente Thorsen at saken ble anmeldt?"
+  },
+  {
+    "qid": 0,
+    "doc_id": 443,
+    "answer": "Rygge",
+    "reference_question": "Hva er navnet på flyplassen i Moss?",
+    "generated_question": "Hvilken flyplass i Moss har vært stengt siden 2016?"
+  },
+  {
+    "qid": 882,
+    "doc_id": 665,
+    "answer": "om «retten til et familieliv»",
+    "reference_question": "Hva handler artikkel åtte i den Europeiske Menneskerettskonvensjonen om?",
+    "generated_question": "Hva handler artikkel åtte i den Europeiske Menneskerettskonvensjonen om?"
+  },
+  {
+    "qid": 1736,
+    "doc_id": 188,
+    "answer": "Avantor",
+    "reference_question": "Hvem eier i dag T-banetomten i Sandakerveien?",
+    "generated_question": "Hvilket selskap eier T-banetomten i Sandakerveien?"
+  },
+  {
+    "qid": 1801,
+    "doc_id": 265,
+    "answer": "Ingrid Aune",
+    "reference_question": "Hva heter ordføreren som mista livet utenfor Namsos natt til i dag?",
+    "generated_question": "Hvem var ordfører i Malvik kommune da hun omkom i en båtulykke utenfor Namsos?"
+  },
+  {
+    "qid": 42,
+    "doc_id": 448,
+    "answer": "Når departementets brev foreligger må det foretas avklaring på flere områder bla hvordan pågående straffesaker skal håndteres. Det må muligens lages en kommunikasjonsstrategi i forhold til endring av praksis",
+    "reference_question": "Hvordan avsluttes den interne Nav-eposten fra 25. februar 2019? ",
+    "generated_question": "Hvordan ble den interne e-posten fra Nav Klageinstans datert 25. februar 2019 avsluttet?"
+  },
+  {
+    "qid": 2138,
+    "doc_id": 205,
+    "answer": "Helle Skjervold",
+    "reference_question": "Hva heter pressesjefen i Google Norge?",
+    "generated_question": "Hva heter pressesjefen i Google Norge?"
+  },
+  {
+    "qid": 268,
+    "doc_id": 499,
+    "answer": "Kongsberg Satellite Services",
+    "reference_question": "Hva står KSAT for?",
+    "generated_question": "Hva står forkortelsen KSAT for?"
+  },
+  {
+    "qid": 2363,
+    "doc_id": 325,
+    "answer": "Vincent Kriechmayr",
+    "reference_question": "Hvem havnet på tredjeplass i finalen?",
+    "generated_question": "Hvem slo Aleksander Aamodt Kilde i kampen om tredjeplassen i utforcupen?"
+  },
+  {
+    "qid": 2345,
+    "doc_id": 324,
+    "answer": "kommunikasjonsansvarlig",
+    "reference_question": "Hva jobber Stine Hartmann som?",
+    "generated_question": "Hvilken stilling har Stine Hartmann i Oslo maraton?"
+  },
+  {
+    "qid": 1557,
+    "doc_id": 681,
+    "answer": "torsdag",
+    "reference_question": "Når skal Arbeiderpartiet ha sin oppsummerende pressekonferanse?",
+    "generated_question": "Hvilken dag utsatte Jonas Gahr Støre Arbeiderpartiets oppsummerende pressekonferanse til?"
+  },
+  {
+    "qid": 612,
+    "doc_id": 586,
+    "answer": "svært knappe",
+    "reference_question": "Hvordan var Guardiolas svar på de første spørsmålene på pressekonferansen fredag?",
+    "generated_question": "Hvordan var Guardiolas svar på de første spørsmålene på pressekonferansen?"
+  },
+  {
+    "qid": 1110,
+    "doc_id": 492,
+    "answer": "til franske tilstander, med gule vester, brennende bildekk og det hele",
+    "reference_question": "Hva mener Moxnes for stor MDG-innflytelse kan føre til?",
+    "generated_question": "Hva mener Moxnes det kan føre til dersom MDG får for stor innflytelse?"
+  },
+  {
+    "qid": 1349,
+    "doc_id": 591,
+    "answer": "mot Bosnia-Hercegovina",
+    "reference_question": "Hvilket lag spiller Norge mot 10. januar?",
+    "generated_question": "Hvem spiller Norge mot i sin første kamp i EM?"
+  },
+  {
+    "qid": 595,
+    "doc_id": 582,
+    "answer": "som 16-åring",
+    "reference_question": "Når kom Maars Johnsen til Norge?",
+    "generated_question": "Hvor gammel var Bjørn Maars Johnsen da han dro til Norge for å prøve fotball-lykken?"
+  },
+  {
+    "qid": 1795,
+    "doc_id": 202,
+    "answer": "VM, OL og deretter VM igjen",
+    "reference_question": "Hvilke sportsarrangementer venter de tre neste sesongene?",
+    "generated_question": "Hvilke mesterskap venter i de tre neste sesongene etter mellomsesongen?"
+  },
+  {
+    "qid": 2025,
+    "doc_id": 303,
+    "answer": "klokka 5.32",
+    "reference_question": "Når fant ulykken sted?",
+    "generated_question": "Når fikk politiet melding om hendelsen i Snartemo?"
+  },
+  {
+    "qid": 379,
+    "doc_id": 530,
+    "answer": "Idai og Kenneth",
+    "reference_question": "Hvilke to sykloner rammet Mosambik i år?",
+    "generated_question": "Hva heter syklonene som rammet Mosambik?"
+  },
+  {
+    "qid": 2297,
+    "doc_id": 233,
+    "answer": "menneskesmugling",
+    "reference_question": "Hva ble Ying Guo satt i fengsel for?",
+    "generated_question": "Hva ble den kinesiske tolken Ying Guo dømt til seks års fengsel for?"
+  },
+  {
+    "qid": 2090,
+    "doc_id": 145,
+    "answer": "å betale avgifter som toll og merverdiavgift",
+    "reference_question": "Hva har en tidligere fått fritak fra ved handel av varer fra utlandet til under 350 kr?",
+    "generated_question": "Hva har man tidligere fått fritak fra når man handlet varer fra utlandet til en verdi under 350 kroner?"
+  },
+  {
+    "qid": 295,
+    "doc_id": 506,
+    "answer": "et såkalt løsepengevirus",
+    "reference_question": "Hva slags datavirus er LockerGoga?",
+    "generated_question": "Hva slags virus er LockerGoga?"
+  },
+  {
+    "qid": 144,
+    "doc_id": 469,
+    "answer": "for «forskjellsdronning»",
+    "reference_question": "Hva kalte Bjørnar Moxnes minister Siv Jensen?",
+    "generated_question": "Hva kalte Bjørnar Moxnes Siv Jensen fra talerstolen på Stortinget?"
+  },
+  {
+    "qid": 916,
+    "doc_id": 677,
+    "answer": "Matteo Berrettini",
+    "reference_question": "Hvem skal Ruud spille mot på onsdag?",
+    "generated_question": "Hvem skulle Casper Ruud møte i den andre runden av Roland-Garros?"
+  },
+  {
+    "qid": 626,
+    "doc_id": 590,
+    "answer": "«Større enn meg»",
+    "reference_question": "Hva heter selvbiografien til Svindal?",
+    "generated_question": "Hva heter selvbiografien til Aksel Lund Svindal?"
+  },
+  {
+    "qid": 2113,
+    "doc_id": 156,
+    "answer": "Få",
+    "reference_question": "Hvor mange nordmenn vet hvor fondspengene sine egentlig er plassert?",
+    "generated_question": "Hvor mange nordmenn med penger i fond aner hvor pengene er?"
+  },
+  {
+    "qid": 465,
+    "doc_id": 549,
+    "answer": "Kystad helse- og velferdssenter",
+    "reference_question": "Hva heter Trondheims mest populære sykehjemsenhet?",
+    "generated_question": "Hvilket sykehjem fikk 5,7 av 6 på bruker- og ansatteundersøkelsen og er byens mest populære sykehjemsenhet?"
+  },
+  {
+    "qid": 1297,
+    "doc_id": 568,
+    "answer": "Siv Jensen",
+    "reference_question": "Hvem var det som ikke deltok på krisemøtet i statsministerboligen på onsdag?",
+    "generated_question": "Hvem er leder for Frp?"
+  },
+  {
+    "qid": 1399,
+    "doc_id": 609,
+    "answer": "nå",
+    "reference_question": "Når planlegger Madagaskar å starte et program for å gi begge messing-vaksinedosene til barn?",
+    "generated_question": "Når planlegger Madagaskar å starte et program for å gi barn begge dosene av meslingvaksinen?"
+  },
+  {
+    "qid": 1220,
+    "doc_id": 557,
+    "answer": "om et par uker",
+    "reference_question": "Når kommer den endelige evalueringen av prøveprosjektet?",
+    "generated_question": "Når blir evalueringen av prøveprosjektet i Olav Tryggvasons gate lagt fram for trondheimspolitikerne?"
+  },
+  {
+    "qid": 2051,
+    "doc_id": 318,
+    "answer": "sterkt skadd",
+    "reference_question": "Hvordan er flyplassen i Aklan?",
+    "generated_question": "Hvor hardt rammet ble flyplassen i Aklan av tyfonen Phanfone?"
+  },
+  {
+    "qid": 1265,
+    "doc_id": 553,
+    "answer": "Jeg har ikke informasjon som verken bekrefter eller avkrefter en slik avtale. Vi håper selvsagt at en slik avtale foreligger",
+    "reference_question": "Hvordan kommenterer advokat Risnes opplysningene om at en avtale skal være på plass?",
+    "generated_question": "Hva sier Frode Bergs norske advokat Brynjulf Risnes om opplysningene om en utvekslingsavtale?"
+  },
+  {
+    "qid": 499,
+    "doc_id": 558,
+    "answer": "som følge av skade",
+    "reference_question": "Hvorfor trakk Plavins og Tocs seg fra kampen mot nordmennene?",
+    "generated_question": "Hvorfor trakk latvierne Martins Plavins og Edgars Tocs seg fra kampen mot Mol og Sørum?"
+  },
+  {
+    "qid": 2318,
+    "doc_id": 238,
+    "answer": "advokat Tom Solberg",
+    "reference_question": "Hvem er den siktedes forsvarer?",
+    "generated_question": "Hvem er forsvareren til den siktede politimannen?"
+  },
+  {
+    "qid": 1372,
+    "doc_id": 598,
+    "answer": "på TV",
+    "reference_question": "Hvordan så Øyvind Skaanes sprinten i junior-VM?",
+    "generated_question": "Hvor så pappa Øyvind Skaanes sønnens VM-bronseløp i Lahti?"
+  },
+  {
+    "qid": 487,
+    "doc_id": 554,
+    "answer": "Thomas Gjelsås",
+    "reference_question": "Hvem er sjef på Øvrevoll travbane?",
+    "generated_question": "Hva heter Øvrevolls administrerende direktør?"
+  },
+  {
+    "qid": 1460,
+    "doc_id": 639,
+    "answer": "Jens Bernhard Herstad",
+    "reference_question": "Hvem er forsvareren til 32-åringen som er siktet for medvirkning?",
+    "generated_question": "Hva heter forsvareren til 32-åringen som er siktet for medvirkning til drapet i Mehamn?"
+  },
+  {
+    "qid": 1685,
+    "doc_id": 170,
+    "answer": "Sindre Guldvog",
+    "reference_question": "Hvem er Sindre Guldvog?",
+    "generated_question": "Hvem er direktør i Norsk filminstitutt?"
+  },
+  {
+    "qid": 1982,
+    "doc_id": 279,
+    "answer": "Cirka 20",
+    "reference_question": "Hvor mange mennesker ble skadd?",
+    "generated_question": "Hvor mange personer ble lettere skadd i eksplosjonen i Linköping?"
+  },
+  {
+    "qid": 2120,
+    "doc_id": 306,
+    "answer": "skattebetalerne",
+    "reference_question": "Hvem betaler for driften av kongefamilien?",
+    "generated_question": "Hvem er det som må ta regningen for at kongefamilien er dyr i drift?"
+  },
+  {
+    "qid": 1311,
+    "doc_id": 574,
+    "answer": "fordi ingen kvinner vant pris",
+    "reference_question": "Hvorfor forlot Sigrid Tusvik Humorprisen?",
+    "generated_question": "Hvorfor forlot Sigrid Bonde Tusvik Humorprisen?"
+  },
+  {
+    "qid": 398,
+    "doc_id": 534,
+    "answer": "på Old Trafford",
+    "reference_question": "Hvor har Ole Gunnar Solskjær sjefsstolen?",
+    "generated_question": "Hvor har Ole Gunnar Solskjær managerjobben?"
+  },
+  {
+    "qid": 805,
+    "doc_id": 644,
+    "answer": "lett diesel",
+    "reference_question": "Hvilket drivstoff bruker Hurtigrutens fartøyer?",
+    "generated_question": "Hvilket drivstoff seiler alle Hurtigrutens skip på i dag?"
+  },
+  {
+    "qid": 1058,
+    "doc_id": 460,
+    "answer": "at sannsynligheten er lavere for å nå styringsmålet satt i 2012",
+    "reference_question": "Hva erkjenner generalmajor Klever overfor BT?",
+    "generated_question": "Hva erkjenner programdirektør i Forsvarsdepartementet, generalmajor Morten Klever, overfor Bergens Tidende?"
+  },
+  {
+    "qid": 1951,
+    "doc_id": 262,
+    "answer": "Ingenting",
+    "reference_question": "Hva synes Svendsen er bedre enn å slå Rosenborg?",
+    "generated_question": "Hva er bedre enn å slå Rosenborg på Lerkendal, ifølge Sander Svendsen?"
+  },
+  {
+    "qid": 837,
+    "doc_id": 653,
+    "answer": "siden 2010",
+    "reference_question": "Hvor lenge har Trine Skei Grande ledet Venstre?",
+    "generated_question": "Hvor lenge har Grande ledet Venstre?"
+  },
+  {
+    "qid": 115,
+    "doc_id": 471,
+    "answer": "ved Svartisen",
+    "reference_question": "Hvor ligger Engabreen?",
+    "generated_question": "Hvor ligger Engabreen?"
+  },
+  {
+    "qid": 742,
+    "doc_id": 623,
+    "answer": "Cleveland",
+    "reference_question": "Hvilket lag vant kampen mellom Pittsburgh og Cleveland?",
+    "generated_question": "Hvilket lag spiller Myles Garrett for?"
+  },
+  {
+    "qid": 1481,
+    "doc_id": 645,
+    "answer": "klassisk fellesstart",
+    "reference_question": "Hvilken øvelse kommer på onsdag?",
+    "generated_question": "Hvilken type renn skal gås i Oberstdorf onsdag?"
+  }
+]
