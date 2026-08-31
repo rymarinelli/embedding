@@ -56,8 +56,7 @@ def main():
     ax.set_axisbelow(True)
 
     n_q = int(df["n_queries"].iloc[0]) if "n_queries" in df.columns else 100
-    ax.set_title(f"Pilot Study {METRIC_LABEL} (n={n_q} queries / {n_q} passages)",
-                 fontsize=12.5)
+    ax.set_title(f"Pilot Study {METRIC_LABEL}", fontsize=12.5)
     fig.tight_layout()
     fig.savefig(PLOT_PATH, bbox_inches="tight")
     print(f"\nSaved plot -> {PLOT_PATH}")
