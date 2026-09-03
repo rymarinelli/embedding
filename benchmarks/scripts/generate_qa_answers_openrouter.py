@@ -27,6 +27,7 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 # summarization benchmarks cover the same set of models.
 MODELS = {
     "claude-sonnet-5": "anthropic/claude-sonnet-5",
+    "claude-fable-5-1": "anthropic/claude-fable-5-1",
     "gpt-5.6-sol": "openai/gpt-5.6-sol",
     "gemini-3.5-flash": "google/gemini-3.5-flash",
     "gemma-3-27b-it-base": "google/gemma-3-27b-it",
