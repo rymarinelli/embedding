@@ -1,5 +1,6 @@
 model,n_articles,n_empty_outputs,rouge1_f1,rouge2_f1,rougeL_f1
 claude-fable-5,33,0,0.5326,0.2626,0.3464
+claude-fable-5-1,33,0,0.5228,0.2494,0.3276
 claude-opus-5,33,0,0.5137,0.2473,0.3224
 borealis-27b-instruct-preview-bf16-full,33,0,0.456,0.2367,0.31
 claude-sonnet-5,33,0,0.4775,0.2103,0.3031
