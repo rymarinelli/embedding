@@ -84,6 +84,11 @@ MODELS = [
     ),
     ("ltg/norbert4-base", "", "", 32, "meanpool"),
     ("ltg/norbert4-large", "", "", 16, "meanpool"),
+    # config_sentence_transformers.json ships empty "query"/"document" prompt
+    # strings, so its documented encode_query()/encode_document() API is
+    # equivalent to plain .encode() with no prefix — same as this table's
+    # other no-prefix models.
+    ("NbAiLab/borealis-embed-212m", "", "", 64, "st"),
 ]
 
 TOP_K = 10
